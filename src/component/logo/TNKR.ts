@@ -49,6 +49,3 @@ export class TinkernetLogo extends BaseLogo {
     `;
   }
 }
-
-/* customElements.define('logo-tnkr', TinkernetLogo);
- */

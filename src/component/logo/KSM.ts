@@ -31,6 +31,3 @@ export class KusamaLogo extends BaseLogo {
     `;
   }
 }
-
-/* customElements.define('logo-ksm', KusamaLogo);
- */

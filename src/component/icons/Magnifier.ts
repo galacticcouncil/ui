@@ -22,6 +22,3 @@ export class MagnifierIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-magnifier', MagnifierIcon);
- */

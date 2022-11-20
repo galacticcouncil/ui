@@ -21,6 +21,3 @@ export class SettingsIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-settings', SettingsIcon);
- */

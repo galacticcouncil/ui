@@ -23,6 +23,3 @@ export class BasiliskLogo extends BaseLogo {
     `;
   }
 }
-
-/* customElements.define('logo-bsx', BasiliskLogo);
- */

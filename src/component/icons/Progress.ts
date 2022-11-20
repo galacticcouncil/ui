@@ -62,6 +62,3 @@ export class ProgressIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-progress', ProgressIcon);
- */

@@ -19,6 +19,3 @@ export class ChevronRightIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-chevron-right', ChevronRightIcon);
- */

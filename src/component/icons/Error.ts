@@ -64,6 +64,3 @@ export class ErrorIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-error', ErrorIcon);
- */

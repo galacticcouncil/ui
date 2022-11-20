@@ -16,6 +16,3 @@ export class DropdownIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-dropdown', DropdownIcon);
- */

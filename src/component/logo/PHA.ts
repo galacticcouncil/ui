@@ -31,6 +31,3 @@ export class PhalaLogo extends BaseLogo {
     `;
   }
 }
-
-/* customElements.define('logo-pha', PhalaLogo);
- */

@@ -47,6 +47,3 @@ export class AcalaLogo extends BaseLogo {
     `;
   }
 }
-
-/* customElements.define('logo-ausd', AcalaLogo);
- */

@@ -84,6 +84,3 @@ export class SuccessIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-success', SuccessIcon);
- */

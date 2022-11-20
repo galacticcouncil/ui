@@ -26,6 +26,3 @@ export class CloseIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-close', CloseIcon);
- */

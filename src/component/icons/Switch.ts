@@ -23,6 +23,3 @@ export class SwitchIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-switch', SwitchIcon);
- */

@@ -13,6 +13,3 @@ export class BackIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-back', BackIcon);
- */

@@ -76,6 +76,3 @@ export class RouteIcon extends BaseIcon {
     `;
   }
 }
-
-/* customElements.define('icon-route', RouteIcon);
- */

@@ -172,6 +172,3 @@ export class UnknownLogo extends BaseLogo {
     `;
   }
 }
-
-/* customElements.define('logo-unknown', UnknownLogo);
- */

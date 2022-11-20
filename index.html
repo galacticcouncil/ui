@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galactic UI</title>
+    <meta name="description" content="Galactic UI Kit" />
+    <base href="/" />
+    <style>
+      :root {
+        --rgb-primary-100: 218, 255, 238;
+      }
+
+      .bsx {
+        --gradient-background: radial-gradient(
+            89.2% 89.2% at 50.07% 87.94%,
+            rgb(0, 138, 105) 0%,
+            rgb(38, 47, 49) 88.52%
+          ),
+          rgb(44, 51, 53);
+      }
+    </style>
+    <style>
+      api-viewer {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bsx">
+    <api-viewer src="./custom-elements.json">
+      <!-- Alert -->
+      <template data-element="ui-alert" data-target="host">
+        <ui-alert variant="success">This is alert message</ui-alert>
+      </template>
+      <template data-element="ui-alert" data-target="knob" data-attr="variant" data-type="select">
+        <select>
+          <option value="success"></option>
+          <option value="error"></option>
+          <option value="progress"></option>
+        </select>
+      </template>
+      <template data-element="ui-alert" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Asset -->
+      <template data-element="ui-asset" data-target="host">
+        <ui-asset asset="KSM"></ui-asset>
+      </template>
+      <template data-element="ui-asset" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- AssetInput -->
+      <template data-element="ui-asset-input" data-target="host">
+        <ui-asset-input id="assetOut" asset="BSX" amount="1000"></ui-asset-input>
+      </template>
+      <template data-element="ui-asset-input" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-asset-input" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            height: 100px;
+          }
+          ui-asset-input {
+            display: block;
+            border-radius: 12px;
+            box-sizing: border-box;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- AssetList -->
+      <template data-element="ui-asset-list" data-target="slot">
+        <ui-asset-list-item
+          slot="selected"
+          selected
+          asset='{"id":"0","symbol":"BSX"}'
+          balance="1500"
+        ></ui-asset-list-item>
+        <ui-asset-list-item asset='{"id":"1","symbol":"KSM"}' balance="3500"></ui-asset-list-item>
+        <ui-asset-list-item
+          slot="disabled"
+          disabled
+          asset='{"id":"2","symbol":"TNKR"}'
+          balance="3500"
+        ></ui-asset-list-item>
+      </template>
+      <template data-element="ui-asset-list" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            display: block;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+      <template data-element="ui-asset-list" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+
+      <!-- AssetListItem -->
+      <template data-element="ui-asset-list-item" data-target="host">
+        <ui-asset-list-item asset='{"id":"0","symbol":"BSX"}' balance="1500"></ui-asset-list-item>
+      </template>
+      <template data-element="ui-asset-list-item" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            display: block;
+            border-radius: 0;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+      <template data-element="ui-asset-list-item" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+
+      <!-- AssetPrice -->
+      <template data-element="ui-asset-price" data-target="host">
+        <ui-asset-price inputAsset="BSX" outputAsset="KSM" outputBalance="10000000"></ui-asset-price>
+      </template>
+      <template data-element="ui-asset-price" data-target="suffix">
+        <style>
+          ui-asset-price {
+            border-radius: 7px;
+            background: rgb(35, 40, 43);
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- AssetSelector-->
+      <template data-element="ui-asset-selector" data-target="host">
+        <ui-asset-selector id="1" asset="KSM"></ui-asset-selector>
+      </template>
+      <template data-element="ui-asset-selector" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- AssetSwitch -->
+      <template data-element="ui-asset-switch" data-target="host">
+        <ui-asset-switch></ui-asset-switch>
+      </template>
+      <template data-element="ui-asset-switch" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-asset-switch" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- AssetTransfer -->
+      <template data-element="ui-asset-transfer" data-target="host">
+        <ui-asset-transfer id="assetOut" title="You get" asset="BSX" amount="1000" balance="50000"></ui-asset-transfer>
+      </template>
+      <template data-element="ui-asset-transfer" data-target="suffix">
+        <style>
+          ui-paper {
+            border-radius: 12px;
+            width: 450px;
+            display: block;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+      <template data-element="ui-asset-transfer" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+
+      <!-- BusyIndicator -->
+      <template data-element="ui-busy-indicator" data-target="host">
+        <ui-busy-indicator></ui-busy-indicator>
+      </template>
+      <template data-element="ui-busy-indicator" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: block;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Button -->
+      <template data-element="ui-button" data-target="host">
+        <ui-button variant="primary">Primary</ui-button>
+      </template>
+      <template data-element="ui-button" data-target="knob" data-attr="variant" data-type="select">
+        <select>
+          <option value="primary"></option>
+          <option value="secondary"></option>
+          <option value="max"></option>
+        </select>
+      </template>
+      <template data-element="ui-button" data-target="knob" data-attr="size" data-type="select">
+        <select>
+          <option value="small"></option>
+          <option value="medium"></option>
+          <option value="micro"></option>
+        </select>
+      </template>
+      <template data-element="ui-button" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- CircularProgress -->
+      <template data-element="ui-circular-progress" data-target="host">
+        <ui-circular-progress></ui-circular-progress>
+      </template>
+      <template data-element="ui-circular-progress" data-target="suffix">
+        <style>
+          ui-circular-progress {
+            width: 50px;
+            height: 50px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Dialog -->
+      <template data-element="ui-dialog" data-target="host">
+        <ui-dialog open></ui-dialog>
+      </template>
+      <template data-element="ui-dialog" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Divider -->
+      <template data-element="ui-divider" data-target="host">
+        <ui-divider></ui-divider>
+      </template>
+      <template data-element="ui-divider" data-target="suffix">
+        <style>
+          ui-divider {
+            width: 500px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Drawer -->
+      <template data-element="ui-drawer" data-target="host">
+        <ui-drawer open></ui-drawer>
+      </template>
+      <template data-element="ui-drawer" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- IconButton -->
+      <template data-element="ui-icon-button" data-target="host">
+        <ui-icon-button><icon-settings></icon-settings> </ui-icon-button>
+      </template>
+      <template data-element="ui-icon-button" data-target="knob" data-attr="size" data-type="select">
+        <select>
+          <option value="small"></option>
+          <option value="medium"></option>
+          <option value="large"></option>
+        </select>
+      </template>
+      <template data-element="ui-icon-button" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Input -->
+      <template data-element="ui-input" data-target="host">
+        <ui-input type="number" defaultValue="20" min="0" max="100" step="0.1" placeholder="Custom"></ui-input>
+      </template>
+      <template data-element="ui-input" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-input" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          ui-asset-input {
+            display: block;
+            border-radius: 12px;
+            box-sizing: border-box;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Paper -->
+      <template data-element="ui-paper" data-target="host">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-paper" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 100px;
+            height: 100px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Progress -->
+      <template data-element="ui-progress" data-target="host">
+        <ui-progress duration="90000"></ui-progress>
+      </template>
+      <template data-element="ui-progress" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-progress" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- SearchBar -->
+      <template data-element="ui-search-bar" data-target="host">
+        <ui-search-bar placeholder="Search by"></ui-search-bar>
+      </template>
+      <template data-element="ui-search-bar" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-search-bar" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Skeleton -->
+      <template data-element="ui-skeleton" data-target="host">
+        <ui-skeleton progress width="100%" height="15px"></ui-skeleton>
+      </template>
+      <template data-element="ui-skeleton" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-skeleton" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Switch -->
+      <template data-element="ui-switch" data-target="host">
+        <ui-switch></ui-switch>
+      </template>
+      <template data-element="ui-switch" data-target="knob" data-attr="size" data-type="select">
+        <select>
+          <option value="small"></option>
+          <option value="medium"></option>
+        </select>
+      </template>
+      <template data-element="ui-switch" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-switch" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Toast -->
+      <template data-element="ui-toast" data-target="host">
+        <ui-toast open id="1" timeout="40000"></ui-toast>
+      </template>
+      <template data-element="ui-toast" data-target="suffix">
+        <style>
+          ui-toast {
+            width: 250px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- ToggleButton -->
+      <template data-element="ui-toggle-button" data-target="host">
+        <ui-toggle-button value="10">10%</ui-toggle-button>
+      </template>
+      <template data-element="ui-toggle-button" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-toggle-button" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- ToggleButtonGroup -->
+      <template data-element="ui-toggle-button-group" data-target="host">
+        <ui-toggle-button-group selected="20"></ui-toggle-button-group>
+      </template>
+      <template data-element="ui-toggle-button-group" selected="20" data-target="slot">
+        <ui-toggle-button value="10">10%</ui-toggle-button>
+        <ui-toggle-button value="20" selected>20%</ui-toggle-button>
+        <ui-toggle-button value="30">30%</ui-toggle-button>
+      </template>
+      <template data-element="ui-toggle-button-group" data-target="wrapper">
+        <ui-paper></ui-paper>
+      </template>
+      <template data-element="ui-toggle-button-group" data-target="suffix">
+        <style>
+          ui-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--gradient-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+    </api-viewer>
+    <script type="module" src="./out/app.js"></script>
+  </body>
+</html>

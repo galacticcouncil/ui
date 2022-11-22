@@ -111,7 +111,7 @@ export class Toast extends CloseableElement {
           <slot name="alert"></slot>
           <slot></slot>
         </div>
-        ${when(this.timeout, () => html` <uigc-ui-progress .duration=${this.timeout}></uigc-ui-progress> `)}
+        ${when(this.timeout, () => html` <uigc-progress .duration=${this.timeout}></uigc-progress> `)}
       </div>
       <button class="close" @click=${this.onClose}>
         <uigc-icon-close></uigc-icon-close>

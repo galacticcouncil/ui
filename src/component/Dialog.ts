@@ -55,9 +55,9 @@ export class Dialog extends CloseableElement {
     return html`
       <div class="dialog-root">
         <slot></slot>
-        ${when(this.timeout, () => html` <uigc-ui-progress .duration=${this.timeout}></uigc-ui-progress> `)}
+        ${when(this.timeout, () => html` <uigc-progress .duration=${this.timeout}></uigc-progress> `)}
       </div>
-      <uigc-ui-backdrop active></uigc-ui-backdrop>
+      <uigc-backdrop active></uigc-backdrop>
     `;
   }
 }

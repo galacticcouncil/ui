@@ -2,7 +2,7 @@ import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-route')
+@customElement('uigc-icon-route')
 export class RouteIcon extends BaseIcon {
   render() {
     return html`

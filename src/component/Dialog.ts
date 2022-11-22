@@ -7,7 +7,7 @@ import { CloseableElement } from './base/CloseableElement';
 
 import './Backdrop';
 
-@customElement('ui-dialog')
+@customElement('uigc-dialog')
 export class Dialog extends CloseableElement {
   @property({ type: Boolean }) open = true;
 
@@ -55,9 +55,9 @@ export class Dialog extends CloseableElement {
     return html`
       <div class="dialog-root">
         <slot></slot>
-        ${when(this.timeout, () => html` <ui-progress .duration=${this.timeout}></ui-progress> `)}
+        ${when(this.timeout, () => html` <uigc-ui-progress .duration=${this.timeout}></uigc-ui-progress> `)}
       </div>
-      <ui-backdrop active></ui-backdrop>
+      <uigc-ui-backdrop active></uigc-ui-backdrop>
     `;
   }
 }

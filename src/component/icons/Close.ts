@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-close')
+@customElement('uigc-icon-close')
 export class CloseIcon extends BaseIcon {
   render() {
     return html`

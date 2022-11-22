@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseLogo } from './BaseLogo';
 
-@customElement('logo-bsx')
+@customElement('uigc-logo-bsx')
 export class BasiliskLogo extends BaseLogo {
   render() {
     return html`

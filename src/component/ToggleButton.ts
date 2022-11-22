@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-toggle-button')
+@customElement('uigc-toggle-button')
 export class ToggleButton extends UIGCElement {
   @property({ type: String }) value = null;
 

@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-icon-button')
+@customElement('uigc-icon-button')
 export class IconButton extends UIGCElement {
   static styles = [
     UIGCElement.styles,

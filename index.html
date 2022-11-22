@@ -8,10 +8,6 @@
     <meta name="description" content="Galactic UI Kit" />
     <base href="/" />
     <style>
-      :root {
-        --rgb-primary-100: 218, 255, 238;
-      }
-
       .bsx {
         --gradient-background: radial-gradient(
             89.2% 89.2% at 50.07% 87.94%,
@@ -19,6 +15,10 @@
             rgb(38, 47, 49) 88.52%
           ),
           rgb(44, 51, 53);
+      }
+
+      .hdx {
+        --gradient-background: linear-gradient(180deg, #00579f 0%, #023b6a 25%, #060917 100%);
       }
     </style>
     <style>
@@ -30,17 +30,17 @@
   <body class="bsx">
     <api-viewer src="./assets/custom-elements.json">
       <!-- Alert -->
-      <template data-element="ui-alert" data-target="host">
-        <ui-alert variant="success">This is alert message</ui-alert>
+      <template data-element="uigc-alert" data-target="host">
+        <uigc-alert variant="success">This is alert message</uigc-alert>
       </template>
-      <template data-element="ui-alert" data-target="knob" data-attr="variant" data-type="select">
+      <template data-element="uigc-alert" data-target="knob" data-attr="variant" data-type="select">
         <select>
           <option value="success"></option>
           <option value="error"></option>
           <option value="progress"></option>
         </select>
       </template>
-      <template data-element="ui-alert" data-target="suffix">
+      <template data-element="uigc-alert" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--gradient-background);
@@ -53,10 +53,10 @@
       </template>
 
       <!-- Asset -->
-      <template data-element="ui-asset" data-target="host">
-        <ui-asset asset="KSM"></ui-asset>
+      <template data-element="uigc-asset" data-target="host">
+        <uigc-asset asset="KSM"></uigc-asset>
       </template>
-      <template data-element="ui-asset" data-target="suffix">
+      <template data-element="uigc-asset" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--gradient-background);
@@ -69,19 +69,19 @@
       </template>
 
       <!-- AssetInput -->
-      <template data-element="ui-asset-input" data-target="host">
-        <ui-asset-input id="assetOut" asset="BSX" amount="1000"></ui-asset-input>
+      <template data-element="uigc-asset-input" data-target="host">
+        <uigc-asset-input id="assetOut" asset="BSX" amount="1000"></uigc-asset-input>
       </template>
-      <template data-element="ui-asset-input" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-asset-input" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-asset-input" data-target="suffix">
+      <template data-element="uigc-asset-input" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             height: 100px;
           }
-          ui-asset-input {
+          uigc-asset-input {
             display: block;
             border-radius: 12px;
             box-sizing: border-box;
@@ -98,24 +98,24 @@
       </template>
 
       <!-- AssetList -->
-      <template data-element="ui-asset-list" data-target="slot">
-        <ui-asset-list-item
+      <template data-element="uigc-asset-list" data-target="slot">
+        <uigc-asset-list-item
           slot="selected"
           selected
           asset='{"id":"0","symbol":"BSX"}'
           balance="1500"
-        ></ui-asset-list-item>
-        <ui-asset-list-item asset='{"id":"1","symbol":"KSM"}' balance="3500"></ui-asset-list-item>
-        <ui-asset-list-item
+        ></uigc-asset-list-item>
+        <uigc-asset-list-item asset='{"id":"1","symbol":"KSM"}' balance="3500"></uigc-asset-list-item>
+        <uigc-asset-list-item
           slot="disabled"
           disabled
           asset='{"id":"2","symbol":"TNKR"}'
           balance="3500"
-        ></ui-asset-list-item>
+        ></uigc-asset-list-item>
       </template>
-      <template data-element="ui-asset-list" data-target="suffix">
+      <template data-element="uigc-asset-list" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             display: block;
           }
@@ -128,17 +128,17 @@
           }
         </style>
       </template>
-      <template data-element="ui-asset-list" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-asset-list" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
 
       <!-- AssetListItem -->
-      <template data-element="ui-asset-list-item" data-target="host">
-        <ui-asset-list-item asset='{"id":"0","symbol":"BSX"}' balance="1500"></ui-asset-list-item>
+      <template data-element="uigc-asset-list-item" data-target="host">
+        <uigc-asset-list-item asset='{"id":"0","symbol":"BSX"}' balance="1500"></uigc-asset-list-item>
       </template>
-      <template data-element="ui-asset-list-item" data-target="suffix">
+      <template data-element="uigc-asset-list-item" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             display: block;
             border-radius: 0;
@@ -152,17 +152,17 @@
           }
         </style>
       </template>
-      <template data-element="ui-asset-list-item" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-asset-list-item" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
 
       <!-- AssetPrice -->
-      <template data-element="ui-asset-price" data-target="host">
-        <ui-asset-price inputAsset="BSX" outputAsset="KSM" outputBalance="10000000"></ui-asset-price>
+      <template data-element="uigc-asset-price" data-target="host">
+        <uigc-asset-price inputAsset="BSX" outputAsset="KSM" outputBalance="10000000"></uigc-asset-price>
       </template>
-      <template data-element="ui-asset-price" data-target="suffix">
+      <template data-element="uigc-asset-price" data-target="suffix">
         <style>
-          ui-asset-price {
+          uigc-asset-price {
             border-radius: 7px;
             background: rgb(35, 40, 43);
           }
@@ -177,10 +177,10 @@
       </template>
 
       <!-- AssetSelector-->
-      <template data-element="ui-asset-selector" data-target="host">
-        <ui-asset-selector id="1" asset="KSM"></ui-asset-selector>
+      <template data-element="uigc-asset-selector" data-target="host">
+        <uigc-asset-selector id="1" asset="KSM"></uigc-asset-selector>
       </template>
-      <template data-element="ui-asset-selector" data-target="suffix">
+      <template data-element="uigc-asset-selector" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--gradient-background);
@@ -193,15 +193,15 @@
       </template>
 
       <!-- AssetSwitch -->
-      <template data-element="ui-asset-switch" data-target="host">
-        <ui-asset-switch></ui-asset-switch>
+      <template data-element="uigc-asset-switch" data-target="host">
+        <uigc-asset-switch></uigc-asset-switch>
       </template>
-      <template data-element="ui-asset-switch" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-asset-switch" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-asset-switch" data-target="suffix">
+      <template data-element="uigc-asset-switch" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             padding: 20px;
           }
@@ -216,12 +216,12 @@
       </template>
 
       <!-- AssetTransfer -->
-      <template data-element="ui-asset-transfer" data-target="host">
-        <ui-asset-transfer id="assetOut" title="You get" asset="BSX" amount="1000" balance="50000"></ui-asset-transfer>
+      <template data-element="uigc-asset-transfer" data-target="host">
+        <uigc-asset-transfer id="assetOut" title="You get" asset="BSX" amount="1000" balance="50000"></uigc-asset-transfer>
       </template>
-      <template data-element="ui-asset-transfer" data-target="suffix">
+      <template data-element="uigc-asset-transfer" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             border-radius: 12px;
             width: 450px;
             display: block;
@@ -235,15 +235,15 @@
           }
         </style>
       </template>
-      <template data-element="ui-asset-transfer" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-asset-transfer" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
 
       <!-- BusyIndicator -->
-      <template data-element="ui-busy-indicator" data-target="host">
-        <ui-busy-indicator></ui-busy-indicator>
+      <template data-element="uigc-busy-indicator" data-target="host">
+        <uigc-busy-indicator></uigc-busy-indicator>
       </template>
-      <template data-element="ui-busy-indicator" data-target="suffix">
+      <template data-element="uigc-busy-indicator" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--gradient-background);
@@ -256,24 +256,24 @@
       </template>
 
       <!-- Button -->
-      <template data-element="ui-button" data-target="host">
-        <ui-button variant="primary">Primary</ui-button>
+      <template data-element="uigc-button" data-target="host">
+        <uigc-button variant="primary">Primary</uigc-button>
       </template>
-      <template data-element="ui-button" data-target="knob" data-attr="variant" data-type="select">
+      <template data-element="uigc-button" data-target="knob" data-attr="variant" data-type="select">
         <select>
           <option value="primary"></option>
           <option value="secondary"></option>
           <option value="max"></option>
         </select>
       </template>
-      <template data-element="ui-button" data-target="knob" data-attr="size" data-type="select">
+      <template data-element="uigc-button" data-target="knob" data-attr="size" data-type="select">
         <select>
           <option value="small"></option>
           <option value="medium"></option>
           <option value="micro"></option>
         </select>
       </template>
-      <template data-element="ui-button" data-target="suffix">
+      <template data-element="uigc-button" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--gradient-background);
@@ -286,12 +286,12 @@
       </template>
 
       <!-- CircularProgress -->
-      <template data-element="ui-circular-progress" data-target="host">
-        <ui-circular-progress></ui-circular-progress>
+      <template data-element="uigc-circular-progress" data-target="host">
+        <uigc-circular-progress></uigc-circular-progress>
       </template>
-      <template data-element="ui-circular-progress" data-target="suffix">
+      <template data-element="uigc-circular-progress" data-target="suffix">
         <style>
-          ui-circular-progress {
+          uigc-circular-progress {
             width: 50px;
             height: 50px;
           }
@@ -306,10 +306,10 @@
       </template>
 
       <!-- Dialog -->
-      <template data-element="ui-dialog" data-target="host">
-        <ui-dialog open></ui-dialog>
+      <template data-element="uigc-dialog" data-target="host">
+        <uigc-dialog open></uigc-dialog>
       </template>
-      <template data-element="ui-dialog" data-target="suffix">
+      <template data-element="uigc-dialog" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--gradient-background);
@@ -322,12 +322,12 @@
       </template>
 
       <!-- Divider -->
-      <template data-element="ui-divider" data-target="host">
-        <ui-divider></ui-divider>
+      <template data-element="uigc-divider" data-target="host">
+        <uigc-divider></uigc-divider>
       </template>
-      <template data-element="ui-divider" data-target="suffix">
+      <template data-element="uigc-divider" data-target="suffix">
         <style>
-          ui-divider {
+          uigc-divider {
             width: 500px;
           }
           [part='demo-output'] {
@@ -341,10 +341,10 @@
       </template>
 
       <!-- Drawer -->
-      <template data-element="ui-drawer" data-target="host">
-        <ui-drawer open></ui-drawer>
+      <template data-element="uigc-drawer" data-target="host">
+        <uigc-drawer open></uigc-drawer>
       </template>
-      <template data-element="ui-drawer" data-target="suffix">
+      <template data-element="uigc-drawer" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--gradient-background);
@@ -357,17 +357,17 @@
       </template>
 
       <!-- IconButton -->
-      <template data-element="ui-icon-button" data-target="host">
-        <ui-icon-button><icon-settings></icon-settings> </ui-icon-button>
+      <template data-element="uigc-icon-button" data-target="host">
+        <uigc-icon-button><icon-settings></icon-settings> </uigc-icon-button>
       </template>
-      <template data-element="ui-icon-button" data-target="knob" data-attr="size" data-type="select">
+      <template data-element="uigc-icon-button" data-target="knob" data-attr="size" data-type="select">
         <select>
           <option value="small"></option>
           <option value="medium"></option>
           <option value="large"></option>
         </select>
       </template>
-      <template data-element="ui-icon-button" data-target="suffix">
+      <template data-element="uigc-icon-button" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--gradient-background);
@@ -380,19 +380,19 @@
       </template>
 
       <!-- Input -->
-      <template data-element="ui-input" data-target="host">
-        <ui-input type="number" defaultValue="20" min="0" max="100" step="0.1" placeholder="Custom"></ui-input>
+      <template data-element="uigc-input" data-target="host">
+        <uigc-input type="number" defaultValue="20" min="0" max="100" step="0.1" placeholder="Custom"></uigc-input>
       </template>
-      <template data-element="ui-input" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-input" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-input" data-target="suffix">
+      <template data-element="uigc-input" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             padding: 20px;
           }
-          ui-asset-input {
+          uigc-asset-input {
             display: block;
             border-radius: 12px;
             box-sizing: border-box;
@@ -409,12 +409,12 @@
       </template>
 
       <!-- Paper -->
-      <template data-element="ui-paper" data-target="host">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-paper" data-target="host">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-paper" data-target="suffix">
+      <template data-element="uigc-paper" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 100px;
             height: 100px;
           }
@@ -429,15 +429,15 @@
       </template>
 
       <!-- Progress -->
-      <template data-element="ui-progress" data-target="host">
-        <ui-progress duration="90000"></ui-progress>
+      <template data-element="uigc-progress" data-target="host">
+        <uigc-progress duration="90000"></uigc-progress>
       </template>
-      <template data-element="ui-progress" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-progress" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-progress" data-target="suffix">
+      <template data-element="uigc-progress" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             padding: 20px;
           }
@@ -452,15 +452,15 @@
       </template>
 
       <!-- SearchBar -->
-      <template data-element="ui-search-bar" data-target="host">
-        <ui-search-bar placeholder="Search by"></ui-search-bar>
+      <template data-element="uigc-search-bar" data-target="host">
+        <uigc-search-bar placeholder="Search by"></uigc-search-bar>
       </template>
-      <template data-element="ui-search-bar" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-search-bar" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-search-bar" data-target="suffix">
+      <template data-element="uigc-search-bar" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             padding: 20px;
           }
@@ -475,15 +475,15 @@
       </template>
 
       <!-- Skeleton -->
-      <template data-element="ui-skeleton" data-target="host">
-        <ui-skeleton progress width="100%" height="15px"></ui-skeleton>
+      <template data-element="uigc-skeleton" data-target="host">
+        <uigc-skeleton progress width="100%" height="15px"></uigc-skeleton>
       </template>
-      <template data-element="ui-skeleton" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-skeleton" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-skeleton" data-target="suffix">
+      <template data-element="uigc-skeleton" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             padding: 20px;
           }
@@ -498,21 +498,21 @@
       </template>
 
       <!-- Switch -->
-      <template data-element="ui-switch" data-target="host">
-        <ui-switch></ui-switch>
+      <template data-element="uigc-switch" data-target="host">
+        <uigc-switch></uigc-switch>
       </template>
-      <template data-element="ui-switch" data-target="knob" data-attr="size" data-type="select">
+      <template data-element="uigc-switch" data-target="knob" data-attr="size" data-type="select">
         <select>
           <option value="small"></option>
           <option value="medium"></option>
         </select>
       </template>
-      <template data-element="ui-switch" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-switch" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-switch" data-target="suffix">
+      <template data-element="uigc-switch" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             padding: 20px;
           }
@@ -527,12 +527,12 @@
       </template>
 
       <!-- Toast -->
-      <template data-element="ui-toast" data-target="host">
-        <ui-toast open id="1" timeout="40000"></ui-toast>
+      <template data-element="uigc-toast" data-target="host">
+        <uigc-toast open id="1" timeout="40000"></uigc-toast>
       </template>
-      <template data-element="ui-toast" data-target="suffix">
+      <template data-element="uigc-toast" data-target="suffix">
         <style>
-          ui-toast {
+          uigc-toast {
             width: 250px;
           }
           [part='demo-output'] {
@@ -546,15 +546,15 @@
       </template>
 
       <!-- ToggleButton -->
-      <template data-element="ui-toggle-button" data-target="host">
-        <ui-toggle-button value="10">10%</ui-toggle-button>
+      <template data-element="uigc-toggle-button" data-target="host">
+        <uigc-toggle-button value="10">10%</uigc-toggle-button>
       </template>
-      <template data-element="ui-toggle-button" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-toggle-button" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-toggle-button" data-target="suffix">
+      <template data-element="uigc-toggle-button" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             padding: 20px;
           }
@@ -569,20 +569,20 @@
       </template>
 
       <!-- ToggleButtonGroup -->
-      <template data-element="ui-toggle-button-group" data-target="host">
-        <ui-toggle-button-group selected="20"></ui-toggle-button-group>
+      <template data-element="uigc-toggle-button-group" data-target="host">
+        <uigc-toggle-button-group selected="20"></uigc-toggle-button-group>
       </template>
-      <template data-element="ui-toggle-button-group" selected="20" data-target="slot">
-        <ui-toggle-button value="10">10%</ui-toggle-button>
-        <ui-toggle-button value="20" selected>20%</ui-toggle-button>
-        <ui-toggle-button value="30">30%</ui-toggle-button>
+      <template data-element="uigc-toggle-button-group" selected="20" data-target="slot">
+        <uigc-toggle-button value="10">10%</uigc-toggle-button>
+        <uigc-toggle-button value="20" selected>20%</uigc-toggle-button>
+        <uigc-toggle-button value="30">30%</uigc-toggle-button>
       </template>
-      <template data-element="ui-toggle-button-group" data-target="wrapper">
-        <ui-paper></ui-paper>
+      <template data-element="uigc-toggle-button-group" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
-      <template data-element="ui-toggle-button-group" data-target="suffix">
+      <template data-element="uigc-toggle-button-group" data-target="suffix">
         <style>
-          ui-paper {
+          uigc-paper {
             width: 400px;
             padding: 20px;
           }

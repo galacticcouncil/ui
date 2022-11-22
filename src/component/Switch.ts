@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-switch')
+@customElement('uigc-switch')
 export class Switch extends UIGCElement {
   @property({ type: String }) value = null;
 

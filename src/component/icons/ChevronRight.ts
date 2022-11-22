@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-chevron-right')
+@customElement('uigc-icon-chevron-right')
 export class ChevronRightIcon extends BaseIcon {
   render() {
     return html`

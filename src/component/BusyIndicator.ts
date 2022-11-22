@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-busy-indicator')
+@customElement('uigc-busy-indicator')
 export class BusyIndicator extends UIGCElement {
   static styles = [
     UIGCElement.styles,

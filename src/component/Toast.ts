@@ -8,7 +8,7 @@ import { CloseableElement } from './base/CloseableElement';
 import './Progress';
 import './icons/Close';
 
-@customElement('ui-toast')
+@customElement('uigc-toast')
 export class Toast extends CloseableElement {
   static styles = [
     UIGCElement.styles,
@@ -111,10 +111,10 @@ export class Toast extends CloseableElement {
           <slot name="alert"></slot>
           <slot></slot>
         </div>
-        ${when(this.timeout, () => html` <ui-progress .duration=${this.timeout}></ui-progress> `)}
+        ${when(this.timeout, () => html` <uigc-ui-progress .duration=${this.timeout}></uigc-ui-progress> `)}
       </div>
       <button class="close" @click=${this.onClose}>
-        <icon-close></icon-close>
+        <uigc-icon-close></uigc-icon-close>
       </button>
     `;
   }

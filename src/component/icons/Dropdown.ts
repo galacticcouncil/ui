@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-dropdown')
+@customElement('uigc-icon-dropdown')
 export class DropdownIcon extends BaseIcon {
   render() {
     return html`

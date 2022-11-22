@@ -15,7 +15,7 @@ import { AssetType, AssetTypes } from './types/AssetType';
 
 const KNOWN_ASSETS = AssetType.getMap(AssetTypes);
 
-@customElement('ui-asset')
+@customElement('uigc-asset')
 export class Asset extends UIGCElement {
   @property({ type: String }) asset = null;
 
@@ -68,13 +68,13 @@ export class Asset extends UIGCElement {
     return html` ${choose(
         this.asset,
         [
-          ['aUSD', () => html`<logo-ausd class="logo" fit></logo-ausd>`],
-          ['BSX', () => html`<logo-bsx class="logo" fit></logo-bsx>`],
-          ['KSM', () => html`<logo-ksm class="logo" fit></logo-ksm>`],
-          ['PHA', () => html`<logo-pha class="logo" fit></logo-pha>`],
-          ['TNKR', () => html`<logo-tnkr class="logo" fit></logo-tnkr>`],
+          ['aUSD', () => html`<uigc-logo-ausd class="logo" fit></uigc-logo-ausd>`],
+          ['BSX', () => html`<uigc-logo-bsx class="logo" fit></uigc-logo-bsx>`],
+          ['KSM', () => html`<uigc-logo-ksm class="logo" fit></uigc-logo-ksm>`],
+          ['PHA', () => html`<uigc-logo-pha class="logo" fit></uigc-logo-pha>`],
+          ['TNKR', () => html`<uigc-logo-tnkr class="logo" fit></uigc-logo-tnkr>`],
         ],
-        () => html`<logo-unknown class="logo" fit></logo-unknown>`
+        () => html`<uigc-logo-unknown class="logo" fit></uigc-logo-unknown>`
       )}
       <span class="title">
         <span class="code">${this.asset}</span>

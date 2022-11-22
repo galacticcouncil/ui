@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseLogo } from './BaseLogo';
 
-@customElement('logo-pha')
+@customElement('uigc-logo-pha')
 export class PhalaLogo extends BaseLogo {
   render() {
     return html`

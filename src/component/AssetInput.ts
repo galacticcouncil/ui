@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { UIGCElement } from './base/UIGCElement';
 import { debounce } from 'ts-debounce';
 
-@customElement('ui-asset-input')
+@customElement('uigc-asset-input')
 export class AssetInput extends UIGCElement {
   @property({ type: String }) id = null;
   @property({ type: String }) amount = null;

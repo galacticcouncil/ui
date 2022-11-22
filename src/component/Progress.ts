@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-progress')
+@customElement('uigc-progress')
 export class Progress extends UIGCElement {
   @property({ type: Number }) duration = null;
 

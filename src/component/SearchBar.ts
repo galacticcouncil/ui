@@ -5,7 +5,7 @@ import { UIGCElement } from './base/UIGCElement';
 
 import './icons/Magnifier';
 
-@customElement('ui-search-bar')
+@customElement('uigc-search-bar')
 export class SearchBar extends UIGCElement {
   @property({ type: String }) value = null;
   @property({ type: String }) placeholder = null;
@@ -60,7 +60,7 @@ export class SearchBar extends UIGCElement {
         box-sizing: border-box;
       }
 
-      .search-root > icon-magnifier {
+      .search-root > uigc-icon-magnifier {
         margin-right: 8px;
         width: 22px;
       }
@@ -93,7 +93,7 @@ export class SearchBar extends UIGCElement {
   render() {
     return html`
       <div class="search-root">
-        <icon-magnifier></icon-magnifier>
+        <uigc-icon-magnifier></uigc-icon-magnifier>
         <input type="text" .value="${this.value}" @input=${this.onInputChange} />
       </div>
     `;

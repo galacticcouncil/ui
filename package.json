@@ -2,22 +2,22 @@
   "name": "@galacticcouncil/ui",
   "version": "1.0.0",
   "private": false,
-  "description": "Galactic Council UI Kit",
+  "description": "Galactic UI Kit",
   "author": "Pavol Noha <pavol.noha@gmail.com>",
   "type": "module",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "analyze": "npx custom-elements-manifest analyze --litelement --exclude 'out/app.js' --outdir assets",
-    "analyze:watch": "npx custom-elements-manifest analyze --watch --litelement --exclude 'out/app.js' --outdir assets",
+    "cem": "npx custom-elements-manifest analyze --litelement --exclude 'out/app.js' --outdir assets",
+    "cem:watch": "npx custom-elements-manifest analyze --watch --litelement --exclude 'out/app.js' --outdir assets",
     "build": "node ./esbuild.prod.mjs && tsc --emitDeclarationOnly --outDir dist/types/",
     "build:watch": "ESBUILD_WATCH=true node ./esbuild.dev.mjs",
     "build:prod": "node ./esbuild.prod.mjs && tsc --emitDeclarationOnly --outDir dist/types/",
     "serve": "wds --node-resolve --watch --app-index index.html --open",
     "cleanup": "rimraf out && rimraf dist",
-    "dev": "rimraf out & npm run analyze:watch & npm run build:watch & npm run serve",
+    "dev": "rimraf out & npm run cem:watch & npm run build:watch & npm run serve",
     "copy:assets": "cp -R ./assets/ ./dist/assets/ && cp ./dist/index.html ./dist/404.html",
-    "package:prod": "rimraf dist && npm run analyze && npm run build:prod && npm run copy:assets"
+    "package:prod": "rimraf dist && npm run cem && npm run build:prod && npm run copy:assets"
   },
   "devDependencies": {
     "@craftamap/esbuild-plugin-html": "^0.4.0",

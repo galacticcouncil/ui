@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-success')
+@customElement('uigc-icon-success')
 export class SuccessIcon extends BaseIcon {
   render() {
     return html`

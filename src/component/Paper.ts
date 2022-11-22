@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-paper')
+@customElement('uigc-paper')
 export class Paper extends UIGCElement {
   static styles = [
     UIGCElement.styles,

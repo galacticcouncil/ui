@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseLogo } from './BaseLogo';
 
-@customElement('logo-ausd')
+@customElement('uigc-logo-ausd')
 export class AcalaLogo extends BaseLogo {
   render() {
     return html`

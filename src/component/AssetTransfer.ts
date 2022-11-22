@@ -6,7 +6,7 @@ import { UIGCElement } from './base/UIGCElement';
 import './AssetInput';
 import './AssetSelector';
 
-@customElement('ui-asset-transfer')
+@customElement('uigc-asset-transfer')
 export class AssetTransfer extends UIGCElement {
   @property({ type: String }) id = null;
   @property({ type: String }) title = null;
@@ -122,19 +122,19 @@ export class AssetTransfer extends UIGCElement {
       <div class="balance">
         <span class="label">Your balance: &nbsp</span>
         <span>${this.balance ? this.balance : '-'}</span>
-        <ui-button
+        <uigc-button
           class="max"
           variant="max"
           size="micro"
           capitalize
           ?disabled=${this.balance == null}
           @click=${this.onMaxClick}
-          >Max</ui-button
+          >Max</uigc-button
         >
       </div>
       <div class="asset">
-        <ui-asset-selector id=${this.id} .asset=${this.asset}></ui-asset-selector>
-        <ui-asset-input id=${this.id} .asset=${this.asset} .amount=${this.amount}></ui-asset-input>
+        <uigc-asset-selector id=${this.id} .asset=${this.asset}></uigc-asset-selector>
+        <uigc-asset-input id=${this.id} .asset=${this.asset} .amount=${this.amount}></uigc-asset-input>
       </div>
     `;
   }

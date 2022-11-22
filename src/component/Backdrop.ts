@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-backdrop')
+@customElement('uigc-backdrop')
 export class Backdrop extends UIGCElement {
   static styles = [
     UIGCElement.styles,

@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-circular-progress')
+@customElement('uigc-circular-progress')
 export class CircularProgress extends UIGCElement {
   static styles = css`
     :host {

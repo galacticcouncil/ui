@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-magnifier')
+@customElement('uigc-icon-magnifier')
 export class MagnifierIcon extends BaseIcon {
   render() {
     return html`

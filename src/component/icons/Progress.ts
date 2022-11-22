@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-progress')
+@customElement('uigc-icon-progress')
 export class ProgressIcon extends BaseIcon {
   static styles = [
     css`

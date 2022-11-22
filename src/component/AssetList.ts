@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-asset-list')
+@customElement('uigc-asset-list')
 export class AssetList extends UIGCElement {
   static styles = [
     UIGCElement.styles,

@@ -15,7 +15,7 @@ const KNOWN_ASSETS = new Map(
   })
 );
 
-@customElement('ui-asset-selector')
+@customElement('uigc-asset-selector')
 export class AssetSelector extends UIGCElement {
   @property({ type: String }) id = null;
   @property({ type: String }) asset = null;
@@ -58,7 +58,7 @@ export class AssetSelector extends UIGCElement {
         white-space: nowrap;
       }
 
-      .select icon-dropdown {
+      .select uigc-icon-dropdown {
         margin-top: 3px;
       }
     `,
@@ -77,12 +77,12 @@ export class AssetSelector extends UIGCElement {
     return html` <button @click=${this.onSelectorClick}>
       ${when(
         this.asset,
-        () => html` <ui-asset .asset=${this.asset}>
-          <icon-dropdown></icon-dropdown>
-        </ui-asset>`,
+        () => html` <uigc-asset .asset=${this.asset}>
+          <uigc-icon-dropdown></uigc-icon-dropdown>
+        </uigc-asset>`,
         () => html` <span class="select">
           <span> Select asset </span>
-          <icon-dropdown></icon-dropdown>
+          <uigc-icon-dropdown></uigc-icon-dropdown>
         </span>`
       )}
     </button>`;

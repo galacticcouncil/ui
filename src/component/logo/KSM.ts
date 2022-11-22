@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseLogo } from './BaseLogo';
 
-@customElement('logo-ksm')
+@customElement('uigc-logo-ksm')
 export class KusamaLogo extends BaseLogo {
   render() {
     return html`

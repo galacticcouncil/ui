@@ -25,7 +25,7 @@ const common = {
   target: 'esnext',
 };
 
-// Website bundle
+// Website API bundle
 esbuild.build({
   ...common,
   entryPoints: ['src/app.ts'],

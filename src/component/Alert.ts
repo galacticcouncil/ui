@@ -18,7 +18,7 @@ export enum AlertVariant {
 
 const VARIANTS: AlertVariant[] = [AlertVariant.success, AlertVariant.error, AlertVariant.progress];
 
-@customElement('ui-alert')
+@customElement('uigc-alert')
 export class Alert extends UIGCElement {
   static styles = [
     UIGCElement.styles,
@@ -36,7 +36,7 @@ export class Alert extends UIGCElement {
         margin-right: 12px;
       }
 
-      ui-circular-progress {
+      uigc-circular-progress {
         width: 31px;
         height: 28px;
       }
@@ -90,11 +90,11 @@ export class Alert extends UIGCElement {
         this.variant != AlertVariant.default,
         () => html`
           ${choose(this.variant, [
-            [AlertVariant.success, () => html`<icon-success class="icon"></icon-success>`],
-            [AlertVariant.error, () => html`<icon-error class="icon"></icon-error>`],
+            [AlertVariant.success, () => html`<uigc-icon-success class="icon"></uigc-icon-success>`],
+            [AlertVariant.error, () => html`<uigc-icon-error class="icon"></uigc-icon-error>`],
             [
               AlertVariant.progress,
-              () => html`<ui-circular-progress size="medium" class="icon"></ui-circular-progress>`,
+              () => html`<uigc-circular-progress size="medium" class="icon"></uigc-circular-progress>`,
             ],
           ])}
         `

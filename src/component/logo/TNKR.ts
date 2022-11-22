@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseLogo } from './BaseLogo';
 
-@customElement('logo-tnkr')
+@customElement('uigc-logo-tnkr')
 export class TinkernetLogo extends BaseLogo {
   render() {
     return html`

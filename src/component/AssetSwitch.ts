@@ -5,7 +5,7 @@ import { UIGCElement } from './base/UIGCElement';
 
 import './icons/Switch';
 
-@customElement('ui-asset-switch')
+@customElement('uigc-asset-switch')
 export class AssetSwitch extends UIGCElement {
   static styles = [
     UIGCElement.styles,
@@ -37,7 +37,7 @@ export class AssetSwitch extends UIGCElement {
   render() {
     return html`
       <div class="switch-root" @click=${this.onSwitchClick}>
-        <icon-switch></icon-switch>
+        <uigc-icon-switch></uigc-icon-switch>
       </div>
     `;
   }

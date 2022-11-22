@@ -2,7 +2,7 @@ import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-switch')
+@customElement('uigc-icon-switch')
 export class SwitchIcon extends BaseIcon {
   render() {
     return html`

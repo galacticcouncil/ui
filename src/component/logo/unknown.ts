@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseLogo } from './BaseLogo';
 
-@customElement('logo-unknown')
+@customElement('uigc-logo-unknown')
 export class UnknownLogo extends BaseLogo {
   render() {
     return html`

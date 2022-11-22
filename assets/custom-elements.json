@@ -385,7 +385,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-alert",
+          "tagName": "uigc-alert",
           "customElement": true
         }
       ],
@@ -400,7 +400,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-alert",
+          "name": "uigc-alert",
           "declaration": {
             "name": "Alert",
             "module": "src/component/Alert.ts"
@@ -457,7 +457,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-asset",
+          "tagName": "uigc-asset",
           "customElement": true
         }
       ],
@@ -472,7 +472,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-asset",
+          "name": "uigc-asset",
           "declaration": {
             "name": "Asset",
             "module": "src/component/Asset.ts"
@@ -625,7 +625,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-asset-input",
+          "tagName": "uigc-asset-input",
           "customElement": true
         }
       ],
@@ -640,7 +640,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-asset-input",
+          "name": "uigc-asset-input",
           "declaration": {
             "name": "AssetInput",
             "module": "src/component/AssetInput.ts"
@@ -678,7 +678,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-asset-list",
+          "tagName": "uigc-asset-list",
           "customElement": true
         }
       ],
@@ -693,7 +693,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-asset-list",
+          "name": "uigc-asset-list",
           "declaration": {
             "name": "AssetList",
             "module": "src/component/AssetList.ts"
@@ -804,7 +804,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-asset-list-item",
+          "tagName": "uigc-asset-list-item",
           "customElement": true
         }
       ],
@@ -819,7 +819,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-asset-list-item",
+          "name": "uigc-asset-list-item",
           "declaration": {
             "name": "AssetListItem",
             "module": "src/component/AssetListItem.ts"
@@ -927,7 +927,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-asset-price",
+          "tagName": "uigc-asset-price",
           "customElement": true
         }
       ],
@@ -942,7 +942,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-asset-price",
+          "name": "uigc-asset-price",
           "declaration": {
             "name": "AssetPrice",
             "module": "src/component/AssetPrice.ts"
@@ -1036,7 +1036,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-asset-selector",
+          "tagName": "uigc-asset-selector",
           "customElement": true
         }
       ],
@@ -1051,7 +1051,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-asset-selector",
+          "name": "uigc-asset-selector",
           "declaration": {
             "name": "AssetSelector",
             "module": "src/component/AssetSelector.ts"
@@ -1109,7 +1109,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-asset-switch",
+          "tagName": "uigc-asset-switch",
           "customElement": true
         }
       ],
@@ -1124,7 +1124,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-asset-switch",
+          "name": "uigc-asset-switch",
           "declaration": {
             "name": "AssetSwitch",
             "module": "src/component/AssetSwitch.ts"
@@ -1269,7 +1269,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-asset-transfer",
+          "tagName": "uigc-asset-transfer",
           "customElement": true
         }
       ],
@@ -1284,7 +1284,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-asset-transfer",
+          "name": "uigc-asset-transfer",
           "declaration": {
             "name": "AssetTransfer",
             "module": "src/component/AssetTransfer.ts"
@@ -1322,7 +1322,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-backdrop",
+          "tagName": "uigc-backdrop",
           "customElement": true
         }
       ],
@@ -1337,7 +1337,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-backdrop",
+          "name": "uigc-backdrop",
           "declaration": {
             "name": "Backdrop",
             "module": "src/component/Backdrop.ts"
@@ -1375,7 +1375,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-busy-indicator",
+          "tagName": "uigc-busy-indicator",
           "customElement": true
         }
       ],
@@ -1390,7 +1390,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-busy-indicator",
+          "name": "uigc-busy-indicator",
           "declaration": {
             "name": "BusyIndicator",
             "module": "src/component/BusyIndicator.ts"
@@ -1428,7 +1428,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-button",
+          "tagName": "uigc-button",
           "customElement": true
         }
       ],
@@ -1443,7 +1443,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-button",
+          "name": "uigc-button",
           "declaration": {
             "name": "Button",
             "module": "src/component/Button.ts"
@@ -1481,7 +1481,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-circular-progress",
+          "tagName": "uigc-circular-progress",
           "customElement": true
         }
       ],
@@ -1496,7 +1496,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-circular-progress",
+          "name": "uigc-circular-progress",
           "declaration": {
             "name": "CircularProgress",
             "module": "src/component/CircularProgress.ts"
@@ -1747,7 +1747,7 @@
             "name": "CloseableElement",
             "module": "/src/component/base/CloseableElement"
           },
-          "tagName": "ui-dialog",
+          "tagName": "uigc-dialog",
           "customElement": true,
           "events": [
             {
@@ -1774,7 +1774,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-dialog",
+          "name": "uigc-dialog",
           "declaration": {
             "name": "Dialog",
             "module": "src/component/Dialog.ts"
@@ -1812,7 +1812,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-divider",
+          "tagName": "uigc-divider",
           "customElement": true
         }
       ],
@@ -1827,7 +1827,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-divider",
+          "name": "uigc-divider",
           "declaration": {
             "name": "Divider",
             "module": "src/component/Divider.ts"
@@ -1913,7 +1913,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-drawer",
+          "tagName": "uigc-drawer",
           "customElement": true
         }
       ],
@@ -1928,7 +1928,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-drawer",
+          "name": "uigc-drawer",
           "declaration": {
             "name": "Drawer",
             "module": "src/component/Drawer.ts"
@@ -1966,7 +1966,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-icon-button",
+          "tagName": "uigc-icon-button",
           "customElement": true
         }
       ],
@@ -1981,7 +1981,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-icon-button",
+          "name": "uigc-icon-button",
           "declaration": {
             "name": "IconButton",
             "module": "src/component/IconButton.ts"
@@ -2143,7 +2143,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-input",
+          "tagName": "uigc-input",
           "customElement": true
         }
       ],
@@ -2158,7 +2158,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-input",
+          "name": "uigc-input",
           "declaration": {
             "name": "Input",
             "module": "src/component/Input.ts"
@@ -2196,7 +2196,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-paper",
+          "tagName": "uigc-paper",
           "customElement": true
         }
       ],
@@ -2211,7 +2211,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-paper",
+          "name": "uigc-paper",
           "declaration": {
             "name": "Paper",
             "module": "src/component/Paper.ts"
@@ -2268,7 +2268,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-progress",
+          "tagName": "uigc-progress",
           "customElement": true
         }
       ],
@@ -2283,7 +2283,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-progress",
+          "name": "uigc-progress",
           "declaration": {
             "name": "Progress",
             "module": "src/component/Progress.ts"
@@ -2377,7 +2377,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-search-bar",
+          "tagName": "uigc-search-bar",
           "customElement": true
         }
       ],
@@ -2392,7 +2392,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-search-bar",
+          "name": "uigc-search-bar",
           "declaration": {
             "name": "SearchBar",
             "module": "src/component/SearchBar.ts"
@@ -2466,7 +2466,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-skeleton",
+          "tagName": "uigc-skeleton",
           "customElement": true
         }
       ],
@@ -2481,7 +2481,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-skeleton",
+          "name": "uigc-skeleton",
           "declaration": {
             "name": "Skeleton",
             "module": "src/component/Skeleton.ts"
@@ -2538,7 +2538,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-switch",
+          "tagName": "uigc-switch",
           "customElement": true
         }
       ],
@@ -2553,7 +2553,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-switch",
+          "name": "uigc-switch",
           "declaration": {
             "name": "Switch",
             "module": "src/component/Switch.ts"
@@ -2795,7 +2795,7 @@
             "name": "CloseableElement",
             "module": "/src/component/base/CloseableElement"
           },
-          "tagName": "ui-toast",
+          "tagName": "uigc-toast",
           "customElement": true,
           "attributes": [
             {
@@ -2849,7 +2849,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-toast",
+          "name": "uigc-toast",
           "declaration": {
             "name": "Toast",
             "module": "src/component/Toast.ts"
@@ -2926,7 +2926,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-toggle-button",
+          "tagName": "uigc-toggle-button",
           "customElement": true
         }
       ],
@@ -2941,7 +2941,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-toggle-button",
+          "name": "uigc-toggle-button",
           "declaration": {
             "name": "ToggleButton",
             "module": "src/component/ToggleButton.ts"
@@ -2998,7 +2998,7 @@
             "name": "UIGCElement",
             "module": "/src/component/base/UIGCElement"
           },
-          "tagName": "ui-toggle-button-group",
+          "tagName": "uigc-toggle-button-group",
           "customElement": true
         }
       ],
@@ -3013,7 +3013,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "ui-toggle-button-group",
+          "name": "uigc-toggle-button-group",
           "declaration": {
             "name": "ToggleButtonGroup",
             "module": "src/component/ToggleButtonGroup.ts"
@@ -3270,7 +3270,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-back",
+          "tagName": "uigc-icon-back",
           "customElement": true
         }
       ],
@@ -3285,7 +3285,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-back",
+          "name": "uigc-icon-back",
           "declaration": {
             "name": "BackIcon",
             "module": "src/component/icons/Back.ts"
@@ -3333,7 +3333,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-chevron-right",
+          "tagName": "uigc-icon-chevron-right",
           "customElement": true
         }
       ],
@@ -3348,7 +3348,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-chevron-right",
+          "name": "uigc-icon-chevron-right",
           "declaration": {
             "name": "ChevronRightIcon",
             "module": "src/component/icons/ChevronRight.ts"
@@ -3369,7 +3369,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-close",
+          "tagName": "uigc-icon-close",
           "customElement": true
         }
       ],
@@ -3384,7 +3384,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-close",
+          "name": "uigc-icon-close",
           "declaration": {
             "name": "CloseIcon",
             "module": "src/component/icons/Close.ts"
@@ -3405,7 +3405,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-dropdown",
+          "tagName": "uigc-icon-dropdown",
           "customElement": true
         }
       ],
@@ -3420,7 +3420,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-dropdown",
+          "name": "uigc-icon-dropdown",
           "declaration": {
             "name": "DropdownIcon",
             "module": "src/component/icons/Dropdown.ts"
@@ -3441,7 +3441,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-error",
+          "tagName": "uigc-icon-error",
           "customElement": true
         }
       ],
@@ -3456,7 +3456,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-error",
+          "name": "uigc-icon-error",
           "declaration": {
             "name": "ErrorIcon",
             "module": "src/component/icons/Error.ts"
@@ -3477,7 +3477,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-magnifier",
+          "tagName": "uigc-icon-magnifier",
           "customElement": true
         }
       ],
@@ -3492,7 +3492,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-magnifier",
+          "name": "uigc-icon-magnifier",
           "declaration": {
             "name": "MagnifierIcon",
             "module": "src/component/icons/Magnifier.ts"
@@ -3513,7 +3513,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-progress",
+          "tagName": "uigc-icon-progress",
           "customElement": true
         }
       ],
@@ -3528,7 +3528,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-progress",
+          "name": "uigc-icon-progress",
           "declaration": {
             "name": "ProgressIcon",
             "module": "src/component/icons/Progress.ts"
@@ -3549,7 +3549,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-route",
+          "tagName": "uigc-icon-route",
           "customElement": true
         }
       ],
@@ -3564,7 +3564,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-route",
+          "name": "uigc-icon-route",
           "declaration": {
             "name": "RouteIcon",
             "module": "src/component/icons/Route.ts"
@@ -3585,7 +3585,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-settings",
+          "tagName": "uigc-icon-settings",
           "customElement": true
         }
       ],
@@ -3600,7 +3600,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-settings",
+          "name": "uigc-icon-settings",
           "declaration": {
             "name": "SettingsIcon",
             "module": "src/component/icons/Settings.ts"
@@ -3621,7 +3621,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-success",
+          "tagName": "uigc-icon-success",
           "customElement": true
         }
       ],
@@ -3636,7 +3636,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-success",
+          "name": "uigc-icon-success",
           "declaration": {
             "name": "SuccessIcon",
             "module": "src/component/icons/Success.ts"
@@ -3657,7 +3657,7 @@
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
           },
-          "tagName": "icon-switch",
+          "tagName": "uigc-icon-switch",
           "customElement": true
         }
       ],
@@ -3672,7 +3672,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "icon-switch",
+          "name": "uigc-icon-switch",
           "declaration": {
             "name": "SwitchIcon",
             "module": "src/component/icons/Switch.ts"
@@ -3693,7 +3693,7 @@
             "name": "BaseLogo",
             "module": "/src/component/logo/BaseLogo"
           },
-          "tagName": "logo-bsx",
+          "tagName": "uigc-logo-bsx",
           "customElement": true
         }
       ],
@@ -3708,7 +3708,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "logo-bsx",
+          "name": "uigc-logo-bsx",
           "declaration": {
             "name": "BasiliskLogo",
             "module": "src/component/logo/BSX.ts"
@@ -3756,7 +3756,7 @@
             "name": "BaseLogo",
             "module": "/src/component/logo/BaseLogo"
           },
-          "tagName": "logo-ksm",
+          "tagName": "uigc-logo-ksm",
           "customElement": true
         }
       ],
@@ -3771,7 +3771,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "logo-ksm",
+          "name": "uigc-logo-ksm",
           "declaration": {
             "name": "KusamaLogo",
             "module": "src/component/logo/KSM.ts"
@@ -3792,7 +3792,7 @@
             "name": "BaseLogo",
             "module": "/src/component/logo/BaseLogo"
           },
-          "tagName": "logo-pha",
+          "tagName": "uigc-logo-pha",
           "customElement": true
         }
       ],
@@ -3807,7 +3807,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "logo-pha",
+          "name": "uigc-logo-pha",
           "declaration": {
             "name": "PhalaLogo",
             "module": "src/component/logo/PHA.ts"
@@ -3828,7 +3828,7 @@
             "name": "BaseLogo",
             "module": "/src/component/logo/BaseLogo"
           },
-          "tagName": "logo-tnkr",
+          "tagName": "uigc-logo-tnkr",
           "customElement": true
         }
       ],
@@ -3843,7 +3843,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "logo-tnkr",
+          "name": "uigc-logo-tnkr",
           "declaration": {
             "name": "TinkernetLogo",
             "module": "src/component/logo/TNKR.ts"
@@ -3864,7 +3864,7 @@
             "name": "BaseLogo",
             "module": "/src/component/logo/BaseLogo"
           },
-          "tagName": "logo-ausd",
+          "tagName": "uigc-logo-ausd",
           "customElement": true
         }
       ],
@@ -3879,7 +3879,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "logo-ausd",
+          "name": "uigc-logo-ausd",
           "declaration": {
             "name": "AcalaLogo",
             "module": "src/component/logo/aUSD.ts"
@@ -3900,7 +3900,7 @@
             "name": "BaseLogo",
             "module": "/src/component/logo/BaseLogo"
           },
-          "tagName": "logo-unknown",
+          "tagName": "uigc-logo-unknown",
           "customElement": true
         }
       ],
@@ -3915,7 +3915,7 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "logo-unknown",
+          "name": "uigc-logo-unknown",
           "declaration": {
             "name": "UnknownLogo",
             "module": "src/component/logo/unknown.ts"
@@ -4016,6 +4016,123 @@
           "declaration": {
             "name": "webkitStyles",
             "module": "src/component/styles/webkit.css.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/component/utils/styles.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "createStyleInHead",
+          "return": {
+            "type": {
+              "text": "HTMLElement"
+            }
+          },
+          "parameters": [
+            {
+              "name": "cssText",
+              "type": {
+                "text": "CSSResult"
+              },
+              "description": "CSSResult"
+            },
+            {
+              "name": "attributes",
+              "type": {
+                "text": "Map<string, any>"
+              },
+              "description": "optional map of attributes to add to the tag"
+            }
+          ],
+          "description": "Creates a <style> tag in the <head> tag"
+        },
+        {
+          "kind": "function",
+          "name": "createStyle",
+          "return": {
+            "type": {
+              "text": "HTMLElement"
+            }
+          },
+          "parameters": [
+            {
+              "name": "cssText",
+              "type": {
+                "text": "CSSResult"
+              },
+              "description": "CSSResult"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "description": "optional attribute name to add to tag"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "optional attribute value to add to tag"
+            }
+          ],
+          "description": "Creates a <style> tag in the <head> tag"
+        },
+        {
+          "kind": "function",
+          "name": "hasStyle",
+          "return": {
+            "type": {
+              "text": ""
+            }
+          },
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "description": "style attribute tag name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "style attribute tag value"
+            }
+          ],
+          "description": "Check whether style already exist"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "createStyleInHead",
+          "declaration": {
+            "name": "createStyleInHead",
+            "module": "src/component/utils/styles.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "createStyle",
+          "declaration": {
+            "name": "createStyle",
+            "module": "src/component/utils/styles.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "hasStyle",
+          "declaration": {
+            "name": "hasStyle",
+            "module": "src/component/utils/styles.ts"
           }
         }
       ]
@@ -4162,123 +4279,6 @@
           "declaration": {
             "name": "DataType",
             "module": "src/component/types/DataType.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/component/utils/styles.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "createStyleInHead",
-          "return": {
-            "type": {
-              "text": "HTMLElement"
-            }
-          },
-          "parameters": [
-            {
-              "name": "cssText",
-              "type": {
-                "text": "CSSResult"
-              },
-              "description": "CSSResult"
-            },
-            {
-              "name": "attributes",
-              "type": {
-                "text": "Map<string, any>"
-              },
-              "description": "optional map of attributes to add to the tag"
-            }
-          ],
-          "description": "Creates a <style> tag in the <head> tag"
-        },
-        {
-          "kind": "function",
-          "name": "createStyle",
-          "return": {
-            "type": {
-              "text": "HTMLElement"
-            }
-          },
-          "parameters": [
-            {
-              "name": "cssText",
-              "type": {
-                "text": "CSSResult"
-              },
-              "description": "CSSResult"
-            },
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "description": "optional attribute name to add to tag"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "optional attribute value to add to tag"
-            }
-          ],
-          "description": "Creates a <style> tag in the <head> tag"
-        },
-        {
-          "kind": "function",
-          "name": "hasStyle",
-          "return": {
-            "type": {
-              "text": ""
-            }
-          },
-          "parameters": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "description": "style attribute tag name"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "style attribute tag value"
-            }
-          ],
-          "description": "Check whether style already exist"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "createStyleInHead",
-          "declaration": {
-            "name": "createStyleInHead",
-            "module": "src/component/utils/styles.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "createStyle",
-          "declaration": {
-            "name": "createStyle",
-            "module": "src/component/utils/styles.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "hasStyle",
-          "declaration": {
-            "name": "hasStyle",
-            "module": "src/component/utils/styles.ts"
           }
         }
       ]

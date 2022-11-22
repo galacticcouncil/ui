@@ -6,7 +6,7 @@ import { UIGCElement } from './base/UIGCElement';
 
 import './icons/Close';
 
-@customElement('ui-drawer')
+@customElement('uigc-drawer')
 export class Drawer extends UIGCElement {
   @property({ type: Boolean, reflect: true }) open = false;
 
@@ -108,9 +108,9 @@ export class Drawer extends UIGCElement {
         <div class="header">
           <slot name="title"></slot>
           <span class="grow"></span>
-          <ui-icon-button @click=${() => this.shouldClose()}>
-            <icon-close></icon-close>
-          </ui-icon-button>
+          <uigc-icon-button @click=${() => this.shouldClose()}>
+            <uigc-icon-close></uigc-icon-close>
+          </uigc-icon-button>
         </div>
         <div class="content">
           <slot></slot>

@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-input')
+@customElement('uigc-input')
 export class Input extends UIGCElement {
   @property({ type: String }) type = 'text';
   @property({ type: String }) value = null;

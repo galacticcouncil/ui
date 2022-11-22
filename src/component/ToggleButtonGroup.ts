@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('ui-toggle-button-group')
+@customElement('uigc-toggle-button-group')
 export class ToggleButtonGroup extends UIGCElement {
   @property({ type: String }) selected = null;
 

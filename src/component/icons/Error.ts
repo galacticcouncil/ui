@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-error')
+@customElement('uigc-icon-error')
 export class ErrorIcon extends BaseIcon {
   render() {
     return html`

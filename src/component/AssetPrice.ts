@@ -6,7 +6,7 @@ import { UIGCElement } from './base/UIGCElement';
 
 import './CircularProgress';
 
-@customElement('ui-asset-price')
+@customElement('uigc-asset-price')
 export class AssetPrice extends UIGCElement {
   @property({ type: String }) inputAsset = null;
   @property({ type: String }) outputAsset = null;
@@ -57,7 +57,7 @@ export class AssetPrice extends UIGCElement {
       ${when(
         this.loading,
         () => html`<div class="chip-root">
-          <span class="progress"> <ui-circular-progress size="small"></ui-circular-progress> </span>
+          <span class="progress"> <uigc-circular-progress size="small"></uigc-circular-progress> </span>
           <span class="progress-text">Fetching the best price...</span>
         </div>`,
         () => html` <div class="chip-root">

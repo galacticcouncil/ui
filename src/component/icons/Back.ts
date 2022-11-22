@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseIcon } from './BaseIcon';
 
-@customElement('icon-back')
+@customElement('uigc-icon-back')
 export class BackIcon extends BaseIcon {
   render() {
     return html`

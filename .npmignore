@@ -1,0 +1,12 @@
+.*
+.*.json
+esbuild.dev.mjs   
+esbuild.prod.mjs
+jest.config.mjs
+tsconfig.json
+test
+demo
+coverage
+badges
+src
+assets

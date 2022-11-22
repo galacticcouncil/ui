@@ -72,7 +72,7 @@ export class Toast extends CloseableElement {
         background: var(--hex-background-gray-800);
       }
 
-      .close icon-close {
+      .close uigc-icon-close {
         width: 7px;
       }
 
@@ -81,7 +81,7 @@ export class Toast extends CloseableElement {
         cursor: pointer;
       }
 
-      ui-progress {
+      uigc-progress {
         position: absolute;
         width: 100%;
         bottom: 0;

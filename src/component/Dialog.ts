@@ -43,7 +43,7 @@ export class Dialog extends CloseableElement {
         }
       }
 
-      ui-progress {
+      uigc-progress {
         position: absolute;
         width: 100%;
         bottom: 0;

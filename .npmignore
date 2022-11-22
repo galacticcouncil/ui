@@ -4,6 +4,7 @@ esbuild.dev.mjs
 esbuild.prod.mjs
 jest.config.mjs
 tsconfig.json
+index.html
 test
 demo
 coverage

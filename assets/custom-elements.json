@@ -4022,123 +4022,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/component/utils/styles.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "createStyleInHead",
-          "return": {
-            "type": {
-              "text": "HTMLElement"
-            }
-          },
-          "parameters": [
-            {
-              "name": "cssText",
-              "type": {
-                "text": "CSSResult"
-              },
-              "description": "CSSResult"
-            },
-            {
-              "name": "attributes",
-              "type": {
-                "text": "Map<string, any>"
-              },
-              "description": "optional map of attributes to add to the tag"
-            }
-          ],
-          "description": "Creates a <style> tag in the <head> tag"
-        },
-        {
-          "kind": "function",
-          "name": "createStyle",
-          "return": {
-            "type": {
-              "text": "HTMLElement"
-            }
-          },
-          "parameters": [
-            {
-              "name": "cssText",
-              "type": {
-                "text": "CSSResult"
-              },
-              "description": "CSSResult"
-            },
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "description": "optional attribute name to add to tag"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "optional attribute value to add to tag"
-            }
-          ],
-          "description": "Creates a <style> tag in the <head> tag"
-        },
-        {
-          "kind": "function",
-          "name": "hasStyle",
-          "return": {
-            "type": {
-              "text": ""
-            }
-          },
-          "parameters": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "description": "style attribute tag name"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "description": "style attribute tag value"
-            }
-          ],
-          "description": "Check whether style already exist"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "createStyleInHead",
-          "declaration": {
-            "name": "createStyleInHead",
-            "module": "src/component/utils/styles.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "createStyle",
-          "declaration": {
-            "name": "createStyle",
-            "module": "src/component/utils/styles.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "hasStyle",
-          "declaration": {
-            "name": "hasStyle",
-            "module": "src/component/utils/styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/component/types/AssetType.ts",
       "declarations": [
         {
@@ -4279,6 +4162,123 @@
           "declaration": {
             "name": "DataType",
             "module": "src/component/types/DataType.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/component/utils/styles.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "createStyleInHead",
+          "return": {
+            "type": {
+              "text": "HTMLElement"
+            }
+          },
+          "parameters": [
+            {
+              "name": "cssText",
+              "type": {
+                "text": "CSSResult"
+              },
+              "description": "CSSResult"
+            },
+            {
+              "name": "attributes",
+              "type": {
+                "text": "Map<string, any>"
+              },
+              "description": "optional map of attributes to add to the tag"
+            }
+          ],
+          "description": "Creates a <style> tag in the <head> tag"
+        },
+        {
+          "kind": "function",
+          "name": "createStyle",
+          "return": {
+            "type": {
+              "text": "HTMLElement"
+            }
+          },
+          "parameters": [
+            {
+              "name": "cssText",
+              "type": {
+                "text": "CSSResult"
+              },
+              "description": "CSSResult"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "description": "optional attribute name to add to tag"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "optional attribute value to add to tag"
+            }
+          ],
+          "description": "Creates a <style> tag in the <head> tag"
+        },
+        {
+          "kind": "function",
+          "name": "hasStyle",
+          "return": {
+            "type": {
+              "text": ""
+            }
+          },
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "description": "style attribute tag name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "style attribute tag value"
+            }
+          ],
+          "description": "Check whether style already exist"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "createStyleInHead",
+          "declaration": {
+            "name": "createStyleInHead",
+            "module": "src/component/utils/styles.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "createStyle",
+          "declaration": {
+            "name": "createStyle",
+            "module": "src/component/utils/styles.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "hasStyle",
+          "declaration": {
+            "name": "hasStyle",
+            "module": "src/component/utils/styles.ts"
           }
         }
       ]

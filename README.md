@@ -4,7 +4,7 @@
 
 ## What are [UIGC Web Components](https://magenta-chimera-ffcef1.netlify.app)?
 
-- Collection of **reusable UI elements** crafted to ease Basilisk & HydraDX chains integration driven by a **lit framework** (~20K gzipped for the framework part).
+- Collection of **reusable UI elements** crafted to ease Basilisk & HydraDX chains integration driven by a **lit framework** (~700kb bundle part).
 - Usable with any current or future **web development framework**.
 - Created and maintained by [Galactic Council](https://galacticcouncil.io/).
 
@@ -64,7 +64,7 @@ UIGC Web Components are supported by all major modern browsers.
 
 ### Structure
 
-The UI5 Web Components project contains following sections:
+Project contains following sections:
 
 | Section | Description                          |
 | ------- | ------------------------------------ |

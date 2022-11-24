@@ -6,6 +6,9 @@ export const AssetTypes = {
   KSM: 'Kusama',
   PHA: 'Phala',
   TNKR: 'Tinkernet',
+  DAI: 'Dai USD',
+  HDX: 'Hydra',
+  KAR: 'Karura',
 };
 
 export class AssetType extends DataType {

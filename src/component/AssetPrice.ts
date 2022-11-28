@@ -24,8 +24,8 @@ export class AssetPrice extends UIGCElement {
         padding: 2px 14px;
         gap: 5px;
         height: 28px;
-        background: rgba(var(--rgb-primary-100), 0.06);
-        border-radius: 7px;
+        background: var(--uigc-asset-price-background);
+        border-radius: var(--uigc-asset-price-border-radius);
       }
 
       span {
@@ -34,12 +34,12 @@ export class AssetPrice extends UIGCElement {
         line-height: 15px;
       }
 
-      span:not(.entry) {
+      span:not(.highlight) {
         color: var(--hex-white);
       }
 
-      .entry {
-        color: var(--hex-primary-300);
+      .highlight {
+        color: var(--uigc-asset-price__highlight-color);
       }
 
       .progress {
@@ -62,7 +62,7 @@ export class AssetPrice extends UIGCElement {
         </div>`,
         () => html` <div class="chip-root">
           <span>Price:</span>
-          <span class="entry">1 ${this.inputAsset}</span>
+          <span class="highlight">1 ${this.inputAsset}</span>
           <span>=</span>
           <span>${this.outputBalance} </span>
           <span>${this.outputAsset}</span>

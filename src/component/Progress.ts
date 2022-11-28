@@ -14,11 +14,31 @@ export class Progress extends UIGCElement {
         overflow: hidden;
       }
 
+      :host([variant='success']) .progress-root {
+        background: linear-gradient(
+          to bottom,
+          var(--uigc-progress__success-background),
+          var(--uigc-progress__success-background)
+        );
+      }
+
+      :host([variant='error']) .progress-root {
+        background: linear-gradient(
+          to bottom,
+          var(--uigc-progress__error-background),
+          var(--uigc-progress__error-background)
+        );
+      }
+
+      :host([variant='progress']) .progress-root {
+        background: linear-gradient(to bottom, var(--uigc-progress-background), var(--uigc-progress-background));
+      }
+
       :host .progress-root {
         height: 3px;
         animation: roundtime calc(var(--duration) * 1s) linear forwards;
         transform-origin: left center;
-        background: linear-gradient(to bottom, var(--hex-primary-500), var(--hex-primary-500));
+        background: linear-gradient(to bottom, var(--uigc-progress-background), var(--uigc-progress-background));
       }
 
       @keyframes roundtime {

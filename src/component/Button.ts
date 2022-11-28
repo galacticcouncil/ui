@@ -35,40 +35,32 @@ export class Button extends UIGCElement {
       }
 
       :host([variant='primary']) .button-root {
-        color: var(--hex-background-gray-800);
-        background: var(--hex-primary-400);
+        color: var(--uigc-button__primary-color);
+        background: var(--uigc-button__primary-background);
       }
 
       :host([variant='primary']) .button-root:hover {
-        background: var(--hex-primary-300);
+        background: var(--uigc-button__primary-background__hover);
         transition: 0.2s ease-in-out;
       }
 
       :host([variant='secondary']) .button-root {
-        background: rgba(var(--rgb-primary-450), 0.12);
-        color: var(--hex-primary-400);
+        color: var(--uigc-button__secondary-color);
+        background: var(--uigc-button__secondary-background);
+        border: var(--uigc-button__secondary-border);
       }
 
       :host([variant='secondary']) .button-root:hover {
-        background: var(--hex-primary-300);
-        background: rgba(var(--rgb-primary-450), 0.3);
-      }
-
-      :host([variant='transparent']) .button-root {
-        color: var(--hex-white);
-        background: transparent;
-      }
-
-      :host([variant='transparent']) .button-root:hover {
-        background: var(--hex-background-gray-700);
-        transition: 0.2s ease-in-out;
+        color: var(--uigc-button__secondary-color__hover);
+        background: var(--uigc-button__secondary-background__hover);
+        border: var(--uigc-button__secondary-border__hover);
       }
 
       :host([variant='max']) .button-root {
         color: #fff;
         background: rgba(var(--rgb-white), 0.06);
         font-weight: 600;
-        text-transform: none;
+        text-transform: var(--uigc-button__max-text-transform);
       }
 
       :host([variant='max']) .button-root:hover {
@@ -76,7 +68,7 @@ export class Button extends UIGCElement {
       }
 
       .button-root {
-        border-radius: 35px;
+        border-radius: var(--uigc-button-border-radius);
         font-weight: 700;
         font-size: 16px;
         border: none;

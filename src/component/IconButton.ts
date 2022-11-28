@@ -28,13 +28,15 @@ export class IconButton extends UIGCElement {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
-        background: rgba(var(--rgb-white), 0.06);
+        border: var(--uigc-icon-button-border);
+        border-radius: var(--uigc-icon-button-border-radius);
+        background: var(--uigc-icon-button-background);
         transition: all 0.3s ease-in-out 0s;
       }
 
       .icon-button-root:hover {
-        background: rgba(var(--rgb-white), 0.2);
+        background: var(--uigc-icon-button-background__hover);
+        border: var(--uigc-icon-button-border__hover);
         cursor: pointer;
       }
     `,

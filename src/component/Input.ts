@@ -33,19 +33,19 @@ export class Input extends UIGCElement {
 
       /* Placeholder color */
       ::-webkit-input-placeholder {
-        color: rgba(var(--rgb-primary-100), 0.4);
+        color: var(--uigc-input__placeholder-color);
       }
 
       ::-moz-placeholder {
-        color: rgba(var(--rgb-primary-100), 0.4);
+        color: var(--uigc-input__placeholder-color);
       }
 
       ::-ms-placeholder {
-        color: rgba(var(--rgb-primary-100), 0.4);
+        color: var(--uigc-input__placeholder-color);
       }
 
       ::placeholder {
-        color: rgba(var(--rgb-primary-100), 0.4);
+        color: var(--uigc-input__placeholder-color);
       }
 
       input {
@@ -67,16 +67,18 @@ export class Input extends UIGCElement {
         align-items: flex-end;
         -webkit-box-pack: center;
         justify-content: center;
+        box-sizing: border-box;
         padding: 0 14px;
         height: 54px;
-        background: rgba(var(--rgb-primary-100), 0.06);
-        border-radius: 9px;
-        border: 1px solid rgba(var(--rgb-white), 0.12);
-        box-sizing: border-box;
+        background: var(--uigc-input-background);
+        border-style: solid;
+        border-radius: var(--uigc-input-border-radius);
+        border-width: var(--uigc-input-border-width);
+        border-color: var(--uigc-input-border-color);
       }
 
       .input-root:focus-within {
-        border: 1px solid var(--hex-primary-300);
+        border-color: var(--uigc-input-border-color__focus);
       }
 
       .input-root[error] {
@@ -88,7 +90,7 @@ export class Input extends UIGCElement {
       }
 
       .input-root:hover {
-        background: rgba(var(--rgb-white), 0.12);
+        background: var(--uigc-input-background__hover);
       }
     `,
   ];

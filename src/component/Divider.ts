@@ -9,7 +9,7 @@ export class Divider extends UIGCElement {
     UIGCElement.styles,
     css`
       .divider-root {
-        background: rgba(var(--rgb-primary-450), 0.12);
+        background: var(--uigc-divider-background);
         height: 1px;
         width: 100%;
       }

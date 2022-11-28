@@ -10,6 +10,10 @@ export class ToggleButton extends UIGCElement {
   static styles = [
     UIGCElement.styles,
     css`
+      :host {
+        font-family: var(--uigc-app-font-secondary), sans-serif;
+      }
+
       :host([size='small']) .toggle-button-root {
         width: 30px;
         height: 30px;
@@ -25,21 +29,21 @@ export class ToggleButton extends UIGCElement {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 9px;
+        border-radius: var(--uigc-toggle-button--root-border-radius);
         transition: all 0.15s ease-in-out;
-        background: transparent;
+        background: var(--uigc-toggle-button--root-background);
         color: var(--hex-white);
         font-weight: 700;
         cursor: pointer;
       }
 
       .toggle-button-root:hover {
-        background: var(--hex-background-gray-700);
+        background: var(--uigc-toggle-button--root-background__hover);
       }
 
       :host([selected]) .toggle-button-root {
-        background: var(--gradient-label);
-        color: var(--hex-black);
+        background: var(--uigc-toggle-button__selected--root-background);
+        color: var(--uigc-toggle-button__selected--root-color);
       }
     `,
   ];

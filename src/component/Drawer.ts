@@ -33,14 +33,14 @@ export class Drawer extends UIGCElement {
         -o-transition: transform 0.5s ease-out;
         transition: transform 0.5s ease-out;
         align-items: center;
-        background: var(--hex-background-gray-900);
-        box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.36);
+        background: var(--uigc-drawer-background);
+        box-shadow: var(--uigc-drawer-box-shadow);
       }
 
       @media (min-width: 768px) {
         .drawer {
           width: 400px;
-          border-radius: 16px;
+          border-radius: var(--uigc-drawer-border-radius);
           margin: 10px;
         }
       }

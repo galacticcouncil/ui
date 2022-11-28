@@ -35,7 +35,7 @@ export class AssetSelector extends UIGCElement {
         gap: 6px;
         background-color: transparent;
         height: 52px;
-        border-radius: 8px;
+        border-radius: var(--uigc-asset-selector-border-radius);
         cursor: pointer;
       }
 

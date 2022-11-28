@@ -19,7 +19,7 @@ export class AssetList extends UIGCElement {
         align-items: center;
         justify-content: space-between;
         padding: 6px 14px;
-        color: var(--hex-neutral-gray-300);
+        color: var(--uigc-asset-list--header-color);
         font-style: normal;
         font-weight: 600;
         font-size: 12px;
@@ -34,7 +34,7 @@ export class AssetList extends UIGCElement {
       }
 
       .subheader {
-        background-color: rgba(var(--rgb-white), 0.03);
+        background-color: var(--uigc-asset-list--subheader-background);
       }
 
       ::slotted(*) {

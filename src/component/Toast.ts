@@ -41,8 +41,8 @@ export class Toast extends CloseableElement {
         flex-direction: row;
         align-items: center;
         box-sizing: border-box;
-        border-radius: 14px;
-        background: var(--hex-background-gray-1000);
+        border-radius: var(--uigc-toast-border-radius);
+        background: var(--uigc-toast-background);
         color: white;
         min-width: 130px;
       }
@@ -57,6 +57,7 @@ export class Toast extends CloseableElement {
 
       ::slotted(*) {
         padding: 0 14px;
+        height: 60px;
       }
 
       .close {
@@ -68,8 +69,9 @@ export class Toast extends CloseableElement {
         right: -8px;
         width: 24px;
         height: 24px;
-        border-radius: 50%;
-        background: var(--hex-background-gray-800);
+        border-radius: var(--uigc-toast--close-border-radius);
+        background: var(--uigc-toast--close-background);
+        border: var(--uigc-toast--close-border);
       }
 
       .close uigc-icon-close {
@@ -77,7 +79,7 @@ export class Toast extends CloseableElement {
       }
 
       .close:hover {
-        background: rgba(var(--rgb-background-gray-800), 0.5);
+        background: var(--uigc-toast--close-background__hover);
         cursor: pointer;
       }
 
@@ -104,6 +106,11 @@ export class Toast extends CloseableElement {
     }
   }
 
+  // override async updated() {
+  //   const prog = this.shadowRoot.querySelector('uigc-progress');
+  //   prog.setAttribute('variant', this.variant);
+  // }
+
   render() {
     return html`
       <div class="root">
@@ -111,7 +118,7 @@ export class Toast extends CloseableElement {
           <slot name="alert"></slot>
           <slot></slot>
         </div>
-        ${when(this.timeout, () => html` <uigc-progress .duration=${this.timeout}></uigc-progress> `)}
+        ${when(this.timeout, () => html` <uigc-progress variant="success" .duration=${this.timeout}></uigc-progress> `)}
       </div>
       <button class="close" @click=${this.onClose}>
         <uigc-icon-close></uigc-icon-close>

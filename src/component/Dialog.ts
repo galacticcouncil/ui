@@ -28,10 +28,10 @@ export class Dialog extends CloseableElement {
         z-index: 1202;
         overflow: hidden;
         padding: 0px 30px 30px;
-        background: var(--hex-background-gray-900);
-        box-shadow: 0px 38px 46px rgba(0, 0, 0, 0.03);
+        background: var(--uigc-dialog-background);
+        box-shadow: var(--uigc-dialog-box-shadow);
+        border-radius: var(--uigc-dialog-border-radius);
         box-sizing: border-box;
-        border-radius: 16px;
       }
 
       @media (min-width: 768px) {

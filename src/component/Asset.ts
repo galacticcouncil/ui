@@ -6,9 +6,12 @@ import { UIGCElement } from './base/UIGCElement';
 
 import './logo/aUSD';
 import './logo/BSX';
+import './logo/HDX';
 import './logo/KSM';
 import './logo/PHA';
 import './logo/TNKR';
+import './logo/KAR';
+import './logo/DAI';
 import './logo/unknown';
 
 import { AssetType, AssetTypes } from './types/AssetType';
@@ -70,9 +73,12 @@ export class Asset extends UIGCElement {
         [
           ['aUSD', () => html`<uigc-logo-ausd class="logo" fit></uigc-logo-ausd>`],
           ['BSX', () => html`<uigc-logo-bsx class="logo" fit></uigc-logo-bsx>`],
+          ['HDX', () => html`<uigc-logo-hdx class="logo" fit></uigc-logo-hdx>`],
           ['KSM', () => html`<uigc-logo-ksm class="logo" fit></uigc-logo-ksm>`],
           ['PHA', () => html`<uigc-logo-pha class="logo" fit></uigc-logo-pha>`],
           ['TNKR', () => html`<uigc-logo-tnkr class="logo" fit></uigc-logo-tnkr>`],
+          ['KAR', () => html`<uigc-logo-kar class="logo" fit></uigc-logo-kar>`],
+          ['DAI', () => html`<uigc-logo-dai class="logo" fit></uigc-logo-dai>`],
         ],
         () => html`<uigc-logo-unknown class="logo" fit></uigc-logo-unknown>`
       )}

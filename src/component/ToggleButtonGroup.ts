@@ -11,8 +11,8 @@ export class ToggleButtonGroup extends UIGCElement {
     UIGCElement.styles,
     css`
       .toggle-group-root {
-        background: rgba(var(--rgb-black), 0.25);
-        border-radius: 11px;
+        background: var(--uigc-toggle-button-group--root-background);
+        border-radius: var(--uigc-toggle-button-group--root-border-radius);
         display: flex;
         gap: 8px;
         padding: 8px 10px;

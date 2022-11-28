@@ -16,8 +16,8 @@ export class CircularProgress extends UIGCElement {
     }
 
     :host([size='medium']) .progress-root {
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 29px;
     }
 
     :host(:not([size])) .progress-root {
@@ -42,15 +42,7 @@ export class CircularProgress extends UIGCElement {
       -webkit-animation: 0.6s linear 0s infinite normal none running animation-rotate;
       animation: 0.6s linear 0s infinite normal none running animation-rotate;
       overflow: hidden;
-      background: conic-gradient(
-        from 0deg,
-        rgb(82, 239, 158) 0deg,
-        rgb(82, 239, 158) 45deg,
-        rgb(252, 174, 49) 140deg,
-        rgb(247, 196, 94) 160deg,
-        rgba(105, 105, 119, 0) 220deg,
-        rgba(255, 181, 112, 0)
-      );
+      background: var(--uigc-circular-progress-background);
     }
 
     @keyframes animation-rotate {

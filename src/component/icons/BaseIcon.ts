@@ -11,6 +11,14 @@ export class BaseIcon extends LitElement {
         width: 100%;
         height: 100%;
       }
+
+      :host svg[bsx] {
+        display: var(--uigc-bsx-icon-display);
+      }
+
+      :host svg[hdx] {
+        display: var(--uigc-hdx-icon-display);
+      }
     `,
   ];
 }

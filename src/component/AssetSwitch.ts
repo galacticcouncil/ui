@@ -21,7 +21,7 @@ export class AssetSwitch extends UIGCElement {
 
       .switch-root:hover {
         cursor: pointer;
-        transform: rotate(180deg);
+        transform: var(--uigc-asset-switch-transform);
       }
     `,
   ];

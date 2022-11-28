@@ -9,9 +9,8 @@ export class Paper extends UIGCElement {
     UIGCElement.styles,
     css`
       :host {
-        background: var(--gradient-paper);
-        box-shadow: 0 0 0 1px hsl(0deg 0% 100% / 5%);
-        border-radius: 20px;
+        background: var(--uigc-paper-background);
+        box-shadow: var(--uigc-paper-box-shadow);
       }
 
       ::slotted(*) {

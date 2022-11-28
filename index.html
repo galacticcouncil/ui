@@ -8,17 +8,21 @@
     <meta name="description" content="Galactic UI Kit" />
     <base href="/" />
     <style>
-      .bsx {
-        --gradient-background: radial-gradient(
-            89.2% 89.2% at 50.07% 87.94%,
-            rgb(0, 138, 105) 0%,
-            rgb(38, 47, 49) 88.52%
-          ),
-          rgb(44, 51, 53);
+      :root api-viewer,
+      .bsx api-viewer {
+        --ave-primary-color: rgb(4, 176, 135);
       }
 
-      .hdx {
-        --gradient-background: linear-gradient(180deg, #00579f 0%, #023b6a 25%, #060917 100%);
+      /* [part='demo-output'] {
+        background-color: #211f24;
+        height: 100px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      } */
+
+      .hdx api-viewer {
+        --ave-primary-color: #01579b;
       }
     </style>
     <style>
@@ -27,11 +31,14 @@
       }
     </style>
   </head>
-  <body class="bsx">
-    <api-viewer src="./assets/custom-elements.json">
+  <body class="hdx">
+    <api-viewer>
       <!-- Alert -->
       <template data-element="uigc-alert" data-target="host">
         <uigc-alert variant="success">This is alert message</uigc-alert>
+      </template>
+      <template data-element="uigc-alert" data-target="wrapper">
+        <uigc-toast></uigc-toast>
       </template>
       <template data-element="uigc-alert" data-target="knob" data-attr="variant" data-type="select">
         <select>
@@ -42,8 +49,11 @@
       </template>
       <template data-element="uigc-alert" data-target="suffix">
         <style>
+          uigc-toast {
+            display: block;
+          }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -59,7 +69,7 @@
       <template data-element="uigc-asset" data-target="suffix">
         <style>
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -88,7 +98,7 @@
             padding: 20px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -120,7 +130,7 @@
             display: block;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -144,7 +154,7 @@
             border-radius: 0;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -160,14 +170,21 @@
       <template data-element="uigc-asset-price" data-target="host">
         <uigc-asset-price inputAsset="BSX" outputAsset="KSM" outputBalance="10000000"></uigc-asset-price>
       </template>
+      <template data-element="uigc-asset-price" data-target="wrapper">
+        <uigc-paper></uigc-paper>
+      </template>
       <template data-element="uigc-asset-price" data-target="suffix">
         <style>
           uigc-asset-price {
             border-radius: 7px;
             background: rgb(35, 40, 43);
           }
+          uigc-paper {
+            width: 400px;
+            padding: 20px;
+          }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -183,7 +200,7 @@
       <template data-element="uigc-asset-selector" data-target="suffix">
         <style>
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -206,7 +223,7 @@
             padding: 20px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -217,17 +234,23 @@
 
       <!-- AssetTransfer -->
       <template data-element="uigc-asset-transfer" data-target="host">
-        <uigc-asset-transfer id="assetOut" title="You get" asset="BSX" amount="1000" balance="50000"></uigc-asset-transfer>
+        <uigc-asset-transfer
+          id="assetOut"
+          title="You get"
+          asset="BSX"
+          amount="1000"
+          balance="50000"
+        ></uigc-asset-transfer>
       </template>
       <template data-element="uigc-asset-transfer" data-target="suffix">
         <style>
           uigc-paper {
-            border-radius: 12px;
+            padding: 20px;
             width: 450px;
             display: block;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -246,7 +269,7 @@
       <template data-element="uigc-busy-indicator" data-target="suffix">
         <style>
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: block;
             align-items: center;
@@ -276,7 +299,7 @@
       <template data-element="uigc-button" data-target="suffix">
         <style>
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -296,7 +319,7 @@
             height: 50px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -312,7 +335,7 @@
       <template data-element="uigc-dialog" data-target="suffix">
         <style>
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 500px;
             display: flex;
             align-items: center;
@@ -331,7 +354,7 @@
             width: 500px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -347,7 +370,7 @@
       <template data-element="uigc-drawer" data-target="suffix">
         <style>
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 500px;
             display: flex;
             align-items: center;
@@ -357,8 +380,8 @@
       </template>
 
       <!-- IconButton -->
-      <template data-element="uigc-icon-button" data-target="host">
-        <uigc-icon-button><icon-settings></icon-settings> </uigc-icon-button>
+      <template data-element="uigc-icon-button" data-target="slot">
+        <uigc-icon-settings></uigc-icon-settings>
       </template>
       <template data-element="uigc-icon-button" data-target="knob" data-attr="size" data-type="select">
         <select>
@@ -370,7 +393,7 @@
       <template data-element="uigc-icon-button" data-target="suffix">
         <style>
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -399,7 +422,7 @@
             padding: 20px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -419,7 +442,7 @@
             height: 100px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -442,7 +465,7 @@
             padding: 20px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -465,7 +488,7 @@
             padding: 20px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -476,7 +499,7 @@
 
       <!-- Skeleton -->
       <template data-element="uigc-skeleton" data-target="host">
-        <uigc-skeleton progress width="100%" height="15px"></uigc-skeleton>
+        <uigc-skeleton progress rectangle width="100%" height="15px"></uigc-skeleton>
       </template>
       <template data-element="uigc-skeleton" data-target="wrapper">
         <uigc-paper></uigc-paper>
@@ -488,7 +511,7 @@
             padding: 20px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -499,12 +522,12 @@
 
       <!-- Switch -->
       <template data-element="uigc-switch" data-target="host">
-        <uigc-switch></uigc-switch>
+        <uigc-switch size="medium"></uigc-switch>
       </template>
       <template data-element="uigc-switch" data-target="knob" data-attr="size" data-type="select">
         <select>
-          <option value="small"></option>
           <option value="medium"></option>
+          <option value="small"></option>
         </select>
       </template>
       <template data-element="uigc-switch" data-target="wrapper">
@@ -517,7 +540,7 @@
             padding: 20px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -528,15 +551,45 @@
 
       <!-- Toast -->
       <template data-element="uigc-toast" data-target="host">
-        <uigc-toast open id="1" timeout="40000"></uigc-toast>
+        <uigc-toast open id="1" timeout="40000">
+          <span variant="success"></span>
+        </uigc-toast>
       </template>
+
+      <!-- <template data-element="uigc-toast" data-target="slot" open="true" id="1" timeout="40000">
+        <uigc-alert variant="success">Hoho</uigc-alert>
+      </template>   -->
+
       <template data-element="uigc-toast" data-target="suffix">
         <style>
           uigc-toast {
             width: 250px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- IconButton -->
+      <template data-element="uigc-icon-button" data-target="slot">
+        <uigc-icon-settings></uigc-icon-settings>
+      </template>
+      <template data-element="uigc-icon-button" data-target="knob" data-attr="size" data-type="select">
+        <select>
+          <option value="small"></option>
+          <option value="medium"></option>
+          <option value="large"></option>
+        </select>
+      </template>
+      <template data-element="uigc-icon-button" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -559,7 +612,7 @@
             padding: 20px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -587,7 +640,7 @@
             padding: 20px;
           }
           [part='demo-output'] {
-            background: var(--gradient-background);
+            background: var(--uigc-app-background);
             min-height: 200px;
             display: flex;
             align-items: center;
@@ -596,6 +649,17 @@
         </style>
       </template>
     </api-viewer>
+    <script>
+      fetch('./assets/custom-elements.json')
+        .then((res) => res.json())
+        .then(({ schema, schemaVersion, modules }) => {
+          document.querySelector('api-viewer').manifest = {
+            schema: schema,
+            schemaVersion: schemaVersion,
+            modules: modules.filter((module) => !module.path.includes('bsx') && !module.path.includes('hdx')),
+          };
+        });
+    </script>
     <script type="module" src="./out/app.js"></script>
   </body>
 </html>

@@ -52,12 +52,14 @@ export class SearchBar extends UIGCElement {
         align-items: center;
         -webkit-box-pack: center;
         justify-content: center;
+        box-sizing: border-box;
         padding: 0 14px;
         height: 54px;
-        background: rgba(var(--rgb-primary-100), 0.06);
-        border-radius: 9px;
-        border: 1px solid rgba(var(--rgb-white), 0.12);
-        box-sizing: border-box;
+        background: var(--uigc-input-background);
+        border-style: solid;
+        border-radius: var(--uigc-input-border-radius);
+        border-width: var(--uigc-input-border-width);
+        border-color: var(--uigc-input-border-color);
       }
 
       .search-root > uigc-icon-magnifier {
@@ -66,11 +68,11 @@ export class SearchBar extends UIGCElement {
       }
 
       .search-root:focus-within {
-        border: 1px solid var(--hex-primary-300);
+        border-color: var(--uigc-input-border-color__focus);
       }
 
       .search-root:hover {
-        background: rgba(var(--rgb-white), 0.12);
+        background: var(--uigc-input-background__hover);
       }
     `,
   ];

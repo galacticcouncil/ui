@@ -19,8 +19,8 @@ export class AssetTransfer extends UIGCElement {
     css`
       :host {
         display: grid;
-        background: rgba(var(--rgb-primary-100), 0.06);
-        border-radius: 12px;
+        background: var(--uigc-asset-transfer-background);
+        border-radius: var(--uigc-asset-transfer-border-radius);
         box-sizing: border-box;
         padding: 14px;
         row-gap: 5px;
@@ -63,7 +63,8 @@ export class AssetTransfer extends UIGCElement {
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
-        color: var(--hex-primary-200);
+        color: var(--uigc-asset-transfer-color);
+        text-transform: var(--uigc-asset-transfer-text-transform);
       }
 
       .balance {

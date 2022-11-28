@@ -5,7 +5,7 @@ import { UIGCElement } from './base/UIGCElement';
 
 @customElement('uigc-switch')
 export class Switch extends UIGCElement {
-  @property({ type: String }) value = null;
+  @property({ type: Boolean, reflect: true }) checked = false;
 
   static styles = [
     UIGCElement.styles,
@@ -37,13 +37,13 @@ export class Switch extends UIGCElement {
       .switch-root {
         position: relative;
         border-radius: 45px;
-        border: 1px solid var(--hex-background-gray-700);
-        background: var(--hex-dark-gray);
+        border: var(--uigc-switch--root-border);
+        background: var(--uigc-switch--root-background);
         cursor: pointer;
       }
 
       .switch-root:hover > span.switch-thumb {
-        border-color: var(--hex-primary-300);
+        border-color: var(--uigc-switch--thumb-border-color__hover);
       }
 
       .switch-thumb {
@@ -51,21 +51,21 @@ export class Switch extends UIGCElement {
         border-radius: 50%;
         top: 1px;
         left: 1px;
-        border-color: var(--hex-dark-gray);
-        background: var(--hex-neutral-gray-400);
+        border-color: var(--uigc-switch--thumb-border-color);
+        background: var(--uigc-switch--thumb-background);
         border-style: solid;
       }
 
       :host([checked]) .switch-root {
-        background: var(--hex-dark-green);
-        border: 1px solid var(--hex-primary-300);
+        background: var(--uigc-switch__checked--root-background);
+        border: var(--uigc-switch__checked--root-border);
       }
 
       :host([checked]) .switch-thumb {
         left: initial;
         right: 1px;
-        background: var(--hex-primary-500);
-        border-color: var(--hex-dark-green);
+        background: var(--uigc-switch__checked--thumb-background);
+        border-color: var(--uigc-switch__checked--thumb-border-color);
       }
 
       :host([disabled]) .switch-root {
@@ -77,6 +77,15 @@ export class Switch extends UIGCElement {
       }
     `,
   ];
+
+  override async updated() {
+    const switchRoot = this.shadowRoot.querySelector('.switch-root');
+    if (this.checked) {
+      switchRoot.removeAttribute('checked');
+    } else {
+      switchRoot.setAttribute('checked', '');
+    }
+  }
 
   render() {
     return html`

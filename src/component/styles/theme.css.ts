@@ -1,11 +1,12 @@
 import { css } from 'lit';
 
-export const themeStyles = css`
-  :host {
+export const paletteProperties = css`
+  :root {
     --hex-white: #ffffff;
     --rgb-white: 255, 255, 255;
     --hex-black: #000000;
     --rgb-black: 0, 0, 0;
+
     --hex-primary-500: #49e49f;
     --rgb-primary-500: 73, 228, 159;
     --hex-primary-450: #4cf3a8;
@@ -18,6 +19,14 @@ export const themeStyles = css`
     --rgb-primary-200: 184, 255, 223;
     --hex-primary-100: #daffee;
     --rgb-primary-100: 218, 255, 238;
+
+    --hex-primary-alpha: #9ea7ba;
+    --rgb-primary-alpha: 158, 167, 186;
+    --hex-primary-alpha15: #4cd5f3;
+    --rgb-primary-alpha15: 76, 213, 243;
+    --hex-primary-alpha20: #25cbff;
+    --rgb-primary-alpha20: 37, 203, 255;
+
     --hex-yellow-100: #f5f0de;
     --rgb-yellow-100: 245, 240, 222;
     --hex-yellow-200: #f4e7b0;
@@ -28,6 +37,7 @@ export const themeStyles = css`
     --rgb-yellow-400: 247, 191, 6;
     --hex-yellow-500: #e5b30b;
     --rgb-yellow-500: 229, 179, 11;
+
     --hex-orange-100: #ffe2c3;
     --rgb-orange-100: 255, 226, 195;
     --hex-orange-200: #fbcd9c;
@@ -40,6 +50,7 @@ export const themeStyles = css`
     --rgb-orange-450: 243, 141, 29;
     --hex-orange-500: #e18521;
     --rgb-orange-500: 225, 133, 33;
+
     --hex-red-100: #ffd7d7;
     --rgb-red-100: 255, 215, 215;
     --hex-red-200: #ffaeae;
@@ -50,6 +61,42 @@ export const themeStyles = css`
     --rgb-red-400: 255, 104, 104;
     --hex-red-500: #da5d5d;
     --rgb-red-500: 218, 93, 93;
+
+    --hex-pink-100: #ffbbd6;
+    --hex-pink-200: #fea6ca;
+    --hex-pink-300: #ff99c2;
+    --hex-pink-400: #ff8bba;
+    --hex-pink-500: #ff67a4;
+    --hex-pink-600: #fc408c;
+    --hex-pink-700: #f6297c;
+
+    --hex-bright-blue-100: #a6ddff;
+    --hex-bright-blue-200: #9cddff;
+    --hex-bright-blue-300: #85d1ff;
+    --hex-bright-blue-400: #3192cd;
+    --hex-bright-blue-500: #1a7ab4;
+    --hex-bright-blue-600: #57b3eb;
+    --hex-bright-blue-700: #009fff;
+
+    --hex-vibrant-blue-100: #7889ff;
+    --hex-vibrant-blue-200: #5f73fe;
+    --hex-vibrant-blue300: #485ef8;
+    --hex-vibrant-blue400: #2b40c8;
+    --hex-vibrant-blue500: #152dc7;
+    --hex-vibrant-blue600: #0a1fa7;
+    --hex-vibrant-blue700: #031586;
+
+    --hex-dark-blue-200: #999ba7;
+    --hex-dark-blue-300: #66697c;
+    --hex-dark-blue-400: #333750;
+    --hex-dark-blue-401: #1c2038;
+    --hex-dark-blue-500: #000524;
+    --hex-dark-blue-600: #00041d;
+    --hex-dark-blue-700: #111320;
+    --hex-dark-blue-800: #00020e;
+    --hex-dark-blue-900: #000107;
+    --hex-dark-blue-1000: #000524;
+
     --hex-background-gray-1000: #1c1a1f;
     --rgb-background-gray-1000: 28, 26, 31;
     --hex-background-gray-900: #211f24;
@@ -62,6 +109,7 @@ export const themeStyles = css`
     --rgb-background-gray-600: 81, 81, 95;
     --hex-background-gray-500: #686876;
     --rgb-background-gray-500: 104, 104, 118;
+
     --hex-neutral-gray-500: #787e82;
     --rgb-neutral-gray-500: 120, 126, 130;
     --hex-neutral-gray-400: #a2b0b8;
@@ -72,9 +120,21 @@ export const themeStyles = css`
     --rgb-neutral-gray-200: 209, 222, 232;
     --hex-neutral-gray-100: #e5ecf1;
     --rgb-neutral-gray-100: 229, 236, 241;
+
+    --hex-basic-100: #ecedef;
+    --hex-basic-200: #8f90a6;
+    --hex-basic-300: #bbbec9;
+    --hex-basic-400: #b2b6c5;
+    --hex-basic-500: #878c9e;
+    --hex-basic-600: #676c80;
+    --hex-basic-700: #5d6175;
+    --hex-basic-800: #26282f;
+    --hex-basic-900: #00041d;
+
     --hex-poison-green: #192022;
     --hex-dark-green: #1d2d26;
     --hex-dark-gray: #1a171b;
+
     --hex-primary-success: #4fffb0;
     --hex-graph-gradient-0: #4fffb0;
     --hex-graph-gradient-50: #b3ff8f;
@@ -85,5 +145,261 @@ export const themeStyles = css`
       linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);
     --gradient-paper: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);
     --gradient-background: radial-gradient(89.2% 89.2% at 50.07% 87.94%, #008a69 0%, #262f31 88.52%), #2c3335;
+  }
+`;
+
+export const bsxThemeProperties = css`
+  :root,
+  .bsx {
+    --uigc-app-font: 'SatoshiVariable';
+    --uigc-app-font-secondary: 'SatoshiVariable';
+    --uigc-app-background: radial-gradient(89.2% 89.2% at 50.07% 87.94%, rgb(0, 138, 105) 0%, rgb(38, 47, 49) 88.52%),
+      rgb(44, 51, 53);
+
+    --uigc-bsx-icon-display: flex;
+    --uigc-hdx-icon-display: none;
+
+    --uigc-app-font-color__gradient: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);
+    --uigc-app-font-color__secondary: var(--hex-primary-success-400);
+
+    /** Alert */
+    --uigc-alert-border-radius: 14px;
+    --uigc-alert-background: var(--hex-background-gray-900);
+    --uigc-alert__success-background: var(--hex-background-gray-900);
+    --uigc-alert__error-background: var(--hex-background-gray-900);
+    --uigc-alert__progress-background: var(--hex-background-gray-900);
+    /** AssetListItem */
+    --uigc-asset-list-item__selected-background: rgba(var(--rgb-primary-450), 0.12);
+    /** AssetList */
+    --uigc-asset-list--header-color: var(--hex-neutral-gray-300);
+    --uigc-asset-list--subheader-background: rgba(var(--rgb-white), 0.03);
+    /** AssetPrice */
+    --uigc-asset-price-background: rgba(var(--rgb-primary-100), 0.06);
+    --uigc-asset-price-border-radius: 7px;
+    --uigc-asset-price__highlight-color: var(--hex-primary-300);
+    /** AssetSelector */
+    --uigc-asset-selector-border-radius: 8px;
+    /** AssetSwitch */
+    --uigc-asset-switch-transform: rotate(180deg);
+    /** AssetTransfer */
+    --uigc-asset-transfer-color: var(--hex-primary-200);
+    --uigc-asset-transfer-text-transform: none;
+    --uigc-asset-transfer-border-radius: 12px;
+    --uigc-asset-transfer-background: rgba(var(--rgb-primary-100), 0.06);
+    /** BusyIndicator */
+    --uigc-busy-indicator--circle-border-radius: 50%;
+    /** Button */
+    --uigc-button-border-radius: 35px;
+    --uigc-button__max-border-radius: 35px;
+    --uigc-button__max-text-transform: none;
+    --uigc-button__primary-color: var(--hex-background-gray-800);
+    --uigc-button__primary-background: var(--hex-primary-400);
+    --uigc-button__primary-background__hover: var(--hex-primary-300);
+    --uigc-button__secondary-color: var(--hex-primary-400);
+    --uigc-button__secondary-color__hover: var(--hex-primary-400);
+    --uigc-button__secondary-background: rgba(var(--rgb-primary-450), 0.12);
+    --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-450), 0.3);
+    --uigc-button__secondary-border: none;
+    --uigc-button__secondary-border__hover: none;
+    /** CircularProgress */
+    --uigc-circular-progress-background: conic-gradient(
+      from 180deg at 50% 50%,
+      #ffe668 -89.54deg,
+      rgba(79, 255, 176, 0) 20.17deg,
+      rgba(79, 255, 176, 0) 129.19deg,
+      rgba(79, 255, 176, 0.14) 157.96deg,
+      #2effa1 228.05deg,
+      #ffe668 270.46deg,
+      rgba(79, 255, 176, 0) 380.17deg
+    );
+    /** Dialog */
+    --uigc-dialog-background: var(--hex-background-gray-900);
+    --uigc-dialog-box-shadow: 0px 38px 46px rgba(0, 0, 0, 0.03);
+    --uigc-dialog-border-radius: 16px;
+    /** Divider */
+    --uigc-divider-background: rgba(var(--rgb-primary-450), 0.12);
+    /** Drawer */
+    --uigc-drawer-background: var(--hex-background-gray-900);
+    --uigc-drawer-box-shadow: 0px 38px 46px rgba(0, 0, 0, 0.03);
+    --uigc-drawer-border-radius: 16px;
+    /** IconButton */
+    --uigc-icon-button-border: none;
+    --uigc-icon-button-border__hover: none;
+    --uigc-icon-button-border-radius: 50%;
+    --uigc-icon-button-background: rgba(var(--rgb-white), 0.06);
+    --uigc-icon-button-background__hover: rgba(var(--rgb-white), 0.2);
+    /** AssetInput */
+    --uigc-input-border-width: 1px;
+    --uigc-input-border-color: rgba(var(--rgb-white), 0.12);
+    --uigc-input-border-color__focus: var(--hex-primary-300);
+    --uigc-input-border-radius: 9px;
+    --uigc-input-background: rgba(var(--rgb-primary-100), 0.06);
+    --uigc-input-background__hover: rgba(var(--rgb-white), 0.12);
+    --uigc-input__placeholder-color: rgba(var(--rgb-primary-100), 0.4);
+    /** Paper */
+    --uigc-paper-border-radius: 20px;
+    --uigc-paper-box-shadow: 0 0 0 1px hsl(0deg 0% 100% / 5%);
+    --uigc-paper-background: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);
+    /** Progress */
+    --uigc-progress__success-background: var(--hex-primary-500);
+    --uigc-progress__error-background: var(--hex-primary-500);
+    --uigc-progress-background: var(--hex-primary-500);
+    /** Switch */
+    --uigc-switch--root-border: 1px solid var(--hex-background-gray-700);
+    --uigc-switch--root-background: var(--hex-dark-gray);
+    --uigc-switch--thumb-background: var(--hex-neutral-gray-400);
+    --uigc-switch--thumb-border-color: var(--hex-dark-gray);
+    --uigc-switch--thumb-border-color__hover: var(--hex-primary-300);
+    --uigc-switch__checked--root-background: var(--hex-dark-green);
+    --uigc-switch__checked--root-border: 1px solid var(--hex-primary-500);
+    --uigc-switch__checked--thumb-background: var(--hex-primary-300);
+    --uigc-switch__checked--thumb-border-color: var(--hex-primary-500);
+    /** Toast */
+    --uigc-toast-background: var(--hex-background-gray-900);
+    --uigc-toast-border-radius: 14px;
+    --uigc-toast--close-border-radius: 50%;
+    --uigc-toast--close-border: none;
+    --uigc-toast--close-background: var(--hex-background-gray-800);
+    --uigc-toast--close-background__hover: var(--hex-background-gray-900);
+    /** ToggleButton */
+    --uigc-toggle-button--root-background__hover: var(--hex-background-gray-700);
+    --uigc-toggle-button--root-background: transparent;
+    --uigc-toggle-button--root-border-radius: 9px;
+    --uigc-toggle-button__selected--root-color: var(--hex-black);
+    --uigc-toggle-button__selected--root-background: linear-gradient(
+        90deg,
+        #4fffb0 1.27%,
+        #b3ff8f 48.96%,
+        #ff984e 104.14%
+      ),
+      linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),
+      linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);
+    /** ToggleButtonGroup */
+    --uigc-toggle-button-group--root-background: rgba(var(--rgb-black), 0.25);
+    --uigc-toggle-button-group--root-border-radius: 11px;
+  }
+`;
+
+export const hdxThemeProperties = css`
+  .hdx {
+    --uigc-app-font: 'ChakraPetch';
+    --uigc-app-font-secondary: 'FontOver';
+    --uigc-app-background: linear-gradient(180deg, #00579f 0%, #023b6a 25%, #060917 100%);
+
+    --uigc-bsx-icon-display: none;
+    --uigc-hdx-icon-display: flex;
+
+    --uigc-app-font-color__gradient: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);
+    --uigc-app-font-color__secondary: var(--hex-bright-blue-300);
+
+    /** Alert */
+    --uigc-alert-border-radius: 4px;
+    --uigc-alert-background: var(--hex-dark-blue-600);
+    --uigc-alert__success-background: rgba(3, 239, 151, 0.25);
+    --uigc-alert__error-background: rgba(239, 3, 3, 0.25);
+    --uigc-alert__progress-background: rgba(37, 203, 255, 0.2);
+    /** AssetListItem */
+    --uigc-asset-list-item__selected-background: rgba(var(--rgb-primary-alpha15), 0.12);
+    /** AssetList */
+    --uigc-asset-list--header-color: var(--hex-basic-700);
+    --uigc-asset-list--subheader-background: rgba(var(--rgb-primary-alpha), 0.06);
+    /** AssetPrice */
+    --uigc-asset-price-background: var(--hex-dark-blue-401);
+    --uigc-asset-price-border-radius: 2px;
+    --uigc-asset-price__highlight-color: var(--hex-bright-blue-300);
+    /** AssetSelector */
+    --uigc-asset-selector-border-radius: 2px;
+    /** AssetSwitch */
+    --uigc-asset-switch-transform: rotateX(180deg);
+    /** AssetTransfer */
+    --uigc-asset-transfer-color: var(--hex-basic-500);
+    --uigc-asset-transfer-text-transform: uppercase;
+    --uigc-asset-transfer-border-radius: 2px;
+    --uigc-asset-transfer-background: rgba(var(--rgb-primary-alpha), 0.06);
+    /** BusyIndicator */
+    --uigc-busy-indicator--circle-border-radius: 4x;
+    /** Button */
+    --uigc-button-border-radius: 4px;
+    --uigc-button__max-border-radius: none;
+    --uigc-button__max-text-transform: uppercase;
+    --uigc-button__max-background__hover: rgba(var(--rgb-primary-alpha15), 0.2);
+    --uigc-button__primary-color: var(--hex-white);
+    --uigc-button__primary-background: var(--hex-pink-700);
+    --uigc-button__primary-background__hover: var(--hex-pink-600);
+    --uigc-button__secondary-color: var(--hex-bright-blue-300);
+    --uigc-button__secondary-color__hover: var(--hex-white);
+    --uigc-button__secondary-background: rgba(var(--rgb-primary-alpha15), 0.12);
+    --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-alpha15), 0.3);
+    --uigc-button__secondary-border: 1px solid var(--hex-bright-blue-300);
+    --uigc-button__secondary-border__hover: 1px solid var(--hex-white);
+    /** CircularProgress */
+    --uigc-circular-progress-background: conic-gradient(
+      from 90.65deg at 50% 50%,
+      #fc408c -1.87deg,
+      rgba(10, 13, 26, 0) 117.39deg,
+      #00c2ff 185.07deg,
+      #004de2 219.37deg,
+      #fc408c 294.78deg,
+      #fc408c 358.13deg,
+      rgba(10, 13, 26, 0) 477.39deg
+    );
+    /** Dialog */
+    --uigc-dialog-background: var(--hex-dark-blue-600);
+    --uigc-dialog-box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.36);
+    --uigc-dialog-border-radius: 4px;
+    /** Divider */
+    --uigc-divider-background: var(--hex-dark-blue-400);
+    /** Drawer */
+    --uigc-drawer-background: var(--hex-dark-blue-600);
+    --uigc-drawer-box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.36);
+    --uigc-drawer-border-radius: 4px;
+    /** IconButton */
+    --uigc-icon-button-border: 1px solid #30344c;
+    --uigc-icon-button-border__hover: 1px solid var(--hex-bright-blue-600);
+    --uigc-icon-button-border-radius: 4px;
+    --uigc-icon-button-background: rgba(var(--rgb-primary-alpha), 0.06);
+    --uigc-icon-button-background__hover: rgba(var(--rgb-primary-alpha20), 0.2);
+    /** Input */
+    --uigc-input-border-width: 0 0 1px 0;
+    --uigc-input-border-color: var(--hex-dark-blue-400);
+    --uigc-input-border-color__focus: var(--hex-bright-blue-600);
+    --uigc-input-border-radius: 2px;
+    --uigc-input-background: rgba(var(--rgb-primary-alpha), 0.06);
+    --uigc-input-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
+    --uigc-input__placeholder-color: rgba(114, 131, 165, 0.6);
+    /** Paper */
+    --uigc-paper-border-radius: 4px;
+    --uigc-paper-box-shadow: 3px 4px 0px rgba(102, 181, 255, 0.19);
+    --uigc-paper-background: var(--hex-dark-blue-700);
+    /** Progress */
+    --uigc-progress__success-background: #30ffb1;
+    --uigc-progress__error-background: #f11313;
+    --uigc-progress-background: #009fff;
+    /** Switch */
+    --uigc-switch--root-border: 1px solid var(--hex-basic-700);
+    --uigc-switch--root-background: var(--hex-dark-gray);
+    --uigc-switch--thumb-background: var(--hex-basic-400);
+    --uigc-switch--thumb-border-color: var(--hex-dark-gray);
+    --uigc-switch--thumb-border-color__hover: var(--hex-bright-blue-300);
+    --uigc-switch__checked--root-background: rgba(var(--rgb-primary-alpha), 0.06);
+    --uigc-switch__checked--root-border: 1px solid var(--hex-bright-blue-300);
+    --uigc-switch__checked--thumb-background: var(--hex-bright-blue-700);
+    --uigc-switch__checked--thumb-border-color: var(--hex-bright-blue-300);
+    /** Toast */
+    --uigc-toast-background: var(--hex-dark-blue-600);
+    --uigc-toast-border-radius: 4px;
+    --uigc-toast--close-border-radius: 4px;
+    --uigc-toast--close-border: 1px solid #30344c;
+    --uigc-toast--close-background: var(--hex-dark-blue-700);
+    --uigc-toast--close-background__hover: var(--hex-dark-blue-600);
+    /** ToggleButton */
+    --uigc-toggle-button--root-background__hover: var(--hex-dark-blue-401);
+    --uigc-toggle-button--root-background: rgba(var(--rgb-primary-alpha), 0.06);
+    --uigc-toggle-button--root-border-radius: 4px;
+    --uigc-toggle-button__selected--root-color: var(--hex-black);
+    --uigc-toggle-button__selected--root-background: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);
+    /** ToggleButtonGroup */
+    --uigc-toggle-button-group--root-background: rgba(var(--rgb-primary-alpha), 0.06);
+    --uigc-toggle-button-group--root-border-radius: 4px;
   }
 `;

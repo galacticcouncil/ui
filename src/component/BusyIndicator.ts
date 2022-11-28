@@ -77,7 +77,7 @@ export class BusyIndicator extends UIGCElement {
       .busy-indicator-circle {
         display: inline-block;
         background-color: currentColor;
-        border-radius: 50%;
+        border-radius: var(--uigc-busy-indicator--circle-border-radius);
       }
 
       .busy-indicator-circle::before {

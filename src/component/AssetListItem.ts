@@ -20,7 +20,7 @@ export class AssetListItem extends UIGCElement {
       }
 
       :host([selected]) {
-        background-color: rgba(var(--rgb-primary-450), 0.12);
+        background-color: var(--uigc-asset-list-item__selected-background);
         pointer-events: none;
       }
 

@@ -24,21 +24,35 @@ export class Alert extends UIGCElement {
     UIGCElement.styles,
     css`
       :host {
-        background: var(--hex-background-gray-1000);
-        border-radius: 12px;
+        background: var(--uigc-alert-background);
+        border-radius: var(--uigc-alert-border-radius);
         display: flex;
         align-items: center;
         padding: 8px 14px;
         color: rgb(255, 255, 255);
+        box-sizing: border-box;
+      }
+
+      :host([variant='success']) {
+        background: var(--uigc-alert__success-background);
+      }
+
+      :host([variant='error']) {
+        background: var(--uigc-alert__error-background);
+      }
+
+      :host([variant='progress']) {
+        background: var(--uigc-alert__progress-background);
       }
 
       .icon {
         margin-right: 12px;
+        width: 30px;
       }
 
       uigc-circular-progress {
-        width: 31px;
-        height: 28px;
+        width: 30px;
+        height: 29px;
       }
 
       div.message {
@@ -90,7 +104,7 @@ export class Alert extends UIGCElement {
         this.variant != AlertVariant.default,
         () => html`
           ${choose(this.variant, [
-            [AlertVariant.success, () => html`<uigc-icon-success class="icon"></uigc-icon-success>`],
+            [AlertVariant.success, () => html`<uigc-icon-success class="icon" alert></uigc-icon-success>`],
             [AlertVariant.error, () => html`<uigc-icon-error class="icon"></uigc-icon-error>`],
             [
               AlertVariant.progress,

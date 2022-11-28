@@ -5,9 +5,9 @@ import { BaseIcon } from './BaseIcon';
 
 @customElement('uigc-icon-error')
 export class ErrorIcon extends BaseIcon {
-  render() {
+  bsxTemplate() {
     return html`
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+      <svg bsx xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
         <circle cx="14.9995" cy="14.145" r="14.0112" fill="url(#paint0_linear_13185_9508)" fill-opacity="0.4" />
         <path
           d="M10.3633 19.4098L12.5777 17.1954L20.1911 9.65625"
@@ -62,5 +62,24 @@ export class ErrorIcon extends BaseIcon {
         </defs>
       </svg>
     `;
+  }
+
+  hdxTemplate() {
+    return html` <svg hdx xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+      <rect x="3.99219" y="4.07471" width="4" height="4" fill="#FF4B4B" />
+      <rect x="7.99219" y="8.07495" width="4" height="4" fill="#FF4B4B" />
+      <rect x="11.9961" y="12.0747" width="4" height="4" fill="#FF4B4B" />
+      <rect x="15.9922" y="16.0747" width="4" height="4" fill="#FF4B4B" />
+      <rect x="19.9922" y="20.0747" width="4" height="4" fill="#FF4B4B" />
+      <rect x="23.9922" y="4.07471" width="4" height="4" transform="rotate(90 23.9922 4.07471)" fill="#FF4B4B" />
+      <rect x="19.9922" y="8.07495" width="4" height="4" transform="rotate(90 19.9922 8.07495)" fill="#FF4B4B" />
+      <rect x="15.9961" y="12.0747" width="4" height="4" transform="rotate(90 15.9961 12.0747)" fill="#FF4B4B" />
+      <rect x="11.9961" y="16.0747" width="4" height="4" transform="rotate(90 11.9961 16.0747)" fill="#FF4B4B" />
+      <rect x="7.99219" y="20.0747" width="4" height="4" transform="rotate(90 7.99219 20.0747)" fill="#FF4B4B" />
+    </svg>`;
+  }
+
+  render() {
+    return html` ${this.bsxTemplate()} ${this.hdxTemplate()} `;
   }
 }

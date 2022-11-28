@@ -3,12 +3,12 @@ import { DataType } from './DataType';
 export const AssetTypes = {
   aUSD: 'Acala USD',
   BSX: 'Basilisk',
-  HDX: 'Hydra',
   KSM: 'Kusama',
   PHA: 'Phala',
   TNKR: 'Tinkernet',
-  KAR: 'Karura',
   DAI: 'Dai USD',
+  HDX: 'Hydra',
+  KAR: 'Karura',
 };
 
 export class AssetType extends DataType {

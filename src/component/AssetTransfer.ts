@@ -17,54 +17,87 @@ export class AssetTransfer extends UIGCElement {
   static styles = [
     UIGCElement.styles,
     css`
-      :host {
+      /* :host {
         display: grid;
         background: var(--uigc-asset-transfer-background);
         border-radius: var(--uigc-asset-transfer-border-radius);
+        border-bottom: var(--uigc-asset-transfer-border-bottom);
         box-sizing: border-box;
         padding: 14px;
         row-gap: 5px;
+      } */
+
+      /* :host:hover {
+        background: red;
+      } */
+
+      /* .asset-root:hover {
+        // background: red;
       }
 
-      :host > :nth-child(1) {
+      .asset-root:focus-within {
+        background: red;
+      } */
+
+      .asset-root {
+        display: grid;
+        background: var(--uigc-asset-transfer-background);
+        border-radius: var(--uigc-asset-transfer-border-radius);
+        border-bottom: var(--uigc-asset-transfer-border-bottom);
+        box-sizing: border-box;
+        padding: var(--uigc-asset-transfer-padding);
+        row-gap: var(--uigc-asset-transfer-row-gap);
+      }
+
+      .asset-root:focus,
+      .asset-root:focus-visible,
+      .asset-root:focus-within,
+      .asset-root:hover {
+        border-bottom: var(--uigc-asset-transfer-border-bottom__hover);
+        background: var(--uigc-asset-transfer-background__hover);
+      }
+
+      .asset-root > :nth-child(1) {
         grid-area: 1 / 1 / 2 / 3;
       }
 
-      :host > :nth-child(2) {
+      .asset-root > :nth-child(2) {
         padding-top: 5px;
         grid-area: 3 / 1 / 4 / 3;
       }
 
-      :host > :nth-child(3) {
+      .asset-root > :nth-child(3) {
         grid-area: 2 / 1 / 3 / 3;
       }
 
       @media (min-width: 768px) {
-        :host {
-          padding: 20px;
-          row-gap: 11px;
+        .asset-root {
+          padding: var(--uigc-asset-transfer-padding__md);
+          row-gap: var(--uigc-asset-transfer-row-gap__md);
         }
 
-        :host > :nth-child(1) {
+        .asset-root > :nth-child(1) {
           grid-area: 1 / 1 / 2 / 2;
         }
 
-        :host > :nth-child(2) {
+        .asset-root > :nth-child(2) {
           padding-top: 0;
           grid-area: 1 / 2 / 2 / 3;
         }
 
-        :host > :nth-child(3) {
+        .asset-root > :nth-child(3) {
           grid-area: 2 / 1 / 3 / 3;
         }
       }
 
       .title {
+        display: flex;
+        align-items: center;
         font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        color: var(--uigc-asset-transfer-color);
-        text-transform: var(--uigc-asset-transfer-text-transform);
+        font-size: var(--uigc-asset-transfer--title-font-size);
+        line-height: var(--uigc-asset-transfer--title-line-height);
+        color: var(--uigc-asset-transfer--title-color);
+        text-transform: var(--uigc-asset-transfer--title-text-transform);
       }
 
       .balance {
@@ -117,25 +150,36 @@ export class AssetTransfer extends UIGCElement {
     this.dispatchEvent(new CustomEvent('asset-input-changed', options));
   }
 
+  focusInput() {
+    this.shadowRoot.getElementById(this.id).focus();
+
+    const slot = this.shadowRoot.querySelector('uigc-asset-input');
+    console.log(slot);
+    console.log('Active: ');
+    console.log(this.shadowRoot.activeElement);
+  }
+
   render() {
     return html`
-      <span class="title">${this.title}</span>
-      <div class="balance">
-        <span class="label">Your balance: &nbsp</span>
-        <span>${this.balance ? this.balance : '-'}</span>
-        <uigc-button
-          class="max"
-          variant="max"
-          size="micro"
-          capitalize
-          ?disabled=${this.balance == null}
-          @click=${this.onMaxClick}
-          >Max</uigc-button
-        >
-      </div>
-      <div class="asset">
-        <uigc-asset-selector id=${this.id} .asset=${this.asset}></uigc-asset-selector>
-        <uigc-asset-input id=${this.id} .asset=${this.asset} .amount=${this.amount}></uigc-asset-input>
+      <div tabindex="0" class="asset-root" @click=${this.focusInput}>
+        <span class="title">${this.title}</span>
+        <div class="balance">
+          <span class="label">Your balance: &nbsp</span>
+          <span>${this.balance ? this.balance : '-'}</span>
+          <uigc-button
+            class="max"
+            variant="max"
+            size="micro"
+            capitalize
+            ?disabled=${this.balance == null}
+            @click=${this.onMaxClick}
+            >Max</uigc-button
+          >
+        </div>
+        <div class="asset">
+          <uigc-asset-selector .asset=${this.asset}></uigc-asset-selector>
+          <uigc-asset-input id=${this.id} .asset=${this.asset} .amount=${this.amount}></uigc-asset-input>
+        </div>
       </div>
     `;
   }

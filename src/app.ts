@@ -26,6 +26,7 @@ import './component/Switch';
 import './component/Toast';
 import './component/ToggleButton';
 import './component/ToggleButtonGroup';
+import './component/Typography';
 
 import './component/icons/Back';
 import './component/icons/ChevronRight';

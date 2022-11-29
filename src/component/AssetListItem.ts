@@ -31,6 +31,7 @@ export class AssetListItem extends UIGCElement {
         padding: 22px 14px;
         gap: 6px;
         background-color: transparent;
+        background: var(--uigc-asset-list-item--button-background);
         width: 100%;
         height: 56px;
         cursor: pointer;

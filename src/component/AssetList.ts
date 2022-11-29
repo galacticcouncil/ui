@@ -24,7 +24,7 @@ export class AssetList extends UIGCElement {
         font-weight: 600;
         font-size: 12px;
         line-height: 90%;
-        border-bottom: 1px solid var(--hex-background-gray-800);
+        border-bottom: var(--uigc-asset-list-border-bottom);
       }
 
       @media (min-width: 768px) {
@@ -38,7 +38,7 @@ export class AssetList extends UIGCElement {
       }
 
       ::slotted(*) {
-        border-bottom: 1px solid var(--hex-background-gray-800);
+        border-bottom: var(--uigc-asset-list-border-bottom);
         display: block;
       }
     `,

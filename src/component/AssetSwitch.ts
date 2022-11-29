@@ -16,10 +16,13 @@ export class AssetSwitch extends UIGCElement {
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 0.3s ease-in-out 0s;
       }
 
-      .switch-root:hover {
+      uigc-icon-switch {
+        transition: var(--uigc-asset-switch-transition);
+      }
+
+      .switch-root:hover > uigc-icon-switch {
         cursor: pointer;
         transform: var(--uigc-asset-switch-transform);
       }

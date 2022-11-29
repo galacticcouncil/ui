@@ -1392,6 +1392,10 @@
             },
             {
               "kind": "method",
+              "name": "focusInput"
+            },
+            {
+              "kind": "method",
               "name": "createFontFaceStylesheet",
               "inheritedFrom": {
                 "name": "UIGCElement",
@@ -3648,6 +3652,83 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/component/Typography.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Typography",
+          "members": [
+            {
+              "kind": "method",
+              "name": "createFontFaceStylesheet",
+              "inheritedFrom": {
+                "name": "UIGCElement",
+                "module": "src/component/base/UIGCElement.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "createWebkitStylesheet",
+              "inheritedFrom": {
+                "name": "UIGCElement",
+                "module": "src/component/base/UIGCElement.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "createPaletteStylesheet",
+              "inheritedFrom": {
+                "name": "UIGCElement",
+                "module": "src/component/base/UIGCElement.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "createBsxThemeStylesheet",
+              "inheritedFrom": {
+                "name": "UIGCElement",
+                "module": "src/component/base/UIGCElement.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "createHdxThemeStylesheet",
+              "inheritedFrom": {
+                "name": "UIGCElement",
+                "module": "src/component/base/UIGCElement.ts"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "UIGCElement",
+            "module": "/src/component/base/UIGCElement"
+          },
+          "tagName": "uigc-typography",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Typography",
+          "declaration": {
+            "name": "Typography",
+            "module": "src/component/Typography.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "uigc-typography",
+          "declaration": {
+            "name": "Typography",
+            "module": "src/component/Typography.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/component/base/CloseableElement.ts",
       "declarations": [
         {
@@ -4097,7 +4178,16 @@
           "kind": "class",
           "description": "",
           "name": "ErrorIcon",
-          "members": [],
+          "members": [
+            {
+              "kind": "method",
+              "name": "bsxTemplate"
+            },
+            {
+              "kind": "method",
+              "name": "hdxTemplate"
+            }
+          ],
           "superclass": {
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
@@ -4250,7 +4340,16 @@
           "kind": "class",
           "description": "",
           "name": "SettingsIcon",
-          "members": [],
+          "members": [
+            {
+              "kind": "method",
+              "name": "bsxTemplate"
+            },
+            {
+              "kind": "method",
+              "name": "hdxTemplate"
+            }
+          ],
           "superclass": {
             "name": "BaseIcon",
             "module": "/src/component/icons/BaseIcon"
@@ -4370,152 +4469,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/component/types/AssetType.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "AssetTypes",
-          "type": {
-            "text": "object"
-          },
-          "default": "{\n  aUSD: 'Acala USD',\n  BSX: 'Basilisk',\n  HDX: 'Hydra',\n  KSM: 'Kusama',\n  PHA: 'Phala',\n  TNKR: 'Tinkernet',\n  KAR: 'Karura',\n  DAI: 'Dai USD',\n}"
-        },
-        {
-          "kind": "class",
-          "description": "",
-          "name": "AssetType",
-          "members": [
-            {
-              "kind": "method",
-              "name": "isValid",
-              "static": true,
-              "return": {
-                "type": {
-                  "text": "boolean"
-                }
-              },
-              "parameters": [
-                {
-                  "name": "value",
-                  "type": {
-                    "text": "any"
-                  }
-                }
-              ],
-              "inheritedFrom": {
-                "name": "DataType",
-                "module": "src/component/types/DataType.ts"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "getMap",
-              "static": true,
-              "return": {
-                "type": {
-                  "text": "Map<string, string>"
-                }
-              },
-              "parameters": [
-                {
-                  "name": "types",
-                  "type": {
-                    "text": "Record<string, string>"
-                  }
-                }
-              ],
-              "inheritedFrom": {
-                "name": "DataType",
-                "module": "src/component/types/DataType.ts"
-              }
-            }
-          ],
-          "superclass": {
-            "name": "DataType",
-            "module": "/src/component/types/DataType"
-          }
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "AssetTypes",
-          "declaration": {
-            "name": "AssetTypes",
-            "module": "src/component/types/AssetType.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "AssetType",
-          "declaration": {
-            "name": "AssetType",
-            "module": "src/component/types/AssetType.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/component/types/DataType.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "DataType",
-          "members": [
-            {
-              "kind": "method",
-              "name": "isValid",
-              "static": true,
-              "return": {
-                "type": {
-                  "text": "boolean"
-                }
-              },
-              "parameters": [
-                {
-                  "name": "value",
-                  "type": {
-                    "text": "any"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getMap",
-              "static": true,
-              "return": {
-                "type": {
-                  "text": "Map<string, string>"
-                }
-              },
-              "parameters": [
-                {
-                  "name": "types",
-                  "type": {
-                    "text": "Record<string, string>"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "DataType",
-          "declaration": {
-            "name": "DataType",
-            "module": "src/component/types/DataType.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/component/styles/base.css.ts",
       "declarations": [
         {
@@ -4576,17 +4529,17 @@
         {
           "kind": "variable",
           "name": "paletteProperties",
-          "default": "css`\n  :root {\n    --hex-white: #ffffff;\n    --rgb-white: 255, 255, 255;\n    --hex-black: #000000;\n    --rgb-black: 0, 0, 0;\n\n    --hex-primary-500: #49e49f;\n    --rgb-primary-500: 73, 228, 159;\n    --hex-primary-450: #4cf3a8;\n    --rgb-primary-450: 76, 243, 168;\n    --hex-primary-400: #4fffb0;\n    --rgb-primary-400: 79, 255, 176;\n    --hex-primary-300: #8affcb;\n    --rgb-primary-300: 138, 255, 203;\n    --hex-primary-200: #b8ffdf;\n    --rgb-primary-200: 184, 255, 223;\n    --hex-primary-100: #daffee;\n    --rgb-primary-100: 218, 255, 238;\n\n    --hex-primary-alpha: #9ea7ba;\n    --rgb-primary-alpha: 158, 167, 186;\n    --hex-primary-alpha15: #4cd5f3;\n    --rgb-primary-alpha15: 76, 213, 243;\n    --hex-primary-alpha20: #25cbff;\n    --rgb-primary-alpha20: 37, 203, 255;\n\n    --hex-yellow-100: #f5f0de;\n    --rgb-yellow-100: 245, 240, 222;\n    --hex-yellow-200: #f4e7b0;\n    --rgb-yellow-200: 244, 231, 176;\n    --hex-yellow-300: #f0da73;\n    --rgb-yellow-300: 240, 218, 115;\n    --hex-yellow-400: #f7bf06;\n    --rgb-yellow-400: 247, 191, 6;\n    --hex-yellow-500: #e5b30b;\n    --rgb-yellow-500: 229, 179, 11;\n\n    --hex-orange-100: #ffe2c3;\n    --rgb-orange-100: 255, 226, 195;\n    --hex-orange-200: #fbcd9c;\n    --rgb-orange-200: 251, 205, 156;\n    --hex-orange-300: #f5a855;\n    --rgb-orange-300: 245, 168, 85;\n    --hex-orange-400: #ff931e;\n    --rgb-orange-400: 255, 147, 30;\n    --hex-orange-450: #f38d1d;\n    --rgb-orange-450: 243, 141, 29;\n    --hex-orange-500: #e18521;\n    --rgb-orange-500: 225, 133, 33;\n\n    --hex-red-100: #ffd7d7;\n    --rgb-red-100: 255, 215, 215;\n    --hex-red-200: #ffaeae;\n    --rgb-red-200: 255, 174, 174;\n    --hex-red-300: #ff8a8a;\n    --rgb-red-300: 255, 138, 138;\n    --hex-red-400: #ff6868;\n    --rgb-red-400: 255, 104, 104;\n    --hex-red-500: #da5d5d;\n    --rgb-red-500: 218, 93, 93;\n\n    --hex-pink-100: #ffbbd6;\n    --hex-pink-200: #fea6ca;\n    --hex-pink-300: #ff99c2;\n    --hex-pink-400: #ff8bba;\n    --hex-pink-500: #ff67a4;\n    --hex-pink-600: #fc408c;\n    --hex-pink-700: #f6297c;\n\n    --hex-bright-blue-100: #a6ddff;\n    --hex-bright-blue-200: #9cddff;\n    --hex-bright-blue-300: #85d1ff;\n    --hex-bright-blue-400: #3192cd;\n    --hex-bright-blue-500: #1a7ab4;\n    --hex-bright-blue-600: #57b3eb;\n    --hex-bright-blue-700: #009fff;\n\n    --hex-vibrant-blue-100: #7889ff;\n    --hex-vibrant-blue-200: #5f73fe;\n    --hex-vibrant-blue300: #485ef8;\n    --hex-vibrant-blue400: #2b40c8;\n    --hex-vibrant-blue500: #152dc7;\n    --hex-vibrant-blue600: #0a1fa7;\n    --hex-vibrant-blue700: #031586;\n\n    --hex-dark-blue-200: #999ba7;\n    --hex-dark-blue-300: #66697c;\n    --hex-dark-blue-400: #333750;\n    --hex-dark-blue-401: #1c2038;\n    --hex-dark-blue-500: #000524;\n    --hex-dark-blue-600: #00041d;\n    --hex-dark-blue-700: #111320;\n    --hex-dark-blue-800: #00020e;\n    --hex-dark-blue-900: #000107;\n    --hex-dark-blue-1000: #000524;\n\n    --hex-background-gray-1000: #1c1a1f;\n    --rgb-background-gray-1000: 28, 26, 31;\n    --hex-background-gray-900: #211f24;\n    --rgb-background-gray-900: 33, 31, 36;\n    --hex-background-gray-800: #29292d;\n    --rgb-background-gray-800: 41, 41, 45;\n    --hex-background-gray-700: #3e3e4b;\n    --rgb-background-gray-700: 62, 62, 75;\n    --hex-background-gray-600: #51515f;\n    --rgb-background-gray-600: 81, 81, 95;\n    --hex-background-gray-500: #686876;\n    --rgb-background-gray-500: 104, 104, 118;\n\n    --hex-neutral-gray-500: #787e82;\n    --rgb-neutral-gray-500: 120, 126, 130;\n    --hex-neutral-gray-400: #a2b0b8;\n    --rgb-neutral-gray-400: 162, 176, 184;\n    --hex-neutral-gray-300: #9ea9b1;\n    --rgb-neutral-gray-300: 158, 169, 177;\n    --hex-neutral-gray-200: #d1dee8;\n    --rgb-neutral-gray-200: 209, 222, 232;\n    --hex-neutral-gray-100: #e5ecf1;\n    --rgb-neutral-gray-100: 229, 236, 241;\n\n    --hex-basic-100: #ecedef;\n    --hex-basic-200: #8f90a6;\n    --hex-basic-300: #bbbec9;\n    --hex-basic-400: #b2b6c5;\n    --hex-basic-500: #878c9e;\n    --hex-basic-600: #676c80;\n    --hex-basic-700: #5d6175;\n    --hex-basic-800: #26282f;\n    --hex-basic-900: #00041d;\n\n    --hex-poison-green: #192022;\n    --hex-dark-green: #1d2d26;\n    --hex-dark-gray: #1a171b;\n\n    --hex-primary-success: #4fffb0;\n    --hex-graph-gradient-0: #4fffb0;\n    --hex-graph-gradient-50: #b3ff8f;\n    --hex-graph-gradient-100: #ff984e;\n\n    --gradient-label: linear-gradient(90deg, #4fffb0 1.27%, #b3ff8f 48.96%, #ff984e 104.14%),\n      linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),\n      linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);\n    --gradient-paper: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);\n    --gradient-background: radial-gradient(89.2% 89.2% at 50.07% 87.94%, #008a69 0%, #262f31 88.52%), #2c3335;\n  }\n`"
+          "default": "css`\n  :root {\n    --hex-white: #ffffff;\n    --rgb-white: 255, 255, 255;\n    --hex-black: #000000;\n    --rgb-black: 0, 0, 0;\n\n    --hex-primary-500: #49e49f;\n    --rgb-primary-500: 73, 228, 159;\n    --hex-primary-450: #4cf3a8;\n    --rgb-primary-450: 76, 243, 168;\n    --hex-primary-400: #4fffb0;\n    --rgb-primary-400: 79, 255, 176;\n    --hex-primary-300: #8affcb;\n    --rgb-primary-300: 138, 255, 203;\n    --hex-primary-200: #b8ffdf;\n    --rgb-primary-200: 184, 255, 223;\n    --hex-primary-100: #daffee;\n    --rgb-primary-100: 218, 255, 238;\n\n    --hex-primary-alpha: #9ea7ba;\n    --rgb-primary-alpha: 158, 167, 186;\n    --hex-primary-alpha15: #4cd5f3;\n    --rgb-primary-alpha15: 76, 213, 243;\n    --hex-primary-alpha20: #25cbff;\n    --rgb-primary-alpha20: 37, 203, 255;\n\n    --hex-yellow-100: #f5f0de;\n    --rgb-yellow-100: 245, 240, 222;\n    --hex-yellow-200: #f4e7b0;\n    --rgb-yellow-200: 244, 231, 176;\n    --hex-yellow-300: #f0da73;\n    --rgb-yellow-300: 240, 218, 115;\n    --hex-yellow-400: #f7bf06;\n    --rgb-yellow-400: 247, 191, 6;\n    --hex-yellow-500: #e5b30b;\n    --rgb-yellow-500: 229, 179, 11;\n\n    --hex-orange-100: #ffe2c3;\n    --rgb-orange-100: 255, 226, 195;\n    --hex-orange-200: #fbcd9c;\n    --rgb-orange-200: 251, 205, 156;\n    --hex-orange-300: #f5a855;\n    --rgb-orange-300: 245, 168, 85;\n    --hex-orange-400: #ff931e;\n    --rgb-orange-400: 255, 147, 30;\n    --hex-orange-450: #f38d1d;\n    --rgb-orange-450: 243, 141, 29;\n    --hex-orange-500: #e18521;\n    --rgb-orange-500: 225, 133, 33;\n\n    --hex-red-100: #ffd7d7;\n    --rgb-red-100: 255, 215, 215;\n    --hex-red-200: #ffaeae;\n    --rgb-red-200: 255, 174, 174;\n    --hex-red-300: #ff8a8a;\n    --rgb-red-300: 255, 138, 138;\n    --hex-red-400: #ff6868;\n    --rgb-red-400: 255, 104, 104;\n    --hex-red-500: #da5d5d;\n    --rgb-red-500: 218, 93, 93;\n\n    --hex-pink-100: #ffbbd6;\n    --hex-pink-200: #fea6ca;\n    --hex-pink-300: #ff99c2;\n    --hex-pink-400: #ff8bba;\n    --hex-pink-500: #ff67a4;\n    --hex-pink-600: #fc408c;\n    --hex-pink-700: #f6297c;\n\n    --hex-bright-blue-100: #a6ddff;\n    --hex-bright-blue-200: #9cddff;\n    --hex-bright-blue-300: #85d1ff;\n    --hex-bright-blue-400: #3192cd;\n    --hex-bright-blue-500: #1a7ab4;\n    --hex-bright-blue-600: #57b3eb;\n    --hex-bright-blue-700: #009fff;\n\n    --hex-vibrant-blue-100: #7889ff;\n    --hex-vibrant-blue-200: #5f73fe;\n    --hex-vibrant-blue300: #485ef8;\n    --hex-vibrant-blue400: #2b40c8;\n    --hex-vibrant-blue500: #152dc7;\n    --hex-vibrant-blue600: #0a1fa7;\n    --hex-vibrant-blue700: #031586;\n\n    --hex-dark-blue-200: #999ba7;\n    --hex-dark-blue-300: #66697c;\n    --hex-dark-blue-400: #333750;\n    --hex-dark-blue-401: #1c2038;\n    --hex-dark-blue-500: #000524;\n    --hex-dark-blue-600: #00041d;\n    --hex-dark-blue-700: #111320;\n    --hex-dark-blue-800: #00020e;\n    --hex-dark-blue-900: #000107;\n    --hex-dark-blue-1000: #000524;\n\n    --hex-background-gray-1000: #1c1a1f;\n    --rgb-background-gray-1000: 28, 26, 31;\n    --hex-background-gray-900: #211f24;\n    --rgb-background-gray-900: 33, 31, 36;\n    --hex-background-gray-800: #29292d;\n    --rgb-background-gray-800: 41, 41, 45;\n    --hex-background-gray-700: #3e3e4b;\n    --rgb-background-gray-700: 62, 62, 75;\n    --hex-background-gray-600: #51515f;\n    --rgb-background-gray-600: 81, 81, 95;\n    --hex-background-gray-500: #686876;\n    --rgb-background-gray-500: 104, 104, 118;\n\n    --hex-neutral-gray-500: #787e82;\n    --rgb-neutral-gray-500: 120, 126, 130;\n    --hex-neutral-gray-400: #a2b0b8;\n    --rgb-neutral-gray-400: 162, 176, 184;\n    --hex-neutral-gray-300: #9ea9b1;\n    --rgb-neutral-gray-300: 158, 169, 177;\n    --hex-neutral-gray-200: #d1dee8;\n    --rgb-neutral-gray-200: 209, 222, 232;\n    --hex-neutral-gray-100: #e5ecf1;\n    --rgb-neutral-gray-100: 229, 236, 241;\n\n    --hex-basic-100: #ecedef;\n    --hex-basic-200: #8f90a6;\n    --hex-basic-300: #bbbec9;\n    --hex-basic-400: #b2b6c5;\n    --hex-basic-500: #878c9e;\n    --hex-basic-600: #676c80;\n    --hex-basic-700: #5d6175;\n    --hex-basic-800: #26282f;\n    --hex-basic-900: #00041d;\n\n    /* --hex-poison-green: #192022; */\n    --hex-dark-green: #1d2d26;\n    --hex-dark-gray: #1a171b;\n\n    --gradient-label: linear-gradient(90deg, #4fffb0 1.27%, #b3ff8f 48.96%, #ff984e 104.14%),\n      linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),\n      linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);\n    --gradient-paper: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);\n    --gradient-background: radial-gradient(89.2% 89.2% at 50.07% 87.94%, #008a69 0%, #262f31 88.52%), #2c3335;\n  }\n`"
         },
         {
           "kind": "variable",
           "name": "bsxThemeProperties",
-          "default": "css`\n  :root,\n  .bsx {\n    --uigc-app-font: 'SatoshiVariable';\n    --uigc-app-font-secondary: 'SatoshiVariable';\n    --uigc-app-background: radial-gradient(89.2% 89.2% at 50.07% 87.94%, rgb(0, 138, 105) 0%, rgb(38, 47, 49) 88.52%),\n      rgb(44, 51, 53);\n\n    --uigc-bsx-icon-display: flex;\n    --uigc-hdx-icon-display: none;\n\n    /** Alert */\n    --uigc-alert-border-radius: 14px;\n    --uigc-alert-background: var(--hex-background-gray-900);\n    --uigc-alert__success-background: var(--hex-background-gray-900);\n    --uigc-alert__error-background: var(--hex-background-gray-900);\n    --uigc-alert__progress-background: var(--hex-background-gray-900);\n    /** AssetListItem */\n    --uigc-asset-list-item__selected-background: rgba(var(--rgb-primary-450), 0.12);\n    /** AssetList */\n    --uigc-asset-list--header-color: var(--hex-neutral-gray-300);\n    --uigc-asset-list--subheader-background: rgba(var(--rgb-white), 0.03);\n    /** AssetPrice */\n    --uigc-asset-price-background: rgba(var(--rgb-primary-100), 0.06);\n    --uigc-asset-price-border-radius: 7px;\n    --uigc-asset-price__highlight-color: var(--hex-primary-300);\n    /** AssetSelector */\n    --uigc-asset-selector-border-radius: 8px;\n    /** AssetSwitch */\n    --uigc-asset-switch-transform: rotate(180deg);\n    /** AssetTransfer */\n    --uigc-asset-transfer-color: var(--hex-primary-200);\n    --uigc-asset-transfer-text-transform: none;\n    --uigc-asset-transfer-border-radius: 12px;\n    --uigc-asset-transfer-background: rgba(var(--rgb-primary-100), 0.06);\n    /** BusyIndicator */\n    --uigc-busy-indicator--circle-border-radius: 50%;\n    /** Button */\n    --uigc-button-border-radius: 35px;\n    --uigc-button__max-border-radius: 35px;\n    --uigc-button__max-text-transform: none;\n    --uigc-button__primary-color: var(--hex-background-gray-800);\n    --uigc-button__primary-background: var(--hex-primary-400);\n    --uigc-button__primary-background__hover: var(--hex-primary-300);\n    --uigc-button__secondary-color: var(--hex-primary-400);\n    --uigc-button__secondary-color__hover: var(--hex-primary-400);\n    --uigc-button__secondary-background: rgba(var(--rgb-primary-450), 0.12);\n    --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-450), 0.3);\n    --uigc-button__secondary-border: none;\n    --uigc-button__secondary-border__hover: none;\n    /** CircularProgress */\n    --uigc-circular-progress-background: conic-gradient(\n      from 180deg at 50% 50%,\n      #ffe668 -89.54deg,\n      rgba(79, 255, 176, 0) 20.17deg,\n      rgba(79, 255, 176, 0) 129.19deg,\n      rgba(79, 255, 176, 0.14) 157.96deg,\n      #2effa1 228.05deg,\n      #ffe668 270.46deg,\n      rgba(79, 255, 176, 0) 380.17deg\n    );\n    /** Dialog */\n    --uigc-dialog-background: var(--hex-background-gray-900);\n    --uigc-dialog-box-shadow: 0px 38px 46px rgba(0, 0, 0, 0.03);\n    --uigc-dialog-border-radius: 16px;\n    /** Divider */\n    --uigc-divider-background: rgba(var(--rgb-primary-450), 0.12);\n    /** Drawer */\n    --uigc-drawer-background: var(--hex-background-gray-900);\n    --uigc-drawer-box-shadow: 0px 38px 46px rgba(0, 0, 0, 0.03);\n    --uigc-drawer-border-radius: 16px;\n    /** IconButton */\n    --uigc-icon-button-border: none;\n    --uigc-icon-button-border__hover: none;\n    --uigc-icon-button-border-radius: 50%;\n    --uigc-icon-button-background: rgba(var(--rgb-white), 0.06);\n    --uigc-icon-button-background__hover: rgba(var(--rgb-white), 0.2);\n    /** AssetInput */\n    --uigc-input-border-width: 1px;\n    --uigc-input-border-color: rgba(var(--rgb-white), 0.12);\n    --uigc-input-border-color__focus: var(--hex-primary-300);\n    --uigc-input-border-radius: 9px;\n    --uigc-input-background: rgba(var(--rgb-primary-100), 0.06);\n    --uigc-input-background__hover: rgba(var(--rgb-white), 0.12);\n    --uigc-input__placeholder-color: rgba(var(--rgb-primary-100), 0.4);\n    /** Paper */\n    --uigc-paper-border-radius: 20px;\n    --uigc-paper-box-shadow: 0 0 0 1px hsl(0deg 0% 100% / 5%);\n    --uigc-paper-background: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);\n    /** Progress */\n    --uigc-progress-background__success: var(--hex-primary-500);\n    --uigc-progress-background__error: var(--hex-primary-500);\n    --uigc-progress-background: var(--hex-primary-500);\n    /** Switch */\n    --uigc-switch--root-border: 1px solid var(--hex-background-gray-700);\n    --uigc-switch--root-background: var(--hex-dark-gray);\n    --uigc-switch--thumb-background: var(--hex-neutral-gray-400);\n    --uigc-switch--thumb-border-color: var(--hex-dark-gray);\n    --uigc-switch--thumb-border-color__hover: var(--hex-primary-300);\n    --uigc-switch__checked--root-background: var(--hex-dark-green);\n    --uigc-switch__checked--root-border: 1px solid var(--hex-primary-500);\n    --uigc-switch__checked--thumb-background: var(--hex-primary-300);\n    --uigc-switch__checked--thumb-border-color: var(--hex-primary-500);\n    /** Toast */\n    --uigc-toast-background: var(--hex-background-gray-900);\n    --uigc-toast-border-radius: 14px;\n    --uigc-toast--close-border-radius: 50%;\n    --uigc-toast--close-border: none;\n    --uigc-toast--close-background: var(--hex-background-gray-800);\n    --uigc-toast--close-background__hover: var(--hex-background-gray-900);\n    /** ToggleButton */\n    --uigc-toggle-button--root-background__hover: var(--hex-background-gray-700);\n    --uigc-toggle-button--root-background: transparent;\n    --uigc-toggle-button--root-border-radius: 9px;\n    --uigc-toggle-button__selected--root-color: var(--hex-black);\n    --uigc-toggle-button__selected--root-background: linear-gradient(\n        90deg,\n        #4fffb0 1.27%,\n        #b3ff8f 48.96%,\n        #ff984e 104.14%\n      ),\n      linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),\n      linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);\n    /** ToggleButtonGroup */\n    --uigc-toggle-button-group--root-background: rgba(var(--rgb-black), 0.25);\n    --uigc-toggle-button-group--root-border-radius: 11px;\n  }\n`"
+          "default": "css`\n  :root,\n  .bsx {\n    --uigc-bsx-icon-display: flex;\n    --uigc-hdx-icon-display: none;\n    /** GENERAL */\n    --uigc-app-font: 'SatoshiVariable';\n    --uigc-app-font-secondary: 'SatoshiVariable';\n    --uigc-app-background: radial-gradient(89.2% 89.2% at 50.07% 87.94%, rgb(0, 138, 105) 0%, rgb(38, 47, 49) 88.52%),\n      rgb(44, 51, 53);\n    --uigc-app-border-radius: 20px;\n\n    --uigc-app-font-color__gradient: linear-gradient(90deg, #4fffb0 1.27%, #b3ff8f 48.96%, #ff984e 104.14%),\n      linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),\n      linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);\n    --uigc-app-font-color__primary: var(--hex-primary-400);\n    --uigc-app-font-color__secondary: var(--hex-neutral-gray-400);\n\n    /** Alert */\n    --uigc-alert-border-radius: 14px;\n    --uigc-alert-background: var(--hex-background-gray-900);\n    --uigc-alert__success-background: var(--hex-background-gray-900);\n    --uigc-alert__error-background: var(--hex-background-gray-900);\n    --uigc-alert__progress-background: var(--hex-background-gray-900);\n    /** AssetInput */\n    --uigc-asset-input-background: rgba(var(--rgb-primary-100), 0.06);\n    --uigc-asset-input-border-style: solid;\n    --uigc-asset-input-padding: 0 14px;\n    /** AssetListItem */\n    --uigc-asset-list-item__selected-background: rgba(var(--rgb-primary-450), 0.12);\n    --uigc-asset-list-item--button-background: transparent;\n    /** AssetList */\n    --uigc-asset-list-border-bottom: 1px solid var(--hex-background-gray-800);\n    --uigc-asset-list--header-color: var(--hex-neutral-gray-300);\n    --uigc-asset-list--subheader-background: rgba(var(--rgb-white), 0.03);\n    /** AssetPrice */\n    --uigc-asset-price-background: rgba(var(--rgb-primary-100), 0.06);\n    --uigc-asset-price-border-radius: 7px;\n    --uigc-asset-price__highlight-color: var(--hex-primary-300);\n    /** AssetSelector */\n    --uigc-asset-selector-border-radius: 8px;\n    /** AssetSwitch */\n    --uigc-asset-switch-transform: rotate(180deg);\n    --uigc-asset-switch-transition: all 0.3s ease-in-out 0s;\n    /** AssetTransfer */\n    --uigc-asset-transfer-border-radius: 12px;\n    --uigc-asset-transfer-border-bottom: none;\n    --uigc-asset-transfer-border-bottom__hover: none;\n    --uigc-asset-transfer-background: rgba(var(--rgb-primary-100), 0.06);\n    --uigc-asset-transfer-background__hover: rgba(var(--rgb-primary-100), 0.06);\n    --uigc-asset-transfer-padding: 14px;\n    --uigc-asset-transfer-padding__md: 20px;\n    --uigc-asset-transfer-row-gap: 5px;\n    --uigc-asset-transfer-row-gap__md: 11px;\n    --uigc-asset-transfer--title-color: var(--hex-primary-200);\n    --uigc-asset-transfer--title-text-transform: none;\n    --uigc-asset-transfer--title-font-size: 16px;\n    --uigc-asset-transfer--title-line-height: 22px;\n    /** BusyIndicator */\n    --uigc-busy-indicator--circle-border-radius: 50%;\n    /** Button */\n    --uigc-button-border-radius: 35px;\n    --uigc-button__max-border-radius: 35px;\n    --uigc-button__max-text-transform: none;\n    --uigc-button__primary-color: var(--hex-background-gray-800);\n    --uigc-button__primary-background: var(--hex-primary-400);\n    --uigc-button__primary-background__hover: var(--hex-primary-300);\n    --uigc-button__secondary-color: var(--hex-primary-400);\n    --uigc-button__secondary-color__hover: var(--hex-primary-400);\n    --uigc-button__secondary-background: rgba(var(--rgb-primary-450), 0.12);\n    --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-450), 0.3);\n    --uigc-button__secondary-border: none;\n    --uigc-button__secondary-border__hover: none;\n    /** CircularProgress */\n    --uigc-circular-progress-background: conic-gradient(\n      from 180deg at 50% 50%,\n      #ffe668 -89.54deg,\n      rgba(79, 255, 176, 0) 20.17deg,\n      rgba(79, 255, 176, 0) 129.19deg,\n      rgba(79, 255, 176, 0.14) 157.96deg,\n      #2effa1 228.05deg,\n      #ffe668 270.46deg,\n      rgba(79, 255, 176, 0) 380.17deg\n    );\n    /** Dialog */\n    --uigc-dialog-background: var(--hex-background-gray-900);\n    --uigc-dialog-box-shadow: 0px 38px 46px rgba(0, 0, 0, 0.03);\n    --uigc-dialog-border-radius: 16px;\n    /** Divider */\n    --uigc-divider-background: rgba(var(--rgb-primary-450), 0.12);\n    /** Drawer */\n    --uigc-drawer-background: var(--hex-background-gray-900);\n    --uigc-drawer-box-shadow: 0px 38px 46px rgba(0, 0, 0, 0.03);\n    --uigc-drawer-border-radius: 16px;\n    /** IconButton */\n    --uigc-icon-button-border: none;\n    --uigc-icon-button-border__hover: none;\n    --uigc-icon-button-border-radius: 50%;\n    --uigc-icon-button-background: rgba(var(--rgb-white), 0.06);\n    --uigc-icon-button-background__hover: rgba(var(--rgb-white), 0.2);\n    /** AssetInput */\n    --uigc-input-border-width: 1px;\n    --uigc-input-border-color: rgba(var(--rgb-white), 0.12);\n    --uigc-input-border-color__focus: var(--hex-primary-300);\n    --uigc-input-border-radius: 9px;\n    --uigc-input-background: rgba(var(--rgb-primary-100), 0.06);\n    --uigc-input-background__hover: rgba(var(--rgb-white), 0.12);\n    --uigc-input__placeholder-color: rgba(var(--rgb-primary-100), 0.4);\n    /** Paper */\n    --uigc-paper-border-radius: 20px;\n    --uigc-paper-box-shadow: 0 0 0 1px hsl(0deg 0% 100% / 5%);\n    --uigc-paper-background: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);\n    /** Progress */\n    --uigc-progress__success-background: var(--hex-primary-500);\n    --uigc-progress__error-background: var(--hex-primary-500);\n    --uigc-progress-background: var(--hex-primary-500);\n    /** Switch */\n    --uigc-switch--root-border: 1px solid var(--hex-background-gray-700);\n    --uigc-switch--root-background: var(--hex-dark-gray);\n    --uigc-switch--thumb-background: var(--hex-neutral-gray-400);\n    --uigc-switch--thumb-border-color: var(--hex-dark-gray);\n    --uigc-switch--thumb-border-color__hover: var(--hex-primary-300);\n    --uigc-switch__checked--root-background: var(--hex-dark-green);\n    --uigc-switch__checked--root-border: 1px solid var(--hex-primary-500);\n    --uigc-switch__checked--thumb-background: var(--hex-primary-300);\n    --uigc-switch__checked--thumb-border-color: var(--hex-primary-500);\n    /** Toast */\n    --uigc-toast-background: var(--hex-background-gray-900);\n    --uigc-toast-border-radius: 14px;\n    --uigc-toast--close-border-radius: 50%;\n    --uigc-toast--close-border: none;\n    --uigc-toast--close-background: var(--hex-background-gray-800);\n    --uigc-toast--close-background__hover: var(--hex-background-gray-900);\n    /** ToggleButton */\n    --uigc-toggle-button--root-background__hover: var(--hex-background-gray-700);\n    --uigc-toggle-button--root-background: transparent;\n    --uigc-toggle-button--root-border-radius: 9px;\n    --uigc-toggle-button__selected--root-color: var(--hex-black);\n    --uigc-toggle-button__selected--root-background: linear-gradient(\n        90deg,\n        #4fffb0 1.27%,\n        #b3ff8f 48.96%,\n        #ff984e 104.14%\n      ),\n      linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),\n      linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);\n    /** ToggleButtonGroup */\n    --uigc-toggle-button-group--root-background: rgba(var(--rgb-black), 0.25);\n    --uigc-toggle-button-group--root-border-radius: 11px;\n    /** Typograppy */\n    --uigc-typography__title-background: linear-gradient(90deg, #4fffb0 1.27%, #b3ff8f 48.96%, #ff984e 104.14%),\n      linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),\n      linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);\n  }\n`"
         },
         {
           "kind": "variable",
           "name": "hdxThemeProperties",
-          "default": "css`\n  .hdx {\n    --uigc-app-font: 'ChakraPetch';\n    --uigc-app-font-secondary: 'FontOver';\n    --uigc-app-background: linear-gradient(180deg, #00579f 0%, #023b6a 25%, #060917 100%);\n\n    --uigc-bsx-icon-display: none;\n    --uigc-hdx-icon-display: flex;\n\n    /** Alert */\n    --uigc-alert-border-radius: 4px;\n    --uigc-alert-background: var(--hex-dark-blue-600);\n    --uigc-alert__success-background: rgba(3, 239, 151, 0.25);\n    --uigc-alert__error-background: rgba(239, 3, 3, 0.25);\n    --uigc-alert__progress-background: rgba(37, 203, 255, 0.2);\n    /** AssetListItem */\n    --uigc-asset-list-item__selected-background: rgba(var(--rgb-primary-alpha15), 0.12);\n    /** AssetList */\n    --uigc-asset-list--header-color: var(--hex-basic-700);\n    --uigc-asset-list--subheader-background: rgba(var(--rgb-primary-alpha), 0.06);\n    /** AssetPrice */\n    --uigc-asset-price-background: var(--hex-dark-blue-401);\n    --uigc-asset-price-border-radius: 2px;\n    --uigc-asset-price__highlight-color: var(--hex-bright-blue-300);\n    /** AssetSelector */\n    --uigc-asset-selector-border-radius: 2px;\n    /** AssetSwitch */\n    --uigc-asset-switch-transform: rotateX(180deg);\n    /** AssetTransfer */\n    --uigc-asset-transfer-color: var(--hex-basic-500);\n    --uigc-asset-transfer-text-transform: uppercase;\n    --uigc-asset-transfer-border-radius: 2px;\n    --uigc-asset-transfer-background: rgba(var(--rgb-primary-alpha), 0.06);\n    /** BusyIndicator */\n    --uigc-busy-indicator--circle-border-radius: 4x;\n    /** Button */\n    --uigc-button-border-radius: 4px;\n    --uigc-button__max-border-radius: none;\n    --uigc-button__max-text-transform: uppercase;\n    --uigc-button__max-background__hover: rgba(var(--rgb-primary-alpha15), 0.2);\n    --uigc-button__primary-color: var(--hex-white);\n    --uigc-button__primary-background: var(--hex-pink-700);\n    --uigc-button__primary-background__hover: var(--hex-pink-600);\n    --uigc-button__secondary-color: var(--hex-bright-blue-300);\n    --uigc-button__secondary-color__hover: var(--hex-white);\n    --uigc-button__secondary-background: rgba(var(--rgb-primary-alpha15), 0.12);\n    --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-alpha15), 0.3);\n    --uigc-button__secondary-border: 1px solid var(--hex-bright-blue-300);\n    --uigc-button__secondary-border__hover: 1px solid var(--hex-white);\n    /** CircularProgress */\n    --uigc-circular-progress-background: conic-gradient(\n      from 90.65deg at 50% 50%,\n      #fc408c -1.87deg,\n      rgba(10, 13, 26, 0) 117.39deg,\n      #00c2ff 185.07deg,\n      #004de2 219.37deg,\n      #fc408c 294.78deg,\n      #fc408c 358.13deg,\n      rgba(10, 13, 26, 0) 477.39deg\n    );\n    /** Dialog */\n    --uigc-dialog-background: var(--hex-dark-blue-600);\n    --uigc-dialog-box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.36);\n    --uigc-dialog-border-radius: 4px;\n    /** Divider */\n    --uigc-divider-background: var(--hex-dark-blue-400);\n    /** Drawer */\n    --uigc-drawer-background: var(--hex-dark-blue-600);\n    --uigc-drawer-box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.36);\n    --uigc-drawer-border-radius: 4px;\n    /** IconButton */\n    --uigc-icon-button-border: 1px solid #30344c;\n    --uigc-icon-button-border__hover: 1px solid var(--hex-bright-blue-600);\n    --uigc-icon-button-border-radius: 4px;\n    --uigc-icon-button-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-icon-button-background__hover: rgba(var(--rgb-primary-alpha20), 0.2);\n    /** Input */\n    --uigc-input-border-width: 0 0 1px 0;\n    --uigc-input-border-color: var(--hex-dark-blue-400);\n    --uigc-input-border-color__focus: var(--hex-bright-blue-600);\n    --uigc-input-border-radius: 2px;\n    --uigc-input-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-input-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);\n    --uigc-input__placeholder-color: rgba(114, 131, 165, 0.6);\n    /** Paper */\n    --uigc-paper-border-radius: 4px;\n    --uigc-paper-box-shadow: 3px 4px 0px rgba(102, 181, 255, 0.19);\n    --uigc-paper-background: var(--hex-dark-blue-700);\n    /** Progress */\n    --uigc-progress-background__success: #30ffb1;\n    --uigc-progress-background__error: #f11313;\n    --uigc-progress-background: #009fff;\n    /** Switch */\n    --uigc-switch--root-border: 1px solid var(--hex-basic-700);\n    --uigc-switch--root-background: var(--hex-dark-gray);\n    --uigc-switch--thumb-background: var(--hex-basic-400);\n    --uigc-switch--thumb-border-color: var(--hex-dark-gray);\n    --uigc-switch--thumb-border-color__hover: var(--hex-bright-blue-300);\n\n    --uigc-switch__checked--root-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-switch__checked--root-border: 1px solid var(--hex-bright-blue-300);\n    --uigc-switch__checked--thumb-background: var(--hex-bright-blue-700);\n    --uigc-switch__checked--thumb-border-color: var(--hex-bright-blue-300);\n    /** Toast */\n    --uigc-toast-background: var(--hex-dark-blue-600);\n    --uigc-toast-border-radius: 4px;\n    --uigc-toast--close-border-radius: 4px;\n    --uigc-toast--close-border: 1px solid #30344c;\n    --uigc-toast--close-background: var(--hex-dark-blue-700);\n    --uigc-toast--close-background__hover: var(--hex-dark-blue-600);\n    /** ToggleButton */\n    --uigc-toggle-button--root-background__hover: var(--hex-dark-blue-401);\n    --uigc-toggle-button--root-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-toggle-button--root-border-radius: 4px;\n    --uigc-toggle-button__selected--root-color: var(--hex-black);\n    --uigc-toggle-button__selected--root-background: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);\n    /** ToggleButtonGroup */\n    --uigc-toggle-button-group--root-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-toggle-button-group--root-border-radius: 4px;\n  }\n`"
+          "default": "css`\n  .hdx {\n    --uigc-bsx-icon-display: none;\n    --uigc-hdx-icon-display: flex;\n    /** GENERAL */\n    --uigc-app-font: 'ChakraPetch';\n    --uigc-app-font-secondary: 'FontOver';\n    --uigc-app-background: linear-gradient(180deg, #00579f 0%, #023b6a 25%, #060917 100%);\n    --uigc-app-border-radius: 4px;\n    --uigc-app-color-error: rgba(239, 3, 3, 0.25);\n    --uigc-app-color-warning: 4px;\n\n    --uigc-app-font-color__gradient: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);\n    --uigc-app-font-color__primary: var(--hex-bright-blue-300);\n    --uigc-app-font-color__secondary: var(--hex-dark-blue-300);\n\n    /** Alert */\n    --uigc-alert-border-radius: 4px;\n    --uigc-alert-background: var(--hex-dark-blue-600);\n    --uigc-alert__success-background: rgba(3, 239, 151, 0.25);\n    --uigc-alert__error-background: rgba(239, 3, 3, 0.25);\n    --uigc-alert__progress-background: rgba(37, 203, 255, 0.2);\n    /** AssetInput */\n    --uigc-asset-input-background: transparent;\n    --uigc-asset-input-border-style: none;\n    --uigc-asset-input-padding: 0;\n    /** AssetListItem */\n    --uigc-asset-list-border-bottom: 1px solid var(--hex-dark-blue-401);\n    --uigc-asset-list-item__selected-background: rgba(var(--rgb-primary-alpha15), 0.12);\n    --uigc-asset-list-item--button-background: rgba(var(--rgb-white), 0.03);\n    /** AssetList */\n    --uigc-asset-list--header-color: var(--hex-basic-700);\n    --uigc-asset-list--subheader-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-asset-list--button-background: rgba(var(--rgb-white), 0.03);\n    /** AssetPrice */\n    --uigc-asset-price-background: var(--hex-dark-blue-401);\n    --uigc-asset-price-border-radius: 2px;\n    --uigc-asset-price__highlight-color: var(--hex-bright-blue-300);\n    /** AssetSelector */\n    --uigc-asset-selector-border-radius: 2px;\n    /** AssetSwitch */\n    --uigc-asset-switch-transform: rotateX(180deg);\n    --uigc-asset-switch-transition: none;\n    /** AssetTransfer */\n    --uigc-asset-transfer-border-radius: 2px;\n    --uigc-asset-transfer-border-bottom: 1px solid var(--hex-dark-blue-400);\n    --uigc-asset-transfer-border-bottom__hover: 1px solid var(--hex-bright-blue-600);\n    --uigc-asset-transfer-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-asset-transfer-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);\n    --uigc-asset-transfer-padding: 12px;\n    --uigc-asset-transfer-padding__md: 12px;\n    --uigc-asset-transfer-row-gap: 5px;\n    --uigc-asset-transfer-row-gap__md: 7px;\n    --uigc-asset-transfer--title-color: var(--hex-basic-500);\n    --uigc-asset-transfer--title-text-transform: uppercase;\n    --uigc-asset-transfer--title-font-size: 12px;\n    --uigc-asset-transfer--title-line-height: 100%;\n    /** BusyIndicator */\n    --uigc-busy-indicator--circle-border-radius: 4x;\n    /** Button */\n    --uigc-button-border-radius: 4px;\n    --uigc-button__max-border-radius: none;\n    --uigc-button__max-text-transform: uppercase;\n    --uigc-button__max-background__hover: rgba(var(--rgb-primary-alpha15), 0.2);\n    --uigc-button__primary-color: var(--hex-white);\n    --uigc-button__primary-background: var(--hex-pink-700);\n    --uigc-button__primary-background__hover: var(--hex-pink-600);\n    --uigc-button__secondary-color: var(--hex-bright-blue-300);\n    --uigc-button__secondary-color__hover: var(--hex-white);\n    --uigc-button__secondary-background: rgba(var(--rgb-primary-alpha15), 0.12);\n    --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-alpha15), 0.3);\n    --uigc-button__secondary-border: 1px solid var(--hex-bright-blue-300);\n    --uigc-button__secondary-border__hover: 1px solid var(--hex-white);\n    /** CircularProgress */\n    --uigc-circular-progress-background: conic-gradient(\n      from 90.65deg at 50% 50%,\n      #fc408c -1.87deg,\n      rgba(10, 13, 26, 0) 117.39deg,\n      #00c2ff 185.07deg,\n      #004de2 219.37deg,\n      #fc408c 294.78deg,\n      #fc408c 358.13deg,\n      rgba(10, 13, 26, 0) 477.39deg\n    );\n    /** Dialog */\n    --uigc-dialog-background: var(--hex-dark-blue-600);\n    --uigc-dialog-box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.36);\n    --uigc-dialog-border-radius: 4px;\n    /** Divider */\n    --uigc-divider-background: var(--hex-dark-blue-400);\n    /** Drawer */\n    --uigc-drawer-background: var(--hex-dark-blue-600);\n    --uigc-drawer-box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.36);\n    --uigc-drawer-border-radius: 4px;\n    /** IconButton */\n    --uigc-icon-button-border: 1px solid #30344c;\n    --uigc-icon-button-border__hover: 1px solid var(--hex-bright-blue-600);\n    --uigc-icon-button-border-radius: 4px;\n    --uigc-icon-button-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-icon-button-background__hover: rgba(var(--rgb-primary-alpha20), 0.2);\n    /** Input */\n    --uigc-input-border-width: 0 0 1px 0;\n    --uigc-input-border-color: var(--hex-dark-blue-400);\n    --uigc-input-border-color__focus: var(--hex-bright-blue-600);\n    --uigc-input-border-radius: 2px;\n    --uigc-input-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-input-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);\n    --uigc-input__placeholder-color: rgba(114, 131, 165, 0.6);\n    /** Paper */\n    --uigc-paper-border-radius: 4px;\n    --uigc-paper-box-shadow: 3px 4px 0px rgba(102, 181, 255, 0.19);\n    --uigc-paper-background: var(--hex-dark-blue-700);\n    /** Progress */\n    --uigc-progress__success-background: #30ffb1;\n    --uigc-progress__error-background: #f11313;\n    --uigc-progress-background: #009fff;\n    /** Switch */\n    --uigc-switch--root-border: 1px solid var(--hex-basic-700);\n    --uigc-switch--root-background: var(--hex-dark-gray);\n    --uigc-switch--thumb-background: var(--hex-basic-400);\n    --uigc-switch--thumb-border-color: var(--hex-dark-gray);\n    --uigc-switch--thumb-border-color__hover: var(--hex-bright-blue-300);\n    --uigc-switch__checked--root-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-switch__checked--root-border: 1px solid var(--hex-bright-blue-300);\n    --uigc-switch__checked--thumb-background: var(--hex-bright-blue-700);\n    --uigc-switch__checked--thumb-border-color: var(--hex-bright-blue-300);\n    /** Toast */\n    --uigc-toast-background: var(--hex-dark-blue-600);\n    --uigc-toast-border-radius: 4px;\n    --uigc-toast--close-border-radius: 4px;\n    --uigc-toast--close-border: 1px solid #30344c;\n    --uigc-toast--close-background: var(--hex-dark-blue-700);\n    --uigc-toast--close-background__hover: var(--hex-dark-blue-600);\n    /** ToggleButton */\n    --uigc-toggle-button--root-background__hover: var(--hex-dark-blue-401);\n    --uigc-toggle-button--root-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-toggle-button--root-border-radius: 4px;\n    --uigc-toggle-button__selected--root-color: var(--hex-black);\n    --uigc-toggle-button__selected--root-background: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);\n    /** ToggleButtonGroup */\n    --uigc-toggle-button-group--root-background: rgba(var(--rgb-primary-alpha), 0.06);\n    --uigc-toggle-button-group--root-border-radius: 4px;\n    /** Typograppy */\n    --uigc-typography__title-background: #fff;\n  }\n`"
         }
       ],
       "exports": [
@@ -4990,6 +4943,152 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/component/types/AssetType.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "AssetTypes",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  aUSD: 'Acala USD',\n  BSX: 'Basilisk',\n  KSM: 'Kusama',\n  PHA: 'Phala',\n  TNKR: 'Tinkernet',\n  DAI: 'Dai USD',\n  HDX: 'Hydra',\n  KAR: 'Karura',\n}"
+        },
+        {
+          "kind": "class",
+          "description": "",
+          "name": "AssetType",
+          "members": [
+            {
+              "kind": "method",
+              "name": "isValid",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": {
+                    "text": "any"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "DataType",
+                "module": "src/component/types/DataType.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getMap",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Map<string, string>"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "types",
+                  "type": {
+                    "text": "Record<string, string>"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "DataType",
+                "module": "src/component/types/DataType.ts"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "DataType",
+            "module": "/src/component/types/DataType"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AssetTypes",
+          "declaration": {
+            "name": "AssetTypes",
+            "module": "src/component/types/AssetType.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "AssetType",
+          "declaration": {
+            "name": "AssetType",
+            "module": "src/component/types/AssetType.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/component/types/DataType.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "DataType",
+          "members": [
+            {
+              "kind": "method",
+              "name": "isValid",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": {
+                    "text": "any"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getMap",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "Map<string, string>"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "types",
+                  "type": {
+                    "text": "Record<string, string>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DataType",
+          "declaration": {
+            "name": "DataType",
+            "module": "src/component/types/DataType.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/component/utils/styles.ts",
       "declarations": [
         {
@@ -5209,131 +5308,6 @@
           "declaration": {
             "name": "hasAdaptedStyle",
             "module": "src/component/utils/styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/component/icons/bsx/BsxIcon.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "BsxIcon",
-          "members": [],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "BsxIcon",
-          "declaration": {
-            "name": "BsxIcon",
-            "module": "src/component/icons/bsx/BsxIcon.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/component/icons/bsx/Switch.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SwitchIcon",
-          "members": [],
-          "superclass": {
-            "name": "BsxIcon",
-            "module": "/src/component/icons/bsx/BsxIcon"
-          },
-          "tagName": "uigc-icon-switch",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "SwitchIcon",
-          "declaration": {
-            "name": "SwitchIcon",
-            "module": "src/component/icons/bsx/Switch.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "uigc-bsx-icon-switch",
-          "declaration": {
-            "name": "SwitchIcon",
-            "module": "src/component/icons/bsx/Switch.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/component/icons/hdx/HdxIcon.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "HdxIcon",
-          "members": [],
-          "superclass": {
-            "name": "BaseIcon",
-            "module": "/src/component/icons/BaseIcon"
-          }
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "HdxIcon",
-          "declaration": {
-            "name": "HdxIcon",
-            "module": "src/component/icons/hdx/HdxIcon.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/component/icons/hdx/Switch.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SwitchIcon",
-          "members": [],
-          "superclass": {
-            "name": "HdxIcon",
-            "module": "/src/component/icons/hdx/HdxIcon"
-          },
-          "tagName": "uigc-icon-switch",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "SwitchIcon",
-          "declaration": {
-            "name": "SwitchIcon",
-            "module": "src/component/icons/hdx/Switch.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "uigc-hdx-icon-switch",
-          "declaration": {
-            "name": "SwitchIcon",
-            "module": "src/component/icons/hdx/Switch.ts"
           }
         }
       ]

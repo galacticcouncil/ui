@@ -648,6 +648,36 @@
           }
         </style>
       </template>
+
+      <!-- Typography -->
+      <template data-element="uigc-typography" data-target="host">
+        <uigc-typography color="primary">Test</uigc-typography>
+      </template>
+      <template data-element="uigc-typography" data-target="knob" data-attr="color" data-type="select">
+        <select>
+          <option value="primary"></option>
+          <option value="secondary"></option>
+          <option value="gradient"></option>
+        </select>
+      </template>
+      <template data-element="uigc-typography" data-target="wrapper">
+        <uigc-paper></uigc-paper>
+      </template>
+      <template data-element="uigc-typography" data-target="suffix">
+        <style>
+          uigc-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
     </api-viewer>
     <script>
       fetch('./assets/custom-elements.json')

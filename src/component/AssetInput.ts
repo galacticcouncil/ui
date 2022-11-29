@@ -16,6 +16,7 @@ export class AssetInput extends UIGCElement {
   constructor() {
     super();
     this._inputHandler = debounce(this.onInputChanged, 300);
+    this.addEventListener('focus', () => console.log('focus'));
   }
 
   static styles = [
@@ -64,10 +65,10 @@ export class AssetInput extends UIGCElement {
         align-items: flex-end;
         -webkit-box-pack: center;
         justify-content: center;
-        padding: 0 14px;
+        padding: var(--uigc-asset-input-padding);
         height: 54px;
-        background: var(--uigc-input-background);
-        border-style: solid;
+        background: var(--uigc-asset-input-background);
+        border-style: var(--uigc-asset-input-border-style);
         border-radius: var(--uigc-input-border-radius);
         border-width: var(--uigc-input-border-width);
         border-color: var(--uigc-input-border-color);
@@ -75,10 +76,6 @@ export class AssetInput extends UIGCElement {
 
       .asset-root:focus-within {
         border-color: var(--uigc-input-border-color__focus);
-      }
-
-      .asset-root:hover {
-        background: var(--uigc-input-background__hover);
       }
 
       .asset-field {
@@ -136,7 +133,7 @@ export class AssetInput extends UIGCElement {
   }
 
   render() {
-    return html`<div class="asset-root" @click=${this.onWrapperClick}>
+    return html`<div class="asset-root" @click="${this.onWrapperClick}}">
       <span class="asset-field">
         <input
           ?disabled=${!this.asset}

@@ -24,6 +24,7 @@ export { Switch } from './component/Switch';
 export { Toast } from './component/Toast';
 export { ToggleButton } from './component/ToggleButton';
 export { ToggleButtonGroup } from './component/ToggleButtonGroup';
+export { Typography } from './component/Typography';
 
 /* Icons */
 export { BackIcon } from './component/icons/Back';

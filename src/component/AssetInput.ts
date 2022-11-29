@@ -16,7 +16,6 @@ export class AssetInput extends UIGCElement {
   constructor() {
     super();
     this._inputHandler = debounce(this.onInputChanged, 300);
-    this.addEventListener('focus', () => console.log('focus'));
   }
 
   static styles = [

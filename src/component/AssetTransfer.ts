@@ -17,28 +17,6 @@ export class AssetTransfer extends UIGCElement {
   static styles = [
     UIGCElement.styles,
     css`
-      /* :host {
-        display: grid;
-        background: var(--uigc-asset-transfer-background);
-        border-radius: var(--uigc-asset-transfer-border-radius);
-        border-bottom: var(--uigc-asset-transfer-border-bottom);
-        box-sizing: border-box;
-        padding: 14px;
-        row-gap: 5px;
-      } */
-
-      /* :host:hover {
-        background: red;
-      } */
-
-      /* .asset-root:hover {
-        // background: red;
-      }
-
-      .asset-root:focus-within {
-        background: red;
-      } */
-
       .asset-root {
         display: grid;
         background: var(--uigc-asset-transfer-background);
@@ -150,18 +128,9 @@ export class AssetTransfer extends UIGCElement {
     this.dispatchEvent(new CustomEvent('asset-input-changed', options));
   }
 
-  focusInput() {
-    this.shadowRoot.getElementById(this.id).focus();
-
-    const slot = this.shadowRoot.querySelector('uigc-asset-input');
-    console.log(slot);
-    console.log('Active: ');
-    console.log(this.shadowRoot.activeElement);
-  }
-
   render() {
     return html`
-      <div tabindex="0" class="asset-root" @click=${this.focusInput}>
+      <div tabindex="0" class="asset-root">
         <span class="title">${this.title}</span>
         <div class="balance">
           <span class="label">Your balance: &nbsp</span>
@@ -177,7 +146,7 @@ export class AssetTransfer extends UIGCElement {
           >
         </div>
         <div class="asset">
-          <uigc-asset-selector .asset=${this.asset}></uigc-asset-selector>
+          <uigc-asset-selector id=${this.id} .asset=${this.asset}></uigc-asset-selector>
           <uigc-asset-input id=${this.id} .asset=${this.asset} .amount=${this.amount}></uigc-asset-input>
         </div>
       </div>

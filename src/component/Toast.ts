@@ -102,7 +102,7 @@ export class Toast extends CloseableElement {
     }
   }
 
-  override async updated() {
+  override async firstUpdated() {
     const slot = this.shadowRoot.querySelector('slot');
     const slt = slot.assignedElements();
     slt.forEach((item) => {

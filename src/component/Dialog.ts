@@ -1,5 +1,5 @@
 import { html, css } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
@@ -9,8 +9,6 @@ import './Backdrop';
 
 @customElement('uigc-dialog')
 export class Dialog extends CloseableElement {
-  @property({ type: Boolean }) open = true;
-
   static styles = [
     UIGCElement.styles,
     css`

@@ -14,12 +14,7 @@ export class Backdrop extends UIGCElement {
         right: 0;
         bottom: 0;
         left: 0;
-        background: radial-gradient(
-            70.22% 56.77% at 51.87% 101.05%,
-            rgba(79, 255, 176, 0.24) 0%,
-            rgba(79, 255, 176, 0) 100%
-          ),
-          rgba(7, 8, 14, 0.7);
+        background: var(--uigc-backdrop-background);
         z-index: 1201;
         opacity: 0;
         visibility: hidden;

@@ -38,7 +38,7 @@
         <uigc-alert variant="success">This is alert message</uigc-alert>
       </template>
       <template data-element="uigc-alert" data-target="wrapper">
-        <uigc-toast></uigc-toast>
+        <uigc-paper></uigc-paper>
       </template>
       <template data-element="uigc-alert" data-target="knob" data-attr="variant" data-type="select">
         <select>
@@ -49,8 +49,9 @@
       </template>
       <template data-element="uigc-alert" data-target="suffix">
         <style>
-          uigc-toast {
-            display: block;
+          uigc-paper {
+            padding: 20px;
+            background: var(--uigc-alert-background);
           }
           [part='demo-output'] {
             background: var(--uigc-app-background);
@@ -330,7 +331,7 @@
 
       <!-- Dialog -->
       <template data-element="uigc-dialog" data-target="host">
-        <uigc-dialog open></uigc-dialog>
+        <uigc-dialog open="true"></uigc-dialog>
       </template>
       <template data-element="uigc-dialog" data-target="suffix">
         <style>
@@ -381,7 +382,7 @@
 
       <!-- IconButton -->
       <template data-element="uigc-icon-button" data-target="slot">
-        <uigc-icon-settings></uigc-icon-settings>
+        <uigc-icon-settings fit></uigc-icon-settings>
       </template>
       <template data-element="uigc-icon-button" data-target="knob" data-attr="size" data-type="select">
         <select>
@@ -551,43 +552,16 @@
 
       <!-- Toast -->
       <template data-element="uigc-toast" data-target="host">
-        <uigc-toast open id="1" timeout="40000">
-          <span variant="success"></span>
-        </uigc-toast>
+        <uigc-toast open id="1" timeout="40000"></uigc-toast>
       </template>
-
-      <!-- <template data-element="uigc-toast" data-target="slot" open="true" id="1" timeout="40000">
-        <uigc-alert variant="success">Hoho</uigc-alert>
-      </template>   -->
-
+      <template data-element="uigc-toast" data-target="slot">
+        <uigc-alert variant="progress"></uigc-toast>
+      </template>
       <template data-element="uigc-toast" data-target="suffix">
         <style>
           uigc-toast {
             width: 250px;
           }
-          [part='demo-output'] {
-            background: var(--uigc-app-background);
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        </style>
-      </template>
-
-      <!-- IconButton -->
-      <template data-element="uigc-icon-button" data-target="slot">
-        <uigc-icon-settings></uigc-icon-settings>
-      </template>
-      <template data-element="uigc-icon-button" data-target="knob" data-attr="size" data-type="select">
-        <select>
-          <option value="small"></option>
-          <option value="medium"></option>
-          <option value="large"></option>
-        </select>
-      </template>
-      <template data-element="uigc-icon-button" data-target="suffix">
-        <style>
           [part='demo-output'] {
             background: var(--uigc-app-background);
             min-height: 200px;
@@ -625,9 +599,9 @@
       <template data-element="uigc-toggle-button-group" data-target="host">
         <uigc-toggle-button-group selected="20"></uigc-toggle-button-group>
       </template>
-      <template data-element="uigc-toggle-button-group" selected="20" data-target="slot">
+      <template data-element="uigc-toggle-button-group" data-target="slot">
         <uigc-toggle-button value="10">10%</uigc-toggle-button>
-        <uigc-toggle-button value="20" selected>20%</uigc-toggle-button>
+        <uigc-toggle-button value="20">20%</uigc-toggle-button>
         <uigc-toggle-button value="30">30%</uigc-toggle-button>
       </template>
       <template data-element="uigc-toggle-button-group" data-target="wrapper">
@@ -651,13 +625,12 @@
 
       <!-- Typography -->
       <template data-element="uigc-typography" data-target="host">
-        <uigc-typography color="primary">Test</uigc-typography>
+        <uigc-typography variant="title">Trade Assets</uigc-typography>
       </template>
-      <template data-element="uigc-typography" data-target="knob" data-attr="color" data-type="select">
+      <template data-element="uigc-typography" data-target="knob" data-attr="variant" data-type="select">
         <select>
-          <option value="primary"></option>
-          <option value="secondary"></option>
-          <option value="gradient"></option>
+          <option value="title"></option>
+          <option value="section"></option>
         </select>
       </template>
       <template data-element="uigc-typography" data-target="wrapper">

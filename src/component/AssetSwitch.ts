@@ -16,6 +16,7 @@ export class AssetSwitch extends UIGCElement {
         display: flex;
         justify-content: center;
         align-items: center;
+        background: var(--uigc-asset-switch-background);
       }
 
       uigc-icon-switch {

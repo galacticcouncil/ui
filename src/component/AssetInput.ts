@@ -91,7 +91,7 @@ export class AssetInput extends UIGCElement {
         background: none;
         border: none;
         color: var(--hex-white);
-        font-size: 16px;
+        font-size: var(--uigc-asset-input-font-size);
         line-height: 24px;
         text-align: right;
         font-weight: 700;

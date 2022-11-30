@@ -8,23 +8,10 @@ export class Typography extends UIGCElement {
   static styles = [
     UIGCElement.styles,
     css`
-      :host([color='primary']) {
-        color: var(--uigc-app-font-color__primary);
-      }
-
-      :host([color='secondary']) {
-        color: var(--uigc-app-font-color__secondary);
-      }
-
-      :host([color='gradient']) {
-        background: var(--uigc-app-font-color__gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
       :host([variant='title']) {
         font-family: var(--uigc-app-font-secondary);
+        font-weight: var(--uigc-typography__title-font-weight);
+        font-size: var(--uigc-typography__title-font-size);
         background: var(--uigc-typography__title-background);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -33,6 +20,10 @@ export class Typography extends UIGCElement {
 
       :host([variant='section']) {
         font-family: var(--uigc-app-font-secondary);
+        font-weight: var(--uigc-typography__section-font-weight);
+        font-size: var(--uigc-typography__section-font-size);
+        line-height: var(--uigc-typography__section-line-height);
+        color: var(--uigc-typography__section-color);
       }
     `,
   ];

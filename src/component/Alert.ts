@@ -45,6 +45,10 @@ export class Alert extends UIGCElement {
         background: var(--uigc-alert__progress-background);
       }
 
+      :host([drawer]) {
+        background: var(--uigc-alert__drawer-background);
+      }
+
       .icon {
         margin-right: 12px;
         width: 30px;
@@ -104,7 +108,7 @@ export class Alert extends UIGCElement {
         this.variant != AlertVariant.default,
         () => html`
           ${choose(this.variant, [
-            [AlertVariant.success, () => html`<uigc-icon-success class="icon" alert></uigc-icon-success>`],
+            [AlertVariant.success, () => html`<uigc-icon-success class="icon"></uigc-icon-success>`],
             [AlertVariant.error, () => html`<uigc-icon-error class="icon"></uigc-icon-error>`],
             [
               AlertVariant.progress,

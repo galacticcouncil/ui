@@ -159,10 +159,11 @@ export const bsxThemeProperties = css`
 
     /** Alert */
     --uigc-alert-border-radius: 14px;
-    --uigc-alert-background: var(--hex-background-gray-900);
-    --uigc-alert__success-background: var(--hex-background-gray-900);
-    --uigc-alert__error-background: var(--hex-background-gray-900);
-    --uigc-alert__progress-background: var(--hex-background-gray-900);
+    --uigc-alert-background: var(--hex-background-gray-1000);
+    --uigc-alert__success-background: var(--hex-background-gray-1000);
+    --uigc-alert__error-background: var(--hex-background-gray-1000);
+    --uigc-alert__progress-background: var(--hex-background-gray-1000);
+    --uigc-alert__drawer-background: var(--hex-background-gray-1000);
     /** AssetInput */
     --uigc-asset-input-background: rgba(var(--rgb-primary-100), 0.06);
     --uigc-asset-input-border-style: solid;
@@ -304,6 +305,7 @@ export const bsxThemeProperties = css`
     --uigc-typography__title-background: linear-gradient(90deg, #4fffb0 1.27%, #b3ff8f 48.96%, #ff984e 104.14%),
       linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),
       linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);
+    --uigc-typography__title-error-background: var(--hex-red-400);
     --uigc-typography__title-font-weight: 600;
     --uigc-typography__title-font-size: 24px;
     --uigc-typography__section-font-weight: 500;
@@ -340,6 +342,7 @@ export const hdxThemeProperties = css`
     --uigc-alert__success-background: rgba(3, 239, 151, 0.25);
     --uigc-alert__error-background: rgba(239, 3, 3, 0.25);
     --uigc-alert__progress-background: rgba(37, 203, 255, 0.2);
+    --uigc-alert__drawer-background: var(--hex-dark-blue-401);
     /** AssetInput */
     --uigc-asset-input-background: transparent;
     --uigc-asset-input-border-style: none;
@@ -472,6 +475,7 @@ export const hdxThemeProperties = css`
     --uigc-toggle-button-group--root-border-radius: 4px;
     /** Typograppy */
     --uigc-typography__title-background: #fff;
+    --uigc-typography__title-error-background: rgb(255, 75, 75);
     --uigc-typography__title-font-weight: 500;
     --uigc-typography__title-font-size: 19px;
     --uigc-typography__section-font-weight: 500;

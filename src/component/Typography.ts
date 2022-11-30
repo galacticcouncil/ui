@@ -18,6 +18,13 @@ export class Typography extends UIGCElement {
         background-clip: text;
       }
 
+      :host([variant='title'][error]) {
+        background: var(--uigc-typography__title-error-background);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
       :host([variant='section']) {
         font-family: var(--uigc-app-font-secondary);
         font-weight: var(--uigc-typography__section-font-weight);

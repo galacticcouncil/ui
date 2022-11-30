@@ -51,10 +51,6 @@ export class Toast extends CloseableElement {
         width: 100%;
       }
 
-      slot[name='alert']::slotted(*) {
-        padding: 0;
-      }
-
       ::slotted(*) {
         padding: 0 14px;
         height: 60px;
@@ -106,19 +102,23 @@ export class Toast extends CloseableElement {
     }
   }
 
-  // override async updated() {
-  //   const prog = this.shadowRoot.querySelector('uigc-progress');
-  //   prog.setAttribute('variant', this.variant);
-  // }
+  override async updated() {
+    const slot = this.shadowRoot.querySelector('slot');
+    const slt = slot.assignedElements();
+    slt.forEach((item) => {
+      const variant = item.getAttribute('variant');
+      const prog = this.shadowRoot.querySelector('uigc-progress');
+      prog.setAttribute('variant', variant);
+    });
+  }
 
   render() {
     return html`
       <div class="root">
         <div class="content" role="alert">
-          <slot name="alert"></slot>
           <slot></slot>
         </div>
-        ${when(this.timeout, () => html` <uigc-progress variant="success" .duration=${this.timeout}></uigc-progress> `)}
+        ${when(this.timeout, () => html` <uigc-progress .duration=${this.timeout}></uigc-progress> `)}
       </div>
       <button class="close" @click=${this.onClose}>
         <uigc-icon-close></uigc-icon-close>

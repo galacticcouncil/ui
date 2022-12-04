@@ -9,8 +9,8 @@ export class AssetList extends UIGCElement {
     UIGCElement.styles,
     css`
       .list-root {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        height: 100%;
+        overflow-y: auto;
       }
 
       .list-header {
@@ -18,23 +18,31 @@ export class AssetList extends UIGCElement {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 6px 14px;
+        padding: 0 14px;
         color: var(--uigc-asset-list--header-color);
+        background: var(--uigc-asset-list--header-background);
         font-style: normal;
         font-weight: 600;
         font-size: 12px;
         line-height: 90%;
         border-bottom: var(--uigc-asset-list-border-bottom);
+        position: sticky;
+        height: 24px;
+        top: 0;
+        z-index: 1;
       }
 
       @media (min-width: 768px) {
         .list-header {
-          padding: 6px 28px;
+          padding: 0 28px;
         }
       }
 
       .subheader {
-        background-color: var(--uigc-asset-list--subheader-background);
+        background: var(--uigc-asset-list--header-background);
+        position: sticky;
+        top: 25px;
+        z-index: 1;
       }
 
       ::slotted(*) {

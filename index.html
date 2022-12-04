@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html theme="bsx">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,19 +9,11 @@
     <base href="/" />
     <style>
       :root api-viewer,
-      .bsx api-viewer {
+      html[theme='bsx'] api-viewer {
         --ave-primary-color: rgb(4, 176, 135);
       }
 
-      /* [part='demo-output'] {
-        background-color: #211f24;
-        height: 100px;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-      } */
-
-      .hdx api-viewer {
+      html[theme='hdx'] api-viewer {
         --ave-primary-color: #01579b;
       }
     </style>
@@ -31,7 +23,7 @@
       }
     </style>
   </head>
-  <body class="hdx">
+  <body>
     <api-viewer>
       <!-- Alert -->
       <template data-element="uigc-alert" data-target="host">
@@ -128,6 +120,8 @@
         <style>
           uigc-paper {
             width: 400px;
+            height: 300px;
+            padding-top: 20px;
             display: block;
           }
           [part='demo-output'] {
@@ -660,7 +654,7 @@
           document.querySelector('api-viewer').manifest = {
             schema: schema,
             schemaVersion: schemaVersion,
-            modules: modules.filter((module) => !module.path.includes('bsx') && !module.path.includes('hdx')),
+            modules: modules,
           };
         });
     </script>

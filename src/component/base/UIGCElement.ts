@@ -5,7 +5,7 @@ import { webkitStyles } from '../styles/webkit.css';
 import { fontStyles, fontFace } from '../styles/font.css';
 import { paletteProperties, bsxThemeProperties, hdxThemeProperties } from '../styles/theme.css';
 
-import { createAdaptedStyle, createStyle, hasAdaptedStyle, hasStyle } from '../utils/styles';
+import { createStyle, hasStyle } from '../utils/styles';
 
 export class UIGCElement extends LitElement {
   static styles = [baseStyles, fontStyles] as CSSResultGroup;
@@ -23,28 +23,28 @@ export class UIGCElement extends LitElement {
   }
 
   createPaletteStylesheet() {
-    if (!hasAdaptedStyle('uigc-palette', '')) {
-      createAdaptedStyle(paletteProperties, 'uigc-palette', '');
+    if (!hasStyle('uigc-palette', '')) {
+      createStyle(paletteProperties, 'uigc-palette', '');
     }
   }
 
   createBsxThemeStylesheet() {
-    if (!hasAdaptedStyle('uigc-bsx-theme', '')) {
-      createAdaptedStyle(bsxThemeProperties, 'uigc-bsx-theme', '');
+    if (!hasStyle('uigc-bsx-theme', '')) {
+      createStyle(bsxThemeProperties, 'uigc-bsx-theme', '');
     }
   }
 
   createHdxThemeStylesheet() {
-    if (!hasAdaptedStyle('uigc-hdx-theme', '')) {
-      createAdaptedStyle(hdxThemeProperties, 'uigc-hdx-theme', '');
+    if (!hasStyle('uigc-hdx-theme', '')) {
+      createStyle(hdxThemeProperties, 'uigc-hdx-theme', '');
     }
   }
 
   override async firstUpdated() {
     this.createPaletteStylesheet();
+    this.createFontFaceStylesheet();
     this.createBsxThemeStylesheet();
     this.createHdxThemeStylesheet();
-    this.createFontFaceStylesheet();
     this.createWebkitStylesheet();
   }
 }

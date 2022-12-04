@@ -12,6 +12,7 @@ import './logo/PHA';
 import './logo/TNKR';
 import './logo/KAR';
 import './logo/DAI';
+import './logo/DOT';
 import './logo/unknown';
 
 import { AssetType, AssetTypes } from './types/AssetType';
@@ -79,6 +80,7 @@ export class Asset extends UIGCElement {
           ['TNKR', () => html`<uigc-logo-tnkr class="logo" fit></uigc-logo-tnkr>`],
           ['KAR', () => html`<uigc-logo-kar class="logo" fit></uigc-logo-kar>`],
           ['DAI', () => html`<uigc-logo-dai class="logo" fit></uigc-logo-dai>`],
+          ['DOT', () => html`<uigc-logo-dot class="logo" fit></uigc-logo-dot>`],
         ],
         () => html`<uigc-logo-unknown class="logo" fit></uigc-logo-unknown>`
       )}

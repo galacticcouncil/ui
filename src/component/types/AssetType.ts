@@ -7,6 +7,7 @@ export const AssetTypes = {
   PHA: 'Phala',
   TNKR: 'Tinkernet',
   DAI: 'Dai USD',
+  DOT: 'Polkadot',
   HDX: 'Hydra',
   KAR: 'Karura',
 };

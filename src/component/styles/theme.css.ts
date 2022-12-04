@@ -135,7 +135,7 @@ export const paletteProperties = css`
 
 export const bsxThemeProperties = css`
   :root,
-  .bsx {
+  html[theme='bsx'] {
     --uigc-bsx-icon-display: flex;
     --uigc-hdx-icon-display: none;
     /** GENERAL */
@@ -175,6 +175,7 @@ export const bsxThemeProperties = css`
     /** AssetList */
     --uigc-asset-list-border-bottom: 1px solid var(--hex-background-gray-800);
     --uigc-asset-list--header-color: var(--hex-neutral-gray-300);
+    --uigc-asset-list--header-background: #1c2527;
     --uigc-asset-list--subheader-background: rgba(var(--rgb-white), 0.03);
     /** AssetPrice */
     --uigc-asset-price-background: rgba(var(--rgb-primary-100), 0.06);
@@ -316,7 +317,7 @@ export const bsxThemeProperties = css`
 `;
 
 export const hdxThemeProperties = css`
-  .hdx {
+  html[theme='hdx'] {
     --uigc-bsx-icon-display: none;
     --uigc-hdx-icon-display: flex;
     /** GENERAL */
@@ -354,6 +355,7 @@ export const hdxThemeProperties = css`
     --uigc-asset-list-item--button-background: rgba(var(--rgb-white), 0.03);
     /** AssetList */
     --uigc-asset-list--header-color: var(--hex-basic-700);
+    --uigc-asset-list--header-background: var(--hex-dark-blue-700);
     --uigc-asset-list--subheader-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-asset-list--button-background: rgba(var(--rgb-white), 0.03);
     /** AssetPrice */

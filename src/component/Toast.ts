@@ -108,7 +108,9 @@ export class Toast extends CloseableElement {
     slt.forEach((item) => {
       const variant = item.getAttribute('variant');
       const prog = this.shadowRoot.querySelector('uigc-progress');
-      prog.setAttribute('variant', variant);
+      if (prog) {
+        prog.setAttribute('variant', variant);
+      }
     });
   }
 

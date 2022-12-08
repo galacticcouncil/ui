@@ -13,6 +13,7 @@ export class AssetTransfer extends UIGCElement {
   @property({ type: String }) balance = null;
   @property({ type: String }) amount = null;
   @property({ type: String }) asset = null;
+  @property({ type: Function }) formatter = null;
 
   static styles = [
     UIGCElement.styles,
@@ -129,12 +130,17 @@ export class AssetTransfer extends UIGCElement {
   }
 
   render() {
+    const formatterFn = this.formatter
+      ? this.formatter
+      : function (val: string) {
+          return val;
+        };
     return html`
       <div tabindex="0" class="asset-root">
         <span class="title">${this.title}</span>
         <div class="balance">
           <span class="label">Your balance: &nbsp</span>
-          <span>${this.balance ? this.balance : '-'}</span>
+          <span>${this.balance ? formatterFn(this.balance) : '-'}</span>
           <uigc-button
             class="max"
             variant="max"

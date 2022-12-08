@@ -1,5 +1,6 @@
 import { html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
@@ -9,6 +10,7 @@ import './Asset';
 export class AssetListItem extends UIGCElement {
   @property({ type: Object }) asset = null;
   @property({ type: String }) balance = null;
+  @property({ type: String }) balanceUsd = null;
   @property({ type: Boolean }) disabled = false;
 
   static styles = [
@@ -22,6 +24,12 @@ export class AssetListItem extends UIGCElement {
       :host([selected]) {
         background-color: var(--uigc-asset-list-item__selected-background);
         pointer-events: none;
+      }
+
+      .balances {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
       }
 
       button {
@@ -53,6 +61,13 @@ export class AssetListItem extends UIGCElement {
         line-height: 18px;
         color: var(--hex-white);
       }
+
+      button span.balance-usd {
+        font-weight: var(--uigc-asset-list-item--usd-font-weight);
+        font-size: 12px;
+        line-height: 140%;
+        color: var(--uigc-asset-list-item--usd-color);
+      }
     `,
   ];
 
@@ -68,8 +83,11 @@ export class AssetListItem extends UIGCElement {
   render() {
     return html` <button @click=${this.onAssetClick} ?disabled=${this.disabled}>
       <uigc-asset .asset=${this.asset.symbol}></uigc-asset>
-      <span class="grow"></span>
-      <span class="balance">${this.balance || 0} ${this.asset.symbol}</span>
+      <div class="grow"></div>
+      <div class="balances">
+        <span class="balance">${this.balance || 0} ${this.asset.symbol}</span>
+        ${when(this.balanceUsd, () => html` <span class="balance-usd">≈ ${this.balanceUsd} USD</span> `)}
+      </div>
     </button>`;
   }
 }

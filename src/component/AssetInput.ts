@@ -1,5 +1,6 @@
 import { html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
 import { debounce } from 'ts-debounce';
@@ -8,7 +9,7 @@ import { debounce } from 'ts-debounce';
 export class AssetInput extends UIGCElement {
   @property({ type: String }) id = null;
   @property({ type: String }) amount = null;
-  @property({ type: String }) amountUsd = '0';
+  @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
 
   private _inputHandler = null;
@@ -148,7 +149,7 @@ export class AssetInput extends UIGCElement {
         />
         <span class="asset-unit">${this.asset}</span>
       </span>
-      <span class="usd">≈ ${this.amountUsd} USD</span>
+      ${when(this.amountUsd, () => html` <span class="usd">≈ ${this.amountUsd} USD</span> `)}
     </div> `;
   }
 }

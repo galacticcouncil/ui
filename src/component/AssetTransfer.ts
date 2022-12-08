@@ -12,6 +12,7 @@ export class AssetTransfer extends UIGCElement {
   @property({ type: String }) title = null;
   @property({ type: String }) balance = null;
   @property({ type: String }) amount = null;
+  @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
   @property({ type: Function }) formatter = null;
 
@@ -153,7 +154,12 @@ export class AssetTransfer extends UIGCElement {
         </div>
         <div class="asset">
           <uigc-asset-selector id=${this.id} .asset=${this.asset}></uigc-asset-selector>
-          <uigc-asset-input id=${this.id} .asset=${this.asset} .amount=${this.amount}></uigc-asset-input>
+          <uigc-asset-input
+            id=${this.id}
+            .asset=${this.asset}
+            .amount=${this.amount}
+            .amountUsd=${this.amountUsd}
+          ></uigc-asset-input>
         </div>
       </div>
     `;

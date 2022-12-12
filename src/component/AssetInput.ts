@@ -4,6 +4,7 @@ import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
 import { debounce } from 'ts-debounce';
+import IMask from 'imask';
 
 @customElement('uigc-asset-input')
 export class AssetInput extends UIGCElement {
@@ -13,6 +14,7 @@ export class AssetInput extends UIGCElement {
   @property({ type: String }) asset = null;
 
   private _inputHandler = null;
+  private _numberMask = null;
 
   constructor() {
     super();
@@ -132,13 +134,28 @@ export class AssetInput extends UIGCElement {
     this.shadowRoot.getElementById('asset').focus();
   }
 
+  override async firstUpdated() {
+    const input = this.shadowRoot.getElementById('asset');
+    const maskSettings: IMask.MaskedNumberOptions = {
+      mask: Number,
+      scale: 18,
+      signed: false,
+      thousandsSeparator: ' ',
+      padFractionalZeros: false,
+      normalizeZeros: true,
+      radix: '.',
+      mapToRadix: ['.'],
+    };
+    this._numberMask = IMask(input, maskSettings);
+  }
+
   render() {
     return html`<div class="asset-root" @click="${this.onWrapperClick}}">
       <span class="asset-field">
         <input
           ?disabled=${!this.asset}
+          type="text"
           id="asset"
-          type="number"
           class="asset-input"
           placeholder="0"
           .value=${this.asset ? this.amount : null}

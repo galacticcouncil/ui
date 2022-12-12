@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@lit/reactive-element": "^1.0.0",
+    "imask": "^6.4.3",
     "lit": "^2.0.0",
     "lit-element": "^3.0.0",
     "lit-html": "^2.0.0",

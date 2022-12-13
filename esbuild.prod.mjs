@@ -18,7 +18,7 @@ const common = {
   preserveSymlinks: true,
   treeShaking: true,
   metafile: true,
-  minify: false,
+  minify: true,
   bundle: true,
   format: 'esm',
   platform: 'browser',

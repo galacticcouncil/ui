@@ -126,7 +126,7 @@ export class AssetInput extends UIGCElement {
 
   onInputChanged() {
     const unmasked = this._imask.unmaskedValue;
-    const masked = this._imask._value;
+    const masked = this._imask.value;
     const options = {
       bubbles: true,
       composed: true,
@@ -142,21 +142,18 @@ export class AssetInput extends UIGCElement {
   override update(changedProperties: Map<string, unknown>) {
     if (changedProperties.has('amount') && this._imask) {
       if (this.amount) {
-        this._imask.value = this.amount;
+        this._imask.unmaskedValue = this.amount;
       } else {
-        this._imask.value = '';
+        this._imask.unmaskedValue = '';
       }
     }
     super.update(changedProperties);
   }
 
   override async firstUpdated() {
+    super.firstUpdated();
     const input = this.shadowRoot.getElementById('asset');
-    const inputValue = this.shadowRoot.getElementById('asset-value');
-    const numberMask = IMask(input, maskSettings).on('accept', function () {
-      inputValue.innerHTML = numberMask.masked.number.toString();
-    });
-    this._imask = numberMask;
+    this._imask = IMask(input, maskSettings);
   }
 
   override disconnectedCallback() {
@@ -181,7 +178,6 @@ export class AssetInput extends UIGCElement {
             this._inputHandler();
           }}
         />
-        <span id="asset-value">${this.asset}</span>
         <span class="asset-unit">${this.asset}</span>
       </span>
       ${when(this.amountUsd, () => html` <span class="usd">≈ ${this.amountUsd} USD</span> `)}

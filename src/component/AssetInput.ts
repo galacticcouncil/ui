@@ -3,18 +3,19 @@ import { customElement, property } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
+import { maskSettings } from './types/AssetInputConfig';
 import { debounce } from 'ts-debounce';
 import IMask from 'imask';
 
 @customElement('uigc-asset-input')
 export class AssetInput extends UIGCElement {
+  private _inputHandler = null;
+  private _imask = null;
+
   @property({ type: String }) id = null;
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
-
-  private _inputHandler = null;
-  private _numberMask = null;
 
   constructor() {
     super();
@@ -114,18 +115,22 @@ export class AssetInput extends UIGCElement {
         color: var(--hex-neutral-gray-400);
         font-weight: 600;
       }
+
+      #asset-value {
+        display: none;
+      }
     `,
   ];
 
-  onInputChange(e: any) {
-    this.amount = e.target.value;
-  }
+  onInputChange(e) {}
 
   onInputChanged() {
+    const unmasked = this._imask.unmaskedValue;
+    const masked = this._imask._value;
     const options = {
       bubbles: true,
       composed: true,
-      detail: { id: this.id, asset: this.asset, value: this.amount },
+      detail: { id: this.id, asset: this.asset, value: unmasked, masked: masked },
     };
     this.dispatchEvent(new CustomEvent('asset-input-changed', options));
   }
@@ -134,19 +139,27 @@ export class AssetInput extends UIGCElement {
     this.shadowRoot.getElementById('asset').focus();
   }
 
+  override update(changedProperties: Map<string, unknown>) {
+    if (changedProperties.has('amount') && this._imask) {
+      this._imask.value = this.amount;
+    }
+    super.update(changedProperties);
+  }
+
   override async firstUpdated() {
     const input = this.shadowRoot.getElementById('asset');
-    const maskSettings: IMask.MaskedNumberOptions = {
-      mask: Number,
-      scale: 18,
-      signed: false,
-      thousandsSeparator: ' ',
-      padFractionalZeros: false,
-      normalizeZeros: true,
-      radix: '.',
-      mapToRadix: ['.'],
-    };
-    this._numberMask = IMask(input, maskSettings);
+    const inputValue = this.shadowRoot.getElementById('asset-value');
+    const numberMask = IMask(input, maskSettings).on('accept', function () {
+      inputValue.innerHTML = numberMask.masked.number.toString();
+    });
+    this._imask = numberMask;
+  }
+
+  override disconnectedCallback() {
+    super.disconnectedCallback();
+    if (this._imask) {
+      this._imask.destroy();
+    }
   }
 
   render() {
@@ -158,12 +171,13 @@ export class AssetInput extends UIGCElement {
           id="asset"
           class="asset-input"
           placeholder="0"
-          .value=${this.asset ? this.amount : null}
+          value=${this.asset ? this.amount : null}
           @input=${(e: any) => {
             this.onInputChange(e);
             this._inputHandler();
           }}
         />
+        <span id="asset-value">${this.asset}</span>
         <span class="asset-unit">${this.asset}</span>
       </span>
       ${when(this.amountUsd, () => html` <span class="usd">≈ ${this.amountUsd} USD</span> `)}

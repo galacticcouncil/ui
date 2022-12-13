@@ -141,7 +141,11 @@ export class AssetInput extends UIGCElement {
 
   override update(changedProperties: Map<string, unknown>) {
     if (changedProperties.has('amount') && this._imask) {
-      this._imask.value = this.amount;
+      if (this.amount) {
+        this._imask.value = this.amount;
+      } else {
+        this._imask.value = '';
+      }
     }
     super.update(changedProperties);
   }

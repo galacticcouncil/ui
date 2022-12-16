@@ -328,9 +328,28 @@
 
       <!-- Dialog -->
       <template data-element="uigc-dialog" data-target="host">
-        <uigc-dialog open="true"></uigc-dialog>
+        <uigc-dialog open="true" timeout="4000"> </uigc-dialog>
       </template>
       <template data-element="uigc-dialog" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- DialogCountdown -->
+      <template data-element="uigc-dialog-countdown" data-target="host">
+        <uigc-dialog-countdown timeout="10000"></uigc-dialog-countdown>
+      </template>
+      <template data-element="uigc-dialog-countdown" data-target="wrapper">
+        <uigc-dialog open="true"> </uigc-dialog>
+      </template>
+      <template data-element="uigc-dialog-countdown" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--uigc-app-background);

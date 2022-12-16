@@ -14,6 +14,7 @@ import './component/BusyIndicator';
 import './component/Button';
 import './component/CircularProgress';
 import './component/Dialog';
+import './component/DialogCountdown';
 import './component/Divider';
 import './component/Drawer';
 import './component/IconButton';

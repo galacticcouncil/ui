@@ -243,6 +243,11 @@ export const bsxThemeProperties = css`
     --uigc-dialog-font-weight: 600;
     --uigc-dialog-font-size: 24px;
     --uigc-dialog-line-height: 32px;
+    /** DialogCountdown*/
+    --uigc-dialog-cnt-color: rgba(var(--rgb-primary-100), 0.6);
+    --uigc-dialog-cnt-font-weight: 400;
+    --uigc-dialog-cnt-font-size: 12px;
+    --uigc-dialog-cnt-line-height: 22px;
     /** Divider */
     --uigc-divider-background: rgba(var(--rgb-primary-450), 0.12);
     /** Drawer */
@@ -378,16 +383,10 @@ export const hdxThemeProperties = css`
     --uigc-asset-transfer-border-bottom__hover: 1px solid var(--hex-bright-blue-600);
     --uigc-asset-transfer-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-asset-transfer-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
-    /* --uigc-asset-transfer-padding: 12px;
-    --uigc-asset-transfer-padding__md: 12px;
-    --uigc-asset-transfer-row-gap: 5px;
-    --uigc-asset-transfer-row-gap__md: 7px; */
-
     --uigc-asset-transfer-padding: 14px;
     --uigc-asset-transfer-padding__md: 20px;
     --uigc-asset-transfer-row-gap: 5px;
     --uigc-asset-transfer-row-gap__md: 11px;
-
     --uigc-asset-transfer--title-color: var(--hex-basic-500);
     --uigc-asset-transfer--title-text-transform: uppercase;
     --uigc-asset-transfer--title-font-size: 12px;
@@ -425,6 +424,11 @@ export const hdxThemeProperties = css`
     --uigc-dialog-background: var(--hex-dark-blue-600);
     --uigc-dialog-box-shadow: 0px 10px 30px rgba(91, 144, 172, 0.12), 3px 3px 0px rgba(126, 161, 194, 0.12);
     --uigc-dialog-border-radius: 4px;
+    /** DialogCountdown */
+    --uigc-dialog-cnt-color: rgba(var(--rgb-primary-100), 0.6);
+    --uigc-dialog-cnt-font-weight: 500;
+    --uigc-dialog-cnt-font-size: 12px;
+    --uigc-dialog-cnt-line-height: 120%;
     /** Divider */
     --uigc-divider-background: var(--hex-dark-blue-400);
     /** Drawer */

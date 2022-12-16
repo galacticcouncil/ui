@@ -46,6 +46,11 @@ export class Dialog extends CloseableElement {
         width: 100%;
         bottom: 0;
       }
+
+      uigc-dialog-countdown {
+        position: absolute;
+        bottom: 14px;
+      }
     `,
   ];
 
@@ -53,7 +58,13 @@ export class Dialog extends CloseableElement {
     return html`
       <div class="dialog-root">
         <slot></slot>
-        ${when(this.timeout, () => html` <uigc-progress .duration=${this.timeout}></uigc-progress> `)}
+        ${when(
+          this.timeout,
+          () => html`
+            <uigc-dialog-countdown timeout=${this.timeout}></uigc-dialog-countdown>
+            <uigc-progress .duration=${this.timeout}></uigc-progress>
+          `
+        )}
       </div>
       <uigc-backdrop active></uigc-backdrop>
     `;

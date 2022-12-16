@@ -61,7 +61,7 @@ export class Dialog extends CloseableElement {
         ${when(
           this.timeout,
           () => html`
-            <uigc-dialog-countdown timeout=${this.timeout}></uigc-dialog-countdown>
+            <uigc-dialog-countdown .timeout=${this.timeout}></uigc-dialog-countdown>
             <uigc-progress .duration=${this.timeout}></uigc-progress>
           `
         )}

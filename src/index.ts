@@ -12,6 +12,7 @@ export { BusyIndicator } from './component/BusyIndicator';
 export { Button } from './component/Button';
 export { CircularProgress } from './component/CircularProgress';
 export { Dialog } from './component/Dialog';
+export { DialogCountdown } from './component/DialogCountdown';
 export { Divider } from './component/Divider';
 export { Drawer } from './component/Drawer';
 export { IconButton } from './component/IconButton';

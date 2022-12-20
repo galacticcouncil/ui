@@ -26,7 +26,15 @@ export class DialogCountdown extends UIGCElement {
       color: var(--uigc-dialog-cnt-color);
     }
 
-    span {
+    :host .countdown-root {
+      height: 22px;
+      min-width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .countdown-root span {
       color: var(--uigc-app-font-color__primary);
     }
   `;
@@ -37,13 +45,15 @@ export class DialogCountdown extends UIGCElement {
 
   render() {
     return html`
-      ${when(
-        this.timer,
-        () => html`
-          Closing window in
-          <span>${asyncReplace(this.timer)}s</span>
-        `
-      )}
+      <div class="countdown-root">
+        ${when(
+          this.timer,
+          () => html`
+            Closing window in&nbsp
+            <span> ${asyncReplace(this.timer)}s</span>
+          `
+        )}
+      </div>
     `;
   }
 }

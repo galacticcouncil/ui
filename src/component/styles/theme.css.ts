@@ -276,6 +276,8 @@ export const bsxThemeProperties = css`
     --uigc-progress__success-background: var(--hex-primary-500);
     --uigc-progress__error-background: var(--hex-primary-500);
     --uigc-progress-background: var(--hex-primary-500);
+    /** Skeleton */
+    --uigc-skeleton-border-radius: 9999px;
     /** Switch */
     --uigc-switch--root-border: 1px solid var(--hex-background-gray-700);
     --uigc-switch--root-background: var(--hex-dark-gray);
@@ -457,6 +459,8 @@ export const hdxThemeProperties = css`
     --uigc-progress__success-background: #30ffb1;
     --uigc-progress__error-background: #f11313;
     --uigc-progress-background: #009fff;
+    /** Skeleton */
+    --uigc-skeleton-border-radius: 4px;
     /** Switch */
     --uigc-switch--root-border: 1px solid var(--hex-basic-700);
     --uigc-switch--root-background: var(--hex-dark-gray);

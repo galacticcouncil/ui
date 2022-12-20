@@ -18,22 +18,42 @@ export class Skeleton extends UIGCElement {
       }
 
       :host([rectangle]) span {
-        border-radius: 0;
+        border-radius: var(--uigc-skeleton-border-radius);
       }
 
       :host([progress]) span {
-        animation: progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        background-size: 200px 100%;
-        background-image: linear-gradient(to right, #50535a 0%, #656871 20%, #50535a 40%, #50535a 100%);
+        line-height: 1;
+        z-index: 1;
+      }
+
+      :host([progress]) span::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(
+          90deg,
+          rgba(var(--rgb-white), 0.12),
+          rgba(var(--rgb-white), 0.24),
+          rgba(var(--rgb-white), 0.12)
+        );
+        transform: translateX(-100%);
+        animation: progress 1.5s ease-in-out infinite;
+        animation-delay: 0.5s;
       }
 
       :host([pulse]) span {
-        animation: pulse 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        animation: pulse 1.5s ease-in-out infinite;
         animation-delay: 0.5s;
       }
 
       span {
         box-sizing: border-box;
+        background-color: rgba(var(--rgb-white), 0.12);
         outline: none;
         overflow: hidden;
         position: relative;
@@ -45,11 +65,8 @@ export class Skeleton extends UIGCElement {
       }
 
       @keyframes progress {
-        0% {
-          background-position: -200px 0;
-        }
         100% {
-          background-position: calc(200px + 100%) 0;
+          transform: translateX(100%);
         }
       }
 

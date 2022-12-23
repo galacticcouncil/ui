@@ -25,6 +25,33 @@
   </head>
   <body>
     <api-viewer>
+      <!-- AddressInput -->
+      <template data-element="uigc-address-input" data-target="host">
+        <uigc-address-input
+          title="To address"
+          address="bXn7YkRjubaT1VxpZKDVCZkdVsKQa8G1DSCteYTXiiDwH5gGF"
+        ></uigc-address-input>
+      </template>
+      <template data-element="uigc-address-input" data-target="suffix">
+        <style>
+          uigc-paper {
+            padding: 20px;
+            width: 530px;
+            display: block;
+          }
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+      <template data-element="uigc-address-input" data-target="wrapper">
+        <uigc-paper></uigc-paper>
+      </template>
+
       <!-- Alert -->
       <template data-element="uigc-alert" data-target="host">
         <uigc-alert variant="success">This is alert message</uigc-alert>
@@ -296,6 +323,44 @@
       </template>
       <template data-element="uigc-button" data-target="suffix">
         <style>
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Chain -->
+      <template data-element="uigc-chain" data-target="host">
+        <uigc-chain chain="hydra"></uigc-chain>
+      </template>
+      <template data-element="uigc-chain" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- ChainSelector-->
+      <template data-element="uigc-chain-selector" data-target="host">
+        <uigc-chain-selector chain="hydra" title="Source Chain"></uigc-chain-selector>
+      </template>
+      <template data-element="uigc-chain-selector" data-target="wrapper">
+        <uigc-paper></uigc-paper>
+      </template>
+      <template data-element="uigc-chain-selector" data-target="suffix">
+        <style>
+          uigc-paper {
+            padding: 20px;
+          }
           [part='demo-output'] {
             background: var(--uigc-app-background);
             min-height: 200px;
@@ -647,6 +712,7 @@
         <select>
           <option value="title"></option>
           <option value="section"></option>
+          <option value="subsection"></option>
         </select>
       </template>
       <template data-element="uigc-typography" data-target="wrapper">

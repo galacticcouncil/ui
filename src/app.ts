@@ -1,5 +1,6 @@
 import 'api-viewer-element';
 
+import './component/AddressInput';
 import './component/Alert';
 import './component/Asset';
 import './component/AssetInput';
@@ -13,6 +14,8 @@ import './component/Backdrop';
 import './component/BusyIndicator';
 import './component/Button';
 import './component/CircularProgress';
+import './component/Chain';
+import './component/ChainSelector';
 import './component/Dialog';
 import './component/DialogCountdown';
 import './component/Divider';
@@ -42,3 +45,4 @@ import './component/icons/Settings';
 import './component/icons/Success';
 import './component/icons/SuccessAlt';
 import './component/icons/Switch';
+import './component/icons/Warning';

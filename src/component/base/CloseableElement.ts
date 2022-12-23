@@ -1,5 +1,6 @@
 import { PropertyValues } from 'lit';
-import { property } from 'lit-element';
+import { property } from 'lit/decorators.js';
+
 import { UIGCElement } from './UIGCElement';
 
 export class CloseableElement extends UIGCElement {

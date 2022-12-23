@@ -32,6 +32,13 @@ export class Typography extends UIGCElement {
         line-height: var(--uigc-typography__section-line-height);
         color: var(--uigc-typography__section-color);
       }
+
+      :host([variant='subsection']) {
+        font-weight: var(--uigc-typography__subsection-font-weight);
+        font-size: var(--uigc-typography__subsection-font-size);
+        line-height: var(--uigc-typography__subsection-line-height);
+        color: var(--uigc-typography__subsection-color);
+      }
     `,
   ];
 

@@ -3,13 +3,15 @@ import { DataType } from './DataType';
 export const AssetTypes = {
   aUSD: 'Acala USD',
   BSX: 'Basilisk',
+  BTC: 'Bitcoin',
+  DAI: 'Dai',
+  DOT: 'Polkadot',
+  ETH: 'Ethereum',
+  HDX: 'HydraDX',
+  KAR: 'Karura',
   KSM: 'Kusama',
   PHA: 'Phala',
   TNKR: 'Tinkernet',
-  DAI: 'Dai',
-  DOT: 'Polkadot',
-  HDX: 'HydraDX',
-  KAR: 'Karura',
 };
 
 export class AssetType extends DataType {

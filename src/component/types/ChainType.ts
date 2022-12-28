@@ -3,7 +3,7 @@ import { DataType } from './DataType';
 export const ChainTypes = {
   acala: 'Acala',
   basilisk: 'Basilisk',
-  hydra: 'HydraDX',
+  hydradx: 'HydraDX',
   karura: 'Karura',
   phala: 'Phala',
   polkadot: 'Polkadot',

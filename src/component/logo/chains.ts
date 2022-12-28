@@ -42,7 +42,7 @@ export const basilisk = html`<svg
   />
 </svg>`;
 
-export const hydra = html`<svg
+export const hydradx = html`<svg
   xmlns="http://www.w3.org/2000/svg"
   width="48"
   height="48"

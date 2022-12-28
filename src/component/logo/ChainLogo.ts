@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { choose } from 'lit/directives/choose.js';
 
 import { BaseLogo } from './BaseLogo';
-import { acala, basilisk, hydra, karura, phala, polkadot } from './chains';
+import { acala, basilisk, hydradx, karura, phala, polkadot } from './chains';
 
 @customElement('uigc-logo-chain')
 export class ChainLogo extends BaseLogo {
@@ -16,7 +16,7 @@ export class ChainLogo extends BaseLogo {
         [
           ['acala', () => acala],
           ['basilisk', () => basilisk],
-          ['hydra', () => hydra],
+          ['hydradx', () => hydradx],
           ['karura', () => karura],
           ['phala', () => phala],
           ['polkadot', () => polkadot],

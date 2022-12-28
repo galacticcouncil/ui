@@ -12,3 +12,6 @@ badges
 src
 assets
 custom-elements.json
+dist/404.html
+dist/index.html
+dist/bundle-*.js

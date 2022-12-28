@@ -22,14 +22,28 @@ export class AssetListItem extends UIGCElement {
       }
 
       :host([selected]) {
-        background-color: var(--uigc-asset-list-item__selected-background);
+        background-color: var(--uigc-list-item__selected-background);
         pointer-events: none;
       }
 
-      .balances {
+      .secondary {
         display: flex;
         flex-direction: column;
         text-align: right;
+      }
+
+      .secondary span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--hex-white);
+      }
+
+      .secondary span.desc {
+        font-weight: var(--uigc-list-item--secondary-desc-font-weight);
+        font-size: 12px;
+        line-height: 140%;
+        color: var(--uigc-list-item--secondary-color);
       }
 
       button {
@@ -39,7 +53,7 @@ export class AssetListItem extends UIGCElement {
         padding: 22px 14px;
         gap: 6px;
         background-color: transparent;
-        background: var(--uigc-asset-list-item--button-background);
+        background: var(--uigc-list-item--button-background);
         width: 100%;
         height: 56px;
         cursor: pointer;
@@ -53,20 +67,6 @@ export class AssetListItem extends UIGCElement {
 
       button:hover {
         background: rgba(var(--rgb-white), 0.06);
-      }
-
-      button span.balance {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 18px;
-        color: var(--hex-white);
-      }
-
-      button span.balance-usd {
-        font-weight: var(--uigc-asset-list-item--usd-font-weight);
-        font-size: 12px;
-        line-height: 140%;
-        color: var(--uigc-asset-list-item--usd-color);
       }
     `,
   ];
@@ -84,9 +84,9 @@ export class AssetListItem extends UIGCElement {
     return html` <button @click=${this.onAssetClick} ?disabled=${this.disabled}>
       <uigc-asset .asset=${this.asset.symbol}></uigc-asset>
       <div class="grow"></div>
-      <div class="balances">
-        <span class="balance">${this.balance || 0} ${this.asset.symbol}</span>
-        ${when(this.balanceUsd, () => html` <span class="balance-usd">≈ ${this.balanceUsd} USD</span> `)}
+      <div class="secondary">
+        <span>${this.balance || 0} ${this.asset.symbol}</span>
+        ${when(this.balanceUsd, () => html` <span class="desc">≈ ${this.balanceUsd} USD</span> `)}
       </div>
     </button>`;
   }

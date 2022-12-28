@@ -20,6 +20,8 @@ export { Divider } from './component/Divider';
 export { Drawer } from './component/Drawer';
 export { IconButton } from './component/IconButton';
 export { Input } from './component/Input';
+export { List } from './component/List';
+export { ListItem } from './component/ListItem';
 export { Paper } from './component/Paper';
 export { Progress } from './component/Progress';
 export { SearchBar } from './component/SearchBar';

@@ -129,14 +129,14 @@
 
       <!-- AssetList -->
       <template data-element="uigc-asset-list" data-target="slot">
+        <uigc-asset-list-item asset='{"id":"0","symbol":"BSX"}' balance="1500" balanceUsd="23"></uigc-asset-list-item>
         <uigc-asset-list-item
           slot="selected"
           selected
-          asset='{"id":"0","symbol":"BSX"}'
-          balance="1500"
-          balanceUsd="23"
+          asset='{"id":"1","symbol":"KSM"}'
+          balance="3500"
+          balanceUsd="46"
         ></uigc-asset-list-item>
-        <uigc-asset-list-item asset='{"id":"1","symbol":"KSM"}' balance="3500" balanceUsd="46"></uigc-asset-list-item>
         <uigc-asset-list-item
           slot="disabled"
           disabled
@@ -511,6 +511,70 @@
             justify-content: center;
           }
         </style>
+      </template>
+
+      <!-- List -->
+      <template data-element="uigc-list" data-target="slot">
+        <span slot="header">CHAIN LIST</span>
+        <uigc-list-item item="hydra" selected slot="selected">
+          <uigc-chain chain="hydra"></uigc-chain>
+        </uigc-list-item>
+        <uigc-list-item item="polkadot">
+          <uigc-chain chain="polkadot"></uigc-chain>
+        </uigc-list-item>
+        <uigc-list-item item="acala">
+          <uigc-chain chain="acala"></uigc-chain>
+        </uigc-list-item>
+        <uigc-list-item item="basilisk" disabled slot="disabled">
+          <uigc-chain chain="basilisk"></uigc-chain>
+        </uigc-list-item>
+      </template>
+      <template data-element="uigc-list" data-target="suffix">
+        <style>
+          uigc-paper {
+            width: 400px;
+            height: 300px;
+            padding-top: 20px;
+            display: block;
+          }
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+      <template data-element="uigc-list" data-target="wrapper">
+        <uigc-paper></uigc-paper>
+      </template>
+
+      <!-- ListItem -->
+      <template data-element="uigc-list-item" data-target="host">
+        <uigc-list-item item="hydradx"></uigc-list-item>
+      </template>
+      <template data-element="uigc-list-item" data-target="slot">
+        <uigc-chain chain="hydra"></uigc-chain>
+      </template>
+      <template data-element="uigc-list-item" data-target="suffix">
+        <style>
+          uigc-paper {
+            width: 400px;
+            display: block;
+            border-radius: 0;
+          }
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+      <template data-element="uigc-list-item" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
 
       <!-- Paper -->

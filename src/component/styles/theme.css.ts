@@ -171,16 +171,6 @@ export const bsxThemeProperties = css`
     --uigc-asset-input-border-style: solid;
     --uigc-asset-input-padding: 0 14px;
     --uigc-asset-input-font-size: 16px;
-    /** AssetListItem */
-    --uigc-asset-list-item__selected-background: rgba(var(--rgb-primary-450), 0.12);
-    --uigc-asset-list-item--button-background: transparent;
-    --uigc-asset-list-item--usd-color: var(--hex-neutral-gray-500);
-    --uigc-asset-list-item--usd-font-weight: 500;
-    /** AssetList */
-    --uigc-asset-list-border-bottom: 1px solid var(--hex-background-gray-800);
-    --uigc-asset-list--header-color: var(--hex-neutral-gray-300);
-    --uigc-asset-list--header-background: #1c2527;
-    --uigc-asset-list--subheader-background: rgba(var(--rgb-white), 0.03);
     /** AssetPrice */
     --uigc-asset-price-background: rgba(var(--rgb-primary-100), 0.06);
     --uigc-asset-price-border-radius: 7px;
@@ -267,7 +257,7 @@ export const bsxThemeProperties = css`
     --uigc-icon-button-border-radius: 50%;
     --uigc-icon-button-background: rgba(var(--rgb-white), 0.06);
     --uigc-icon-button-background__hover: rgba(var(--rgb-white), 0.2);
-    /** AssetInput */
+    /** Input */
     --uigc-input-border-width: 1px;
     --uigc-input-border-color: rgba(var(--rgb-white), 0.12);
     --uigc-input-border-color__focus: var(--hex-primary-300);
@@ -275,6 +265,17 @@ export const bsxThemeProperties = css`
     --uigc-input-background: rgba(var(--rgb-primary-100), 0.06);
     --uigc-input-background__hover: rgba(var(--rgb-white), 0.12);
     --uigc-input__placeholder-color: rgba(var(--rgb-primary-100), 0.4);
+    /** List */
+    --uigc-list-border-bottom: 1px solid var(--hex-background-gray-800);
+    --uigc-list-border-bottom: 1px solid var(--hex-background-gray-800);
+    --uigc-list--header-color: var(--hex-neutral-gray-300);
+    --uigc-list--header-background: #1c2527;
+    --uigc-list--subheader-background: rgba(var(--rgb-white), 0.03);
+    /** ListItem */
+    --uigc-list-item__selected-background: rgba(var(--rgb-primary-450), 0.12);
+    --uigc-list-item--button-background: transparent;
+    --uigc-list-item--secondary-color: var(--hex-neutral-gray-500);
+    --uigc-list-item--secondary-desc-font-weight: 500;
     /** Paper */
     --uigc-paper-border-radius: 20px;
     --uigc-paper-box-shadow: 0 0 0 1px hsl(0deg 0% 100% / 5%);
@@ -354,7 +355,7 @@ export const hdxThemeProperties = css`
 
     --uigc-app-font-color__gradient: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);
     --uigc-app-font-color__primary: var(--hex-bright-blue-300);
-    --uigc-app-font-color__secondary: var(--hex-dark-blue-300);
+    --uigc-app-font-color__secondary: var(--hex-dark-blue-200);
     --uigc-app-font-color__alternative: var(--hex-basic-400);
 
     /** AddressInput */
@@ -371,17 +372,6 @@ export const hdxThemeProperties = css`
     --uigc-asset-input-border-style: none;
     --uigc-asset-input-padding: 0;
     --uigc-asset-input-font-size: 18px;
-    /** AssetListItem */
-    --uigc-asset-list-border-bottom: 1px solid var(--hex-dark-blue-401);
-    --uigc-asset-list-item__selected-background: rgba(var(--rgb-primary-alpha15), 0.12);
-    --uigc-asset-list-item--button-background: rgba(var(--rgb-white), 0.03);
-    --uigc-asset-list-item--usd-color: rgba(221, 229, 255, 0.61);
-    --uigc-asset-list-item--usd-font-weight: 400;
-    /** AssetList */
-    --uigc-asset-list--header-color: var(--hex-basic-700);
-    --uigc-asset-list--header-background: var(--hex-dark-blue-700);
-    --uigc-asset-list--subheader-background: rgba(var(--rgb-primary-alpha), 0.06);
-    --uigc-asset-list--button-background: rgba(var(--rgb-white), 0.03);
     /** AssetPrice */
     --uigc-asset-price-background: var(--hex-dark-blue-401);
     --uigc-asset-price-border-radius: 2px;
@@ -469,6 +459,17 @@ export const hdxThemeProperties = css`
     --uigc-input-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-input-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
     --uigc-input__placeholder-color: rgba(114, 131, 165, 0.6);
+    /** List */
+    --uigc-list-border-bottom: 1px solid var(--hex-dark-blue-401);
+    --uigc-list--header-color: var(--hex-basic-700);
+    --uigc-list--header-background: var(--hex-dark-blue-700);
+    --uigc-list--subheader-background: rgba(var(--rgb-primary-alpha), 0.06);
+    --uigc-list--button-background: rgba(var(--rgb-white), 0.03);
+    /** ListItem */
+    --uigc-list-item__selected-background: rgba(var(--rgb-primary-alpha15), 0.12);
+    --uigc-list-item--button-background: rgba(var(--rgb-white), 0.03);
+    --uigc-list-item--secondary-color: rgba(221, 229, 255, 0.61);
+    --uigc-list-item--secondary-desc-font-weight: 400;
     /** Paper */
     --uigc-paper-border-radius: 4px;
     --uigc-paper-box-shadow: 3px 4px 0px rgba(102, 181, 255, 0.19);

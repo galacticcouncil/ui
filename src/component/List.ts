@@ -3,8 +3,8 @@ import { customElement } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-@customElement('uigc-asset-list')
-export class AssetList extends UIGCElement {
+@customElement('uigc-list')
+export class List extends UIGCElement {
   static styles = [
     UIGCElement.styles,
     css`
@@ -17,7 +17,6 @@ export class AssetList extends UIGCElement {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
         padding: 0 14px;
         color: var(--uigc-list--header-color);
         background: var(--uigc-list--header-background);
@@ -49,6 +48,10 @@ export class AssetList extends UIGCElement {
         border-bottom: var(--uigc-list-border-bottom);
         display: block;
       }
+
+      ::slotted(*[slot='header']) {
+        border-bottom: none;
+      }
     `,
   ];
 
@@ -56,14 +59,10 @@ export class AssetList extends UIGCElement {
     return html`
       <div class="list-root">
         <div class="list-header">
-          <span>ASSET</span>
-          <span>BALANCE</span>
+          <slot name="header"> </slot>
         </div>
         <slot name="selected"></slot>
         <slot></slot>
-        <div class="list-header subheader">
-          <span>ASSETS WITHOUT PAIR/POOL</span>
-        </div>
         <slot name="disabled"></slot>
       </div>
     `;

@@ -22,6 +22,8 @@ import './component/Divider';
 import './component/Drawer';
 import './component/IconButton';
 import './component/Input';
+import './component/List';
+import './component/ListItem';
 import './component/Paper';
 import './component/Progress';
 import './component/SearchBar';

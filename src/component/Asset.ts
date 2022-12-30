@@ -52,7 +52,7 @@ export class Asset extends UIGCElement {
   ];
 
   render() {
-    const assetDesc = KNOWN_ASSETS.get(this.asset) || '--';
+    const assetDesc = KNOWN_ASSETS.get(this.asset) || this.asset;
     return html` <uigc-logo-asset fit asset=${this.asset}></uigc-logo-asset>
       <span class="title">
         <span class="code">${this.asset}</span>

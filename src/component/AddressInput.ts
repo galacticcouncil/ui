@@ -13,6 +13,8 @@ import './IconButton';
 export class AddressInput extends UIGCElement {
   @property({ type: String }) title = null;
   @property({ type: String }) address = null;
+  @property({ type: String }) nativeAddress = null;
+  @property({ type: String }) chain = null;
 
   static styles = [
     UIGCElement.styles,
@@ -136,7 +138,10 @@ export class AddressInput extends UIGCElement {
               placeholder="Paste recipient address here"
               @input=${(e: any) => this.onInputChange(e)}
             />
-            ${when(this.address, () => html` <p>HYDRA FORMAT:&nbsp ${this.address}</p> `)}
+            ${when(
+              this.nativeAddress,
+              () => html` <p>${this.chain ? this.chain.toUpperCase() + ' FORMAT:\n' : ''} ${this.nativeAddress}</p> `
+            )}
           </div>
           ${when(
             this.address,

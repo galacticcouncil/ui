@@ -76,6 +76,7 @@ export class Toast extends CloseableElement {
 
       .close:hover {
         background: var(--uigc-toast--close-background__hover);
+        transition: 0.2s ease-in-out;
         cursor: pointer;
       }
 

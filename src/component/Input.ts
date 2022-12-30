@@ -91,6 +91,7 @@ export class Input extends UIGCElement {
 
       .input-root:hover {
         background: var(--uigc-input-background__hover);
+        transition: 0.2s ease-in-out;
       }
     `,
   ];

@@ -35,6 +35,7 @@ export class AddressInput extends UIGCElement {
       .address-root:hover {
         border-bottom: var(--uigc-asset-transfer-border-bottom__hover);
         background: var(--uigc-asset-transfer-background__hover);
+        transition: 0.2s ease-in-out;
       }
 
       @media (min-width: 768px) {

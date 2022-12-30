@@ -54,6 +54,7 @@ export class Button extends UIGCElement {
         color: var(--uigc-button__secondary-color__hover);
         background: var(--uigc-button__secondary-background__hover);
         border: var(--uigc-button__secondary-border__hover);
+        transition: 0.2s ease-in-out;
       }
 
       :host([variant='max']) .button-root {
@@ -65,6 +66,7 @@ export class Button extends UIGCElement {
 
       :host([variant='max']) .button-root:hover {
         background: rgba(var(--rgb-white), 0.15);
+        transition: 0.2s ease-in-out;
       }
 
       .button-root {

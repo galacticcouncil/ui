@@ -31,13 +31,13 @@ export class IconButton extends UIGCElement {
         border: var(--uigc-icon-button-border);
         border-radius: var(--uigc-icon-button-border-radius);
         background: var(--uigc-icon-button-background);
-        transition: all 0.3s ease-in-out 0s;
       }
 
       .icon-button-root:hover {
         background: var(--uigc-icon-button-background__hover);
         border: var(--uigc-icon-button-border__hover);
         cursor: pointer;
+        transition: 0.2s ease-in-out;
       }
     `,
   ];

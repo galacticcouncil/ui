@@ -53,6 +53,7 @@ export class ChainSelector extends UIGCElement {
       button:hover {
         background: var(--uigc-chain-selector-background__hover);
         border: var(--uigc-chain-selector-border);
+        transition: 0.2s ease-in-out;
       }
 
       .select {

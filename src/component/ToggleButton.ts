@@ -39,6 +39,7 @@ export class ToggleButton extends UIGCElement {
 
       .toggle-button-root:hover {
         background: var(--uigc-toggle-button--root-background__hover);
+        transition: 0.2s ease-in-out;
       }
 
       :host([selected]) .toggle-button-root {

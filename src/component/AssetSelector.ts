@@ -41,6 +41,7 @@ export class AssetSelector extends UIGCElement {
 
       button:hover {
         background: rgba(var(--rgb-white), 0.06);
+        transition: 0.2s ease-in-out;
       }
 
       .select {

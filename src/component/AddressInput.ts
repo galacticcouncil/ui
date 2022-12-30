@@ -112,8 +112,15 @@ export class AddressInput extends UIGCElement {
     `,
   ];
 
-  clearInput() {
+  onInputClear() {
     this.address = null;
+    this.nativeAddress = null;
+    const options = {
+      bubbles: true,
+      composed: true,
+      detail: { address: null },
+    };
+    this.dispatchEvent(new CustomEvent('address-input-changed', options));
   }
 
   onInputChange(e: any) {
@@ -140,7 +147,7 @@ export class AddressInput extends UIGCElement {
               @input=${(e: any) => this.onInputChange(e)}
             />
             ${when(
-              this.nativeAddress,
+              this.address && this.nativeAddress,
               () => html` <p>${this.chain ? this.chain.toUpperCase() + ' FORMAT:\n' : ''} ${this.nativeAddress}</p> `
             )}
           </div>
@@ -148,7 +155,7 @@ export class AddressInput extends UIGCElement {
             this.address,
             () => html`
               <uigc-icon-button size="small">
-                <uigc-icon-close @click=${() => this.clearInput()}></uigc-icon-close>
+                <uigc-icon-close @click=${() => this.onInputClear()}></uigc-icon-close>
               </uigc-icon-button>
             `,
             () => html` <uigc-icon-paste></uigc-icon-paste> `

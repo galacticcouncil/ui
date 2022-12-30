@@ -56,8 +56,6 @@ export class ListItem extends UIGCElement {
   }
 
   render() {
-    console.log(this.item);
-    console.log(this.disabled);
     return html` <button @click=${this.onItemClick} ?disabled=${this.disabled}>
       <slot></slot>
     </button>`;

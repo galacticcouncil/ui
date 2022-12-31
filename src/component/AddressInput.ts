@@ -86,7 +86,7 @@ export class AddressInput extends UIGCElement {
         justify-content: center;
         box-sizing: border-box;
         padding: 0 14px;
-        height: 54px;
+        min-height: 54px;
       }
 
       .input-root p {
@@ -96,6 +96,7 @@ export class AddressInput extends UIGCElement {
         line-height: 16px;
         text-align: left;
         overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       input {

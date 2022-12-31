@@ -11,6 +11,7 @@ export class AssetTransfer extends UIGCElement {
   @property({ type: String }) id = null;
   @property({ type: String }) title = null;
   @property({ type: String }) balance = null;
+  @property({ type: String }) effectiveBalance = null;
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
@@ -122,7 +123,7 @@ export class AssetTransfer extends UIGCElement {
   ];
 
   onMaxClick(e: Event) {
-    this.amount = this.balance;
+    this.amount = this.effectiveBalance ?? this.balance;
     const options = {
       bubbles: true,
       composed: true,

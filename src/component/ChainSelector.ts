@@ -16,15 +16,16 @@ export class ChainSelector extends UIGCElement {
     css`
       :host {
         border-radius: 12px;
+        width: 100%;
       }
 
       button {
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 12px 12px 12px 18px;
-        min-width: 200px;
         border-radius: var(--uigc-chain-selector-border-radius);
         cursor: pointer;
         background: var(--uigc-chain-selector-background);

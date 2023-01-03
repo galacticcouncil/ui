@@ -16,9 +16,12 @@ export class AssetLogo extends BaseLogo {
         this.asset,
         [
           ['aUSD', () => acala],
+          ['ACA', () => acala],
           ['BSX', () => basilisk],
           ['BTC', () => bitcoin],
+          ['WBTC', () => bitcoin],
           ['ETH', () => eth],
+          ['WETH', () => eth],
           ['HDX', () => hydraDX],
           ['KSM', () => kusama],
           ['PHA', () => phala],

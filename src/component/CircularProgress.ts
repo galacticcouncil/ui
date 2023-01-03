@@ -17,7 +17,7 @@ export class CircularProgress extends UIGCElement {
 
     :host([size='medium']) .progress-root {
       width: 30px;
-      height: 29px;
+      height: 30px;
     }
 
     :host(:not([size])) .progress-root {
@@ -39,8 +39,8 @@ export class CircularProgress extends UIGCElement {
         rgba(255, 255, 255, 0) calc(100% - var(--spinner-width)),
         rgba(255, 255, 255, 1) calc(100% - var(--spinner-width) + 1px)
       );
-      -webkit-animation: 0.6s linear 0s infinite normal none running animation-rotate;
-      animation: 0.6s linear 0s infinite normal none running animation-rotate;
+      -webkit-animation: animation-rotate 0.6s linear infinite;
+      animation: animation-rotate 0.6s linear infinite;
       overflow: hidden;
       background: var(--uigc-circular-progress-background);
     }
@@ -53,10 +53,10 @@ export class CircularProgress extends UIGCElement {
         transform: rotate(0deg);
       }
       100% {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        transform: rotate(-360deg);
       }
     }
   `;

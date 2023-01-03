@@ -13,8 +13,7 @@ import './IconButton';
 export class AddressInput extends UIGCElement {
   @property({ type: String }) title = null;
   @property({ type: String }) address = null;
-  @property({ type: String }) nativeAddress = null;
-  @property({ type: String }) chain = null;
+  @property({ type: String }) error = null;
 
   static styles = [
     UIGCElement.styles,
@@ -29,6 +28,10 @@ export class AddressInput extends UIGCElement {
         row-gap: var(--uigc-asset-transfer-row-gap);
       }
 
+      :host([error]) .address-root {
+        border-bottom: 1px solid var(--hex-red-400); // TODO: BSX scheme
+      }
+
       .address-root:focus,
       .address-root:focus-visible,
       .address-root:focus-within,
@@ -41,7 +44,6 @@ export class AddressInput extends UIGCElement {
       @media (min-width: 768px) {
         .address-root {
           padding: var(--uigc-asset-transfer-padding__md);
-          row-gap: var(--uigc-asset-transfer-row-gap__md);
         }
       }
 
@@ -78,6 +80,13 @@ export class AddressInput extends UIGCElement {
         align-items: center;
       }
 
+      .address-error {
+        color: var(--hex-red-400); // TODO: BSX scheme
+        line-height: 16px;
+        margin-top: 2px;
+        font-size: 12px;
+      }
+
       .input-root {
         width: 100%;
         display: flex;
@@ -110,12 +119,15 @@ export class AddressInput extends UIGCElement {
         padding: 0px;
         box-sizing: border-box;
       }
+
+      uigc-icon-paste {
+        cursor: pointer;
+      }
     `,
   ];
 
   onInputClear() {
     this.address = null;
-    this.nativeAddress = null;
     const options = {
       bubbles: true,
       composed: true,
@@ -134,6 +146,11 @@ export class AddressInput extends UIGCElement {
     this.dispatchEvent(new CustomEvent('address-input-changed', options));
   }
 
+  async onPaste() {
+    const text = await navigator.clipboard.readText();
+    this.address = text;
+  }
+
   render() {
     return html`
       <div tabindex="0" class="address-root">
@@ -147,10 +164,6 @@ export class AddressInput extends UIGCElement {
               placeholder="Paste recipient address here"
               @input=${(e: any) => this.onInputChange(e)}
             />
-            ${when(
-              this.address && this.nativeAddress,
-              () => html` <p>${this.chain ? this.chain.toUpperCase() + ' FORMAT:\n' : ''} ${this.nativeAddress}</p> `
-            )}
           </div>
           ${when(
             this.address,
@@ -159,10 +172,11 @@ export class AddressInput extends UIGCElement {
                 <uigc-icon-close @click=${() => this.onInputClear()}></uigc-icon-close>
               </uigc-icon-button>
             `,
-            () => html` <uigc-icon-paste></uigc-icon-paste> `
+            () => html` <uigc-icon-paste @click=${() => this.onPaste()}></uigc-icon-paste> `
           )}
         </div>
       </div>
+      <p class="address-error">${this.error}</p>
     `;
   }
 }

@@ -16,6 +16,7 @@ export class AssetTransfer extends UIGCElement {
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
   @property({ type: Function }) formatter = null;
+  @property({ type: String }) error = null;
 
   static styles = [
     UIGCElement.styles,
@@ -28,6 +29,10 @@ export class AssetTransfer extends UIGCElement {
         box-sizing: border-box;
         padding: var(--uigc-asset-transfer-padding);
         row-gap: var(--uigc-asset-transfer-row-gap);
+      }
+
+      :host([error]) .asset-root {
+        border-bottom: 1px solid var(--hex-red-400); // TODO: BSX scheme
       }
 
       .asset-root:focus,
@@ -70,6 +75,13 @@ export class AssetTransfer extends UIGCElement {
         .asset-root > :nth-child(3) {
           grid-area: 2 / 1 / 3 / 3;
         }
+      }
+
+      .asset-error {
+        color: var(--hex-red-400); // TODO: BSX scheme
+        line-height: 16px;
+        margin-top: 2px;
+        font-size: 12px;
       }
 
       .title {
@@ -164,6 +176,7 @@ export class AssetTransfer extends UIGCElement {
           ></uigc-asset-input>
         </div>
       </div>
+      <p class="asset-error">${this.error}</p>
     `;
   }
 }

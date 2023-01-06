@@ -146,9 +146,14 @@ export class AddressInput extends UIGCElement {
     this.dispatchEvent(new CustomEvent('address-input-changed', options));
   }
 
-  async onPaste() {
-    const text = await navigator.clipboard.readText();
-    this.address = text;
+  async onPasteClick() {
+    this.address = await navigator.clipboard.readText();
+    const options = {
+      bubbles: true,
+      composed: true,
+      detail: { address: this.address },
+    };
+    this.dispatchEvent(new CustomEvent('address-input-changed', options));
   }
 
   render() {
@@ -172,7 +177,7 @@ export class AddressInput extends UIGCElement {
                 <uigc-icon-close @click=${() => this.onInputClear()}></uigc-icon-close>
               </uigc-icon-button>
             `,
-            () => html` <uigc-icon-paste @click=${() => this.onPaste()}></uigc-icon-paste> `
+            () => html` <uigc-icon-paste @click=${() => this.onPasteClick()}></uigc-icon-paste> `
           )}
         </div>
       </div>

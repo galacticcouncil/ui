@@ -15,6 +15,7 @@ export class AssetTransfer extends UIGCElement {
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
+  @property({ type: Boolean }) maxDisabled = false;
   @property({ type: Function }) formatter = null;
   @property({ type: String }) error = null;
 
@@ -144,6 +145,10 @@ export class AssetTransfer extends UIGCElement {
     this.dispatchEvent(new CustomEvent('asset-input-changed', options));
   }
 
+  isEmptyBalance() {
+    return this.balance == null || this.balance == '' || this.balance == '0';
+  }
+
   render() {
     const formatterFn = this.formatter
       ? this.formatter
@@ -161,7 +166,7 @@ export class AssetTransfer extends UIGCElement {
             variant="max"
             size="micro"
             capitalize
-            ?disabled=${this.balance == null}
+            ?disabled=${this.isEmptyBalance() || this.maxDisabled}
             @click=${this.onMaxClick}
             >Max</uigc-button
           >

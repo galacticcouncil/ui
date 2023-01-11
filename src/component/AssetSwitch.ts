@@ -1,5 +1,5 @@
 import { html, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
@@ -8,6 +8,8 @@ import './icons/Arrow';
 
 @customElement('uigc-asset-switch')
 export class AssetSwitch extends UIGCElement {
+  @property({ type: String }) message = null;
+
   static styles = [
     UIGCElement.styles,
     css`
@@ -17,6 +19,11 @@ export class AssetSwitch extends UIGCElement {
 
       :host(:not([basic])) uigc-icon-switch {
         display: block;
+      }
+
+      :host([disabled]) .switch-root:hover > uigc-icon-switch,
+      :host([disabled]) .switch-root:hover > uigc-icon-arrow {
+        transform: none;
       }
 
       .switch-root {
@@ -51,7 +58,7 @@ export class AssetSwitch extends UIGCElement {
 
   render() {
     return html`
-      <div class="switch-root" @click=${this.onSwitchClick}>
+      <div class="switch-root" @click=${this.onSwitchClick} title=${this.message}>
         <uigc-icon-switch></uigc-icon-switch>
         <uigc-icon-arrow></uigc-icon-arrow>
       </div>

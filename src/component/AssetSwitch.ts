@@ -23,6 +23,7 @@ export class AssetSwitch extends UIGCElement {
 
       :host([disabled]) .switch-root:hover > uigc-icon-switch,
       :host([disabled]) .switch-root:hover > uigc-icon-arrow {
+        cursor: unset;
         transform: none;
       }
 

@@ -11,7 +11,7 @@ export const AssetTypes = {
   HDX: 'HydraDX',
   KAR: 'Karura',
   KSM: 'Kusama',
-  LRNA: 'LRNA',
+  LRNA: 'Lerna',
   PHA: 'Phala',
   TNKR: 'Tinkernet',
   WBTC: 'Portal BTC',

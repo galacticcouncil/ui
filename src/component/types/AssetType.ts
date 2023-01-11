@@ -5,16 +5,17 @@ export const AssetTypes = {
   ACA: 'Acala',
   BSX: 'Basilisk',
   BTC: 'Bitcoin',
-  WBTC: 'Portal BTC',
   DAI: 'Dai',
   DOT: 'Polkadot',
   ETH: 'Ethereum',
-  WETH: 'Portal ETH',
   HDX: 'HydraDX',
   KAR: 'Karura',
   KSM: 'Kusama',
+  LRNA: 'LRNA',
   PHA: 'Phala',
   TNKR: 'Tinkernet',
+  WBTC: 'Portal BTC',
+  WETH: 'Portal ETH',
 };
 
 export class AssetType extends DataType {

@@ -4,7 +4,20 @@ import { choose } from 'lit/directives/choose.js';
 
 import { BaseLogo } from './BaseLogo';
 import './unknown';
-import { acala, basilisk, bitcoin, dai, eth, hydraDX, karura, kusama, phala, polkadot, tinkernet } from './assets';
+import {
+  acala,
+  basilisk,
+  bitcoin,
+  dai,
+  eth,
+  hydraDX,
+  karura,
+  kusama,
+  lrna,
+  phala,
+  polkadot,
+  tinkernet,
+} from './assets';
 
 @customElement('uigc-logo-asset')
 export class AssetLogo extends BaseLogo {
@@ -19,16 +32,17 @@ export class AssetLogo extends BaseLogo {
           ['ACA', () => acala],
           ['BSX', () => basilisk],
           ['BTC', () => bitcoin],
-          ['WBTC', () => bitcoin],
-          ['ETH', () => eth],
-          ['WETH', () => eth],
-          ['HDX', () => hydraDX],
-          ['KSM', () => kusama],
-          ['PHA', () => phala],
-          ['TNKR', () => tinkernet],
-          ['KAR', () => karura],
           ['DAI', () => dai],
           ['DOT', () => polkadot],
+          ['ETH', () => eth],
+          ['HDX', () => hydraDX],
+          ['KAR', () => karura],
+          ['KSM', () => kusama],
+          ['LRNA', () => lrna],
+          ['PHA', () => phala],
+          ['TNKR', () => tinkernet],
+          ['WBTC', () => bitcoin],
+          ['WETH', () => eth],
         ],
         () => html`<uigc-logo-unknown></uigc-logo-unknown>`
       )}

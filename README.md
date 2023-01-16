@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@galacticcouncil/ui.svg)](https://www.npmjs.com/package/@galacticcouncil/ui)
 
-## What are [UIGC Web Components](https://magenta-chimera-ffcef1.netlify.app)?
+## What are [UIGC Web Components](https://galactic-uikit.netlify.app)?
 
 - Collection of **reusable UI elements** crafted to ease Basilisk & HydraDX chains integration driven by a **lit framework** (~400kb unpacked size).
 - Usable with any current or future **web development framework**.
@@ -16,7 +16,7 @@
 
 ## Docs & Demo
 
-- [Playground and API Reference](https://magenta-chimera-ffcef1.netlify.app)
+- [Playground and API Reference](https://galactic-uikit.netlify.app)
 
 ## How to Use
 

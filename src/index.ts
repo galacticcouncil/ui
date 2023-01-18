@@ -34,6 +34,7 @@ export { Typography } from './component/Typography';
 
 /* Icons */
 export { BackIcon } from './component/icons/Back';
+export { ChartIcon } from './component/icons/Chart';
 export { ChevronRightIcon } from './component/icons/ChevronRight';
 export { CloseIcon } from './component/icons/Close';
 export { DropdownIcon } from './component/icons/Dropdown';

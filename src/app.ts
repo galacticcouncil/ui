@@ -35,6 +35,7 @@ import './component/ToggleButtonGroup';
 import './component/Typography';
 
 import './component/icons/Back';
+import './component/icons/Chart';
 import './component/icons/ChevronRight';
 import './component/icons/Close';
 import './component/icons/Dropdown';

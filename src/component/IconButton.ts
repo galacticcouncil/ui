@@ -15,13 +15,17 @@ export class IconButton extends UIGCElement {
 
       :host(:not([size])) .icon-button-root,
       :host([size='medium']) .icon-button-root {
-        width: 40px;
-        height: 40px;
+        width: 34px;
+        height: 34px;
       }
 
       :host([size='large']) .icon-button-root {
-        width: 50px;
-        height: 50px;
+        width: 44px;
+        height: 44px;
+      }
+
+      :host([basic]) .icon-button-root {
+        border: none;
       }
 
       .icon-button-root {

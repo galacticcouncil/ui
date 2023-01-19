@@ -22,9 +22,6 @@ export class ChartIcon extends BaseIcon {
       <svg hdx xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
         <script xmlns="" />
         <script xmlns="" />
-        <!-- <rect x="6" width="3" height="16" rx="1.5" fill="#00c2ff" />
-        <rect y="8" width="3" height="8" rx="1.5" fill="#00579f" />
-        <rect x="12" y="4" width="3" height="12" rx="1.5" fill="#023b6a" /> -->
         <rect x="6" width="3" height="16" rx="1.5" fill="#FC408C" />
         <rect y="8" width="3" height="8" rx="1.5" fill="#EFB0FF" />
         <rect x="12" y="4" width="3" height="12" rx="1.5" fill="#EFB0FF" />

@@ -320,10 +320,9 @@ export const bsxThemeProperties = css`
     --uigc-toggle-button-group--root-background: rgba(var(--rgb-black), 0.25);
     --uigc-toggle-button-group--root-border-radius: 11px;
     /** Typograppy */
-    --uigc-typography__title-background: linear-gradient(90deg, #4fffb0 1.27%, #b3ff8f 48.96%, #ff984e 104.14%),
-      linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),
-      linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);
+    --uigc-typography__title-background: var(--uigc-app-font-color__gradient);
     --uigc-typography__title-error-background: var(--hex-red-400);
+    --uigc-typography__title-gradient-background: var(--uigc-app-font-color__gradient);
     --uigc-typography__title-font-weight: 600;
     --uigc-typography__title-font-size: 24px;
     --uigc-typography__section-font-weight: 500;
@@ -509,6 +508,7 @@ export const hdxThemeProperties = css`
     /** Typograppy */
     --uigc-typography__title-background: #fff;
     --uigc-typography__title-error-background: rgb(255, 75, 75);
+    --uigc-typography__title-gradient-background: var(--uigc-app-font-color__gradient);
     --uigc-typography__title-font-weight: 500;
     --uigc-typography__title-font-size: 19px;
     --uigc-typography__section-font-weight: 500;

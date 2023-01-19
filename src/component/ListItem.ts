@@ -18,7 +18,6 @@ export class ListItem extends UIGCElement {
 
       :host([selected]) {
         background-color: var(--uigc-list-item__selected-background);
-        pointer-events: none;
       }
 
       button {

@@ -35,10 +35,10 @@ export class ChainSelector extends UIGCElement {
       button .title {
         display: flex;
         align-items: center;
-        font-weight: 600;
+        color: var(--uigc-chain-selector--title-color);
+        font-weight: var(--uigc-chain-selector--title-font-weight);
         font-size: var(--uigc-asset-transfer--title-font-size);
         line-height: var(--uigc-asset-transfer--title-line-height);
-        color: var(--uigc-asset-transfer--title-color);
         text-transform: var(--uigc-asset-transfer--title-text-transform);
       }
 

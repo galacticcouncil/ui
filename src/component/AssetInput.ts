@@ -81,6 +81,10 @@ export class AssetInput extends UIGCElement {
         border-color: var(--uigc-input-border-color__focus);
       }
 
+      .asset-root:hover {
+        background: var(--uigc-asset-input-background__hover);
+      }
+
       .asset-field {
         width: 100%;
         display: flex;

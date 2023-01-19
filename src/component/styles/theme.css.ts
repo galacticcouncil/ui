@@ -168,6 +168,7 @@ export const bsxThemeProperties = css`
     --uigc-alert__drawer-background: var(--hex-background-gray-1000);
     /** AssetInput */
     --uigc-asset-input-background: rgba(var(--rgb-primary-100), 0.06);
+    --uigc-asset-input-background__hover: rgba(var(--rgb-primary-100), 0.12);
     --uigc-asset-input-border-style: solid;
     --uigc-asset-input-padding: 0 14px;
     --uigc-asset-input-font-size: 16px;
@@ -230,9 +231,11 @@ export const bsxThemeProperties = css`
     );
     /** ChainSelector */
     --uigc-chain-selector-border-radius: 8px;
-    --uigc-chain-selector-border: none;
-    --uigc-chain-selector-background: rgba(var(--rgb-primary-100), 0.06);
+    --uigc-chain-selector-border: 1px solid var(--uigc-input-border-color);
+    --uigc-chain-selector-background: rgba(var(--rgb-black), 0.06);
     --uigc-chain-selector-background__hover: rgba(var(--rgb-primary-100), 0.06);
+    --uigc-chain-selector--title-color: rgba(var(--rgb-white), 0.7);
+    --uigc-chain-selector--title-font-weight: 500;
     /** Dialog */
     --uigc-dialog-background: var(--hex-background-gray-900);
     --uigc-dialog-box-shadow: 0px 38px 46px rgba(0, 0, 0, 0.03);
@@ -263,7 +266,7 @@ export const bsxThemeProperties = css`
     --uigc-input-border-color__focus: var(--hex-primary-300);
     --uigc-input-border-radius: 9px;
     --uigc-input-background: rgba(var(--rgb-primary-100), 0.06);
-    --uigc-input-background__hover: rgba(var(--rgb-white), 0.12);
+    --uigc-input-background__hover: rgba(var(--rgb-primary-100), 0.12);
     --uigc-input__placeholder-color: rgba(var(--rgb-primary-100), 0.4);
     /** List */
     --uigc-list-border-bottom: 1px solid var(--hex-background-gray-800);
@@ -368,6 +371,7 @@ export const hdxThemeProperties = css`
     --uigc-alert__drawer-background: var(--hex-dark-blue-401);
     /** AssetInput */
     --uigc-asset-input-background: transparent;
+    --uigc-asset-input-background__hover: none;
     --uigc-asset-input-border-style: none;
     --uigc-asset-input-padding: 0;
     --uigc-asset-input-font-size: 18px;
@@ -429,6 +433,8 @@ export const hdxThemeProperties = css`
     --uigc-chain-selector-border: 1px solid var(--hex-dark-blue-400);
     --uigc-chain-selector-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-chain-selector-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
+    --uigc-chain-selector--title-color: var(--hex-basic-500);
+    --uigc-chain-selector--title-font-weight: 600;
     /** Dialog */
     --uigc-dialog-background: var(--hex-dark-blue-600);
     --uigc-dialog-box-shadow: 0px 10px 30px rgba(91, 144, 172, 0.12), 3px 3px 0px rgba(126, 161, 194, 0.12);

@@ -1,5 +1,6 @@
 import { html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
 import './logo/AssetLogo';
@@ -10,7 +11,8 @@ const KNOWN_ASSETS = AssetType.getMap(AssetTypes);
 
 @customElement('uigc-asset')
 export class Asset extends UIGCElement {
-  @property({ type: String }) asset = null;
+  @property({ type: String }) symbol = null;
+  @property({ type: String }) desc = null;
 
   static styles = [
     UIGCElement.styles,
@@ -52,11 +54,10 @@ export class Asset extends UIGCElement {
   ];
 
   render() {
-    const assetDesc = KNOWN_ASSETS.get(this.asset) || this.asset;
-    return html` <uigc-logo-asset fit asset=${this.asset}></uigc-logo-asset>
+    return html` <uigc-logo-asset fit asset=${this.symbol}></uigc-logo-asset>
       <span class="title">
-        <span class="code">${this.asset}</span>
-        <span class="desc">${assetDesc}</span>
+        <span class="code">${this.symbol}</span>
+        ${when(this.desc, () => html` <span class="desc">${this.desc}</span> `)}
       </span>
       <slot></slot>`;
   }

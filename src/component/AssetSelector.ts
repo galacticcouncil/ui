@@ -78,7 +78,7 @@ export class AssetSelector extends UIGCElement {
     return html` <button @click=${this.onSelectorClick}>
       ${when(
         this.asset,
-        () => html` <uigc-asset .asset=${this.asset}>
+        () => html` <uigc-asset .symbol=${this.asset}>
           <uigc-icon-dropdown></uigc-icon-dropdown>
         </uigc-asset>`,
         () => html` <span class="select">

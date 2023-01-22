@@ -37,7 +37,7 @@ export class AddressInput extends UIGCElement {
       .address-root:focus-within,
       .address-root:hover {
         border-bottom: var(--uigc-asset-transfer-border-bottom__hover);
-        background: var(--uigc-asset-transfer-background__hover);
+        background: var(--uigc-address-input-background__hover);
         transition: 0.2s ease-in-out;
       }
 
@@ -67,10 +67,10 @@ export class AddressInput extends UIGCElement {
       .title {
         display: flex;
         align-items: center;
-        font-weight: 600;
+        color: var(--uigc-chain-selector--title-color);
+        font-weight: var(--uigc-chain-selector--title-font-weight);
         font-size: var(--uigc-asset-transfer--title-font-size);
         line-height: var(--uigc-asset-transfer--title-line-height);
-        color: var(--uigc-asset-transfer--title-color);
         text-transform: var(--uigc-asset-transfer--title-text-transform);
       }
 

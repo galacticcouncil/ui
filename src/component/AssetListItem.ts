@@ -9,6 +9,7 @@ import './Asset';
 @customElement('uigc-asset-list-item')
 export class AssetListItem extends UIGCElement {
   @property({ type: Object }) asset = null;
+  @property({ type: String }) desc = null;
   @property({ type: String }) balance = null;
   @property({ type: String }) balanceUsd = null;
   @property({ type: Boolean }) disabled = false;
@@ -81,7 +82,7 @@ export class AssetListItem extends UIGCElement {
 
   render() {
     return html` <button @click=${this.onAssetClick} ?disabled=${this.disabled}>
-      <uigc-asset .asset=${this.asset.symbol}></uigc-asset>
+      <uigc-asset .symbol=${this.asset.symbol} .desc=${this.desc}></uigc-asset>
       <div class="grow"></div>
       <div class="secondary">
         <span>${this.balance || 0} ${this.asset.symbol}</span>

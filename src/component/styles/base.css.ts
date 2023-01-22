@@ -129,4 +129,18 @@ export const baseStyles = css`
   .grow {
     flex: 1;
   }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent url('assets/img/scrollbar.svg') no-repeat;
+    background-position: bottom;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 `;

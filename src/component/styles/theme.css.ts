@@ -159,6 +159,9 @@ export const bsxThemeProperties = css`
 
     /** AddressInput */
     --uigc-address-input__placeholder-color: var(--hex-basic-300);
+    --uigc-address-input-background__hover: rgba(var(--rgb-primary-100), 0.12);
+    --uigc-chain-selector--title-color: rgba(var(--rgb-white), 0.7);
+    --uigc-chain-selector--title-font-weight: 500;
     /** Alert */
     --uigc-alert-border-radius: 14px;
     --uigc-alert-background: var(--hex-background-gray-1000);
@@ -231,9 +234,9 @@ export const bsxThemeProperties = css`
     );
     /** ChainSelector */
     --uigc-chain-selector-border-radius: 8px;
-    --uigc-chain-selector-border: 1px solid var(--uigc-input-border-color);
-    --uigc-chain-selector-background: rgba(var(--rgb-black), 0.06);
-    --uigc-chain-selector-background__hover: rgba(var(--rgb-primary-100), 0.06);
+    --uigc-chain-selector-border: none;
+    --uigc-chain-selector-background: rgba(var(--rgb-primary-100), 0.06);
+    --uigc-chain-selector-background__hover: rgba(var(--rgb-primary-100), 0.12);
     --uigc-chain-selector--title-color: rgba(var(--rgb-white), 0.7);
     --uigc-chain-selector--title-font-weight: 500;
     /** Dialog */
@@ -362,6 +365,9 @@ export const hdxThemeProperties = css`
 
     /** AddressInput */
     --uigc-address-input__placeholder-color: var(--hex-basic-300);
+    --uigc-address-input-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
+    --uigc-chain-selector--title-color: var(--hex-basic-500);
+    --uigc-chain-selector--title-font-weight: 600;
     /** Alert */
     --uigc-alert-border-radius: 4px;
     --uigc-alert-background: var(--hex-dark-blue-600);

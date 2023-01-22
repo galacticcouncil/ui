@@ -6,17 +6,22 @@ import { BaseLogo } from './BaseLogo';
 import './unknown';
 import {
   acala,
+  astar,
   basilisk,
   bitcoin,
   dai,
   eth,
   hydraDX,
+  interlay,
   karura,
   kusama,
   lrna,
   phala,
   polkadot,
   tinkernet,
+  usdc,
+  usdt,
+  zeitgeist,
 } from './assets';
 
 @customElement('uigc-logo-asset')
@@ -26,21 +31,27 @@ export class AssetLogo extends BaseLogo {
   render() {
     return html`
       ${choose(
-        this.asset,
+        this.asset.toUpperCase(),
         [
-          ['aUSD', () => acala],
+          ['AUSD', () => acala],
           ['ACA', () => acala],
+          ['ASTR', () => astar],
           ['BSX', () => basilisk],
           ['BTC', () => bitcoin],
           ['DAI', () => dai],
           ['DOT', () => polkadot],
           ['ETH', () => eth],
           ['HDX', () => hydraDX],
+          ['IBTC', () => bitcoin],
+          ['INTR', () => interlay],
           ['KAR', () => karura],
           ['KSM', () => kusama],
           ['LRNA', () => lrna],
           ['PHA', () => phala],
           ['TNKR', () => tinkernet],
+          ['USDC', () => usdc],
+          ['USDT', () => usdt],
+          ['ZTG', () => zeitgeist],
           ['WBTC', () => bitcoin],
           ['WETH', () => eth],
         ],

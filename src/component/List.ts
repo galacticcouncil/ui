@@ -63,6 +63,9 @@ export class List extends UIGCElement {
         </div>
         <slot name="selected"></slot>
         <slot></slot>
+        <div class="list-header subheader">
+          <slot name="subheader"> </slot>
+        </div>
         <slot name="disabled"></slot>
       </div>
     `;

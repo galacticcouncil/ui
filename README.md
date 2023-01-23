@@ -43,7 +43,7 @@
 For framework customization please see following sections:
 
 - [Font](https://github.com/galacticcouncil/ui/blob/master/doc/font.md)
-- [Webkit](https://github.com/galacticcouncil/ui/blob/master/doc/webkit.md)
+- [Base](https://github.com/galacticcouncil/ui/blob/master/doc/base.md)
 
 ## Browser Support
 

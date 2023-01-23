@@ -1,5 +1,11 @@
 import { css } from 'lit';
 
+export const baseProperties = css`
+  :root {
+    --scrollbar-url: url('assets/img/scrollbar.svg');
+  }
+`;
+
 export const baseStyles = css`
   /* Reset */
   a,
@@ -136,7 +142,7 @@ export const baseStyles = css`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: transparent url('assets/img/scrollbar.svg') no-repeat;
+    background: transparent var(--scrollbar-url) no-repeat;
     background-position: bottom;
   }
 

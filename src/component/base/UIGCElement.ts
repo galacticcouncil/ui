@@ -1,7 +1,6 @@
 import { LitElement, CSSResultGroup } from 'lit';
 
-import { baseStyles } from '../styles/base.css';
-import { webkitStyles } from '../styles/webkit.css';
+import { baseStyles, baseProperties } from '../styles/base.css';
 import { fontStyles, fontFace } from '../styles/font.css';
 import { paletteProperties, bsxThemeProperties, hdxThemeProperties } from '../styles/theme.css';
 
@@ -16,9 +15,9 @@ export class UIGCElement extends LitElement {
     }
   }
 
-  createWebkitStylesheet() {
-    if (!hasStyle('uigc-webkit', '')) {
-      createStyle(webkitStyles, 'uigc-webkit', '');
+  createBaseStylesheet() {
+    if (!hasStyle('uigc-base', '')) {
+      createStyle(baseProperties, 'uigc-base', '');
     }
   }
 
@@ -41,10 +40,10 @@ export class UIGCElement extends LitElement {
   }
 
   override async firstUpdated() {
+    this.createBaseStylesheet();
     this.createPaletteStylesheet();
     this.createFontFaceStylesheet();
     this.createBsxThemeStylesheet();
     this.createHdxThemeStylesheet();
-    this.createWebkitStylesheet();
   }
 }

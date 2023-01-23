@@ -177,6 +177,7 @@ export const bsxThemeProperties = css`
     --uigc-asset-input-font-size: 16px;
     /** AssetPrice */
     --uigc-asset-price-background: rgba(var(--rgb-primary-100), 0.06);
+    --uigc-asset-price-border: none;
     --uigc-asset-price-border-radius: 7px;
     --uigc-asset-price__highlight-color: var(--hex-primary-300);
     /** AssetSelector */
@@ -382,7 +383,8 @@ export const hdxThemeProperties = css`
     --uigc-asset-input-padding: 0;
     --uigc-asset-input-font-size: 18px;
     /** AssetPrice */
-    --uigc-asset-price-background: var(--hex-dark-blue-401);
+    --uigc-asset-price-background: var(--hex-dark-blue-700);
+    --uigc-asset-price-border: 1px solid var(--hex-dark-blue-400);
     --uigc-asset-price-border-radius: 2px;
     --uigc-asset-price__highlight-color: var(--hex-bright-blue-300);
     /** AssetSelector */

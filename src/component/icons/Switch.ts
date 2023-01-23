@@ -23,7 +23,7 @@ export class SwitchIcon extends BaseIcon {
 
   hdxTemplate() {
     return html` <svg hdx xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43" fill="none">
-      <rect x="0.5" y="0.5" width="42" height="42" rx="3.5" fill="#0E132F" />
+      <rect x="0.5" y="0.5" width="42" height="42" rx="3.5" fill="#111320" />
       <rect x="14.125" y="23.0273" width="2.94973" height="2.94973" fill="#57B3EB" />
       <rect x="17.0781" y="25.9769" width="2.94973" height="2.94973" fill="#57B3EB" />
       <rect x="20.0234" y="28.9268" width="2.94973" height="2.94973" fill="#57B3EB" />

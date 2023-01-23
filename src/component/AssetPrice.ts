@@ -26,6 +26,7 @@ export class AssetPrice extends UIGCElement {
         height: 28px;
         background: var(--uigc-asset-price-background);
         border-radius: var(--uigc-asset-price-border-radius);
+        border: var(--uigc-asset-price-border);
       }
 
       span {

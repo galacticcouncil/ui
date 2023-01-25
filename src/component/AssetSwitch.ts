@@ -28,8 +28,8 @@ export class AssetSwitch extends UIGCElement {
       }
 
       .switch-root {
-        width: 43px;
-        height: 43px;
+        width: 32px;
+        height: 32px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -60,7 +60,7 @@ export class AssetSwitch extends UIGCElement {
   render() {
     return html`
       <div class="switch-root" @click=${this.onSwitchClick} title=${this.message}>
-        <uigc-icon-switch></uigc-icon-switch>
+        <uigc-icon-switch fit></uigc-icon-switch>
         <uigc-icon-arrow></uigc-icon-arrow>
       </div>
     `;

@@ -21,7 +21,7 @@ export class AssetPrice extends UIGCElement {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 2px 14px;
+        padding: 0 14px;
         gap: 5px;
         height: 28px;
         background: var(--uigc-asset-price-background);

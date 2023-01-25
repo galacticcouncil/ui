@@ -89,6 +89,7 @@ export const paletteProperties = css`
     --hex-dark-blue-200: #999ba7;
     --hex-dark-blue-300: #66697c;
     --hex-dark-blue-400: #333750;
+    --rgb-dark-blue-400: 51, 55, 80;
     --hex-dark-blue-401: #1c2038;
     --hex-dark-blue-500: #000524;
     --hex-dark-blue-600: #00041d;

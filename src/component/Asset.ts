@@ -23,7 +23,7 @@ export class Asset extends UIGCElement {
         align-items: center;
         gap: 6px;
         background-color: transparent;
-        height: 52px;
+        height: 32px;
         border-radius: 8px;
         cursor: pointer;
       }
@@ -49,6 +49,10 @@ export class Asset extends UIGCElement {
         justify-content: center;
         align-items: flex-start;
         padding: 5px 0px;
+      }
+
+      uigc-logo-asset {
+        width: 30px;
       }
     `,
   ];

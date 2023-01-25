@@ -41,12 +41,6 @@ export class AddressInput extends UIGCElement {
         transition: 0.2s ease-in-out;
       }
 
-      @media (min-width: 768px) {
-        .address-root {
-          padding: var(--uigc-asset-transfer-padding__md);
-        }
-      }
-
       /* Placeholder color */
       ::-webkit-input-placeholder {
         color: var(--uigc-address-input__placeholder-color);

@@ -99,7 +99,7 @@ export class AssetInput extends UIGCElement {
         background: none;
         border: none;
         color: var(--hex-white);
-        font-size: var(--uigc-asset-input-font-size);
+        font-size: var(--uigc-asset-input-font-size__sm);
         line-height: 24px;
         text-align: right;
         font-weight: 700;
@@ -109,8 +109,18 @@ export class AssetInput extends UIGCElement {
       .asset-unit {
         color: var(--hex-white);
         font-weight: 700;
-        font-size: 16px;
+        font-size: var(--uigc-asset-input-font-size__sm);
         line-height: 24px;
+      }
+
+      @media (min-width: 520px) {
+        .asset-input {
+          font-size: var(--uigc-asset-input-font-size);
+        }
+
+        .asset-unit {
+          font-size: var(--uigc-asset-input-font-size);
+        }
       }
 
       .usd {

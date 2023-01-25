@@ -175,6 +175,7 @@ export const bsxThemeProperties = css`
     --uigc-asset-input-border-style: solid;
     --uigc-asset-input-padding: 0 14px;
     --uigc-asset-input-font-size: 16px;
+    --uigc-asset-input-font-size__sm: 14px;
     /** AssetPrice */
     --uigc-asset-price-background: rgba(var(--rgb-primary-100), 0.06);
     --uigc-asset-price-border: none;
@@ -193,9 +194,7 @@ export const bsxThemeProperties = css`
     --uigc-asset-transfer-background: rgba(var(--rgb-primary-100), 0.06);
     --uigc-asset-transfer-background__hover: rgba(var(--rgb-primary-100), 0.06);
     --uigc-asset-transfer-padding: 14px;
-    --uigc-asset-transfer-padding__md: 20px;
     --uigc-asset-transfer-row-gap: 5px;
-    --uigc-asset-transfer-row-gap__md: 11px;
     --uigc-asset-transfer--title-color: var(--hex-primary-200);
     --uigc-asset-transfer--title-text-transform: none;
     --uigc-asset-transfer--title-font-size: 16px;
@@ -254,6 +253,7 @@ export const bsxThemeProperties = css`
     --uigc-dialog-cnt-line-height: 22px;
     /** Divider */
     --uigc-divider-background: rgba(var(--rgb-primary-450), 0.12);
+    --uigc-divider-color: var(--hex-background-gray-800);
     /** Drawer */
     --uigc-drawer-background: var(--hex-background-gray-900);
     --uigc-drawer-box-shadow: 0px 38px 46px rgba(0, 0, 0, 0.03);
@@ -382,6 +382,7 @@ export const hdxThemeProperties = css`
     --uigc-asset-input-border-style: none;
     --uigc-asset-input-padding: 0;
     --uigc-asset-input-font-size: 18px;
+    --uigc-asset-input-font-size__sm: 16px;
     /** AssetPrice */
     --uigc-asset-price-background: var(--hex-dark-blue-700);
     --uigc-asset-price-border: 1px solid var(--hex-dark-blue-400);
@@ -400,9 +401,7 @@ export const hdxThemeProperties = css`
     --uigc-asset-transfer-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-asset-transfer-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
     --uigc-asset-transfer-padding: 14px;
-    --uigc-asset-transfer-padding__md: 20px;
     --uigc-asset-transfer-row-gap: 5px;
-    --uigc-asset-transfer-row-gap__md: 11px;
     --uigc-asset-transfer--title-color: var(--hex-basic-500);
     --uigc-asset-transfer--title-text-transform: uppercase;
     --uigc-asset-transfer--title-font-size: 12px;
@@ -454,6 +453,7 @@ export const hdxThemeProperties = css`
     --uigc-dialog-cnt-line-height: 120%;
     /** Divider */
     --uigc-divider-background: var(--hex-dark-blue-400);
+    --uigc-divider-color: rgba(var(--rgb-dark-blue-400), 0.3);
     /** Drawer */
     --uigc-drawer-background: var(--hex-dark-blue-600);
     --uigc-drawer-box-shadow: 0px 0px 61px rgba(0, 0, 0, 0.36);

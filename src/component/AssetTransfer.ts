@@ -46,36 +46,16 @@ export class AssetTransfer extends UIGCElement {
       }
 
       .asset-root > :nth-child(1) {
-        grid-area: 1 / 1 / 2 / 3;
+        grid-area: 1 / 1 / 2 / 2;
       }
 
       .asset-root > :nth-child(2) {
-        padding-top: 5px;
-        grid-area: 3 / 1 / 4 / 3;
+        padding-top: 0;
+        grid-area: 1 / 2 / 2 / 3;
       }
 
       .asset-root > :nth-child(3) {
         grid-area: 2 / 1 / 3 / 3;
-      }
-
-      @media (min-width: 768px) {
-        .asset-root {
-          padding: var(--uigc-asset-transfer-padding__md);
-          row-gap: var(--uigc-asset-transfer-row-gap__md);
-        }
-
-        .asset-root > :nth-child(1) {
-          grid-area: 1 / 1 / 2 / 2;
-        }
-
-        .asset-root > :nth-child(2) {
-          padding-top: 0;
-          grid-area: 1 / 2 / 2 / 3;
-        }
-
-        .asset-root > :nth-child(3) {
-          grid-area: 2 / 1 / 3 / 3;
-        }
       }
 
       .asset-error {
@@ -159,7 +139,7 @@ export class AssetTransfer extends UIGCElement {
       <div tabindex="0" class="asset-root">
         <span class="title">${this.title}</span>
         <div class="balance">
-          <span class="label">Your balance: &nbsp</span>
+          <span class="label">Balance: &nbsp</span>
           <span>${this.balance ? formatterFn(this.balance) : '-'}</span>
           <uigc-button
             class="max"

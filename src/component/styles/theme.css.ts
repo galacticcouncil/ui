@@ -155,7 +155,7 @@ export const bsxThemeProperties = css`
       linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),
       linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);
     --uigc-app-font-color__primary: var(--hex-primary-400);
-    --uigc-app-font-color__secondary: var(--hex-neutral-gray-400);
+    --uigc-app-font-color__secondary: var(--hex-neutral-gray-300);
     --uigc-app-font-color__alternative: var(--hex-neutral-gray-400);
 
     /** AddressInput */
@@ -195,6 +195,7 @@ export const bsxThemeProperties = css`
     --uigc-asset-transfer-background: rgba(var(--rgb-primary-100), 0.06);
     --uigc-asset-transfer-background__hover: rgba(var(--rgb-primary-100), 0.06);
     --uigc-asset-transfer-padding: 14px;
+    --uigc-asset-transfer-margin__sm: 0 5px;
     --uigc-asset-transfer-row-gap: 5px;
     --uigc-asset-transfer--title-color: var(--hex-primary-200);
     --uigc-asset-transfer--title-text-transform: none;
@@ -362,7 +363,7 @@ export const hdxThemeProperties = css`
 
     --uigc-app-font-color__gradient: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);
     --uigc-app-font-color__primary: var(--hex-bright-blue-300);
-    --uigc-app-font-color__secondary: var(--hex-dark-blue-200);
+    --uigc-app-font-color__secondary: var(--hex-dark-blue-300);
     --uigc-app-font-color__alternative: var(--hex-basic-400);
 
     /** AddressInput */
@@ -402,6 +403,7 @@ export const hdxThemeProperties = css`
     --uigc-asset-transfer-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-asset-transfer-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
     --uigc-asset-transfer-padding: 14px;
+    --uigc-asset-transfer-margin__sm: none;
     --uigc-asset-transfer-row-gap: 5px;
     --uigc-asset-transfer--title-color: var(--hex-basic-500);
     --uigc-asset-transfer--title-text-transform: uppercase;

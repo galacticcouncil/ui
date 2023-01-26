@@ -35,7 +35,7 @@ export class AssetListItem extends UIGCElement {
       .secondary span {
         font-weight: 500;
         font-size: 14px;
-        line-height: 18px;
+        line-height: 12px;
         color: var(--hex-white);
       }
 

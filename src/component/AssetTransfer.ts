@@ -24,12 +24,19 @@ export class AssetTransfer extends UIGCElement {
     css`
       .asset-root {
         display: grid;
+        margin: none;
         background: var(--uigc-asset-transfer-background);
         border-radius: var(--uigc-asset-transfer-border-radius);
         border-bottom: var(--uigc-asset-transfer-border-bottom);
         box-sizing: border-box;
         padding: var(--uigc-asset-transfer-padding);
         row-gap: var(--uigc-asset-transfer-row-gap);
+      }
+
+      @media (max-width: 480px) {
+        .asset-root {
+          margin: var(--uigc-asset-transfer-margin__sm);
+        }
       }
 
       :host([error]) .asset-root {
@@ -95,6 +102,7 @@ export class AssetTransfer extends UIGCElement {
 
       .max {
         margin-left: 5px;
+        margin-top: -2px;
       }
 
       .asset {

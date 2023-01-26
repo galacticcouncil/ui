@@ -28,8 +28,8 @@ export class AssetSwitch extends UIGCElement {
       }
 
       .switch-root {
-        width: 32px;
-        height: 32px;
+        width: 34px;
+        height: 34px;
         display: flex;
         justify-content: center;
         align-items: center;

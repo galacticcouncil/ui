@@ -826,41 +826,32 @@ export const moonbeam = html`<svg
 </svg>`;
 
 export const phala = html`<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="48"
-  height="48"
-  viewBox="0 0 48 48"
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
   fill="none"
+  xmlns="http://www.w3.org/2000/svg"
 >
-  <g clip-path="url(#clip0_1300_1493)">
+  <g clip-path="url(#clip0_9060_132003)">
     <path
-      d="M0 14C0 6.26801 6.26801 0 14 0H34C41.732 0 48 6.26801 48 14V34C48 41.732 41.732 48 34 48H14C6.26801 48 0 41.732 0 34V14Z"
-      fill="url(#paint0_linear_1300_1493)"
+      d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+      fill="black"
     />
+    <path d="M22.4955 16.6304H11.5195V20.2892H22.4955V16.6304Z" fill="#D1FF52" />
+    <path d="M26.155 11.1424H22.4961V16.631H26.155V11.1424Z" fill="#D1FF52" />
+    <path d="M11.5189 20.2899H7.85938V21.2045V22.1197V25.7779H11.5183V22.1197H11.5189V20.2899Z" fill="#D1FF52" />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M32.9246 9.125H15.0765H14.2211H9.125V21.0254V22.9254V23.9998H15.0765V22.9254V21.0254V15.0752H32.9246V9.125ZM38.8748 15.0753H32.9246V24L15.0765 24V29.9502H32.9246L32.9246 24H38.8748V15.0753ZM9.125 29.9503H15.0765V32.9261H15.0752V38.875H9.125V32.9261V31.4382V29.9503Z"
-      fill="white"
+      d="M22.4955 7.48352H11.5189H10.9928H7.85938V14.8013V15.9693V16.631H11.5189V15.9693V14.8013V11.1424H22.4955V7.48352Z"
+      fill="#D1FF52"
     />
+    <path d="M22.4955 16.6304H11.5195V20.2892H22.4955V16.6304Z" fill="#D1FF52" />
   </g>
   <defs>
-    <linearGradient
-      id="paint0_linear_1300_1493"
-      x1="48"
-      y1="48"
-      x2="-2.62577e-05"
-      y2="2.62577e-05"
-      gradientUnits="userSpaceOnUse"
-    >
-      <stop stop-color="#78930F" />
-      <stop offset="1" stop-color="#D1F068" />
-    </linearGradient>
-    <clipPath id="clip0_1300_1493">
-      <rect width="48" height="48" rx="24" fill="white" />
+    <clipPath id="clip0_9060_132003">
+      <rect width="32" height="32" fill="white" />
     </clipPath>
   </defs>
-</svg>`;
+</svg> `;
 
 export const polkadot = html`<svg
   xmlns="http://www.w3.org/2000/svg"

@@ -1025,7 +1025,7 @@ export const usdc = html`<svg xmlns="http://www.w3.org/2000/svg" width="48" heig
   </defs>
 </svg>`;
 
-export const wbtc = html`<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+export const usdt = html`<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
   <g clip-path="url(#clip0_2067_3803)">
     <rect width="48" height="48" rx="20" fill="white" />
     <path
@@ -1046,7 +1046,7 @@ export const wbtc = html`<svg xmlns="http://www.w3.org/2000/svg" width="48" heig
   </defs>
 </svg>`;
 
-export const usdt = html`<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+export const wbtc = html`<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
   <g clip-path="url(#clip0_2340_3809)">
     <g clip-path="url(#clip1_2340_3809)">
       <path

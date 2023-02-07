@@ -1129,8 +1129,8 @@ export const zeitgeist = html`
     </g>
     <defs>
       <linearGradient id="paint0_linear_1301_868" x1="48" y1="48" x2="0" y2="0" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#132849" />
-        <stop offset="1" stop-color="#2C5AA6" />
+        <stop stop-color="#000" />
+        <stop offset="1" stop-color="#000" />
       </linearGradient>
       <clipPath id="clip0_1301_868">
         <rect width="48" height="48" rx="24" fill="white" />

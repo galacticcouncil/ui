@@ -40,7 +40,8 @@ export class AssetTransfer extends UIGCElement {
       }
 
       :host([error]) .asset-root {
-        border-bottom: 1px solid var(--hex-red-400); // TODO: BSX scheme
+        border: var(--uigc-input__error-border);
+        border-width: var(--uigc-input__error-border-width);
       }
 
       .asset-root:focus,
@@ -66,7 +67,7 @@ export class AssetTransfer extends UIGCElement {
       }
 
       .asset-error {
-        color: var(--hex-red-400); // TODO: BSX scheme
+        color: var(--uigc-input__error-color);
         line-height: 16px;
         margin-top: 2px;
         font-size: 12px;

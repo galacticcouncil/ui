@@ -190,7 +190,7 @@ export const bsxThemeProperties = css`
     --uigc-asset-switch-background: #192022;
     /** AssetTransfer */
     --uigc-asset-transfer-border-radius: 12px;
-    --uigc-asset-transfer-border-bottom: none;
+    --uigc-asset-transfer-border: none;
     --uigc-asset-transfer-border-bottom__hover: none;
     --uigc-asset-transfer-background: rgba(var(--rgb-primary-100), 0.06);
     --uigc-asset-transfer-background__hover: rgba(var(--rgb-primary-100), 0.06);
@@ -274,6 +274,9 @@ export const bsxThemeProperties = css`
     --uigc-input-background: rgba(var(--rgb-primary-100), 0.06);
     --uigc-input-background__hover: rgba(var(--rgb-primary-100), 0.12);
     --uigc-input__placeholder-color: rgba(var(--rgb-primary-100), 0.4);
+    --uigc-input__error-border-width: 1px 1px 1px 1px;
+    --uigc-input__error-border: 1px solid var(--hex-red-300);
+    --uigc-input__error-color: var(--hex-red-300);
     /** List */
     --uigc-list-border-bottom: 1px solid var(--hex-background-gray-800);
     --uigc-list-border-bottom: 1px solid var(--hex-background-gray-800);
@@ -475,6 +478,9 @@ export const hdxThemeProperties = css`
     --uigc-input-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-input-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
     --uigc-input__placeholder-color: rgba(114, 131, 165, 0.6);
+    --uigc-input__error-border-width: 0 0 1px 0;
+    --uigc-input__error-border: 1px solid var(--hex-red-400);
+    --uigc-input__error-color: var(--hex-red-400);
     /** List */
     --uigc-list-border-bottom: 1px solid var(--hex-dark-blue-401);
     --uigc-list--header-color: var(--hex-basic-700);

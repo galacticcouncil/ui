@@ -29,7 +29,8 @@ export class AddressInput extends UIGCElement {
       }
 
       :host([error]) .address-root {
-        border-bottom: 1px solid var(--hex-red-400); // TODO: BSX scheme
+        border: var(--uigc-input__error-border);
+        border-width: var(--uigc-input__error-border-width);
       }
 
       .address-root:focus,
@@ -75,7 +76,7 @@ export class AddressInput extends UIGCElement {
       }
 
       .address-error {
-        color: var(--hex-red-400); // TODO: BSX scheme
+        color: var(--uigc-input__error-color);
         line-height: 16px;
         margin-top: 2px;
         font-size: 12px;

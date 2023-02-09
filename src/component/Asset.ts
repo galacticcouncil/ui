@@ -5,10 +5,6 @@ import { when } from 'lit/directives/when.js';
 import { UIGCElement } from './base/UIGCElement';
 import './logo/AssetLogo';
 
-import { AssetType, AssetTypes } from './types/AssetType';
-
-const KNOWN_ASSETS = AssetType.getMap(AssetTypes);
-
 @customElement('uigc-asset')
 export class Asset extends UIGCElement {
   @property({ type: String }) symbol = null;

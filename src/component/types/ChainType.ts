@@ -5,8 +5,11 @@ export const ChainTypes = {
   basilisk: 'Basilisk',
   hydradx: 'HydraDX',
   karura: 'Karura',
+  kusama: 'Kusama',
   phala: 'Phala',
   polkadot: 'Polkadot',
+  tinkernet: 'Tinkernet',
+  statemine: 'Statemine',
 };
 
 export class ChainType extends DataType {

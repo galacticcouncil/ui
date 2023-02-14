@@ -13,6 +13,7 @@ import './IconButton';
 export class AddressInput extends UIGCElement {
   @property({ type: String }) title = null;
   @property({ type: String }) address = null;
+  @property({ type: String }) id = null;
   @property({ type: String }) error = null;
 
   static styles = [
@@ -31,6 +32,8 @@ export class AddressInput extends UIGCElement {
       :host([error]) .address-root {
         border: var(--uigc-input__error-border);
         border-width: var(--uigc-input__error-border-width);
+        outline: var(--uigc-input__error-outline);
+        outline-offset: -1px;
       }
 
       .address-root:focus,
@@ -118,6 +121,21 @@ export class AddressInput extends UIGCElement {
       uigc-icon-paste {
         cursor: pointer;
       }
+
+      ::slotted([slot='id']) {
+        min-width: 32px;
+        height: 32px;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--uigc-app-bg-id);
+      }
+
+      ::slotted([slot='id']) > svg {
+        width: 26px;
+        height: 26px;
+      }
     `,
   ];
 
@@ -151,12 +169,25 @@ export class AddressInput extends UIGCElement {
     this.dispatchEvent(new CustomEvent('address-input-changed', options));
   }
 
+  override async updated() {
+    const defaultIdIcon: Element = this.shadowRoot.querySelector('uigc-icon-id');
+    const slotId: HTMLSlotElement = this.shadowRoot.querySelector<HTMLSlotElement>('slot[name=id]');
+    const slotNodes = slotId.assignedNodes();
+
+    if (slotNodes.length > 0) {
+      defaultIdIcon.setAttribute('style', 'display: none');
+    } else {
+      defaultIdIcon.setAttribute('style', 'display: block');
+    }
+  }
+
   render() {
     return html`
       <div tabindex="0" class="address-root">
         <span class="title">${this.title}</span>
         <div class="address">
           <uigc-icon-id></uigc-icon-id>
+          <slot name="id"></slot>
           <div class="input-root">
             <input
               type="text"

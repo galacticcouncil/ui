@@ -150,6 +150,7 @@ export const bsxThemeProperties = css`
     --uigc-app-bg-section: rgba(var(--rgb-black), 0.25);
     --uigc-app-bg-error: rgba(var(--rgb-red-400), 0.3);
     --uigc-app-bg-warning: rgba(255, 184, 0, 0.5);
+    --uigc-app-bg-id: var(--hex-black);
 
     --uigc-app-font-color__gradient: linear-gradient(90deg, #4fffb0 1.27%, #b3ff8f 48.96%, #ff984e 104.14%),
       linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),
@@ -275,8 +276,9 @@ export const bsxThemeProperties = css`
     --uigc-input-background__hover: rgba(var(--rgb-primary-100), 0.12);
     --uigc-input__placeholder-color: rgba(var(--rgb-primary-100), 0.4);
     --uigc-input__error-border-width: 1px 1px 1px 1px;
-    --uigc-input__error-border: 1px solid var(--hex-red-300);
+    --uigc-input__error-border: none;
     --uigc-input__error-color: var(--hex-red-300);
+    --uigc-input__error-outline: 1px solid var(--hex-red-300);
     /** List */
     --uigc-list-border-bottom: 1px solid var(--hex-background-gray-800);
     --uigc-list-border-bottom: 1px solid var(--hex-background-gray-800);
@@ -363,6 +365,7 @@ export const hdxThemeProperties = css`
     --uigc-app-bg-section: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-app-bg-error: rgba(239, 3, 3, 0.25);
     --uigc-app-bg-warning: rgba(255, 223, 56, 0.4);
+    --uigc-app-bg-id: var(--hex-dark-blue-400);
 
     --uigc-app-font-color__gradient: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);
     --uigc-app-font-color__primary: var(--hex-bright-blue-300);
@@ -481,6 +484,7 @@ export const hdxThemeProperties = css`
     --uigc-input__error-border-width: 0 0 1px 0;
     --uigc-input__error-border: 1px solid var(--hex-red-400);
     --uigc-input__error-color: var(--hex-red-400);
+    --uigc-input__error-outline: none;
     /** List */
     --uigc-list-border-bottom: 1px solid var(--hex-dark-blue-401);
     --uigc-list--header-color: var(--hex-basic-700);

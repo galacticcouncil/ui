@@ -131,11 +131,6 @@ export class AddressInput extends UIGCElement {
         justify-content: center;
         background: var(--uigc-app-bg-id);
       }
-
-      ::slotted([slot='id']) > svg {
-        width: 26px;
-        height: 26px;
-      }
     `,
   ];
 

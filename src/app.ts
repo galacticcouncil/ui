@@ -3,6 +3,7 @@ import 'api-viewer-element';
 import './component/AddressInput';
 import './component/Alert';
 import './component/Asset';
+import './component/AssetBalance';
 import './component/AssetInput';
 import './component/AssetList';
 import './component/AssetListItem';

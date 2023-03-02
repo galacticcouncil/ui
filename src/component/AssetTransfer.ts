@@ -1,5 +1,6 @@
 import { html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
@@ -10,14 +11,11 @@ import './AssetSelector';
 export class AssetTransfer extends UIGCElement {
   @property({ type: String }) id = null;
   @property({ type: String }) title = null;
-  @property({ type: String }) balance = null;
-  @property({ type: String }) effectiveBalance = null;
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
-  @property({ type: Boolean }) maxDisabled = false;
-  @property({ type: Function }) formatter = null;
   @property({ type: String }) error = null;
+  @property({ type: Boolean }) selectable = true;
 
   static styles = [
     UIGCElement.styles,
@@ -85,33 +83,14 @@ export class AssetTransfer extends UIGCElement {
         text-transform: var(--uigc-asset-transfer--title-text-transform);
       }
 
-      .balance {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: end;
-      }
-
-      .balance > span {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 16px;
-        color: var(--hex-white);
-      }
-
-      .balance > span.label {
-        color: rgba(var(--rgb-white), 0.7);
-      }
-
-      .max {
-        margin-left: 5px;
-        margin-top: -2px;
-      }
-
       .asset {
         display: flex;
         flex-direction: row;
         align-items: center;
+      }
+
+      .asset_ro {
+        padding: 0 6px;
       }
 
       .asset > *:last-child {
@@ -126,44 +105,17 @@ export class AssetTransfer extends UIGCElement {
     `,
   ];
 
-  onMaxClick(e: Event) {
-    this.amount = this.effectiveBalance ?? this.balance;
-    const options = {
-      bubbles: true,
-      composed: true,
-      detail: { id: this.id, asset: this.asset, value: this.amount },
-    };
-    this.dispatchEvent(new CustomEvent('asset-input-changed', options));
-  }
-
-  isEmptyBalance() {
-    return this.balance == null || this.balance == '' || this.balance == '0';
-  }
-
   render() {
-    const formatterFn = this.formatter
-      ? this.formatter
-      : function (val: string) {
-          return val;
-        };
     return html`
       <div tabindex="0" class="asset-root">
         <span class="title">${this.title}</span>
-        <div class="balance">
-          <span class="label">Balance: &nbsp</span>
-          <span>${this.balance ? formatterFn(this.balance) : '-'}</span>
-          <uigc-button
-            class="max"
-            variant="max"
-            size="micro"
-            capitalize
-            ?disabled=${this.isEmptyBalance() || this.maxDisabled}
-            @click=${this.onMaxClick}
-            >Max</uigc-button
-          >
-        </div>
+        <slot name="balance"></slot>
         <div class="asset">
-          <uigc-asset-selector id=${this.id} .asset=${this.asset}></uigc-asset-selector>
+          ${when(
+            this.selectable,
+            () => html` <uigc-asset-selector id=${this.id} .asset=${this.asset}></uigc-asset-selector> `,
+            () => html` <uigc-asset class="asset_ro" .symbol=${this.asset}></uigc-asset>`
+          )}
           <uigc-asset-input
             id=${this.id}
             .asset=${this.asset}

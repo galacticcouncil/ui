@@ -1,6 +1,7 @@
 export { AddressInput } from './component/AddressInput';
 export { Alert } from './component/Alert';
 export { Asset } from './component/Asset';
+export { AssetBalance } from './component/AssetBalance';
 export { AssetInput } from './component/AssetInput';
 export { AssetList } from './component/AssetList';
 export { AssetListItem } from './component/AssetListItem';

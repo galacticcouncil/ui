@@ -6,15 +6,6 @@ import { UIGCElement } from './base/UIGCElement';
 
 import './icons/Dropdown';
 
-const KNOWN_ASSETS = new Map(
-  Object.entries({
-    aUSD: 'Acala USD',
-    BSX: 'Basilisk',
-    KSM: 'Kusama',
-    PHA: 'Phala',
-  })
-);
-
 @customElement('uigc-asset-selector')
 export class AssetSelector extends UIGCElement {
   @property({ type: String }) id = null;

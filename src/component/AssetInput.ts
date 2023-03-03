@@ -16,6 +16,7 @@ export class AssetInput extends UIGCElement {
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
+  @property({ type: Boolean }) disabled = false;
 
   constructor() {
     super();
@@ -181,7 +182,7 @@ export class AssetInput extends UIGCElement {
     return html`<div class="asset-root" @click="${this.onWrapperClick}}">
       <span class="asset-field">
         <input
-          ?disabled=${!this.asset}
+          ?disabled=${!this.asset || this.disabled}
           type="text"
           id="asset"
           class="asset-input"

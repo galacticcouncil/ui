@@ -16,6 +16,7 @@ export class AssetTransfer extends UIGCElement {
   @property({ type: String }) asset = null;
   @property({ type: String }) error = null;
   @property({ type: Boolean }) selectable = true;
+  @property({ type: Boolean }) readonly = false;
 
   static styles = [
     UIGCElement.styles,
@@ -121,6 +122,7 @@ export class AssetTransfer extends UIGCElement {
             .asset=${this.asset}
             .amount=${this.amount}
             .amountUsd=${this.amountUsd}
+            ?disabled=${this.readonly}
           ></uigc-asset-input>
         </div>
       </div>

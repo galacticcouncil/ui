@@ -8,6 +8,7 @@ export const ChainTypes = {
   kusama: 'Kusama',
   phala: 'Phala',
   polkadot: 'Polkadot',
+  robonomics: 'Robonomics',
   tinkernet: 'Tinkernet',
   statemine: 'Statemine',
 };

@@ -4,7 +4,7 @@ import { choose } from 'lit/directives/choose.js';
 
 import { BaseLogo } from './BaseLogo';
 import { acala, basilisk, hydradx, karura, phala, polkadot, statemine } from './chains';
-import { kusama, tinkernet } from './assets';
+import { kusama, robonomics, tinkernet } from './assets';
 
 @customElement('uigc-logo-chain')
 export class ChainLogo extends BaseLogo {
@@ -22,6 +22,7 @@ export class ChainLogo extends BaseLogo {
           ['kusama', () => kusama],
           ['phala', () => phala],
           ['polkadot', () => polkadot],
+          ['robonomics', () => robonomics],
           ['statemine', () => statemine],
           ['tinkernet', () => tinkernet],
         ],

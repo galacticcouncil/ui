@@ -11,8 +11,12 @@ const __dirname = path.dirname(__filename);
 const indexTemplate = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf8');
 
 const indexDOM = parse(indexTemplate);
-const script = indexDOM.getElementsByTagName('script')[0];
-script.remove();
+indexDOM.getElementsByTagName('script').forEach((script) => {
+  if (!script.hasAttribute('id')) {
+    // Remove only scripts without id
+    script.remove();
+  }
+});
 
 const common = {
   preserveSymlinks: true,

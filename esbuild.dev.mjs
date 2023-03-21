@@ -1,10 +1,8 @@
 import esbuild from 'esbuild';
 
-/**
- * Esbuild currently only inspects the following fields in tsconfig.json files
- * See https://esbuild.github.io/content-types/#tsconfig-json
- */
-esbuild.build({
+const plugins = [];
+
+const options = {
   entryPoints: ['src/app.ts'],
   bundle: true,
   format: 'esm',
@@ -13,15 +11,14 @@ esbuild.build({
   preserveSymlinks: true,
   treeShaking: true,
   sourcemap: true,
-  watch: process.env.ESBUILD_WATCH === 'true' && {
-    onRebuild(error, result) {
-      if (error) {
-        console.error('watch build failed:', error);
-      } else {
-        console.log('watch build succeeded:', result);
-        
-      }
-    },
-  },
   outdir: 'out/',
+  logLevel: 'info',
+};
+
+const ctx = await esbuild.context({ ...options, plugins });
+await ctx.rebuild();
+await ctx.watch();
+await ctx.serve({
+  servedir: './',
+  host: '127.0.0.1',
 });

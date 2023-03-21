@@ -8,27 +8,32 @@
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
+    "build": "node ./esbuild.dev.mjs",
+    "build:prod": "node ./esbuild.prod.mjs && tsc --emitDeclarationOnly --outDir dist/types/",
     "cem": "npx custom-elements-manifest analyze --litelement --exclude 'out/app.js' --outdir assets",
     "cem:watch": "npx custom-elements-manifest analyze --watch --litelement --exclude 'out/app.js' --outdir assets",
-    "build": "node ./esbuild.prod.mjs && tsc --emitDeclarationOnly --outDir dist/types/",
-    "build:watch": "ESBUILD_WATCH=true node ./esbuild.dev.mjs",
-    "build:prod": "node ./esbuild.prod.mjs && tsc --emitDeclarationOnly --outDir dist/types/",
-    "serve": "wds --node-resolve --watch --app-index index.html --open",
     "cleanup": "rimraf out && rimraf dist",
-    "dev": "rimraf out & npm run cem:watch & npm run build:watch & npm run serve",
-    "copy:assets": "cp -R ./assets/ ./dist/assets/ && cp ./dist/index.html ./dist/404.html",
-    "package:prod": "rimraf dist && npm run cem && npm run build:prod && npm run copy:assets"
+    "dev": "npm run cleanup && npm run cem:watch & npm run build",
+    "pckg:assets": "cp -R ./assets/ ./dist/assets/ && cp ./dist/index.html ./dist/404.html",
+    "pckg:build": "npm run cleanup && npm run cem && npm run build:prod && npm run pckg:assets",
+    "pckg:release": "npm run pckg:build && standard-version",
+    "pckg:publish": "git push origin master && npm publish"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true,
+      "tag": true
+    }
   },
   "devDependencies": {
     "@craftamap/esbuild-plugin-html": "^0.4.0",
     "@custom-elements-manifest/analyzer": "^0.6.6",
-    "@web/dev-server": "^0.1.17",
-    "@web/dev-server-esbuild": "^0.3.2",
     "api-viewer-element": "^1.0.0-pre.3",
-    "esbuild": "^0.14.53",
+    "esbuild": "^0.17.11",
     "node-html-parser": "^5.4.2-0",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
+    "standard-version": "^9.5.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {

@@ -30,9 +30,14 @@ export class ToggleButtonGroup extends UIGCElement {
 
   override async updated() {
     const slot = this.shadowRoot.querySelector('slot');
+    console.log(slot);
     const slt = slot.assignedElements();
+    console.log(slt);
     slt.forEach((item) => {
+      console.log(item);
       const value = item.getAttribute('value');
+      console.log(value);
+      console.log(value == this.selected);
       if (value == this.selected) {
         item.setAttribute('aria-pressed', 'true');
       } else {

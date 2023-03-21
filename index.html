@@ -236,6 +236,38 @@
         </style>
       </template>
 
+      <!-- AssetXRate-->
+      <template data-element="uigc-asset-x-rate" data-target="host">
+        <uigc-asset-x-rate
+          title="Price for 1 HDX:"
+          asset="BSX"
+          amount="1000"
+          amountUsd="45"
+        ></uigc-asset-x-rate>
+      </template>
+      <template data-element="uigc-asset-x-rate" data-target="slot">
+        <uigc-button slot="button" variant="max" size="micro" nowrap>Last omnipool price</uigc-button>
+     </template>
+      <template data-element="uigc-asset-x-rate" data-target="suffix">
+        <style>
+          uigc-paper {
+            padding: 20px;
+            width: 450px;
+            display: block;
+          }
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+      <template data-element="uigc-asset-x-rate" data-target="wrapper">
+        <uigc-paper></uigc-paper>
+      </template>
+
       <!-- AssetSelector-->
       <template data-element="uigc-asset-selector" data-target="host">
         <uigc-asset-selector id="1" asset="KSM"></uigc-asset-selector>
@@ -852,8 +884,11 @@
         </style>
       </template>
     </api-viewer>
-    <script type="module" src="./out/app.js"></script>
     <script>
+      new EventSource('/esbuild').addEventListener('change', () => location.reload());
+    </script>
+    <script type="module" src="./out/app.js"></script>
+    <script id="data">
       fetch('./assets/custom-elements.json')
         .then((res) => res.json())
         .then(({ schema, schemaVersion, modules }) => {

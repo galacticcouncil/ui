@@ -34,6 +34,10 @@ export class Button extends UIGCElement {
         pointer-events: none;
       }
 
+      :host([nowrap]) .button-root {
+        white-space: nowrap;
+      }
+
       :host([variant='primary']) .button-root {
         color: var(--uigc-button__primary-color);
         background: var(--uigc-button__primary-background);

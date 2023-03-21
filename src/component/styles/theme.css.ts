@@ -202,6 +202,9 @@ export const bsxThemeProperties = css`
     --uigc-asset-transfer--title-text-transform: none;
     --uigc-asset-transfer--title-font-size: 16px;
     --uigc-asset-transfer--title-line-height: 22px;
+    /** AssetXRate */
+    --uigc-asset-x-rate-padding: 5px 14px;
+    --uigc-asset-x-rate-row-gap: 5px;
     /** Backdrop */
     --uigc-backdrop-background: radial-gradient(
         70.22% 56.77% at 51.87% 101.05%,
@@ -333,7 +336,7 @@ export const bsxThemeProperties = css`
     /** ToggleButtonGroup */
     --uigc-toggle-button-group--root-background: rgba(var(--rgb-black), 0.25);
     --uigc-toggle-button-group--root-border-radius: 11px;
-    /** Typograppy */
+    /** Typography */
     --uigc-typography__title-background: var(--uigc-app-font-color__gradient);
     --uigc-typography__title-error-background: var(--hex-red-400);
     --uigc-typography__title-gradient-background: var(--uigc-app-font-color__gradient);
@@ -415,6 +418,9 @@ export const hdxThemeProperties = css`
     --uigc-asset-transfer--title-text-transform: uppercase;
     --uigc-asset-transfer--title-font-size: 12px;
     --uigc-asset-transfer--title-line-height: 100%;
+    /** AssetXRate */
+    --uigc-asset-x-rate-padding: 5px 14px;
+    --uigc-asset-x-rate-row-gap: 5px;
     /** Backdrop */
     --uigc-backdrop-background: rgba(0, 7, 50, 0.7);
     /** BusyIndicator */
@@ -532,7 +538,7 @@ export const hdxThemeProperties = css`
     /** ToggleButtonGroup */
     --uigc-toggle-button-group--root-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-toggle-button-group--root-border-radius: 4px;
-    /** Typograppy */
+    /** Typography */
     --uigc-typography__title-background: #fff;
     --uigc-typography__title-error-background: rgb(255, 75, 75);
     --uigc-typography__title-gradient-background: var(--uigc-app-font-color__gradient);

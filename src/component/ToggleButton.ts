@@ -19,8 +19,13 @@ export class ToggleButton extends UIGCElement {
         height: 30px;
       }
 
-      :host(:not([size])) .toggle-button-root,
       :host([size='medium']) .toggle-button-root {
+        width: 40px;
+        height: 40px;
+      }
+
+      :host(:not([size])) .toggle-button-root,
+      :host([size='large']) .toggle-button-root {
         width: 54px;
         height: 54px;
       }
@@ -42,7 +47,7 @@ export class ToggleButton extends UIGCElement {
         transition: 0.2s ease-in-out;
       }
 
-      :host([selected]) .toggle-button-root {
+      :host([aria-pressed='true']) .toggle-button-root {
         background: var(--uigc-toggle-button__selected--root-background);
         color: var(--uigc-toggle-button__selected--root-color);
       }

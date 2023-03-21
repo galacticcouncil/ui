@@ -10,12 +10,20 @@ export class ToggleButtonGroup extends UIGCElement {
   static styles = [
     UIGCElement.styles,
     css`
+      :host(:not([variant])) .toggle-group-root {
+        gap: 8px;
+        padding: 8px 10px;
+      }
+
+      :host([variant='dense']) .toggle-group-root {
+        gap: 4px;
+        padding: 4px 5px;
+      }
+
       .toggle-group-root {
         background: var(--uigc-toggle-button-group--root-background);
         border-radius: var(--uigc-toggle-button-group--root-border-radius);
         display: flex;
-        gap: 8px;
-        padding: 8px 10px;
       }
     `,
   ];
@@ -26,9 +34,9 @@ export class ToggleButtonGroup extends UIGCElement {
     slt.forEach((item) => {
       const value = item.getAttribute('value');
       if (value == this.selected) {
-        item.setAttribute('selected', '');
+        item.setAttribute('aria-pressed', 'true');
       } else {
-        item.removeAttribute('selected');
+        item.setAttribute('aria-pressed', 'false');
       }
     });
   }

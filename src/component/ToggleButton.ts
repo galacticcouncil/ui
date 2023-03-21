@@ -65,7 +65,7 @@ export class ToggleButton extends UIGCElement {
 
   render() {
     return html`
-      <button class="toggle-button-root" @click=${this.onClick}>
+      <button class="toggle-button-root" @click=${this.onClick} value=${this.value}>
         <slot></slot>
       </button>
     `;

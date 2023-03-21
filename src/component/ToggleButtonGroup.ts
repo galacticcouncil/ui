@@ -5,7 +5,7 @@ import { UIGCElement } from './base/UIGCElement';
 
 @customElement('uigc-toggle-button-group')
 export class ToggleButtonGroup extends UIGCElement {
-  @property({ type: String }) selected = null;
+  @property({ type: String }) value = null;
 
   static styles = [
     UIGCElement.styles,
@@ -30,15 +30,10 @@ export class ToggleButtonGroup extends UIGCElement {
 
   override async updated() {
     const slot = this.shadowRoot.querySelector('slot');
-    console.log(slot);
     const slt = slot.assignedElements();
-    console.log(slt);
     slt.forEach((item) => {
-      console.log(item);
       const value = item.getAttribute('value');
-      console.log(value);
-      console.log(value == this.selected);
-      if (value == this.selected) {
+      if (value == this.value) {
         item.setAttribute('aria-pressed', 'true');
       } else {
         item.setAttribute('aria-pressed', 'false');

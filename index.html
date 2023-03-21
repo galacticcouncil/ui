@@ -100,7 +100,7 @@
 
       <!-- AssetBalance -->
       <template data-element="uigc-asset-balance" data-target="host">
-        <uigc-asset-balance balance="50000"></uigc-asset-input>
+        <uigc-asset-balance balance="50000"></uigc-asset-balance>
       </template>
       <template data-element="uigc-asset-balance" data-target="suffix">
         <style>
@@ -238,16 +238,11 @@
 
       <!-- AssetXRate-->
       <template data-element="uigc-asset-x-rate" data-target="host">
-        <uigc-asset-x-rate
-          title="Price for 1 HDX:"
-          asset="BSX"
-          amount="1000"
-          amountUsd="45"
-        ></uigc-asset-x-rate>
+        <uigc-asset-x-rate title="Price for 1 HDX:" asset="BSX" amount="1000" amountUsd="45"></uigc-asset-x-rate>
       </template>
       <template data-element="uigc-asset-x-rate" data-target="slot">
         <uigc-button slot="button" variant="max" size="micro" nowrap>Last omnipool price</uigc-button>
-     </template>
+      </template>
       <template data-element="uigc-asset-x-rate" data-target="suffix">
         <style>
           uigc-paper {
@@ -884,6 +879,7 @@
         </style>
       </template>
     </api-viewer>
+
     <script>
       new EventSource('/esbuild').addEventListener('change', () => location.reload());
     </script>

@@ -8,5 +8,4 @@
 *.iml
 node_modules/
 dist/
-/package-lock.json
 custom-elements.json

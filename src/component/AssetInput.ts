@@ -69,20 +69,23 @@ export class AssetInput extends UIGCElement {
         align-items: flex-end;
         -webkit-box-pack: center;
         justify-content: center;
-        padding: var(--uigc-asset-input-padding);
         height: 54px;
-        background: var(--uigc-asset-input-background);
-        border-style: var(--uigc-asset-input-border-style);
         border-radius: var(--uigc-input-border-radius);
         border-width: var(--uigc-input-border-width);
         border-color: var(--uigc-input-border-color);
       }
 
-      .asset-root:focus-within {
+      :host(:not([disabled])) .asset-root {
+        padding: var(--uigc-asset-input-padding);
+        background: var(--uigc-asset-input-background);
+        border-style: var(--uigc-asset-input-border-style);
+      }
+
+      :host(:not([disabled])) .asset-root:focus-within {
         border-color: var(--uigc-input-border-color__focus);
       }
 
-      .asset-root:hover {
+      :host(:not([disabled])) .asset-root:hover {
         background: var(--uigc-asset-input-background__hover);
       }
 

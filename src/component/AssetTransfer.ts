@@ -26,10 +26,13 @@ export class AssetTransfer extends UIGCElement {
         margin: none;
         background: var(--uigc-asset-transfer-background);
         border-radius: var(--uigc-asset-transfer-border-radius);
-        border-bottom: var(--uigc-asset-transfer-border-bottom);
         box-sizing: border-box;
         padding: var(--uigc-asset-transfer-padding);
         row-gap: var(--uigc-asset-transfer-row-gap);
+      }
+
+      :host(:not([readonly])) .asset-root {
+        border-bottom: var(--uigc-asset-transfer-border-bottom);
       }
 
       @media (max-width: 480px) {
@@ -45,10 +48,10 @@ export class AssetTransfer extends UIGCElement {
         outline-offset: -1px;
       }
 
-      .asset-root:focus,
-      .asset-root:focus-visible,
-      .asset-root:focus-within,
-      .asset-root:hover {
+      :host(:not([readonly])) .asset-root:focus,
+      :host(:not([readonly])) .asset-root:focus-visible,
+      :host(:not([readonly])) .asset-root:focus-within,
+      :host(:not([readonly])) .asset-root:hover {
         border-bottom: var(--uigc-asset-transfer-border-bottom__hover);
         background: var(--uigc-asset-transfer-background__hover);
         transition: 0.2s ease-in-out;

@@ -46,6 +46,7 @@ export class AssetTransfer extends UIGCElement {
         border-width: var(--uigc-input__error-border-width);
         outline: var(--uigc-input__error-outline);
         outline-offset: -1px;
+        border-bottom: var(--uigc-input__error-border) !important;
       }
 
       :host(:not([readonly])) .asset-root:focus,

@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
+import { amountFormatter } from './utils/formatters';
 
 @customElement('uigc-asset-balance')
 export class AssetBalance extends UIGCElement {
@@ -45,11 +46,7 @@ export class AssetBalance extends UIGCElement {
   }
 
   render() {
-    const formatterFn = this.formatter
-      ? this.formatter
-      : function (val: string) {
-          return val;
-        };
+    const formatterFn = this.formatter ? this.formatter : amountFormatter;
     return html`
       <div class="balance">
         <span class="label">Balance: &nbsp</span>

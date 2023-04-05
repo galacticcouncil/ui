@@ -4,6 +4,7 @@ export const ChainTypes = {
   acala: 'Acala',
   basilisk: 'Basilisk',
   hydradx: 'HydraDX',
+  interlay: 'Interlay',
   karura: 'Karura',
   kusama: 'Kusama',
   phala: 'Phala',
@@ -11,6 +12,7 @@ export const ChainTypes = {
   robonomics: 'Robonomics',
   tinkernet: 'Tinkernet',
   statemine: 'Statemine',
+  statemint: 'Statemint',
 };
 
 export class ChainType extends DataType {

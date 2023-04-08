@@ -36,6 +36,10 @@ import './component/ToggleButton';
 import './component/ToggleButtonGroup';
 import './component/Typography';
 
+import './component/logo/AssetLogo';
+import './component/logo/ChainLogo';
+import './component/logo/UnknownLogo';
+
 import './component/icons/Back';
 import './component/icons/Chart';
 import './component/icons/ChevronRight';

@@ -34,6 +34,11 @@ export { ToggleButton } from './component/ToggleButton';
 export { ToggleButtonGroup } from './component/ToggleButtonGroup';
 export { Typography } from './component/Typography';
 
+/* Logos */
+export { AssetLogo } from './component/logo/AssetLogo';
+export { ChainLogo } from './component/logo/ChainLogo';
+export { UnknownLogo } from './component/logo/UnknownLogo';
+
 /* Icons */
 export { BackIcon } from './component/icons/Back';
 export { ChartIcon } from './component/icons/Chart';

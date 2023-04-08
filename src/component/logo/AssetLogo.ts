@@ -3,7 +3,6 @@ import { customElement, property } from 'lit/decorators.js';
 import { choose } from 'lit/directives/choose.js';
 
 import { BaseLogo } from './BaseLogo';
-import './unknown';
 import {
   acala,
   astar,
@@ -27,6 +26,8 @@ import {
   weth,
   zeitgeist,
 } from './assets';
+
+import './UnknownLogo';
 
 @customElement('uigc-logo-asset')
 export class AssetLogo extends BaseLogo {

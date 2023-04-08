@@ -6,6 +6,8 @@ import { BaseLogo } from './BaseLogo';
 import { acala, basilisk, hydradx, karura, phala, polkadot, statemine, interlay } from './chains';
 import { kusama, robonomics, tinkernet } from './assets';
 
+import './UnknownLogo';
+
 @customElement('uigc-logo-chain')
 export class ChainLogo extends BaseLogo {
   @property({ type: String }) chain = null;

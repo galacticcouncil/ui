@@ -12,6 +12,11 @@ export class BaseLogo extends LitElement {
         height: 34px;
       }
 
+      :host([fit]) svg {
+        width: 100%;
+        height: 100%;
+      }
+
       :host svg[bsx] {
         display: var(--uigc-bsx-icon-display);
       }

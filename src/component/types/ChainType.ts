@@ -13,6 +13,7 @@ export const ChainTypes = {
   tinkernet: 'Tinkernet',
   statemine: 'Statemine',
   statemint: 'Statemint',
+  zeitgeist: 'Zeitgeist',
 };
 
 export class ChainType extends DataType {

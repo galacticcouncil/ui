@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { choose } from 'lit/directives/choose.js';
 
 import { BaseLogo } from './BaseLogo';
-import { acala, basilisk, hydradx, karura, phala, polkadot, statemine, interlay } from './chains';
+import { acala, basilisk, hydradx, karura, phala, polkadot, statemine, interlay, zeitgeist } from './chains';
 import { kusama, robonomics, tinkernet } from './assets';
 
 @customElement('uigc-logo-chain')
@@ -27,6 +27,7 @@ export class ChainLogo extends BaseLogo {
           ['statemine', () => statemine],
           ['statemint', () => statemine],
           ['tinkernet', () => tinkernet],
+          ['zeitgeist', () => zeitgeist],
         ],
         () => html`<slot name="placeholder"></slot>`
       )}

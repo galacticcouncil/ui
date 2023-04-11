@@ -49,10 +49,7 @@ export class Asset extends UIGCElement {
         padding: 5px 0px;
       }
 
-      uigc-logo-asset {
-        width: 30px;
-      }
-
+      uigc-logo-asset,
       uigc-logo-placeholder {
         width: 30px;
       }

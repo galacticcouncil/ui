@@ -37,7 +37,7 @@ export { Typography } from './component/Typography';
 /* Logos */
 export { AssetLogo } from './component/logo/AssetLogo';
 export { ChainLogo } from './component/logo/ChainLogo';
-export { UnknownLogo } from './component/logo/UnknownLogo';
+export { PlaceholderLogo } from './component/logo/PlaceholderLogo';
 
 /* Icons */
 export { BackIcon } from './component/icons/Back';

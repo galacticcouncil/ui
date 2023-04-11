@@ -3,8 +3,8 @@ import { customElement } from 'lit/decorators.js';
 
 import { BaseLogo } from './BaseLogo';
 
-@customElement('uigc-logo-unknown')
-export class UnknownLogo extends BaseLogo {
+@customElement('uigc-logo-placeholder')
+export class PlaceholderLogo extends BaseLogo {
   bsxTemplate() {
     return html` <svg bsx width="32" height="32" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

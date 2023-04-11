@@ -2,7 +2,9 @@ import { html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
+
 import './logo/ChainLogo';
+import './logo/PlaceholderLogo';
 
 import { ChainType, ChainTypes } from './types/ChainType';
 
@@ -31,7 +33,8 @@ export class Chain extends UIGCElement {
         color: var(--hex-white);
       }
 
-      .logo {
+      uigc-logo-chain,
+      uigc-logo-placeholder {
         width: 34px;
         height: 34px;
       }
@@ -40,7 +43,9 @@ export class Chain extends UIGCElement {
 
   render() {
     const chainTitle = KNOWN_CHAINS.get(this.chain) || this.chain;
-    return html` <uigc-logo-chain chain=${this.chain}></uigc-logo-chain>
+    return html` <uigc-logo-chain fit chain=${this.chain}>
+        <uigc-logo-placeholder fit slot="placeholder"></uigc-logo-placeholder>
+      </uigc-logo-chain>
       <span class="title"> ${chainTitle} </span>
       <slot></slot>`;
   }

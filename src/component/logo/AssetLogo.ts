@@ -5,6 +5,7 @@ import { choose } from 'lit/directives/choose.js';
 import { BaseLogo } from './BaseLogo';
 import {
   acala,
+  apecoin,
   astar,
   basilisk,
   bitcoin,
@@ -27,8 +28,6 @@ import {
   zeitgeist,
 } from './assets';
 
-import './UnknownLogo';
-
 @customElement('uigc-logo-asset')
 export class AssetLogo extends BaseLogo {
   @property({ type: String }) asset = null;
@@ -40,6 +39,7 @@ export class AssetLogo extends BaseLogo {
         [
           ['AUSD', () => acala],
           ['ACA', () => acala],
+          ['APE', () => apecoin],
           ['ASTR', () => astar],
           ['BSX', () => basilisk],
           ['BTC', () => bitcoin],
@@ -62,7 +62,7 @@ export class AssetLogo extends BaseLogo {
           ['WETH', () => weth],
           ['XRT', () => robonomics],
         ],
-        () => html`<uigc-logo-unknown></uigc-logo-unknown>`
+        () => html`<slot name="placeholder"></slot>`
       )}
     `;
   }

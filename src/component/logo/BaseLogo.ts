@@ -7,11 +7,6 @@ export class BaseLogo extends LitElement {
         display: flex;
       }
 
-      :host svg {
-        width: 34px;
-        height: 34px;
-      }
-
       :host([fit]) svg {
         width: 100%;
         height: 100%;

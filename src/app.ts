@@ -38,7 +38,7 @@ import './component/Typography';
 
 import './component/logo/AssetLogo';
 import './component/logo/ChainLogo';
-import './component/logo/UnknownLogo';
+import './component/logo/PlaceholderLogo';
 
 import './component/icons/Back';
 import './component/icons/Chart';

@@ -3,7 +3,9 @@ import { customElement, property } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
+
 import './logo/AssetLogo';
+import './logo/PlaceholderLogo';
 
 @customElement('uigc-asset')
 export class Asset extends UIGCElement {
@@ -50,11 +52,17 @@ export class Asset extends UIGCElement {
       uigc-logo-asset {
         width: 30px;
       }
+
+      uigc-logo-placeholder {
+        width: 30px;
+      }
     `,
   ];
 
   render() {
-    return html` <uigc-logo-asset fit asset=${this.symbol}></uigc-logo-asset>
+    return html` <uigc-logo-asset fit asset=${this.symbol}>
+        <uigc-logo-placeholder fit slot="placeholder"></uigc-logo-placeholder>
+      </uigc-logo-asset>
       <span class="title">
         <span class="code">${this.symbol}</span>
         ${when(this.desc, () => html` <span class="desc">${this.desc}</span> `)}

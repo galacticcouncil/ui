@@ -56,10 +56,12 @@ export class AssetLogo extends BaseLogo {
           ['PHA', () => phala],
           ['TNKR', () => tinkernet],
           ['USDC', () => usdc],
+          ['USDCET', () => usdc],
           ['USDT', () => usdt],
           ['ZTG', () => zeitgeist],
           ['WBTC', () => wbtc],
           ['WETH', () => weth],
+          ['WUSDT', () => usdt],
           ['XRT', () => robonomics],
         ],
         () => html`<slot name="placeholder"></slot>`

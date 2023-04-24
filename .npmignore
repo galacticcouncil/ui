@@ -10,6 +10,7 @@ demo
 coverage
 badges
 src
+out
 assets
 custom-elements.json
 dist/404.html

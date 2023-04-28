@@ -14,6 +14,16 @@ export class ToggleButton extends UIGCElement {
         font-family: var(--uigc-app-font-secondary), sans-serif;
       }
 
+      :host([tab]) {
+        width: 100%;
+        font-family: var(--uigc-app-font-primary), sans-serif;
+      }
+
+      :host([tab]) .toggle-button-root {
+        width: 100%;
+        height: 30px;
+      }
+
       :host([size='small']) .toggle-button-root {
         width: 30px;
         height: 30px;
@@ -24,7 +34,7 @@ export class ToggleButton extends UIGCElement {
         height: 40px;
       }
 
-      :host(:not([size])) .toggle-button-root,
+      :host(:not([size]):not([tab])) .toggle-button-root,
       :host([size='large']) .toggle-button-root {
         width: 54px;
         height: 54px;
@@ -42,6 +52,10 @@ export class ToggleButton extends UIGCElement {
         cursor: pointer;
       }
 
+      :host([tab]) .toggle-button-root {
+        background: transparent;
+      }
+
       .toggle-button-root:hover {
         background: var(--uigc-toggle-button--root-background__hover);
         transition: 0.2s ease-in-out;
@@ -50,6 +64,11 @@ export class ToggleButton extends UIGCElement {
       :host([aria-pressed='true']) .toggle-button-root {
         background: var(--uigc-toggle-button__selected--root-background);
         color: var(--uigc-toggle-button__selected--root-color);
+      }
+
+      :host([aria-pressed='true'][tab]) .toggle-button-root {
+        background: var(--uigc-app-font-color__gradient);
+        color: var(--uigc-toggle-button__selected-tab-color);
       }
     `,
   ];

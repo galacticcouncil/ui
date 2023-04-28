@@ -84,7 +84,7 @@
 
       <!-- Asset -->
       <template data-element="uigc-asset" data-target="host">
-        <uigc-asset asset="KSM"></uigc-asset>
+        <uigc-asset symbol="KSM"></uigc-asset>
       </template>
       <template data-element="uigc-asset" data-target="suffix">
         <style>
@@ -144,6 +144,42 @@
             justify-content: center;
           }
         </style>
+      </template>
+
+      <!-- AssetNamedInput-->
+      <template data-element="uigc-asset-ninput" data-target="host">
+        <uigc-asset-ninput id="assetOut" asset="BSX" amount="1000"></uigc-asset-ninput>
+      </template>
+      <template data-element="uigc-asset-ninput" data-target="slot">
+        <span class="title">Max budget</span>
+      </template>
+      <template data-element="uigc-asset-ninput" data-target="suffix">
+        <style>
+          uigc-paper {
+            padding: 20px;
+            width: 450px;
+            display: block;
+          }
+          .title {
+            white-space: nowrap;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            color: #ffffff;
+            font-family: 'ChakraPetch';
+          }
+
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+      <template data-element="uigc-asset-ninput" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
 
       <!-- AssetList -->
@@ -360,6 +396,7 @@
         <select>
           <option value="primary"></option>
           <option value="secondary"></option>
+          <option value="info"></option>
           <option value="max"></option>
         </select>
       </template>
@@ -723,6 +760,33 @@
             justify-content: center;
           }
         </style>
+      </template>
+
+      <!-- Selector -->
+      <template data-element="uigc-selector" data-target="host">
+        <uigc-selector item="HDX"></uigc-selector>
+      </template>
+      <template data-element="uigc-selector" data-target="slot">
+        <uigc-asset symbol="HDX"></uigc-asset>
+      </template>
+      <template data-element="uigc-selector" data-target="suffix">
+        <style>
+          uigc-paper {
+            padding: 20px;
+            width: 450px;
+            display: block;
+          }
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+      <template data-element="uigc-selector" data-target="wrapper">
+        <uigc-paper></uigc-paper>
       </template>
 
       <!-- Skeleton -->

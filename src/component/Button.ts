@@ -61,6 +61,16 @@ export class Button extends UIGCElement {
         transition: 0.2s ease-in-out;
       }
 
+      :host([variant='info']) .button-root {
+        color: var(--uigc-button__info-color);
+        background: var(--uigc-button__info-background);
+      }
+
+      :host([variant='info']) .button-root:hover {
+        background: var(--uigc-button__info-background__hover);
+        transition: 0.2s ease-in-out;
+      }
+
       :host([variant='max']) .button-root {
         color: #fff;
         background: rgba(var(--rgb-white), 0.06);

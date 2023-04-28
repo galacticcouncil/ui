@@ -122,8 +122,8 @@
       <template data-element="uigc-asset-input" data-target="host">
         <uigc-asset-input id="assetOut" asset="BSX" amount="1000"></uigc-asset-input>
       </template>
-      <template data-element="uigc-asset-input" data-target="wrapper">
-        <uigc-paper></uigc-paper>
+      <template data-element="uigc-asset-input" data-target="slot">
+        <span class="title" slot="inputAdornment">Max budget</span>
       </template>
       <template data-element="uigc-asset-input" data-target="suffix">
         <style>
@@ -136,6 +136,14 @@
             box-sizing: border-box;
             padding: 20px;
           }
+          .title {
+            white-space: nowrap;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            color: #ffffff;
+            font-family: 'ChakraPetch';
+          }
           [part='demo-output'] {
             background: var(--uigc-app-background);
             min-height: 200px;
@@ -145,15 +153,18 @@
           }
         </style>
       </template>
+      <template data-element="uigc-asset-input" data-target="wrapper">
+        <uigc-paper></uigc-paper>
+      </template>
 
-      <!-- AssetNamedInput-->
-      <template data-element="uigc-asset-ninput" data-target="host">
-        <uigc-asset-ninput id="assetOut" asset="BSX" amount="1000"></uigc-asset-ninput>
+      <!-- AssetInputComposite-->
+      <template data-element="uigc-asset-cinput" data-target="host">
+        <uigc-asset-cinput id="assetOut" asset="BSX" amount="1000"></uigc-asset-cinput>
       </template>
-      <template data-element="uigc-asset-ninput" data-target="slot">
-        <span class="title">Max budget</span>
+      <template data-element="uigc-asset-cinput" data-target="slot">
+        <span class="title">Info</span>
       </template>
-      <template data-element="uigc-asset-ninput" data-target="suffix">
+      <template data-element="uigc-asset-cinput" data-target="suffix">
         <style>
           uigc-paper {
             padding: 20px;
@@ -168,7 +179,6 @@
             color: #ffffff;
             font-family: 'ChakraPetch';
           }
-
           [part='demo-output'] {
             background: var(--uigc-app-background);
             min-height: 200px;
@@ -178,7 +188,7 @@
           }
         </style>
       </template>
-      <template data-element="uigc-asset-ninput" data-target="wrapper">
+      <template data-element="uigc-asset-cinput" data-target="wrapper">
         <uigc-paper></uigc-paper>
       </template>
 

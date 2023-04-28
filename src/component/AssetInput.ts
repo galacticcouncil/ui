@@ -65,28 +65,53 @@ export class AssetInput extends UIGCElement {
 
       .asset-root {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        -webkit-box-pack: center;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
         height: 54px;
         border-radius: var(--uigc-input-border-radius);
         border-width: var(--uigc-input-border-width);
         border-color: var(--uigc-input-border-color);
       }
 
-      :host(:not([disabled])) .asset-root {
+      :host([field]) .asset-root {
+        flex-direction: row;
+        background: var(--uigc-asset-input__field-background);
+        border-width: var(--uigc-asset-input__field-border-width);
+        border-color: var(--uigc-asset-input__field-border-color);
+        border-style: solid;
+        box-sizing: border-box;
+        padding: var(--uigc-field-padding);
+      }
+
+      :host([disabled]) .asset-root {
+        border-width: 0;
+      }
+
+      :host(:not([disabled]):not([field])) .asset-root {
         padding: var(--uigc-asset-input-padding);
         background: var(--uigc-asset-input-background);
         border-style: var(--uigc-asset-input-border-style);
       }
 
-      :host(:not([disabled])) .asset-root:focus-within {
+      :host(:not([disabled]):not([field])) .asset-root:focus-within {
         border-color: var(--uigc-input-border-color__focus);
       }
 
-      :host(:not([disabled])) .asset-root:hover {
+      :host(:not([disabled]):not([field])) .asset-root:hover {
         background: var(--uigc-asset-input-background__hover);
+      }
+
+      :host([field]:not([disabled])) .asset-root:focus,
+      :host([field]:not([disabled])) .asset-root:focus-visible,
+      :host([field]:not([disabled])) .asset-root:focus-within,
+      :host([field]:not([disabled])) .asset-root:hover {
+        border-color: var(--uigc-asset-input__field-border-color__hover);
+        background: var(--uigc-asset-input__field-background__hover);
+        transition: 0.2s ease-in-out;
+      }
+
+      .asset-wrapper {
+        width: 100%;
       }
 
       .asset-field {
@@ -128,6 +153,9 @@ export class AssetInput extends UIGCElement {
       }
 
       .usd {
+        display: flex;
+        flex-direction: row-reverse;
+
         font-size: 10px;
         line-height: 14px;
         color: var(--hex-neutral-gray-400);
@@ -182,23 +210,28 @@ export class AssetInput extends UIGCElement {
   }
 
   render() {
-    return html`<div class="asset-root" @click="${this.onWrapperClick}}">
-      <span class="asset-field">
-        <input
-          ?disabled=${!this.asset || this.disabled}
-          type="text"
-          id="asset"
-          class="asset-input"
-          placeholder="0"
-          value=${this.asset ? this.amount : null}
-          @input=${(e: any) => {
-            this.onInputChange(e);
-            this._inputHandler();
-          }}
-        />
-        <span class="asset-unit">${this.asset}</span>
-      </span>
-      ${when(this.amountUsd, () => html` <span class="usd">≈ ${this.amountUsd} USD</span> `)}
-    </div> `;
+    return html`
+      <div class="asset-root" @click="${this.onWrapperClick}}">
+        <slot name="inputAdornment"></slot>
+        <div class="asset-wrapper">
+          <span class="asset-field">
+            <input
+              ?disabled=${!this.asset || this.disabled}
+              type="text"
+              id="asset"
+              class="asset-input"
+              placeholder="0"
+              value=${this.asset ? this.amount : null}
+              @input=${(e: any) => {
+                this.onInputChange(e);
+                this._inputHandler();
+              }}
+            />
+            <span class="asset-unit">${this.asset}</span>
+          </span>
+          ${when(this.amountUsd, () => html` <span class="usd">≈ ${this.amountUsd} USD</span> `)}
+        </div>
+      </div>
+    `;
   }
 }

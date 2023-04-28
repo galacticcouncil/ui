@@ -197,6 +197,11 @@ export const bsxThemeProperties = css`
     --uigc-asset-input-padding: 0 14px;
     --uigc-asset-input-font-size: 16px;
     --uigc-asset-input-font-size__sm: 14px;
+    --uigc-asset-input__field-background: var(--uigc-asset-input-background);
+    --uigc-asset-input__field-background__hover: var(--uigc-asset-input-background__hover);
+    --uigc-asset-input__field-border-width: var(--uigc-input-border-width);
+    --uigc-asset-input__field-border-color: var(--uigc-input-border-color);
+    --uigc-asset-input__field-border-color__hover: var(--uigc-input-border-color__focus);
     /** AssetNamedInput */
     --uigc-asset-ninput-padding: 5px 14px;
     --uigc-asset-ninput-row-gap: 5px;
@@ -421,6 +426,11 @@ export const hdxThemeProperties = css`
     --uigc-asset-input-padding: 0;
     --uigc-asset-input-font-size: 18px;
     --uigc-asset-input-font-size__sm: 16px;
+    --uigc-asset-input__field-background: var(--uigc-field-background);
+    --uigc-asset-input__field-background__hover: var(--uigc-field-background__hover);
+    --uigc-asset-input__field-border-bottom: var(--uigc-input-border-width);
+    --uigc-asset-input__field-border-color: var(--uigc-input-border-color);
+    --uigc-asset-input__field-border-color__hover: var(--uigc-input-border-color__focus);
     /** AssetNamedInput */
     --uigc-asset-ninput-padding: 5px 14px;
     --uigc-asset-ninput-row-gap: 5px;

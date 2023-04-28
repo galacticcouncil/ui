@@ -5,8 +5,8 @@ import { UIGCElement } from './base/UIGCElement';
 
 import './AssetInput';
 
-@customElement('uigc-asset-ninput')
-export class AssetNamedInput extends UIGCElement {
+@customElement('uigc-asset-cinput')
+export class AssetInputComposite extends UIGCElement {
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;

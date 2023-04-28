@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-import './AssetNamedInput';
+import './AssetInputComposite';
 import './icons/Crosshair';
 
 @customElement('uigc-asset-x-rate')
@@ -35,13 +35,13 @@ export class AssetXRate extends UIGCElement {
 
   render() {
     return html`
-      <uigc-asset-ninput .asset=${this.asset} .amount=${this.amount} .amountUsd=${this.amountUsd}>
+      <uigc-asset-cinput .asset=${this.asset} .amount=${this.amount} .amountUsd=${this.amountUsd}>
         <div class="title">
           <uigc-icon-crosshair></uigc-icon-crosshair>
           <span>${this.title}</span>
         </div>
         <slot name="button"></slot>
-      </uigc-asset-ninput>
+      </uigc-asset-cinput>
     `;
   }
 }

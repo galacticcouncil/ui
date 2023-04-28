@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-import './AssetInput';
+import './AssetNamedInput';
 import './icons/Crosshair';
 
 @customElement('uigc-asset-x-rate')
@@ -16,47 +16,7 @@ export class AssetXRate extends UIGCElement {
   static styles = [
     UIGCElement.styles,
     css`
-      .xrate-root {
-        display: flex;
-        flex-direction: row;
-        background: var(--uigc-asset-transfer-background);
-        border-radius: var(--uigc-asset-transfer-border-radius);
-        border-bottom: var(--uigc-asset-transfer-border-bottom);
-        box-sizing: border-box;
-        padding: var(--uigc-asset-x-rate-padding);
-        gap: var(--uigc-asset-x-rate-row-gap);
-      }
-
-      @media (max-width: 480px) {
-        .xrate-root {
-          margin: var(--uigc-asset-transfer-margin__sm);
-        }
-      }
-
-      :host([error]) .xrate-root {
-        border: var(--uigc-input__error-border);
-        border-width: var(--uigc-input__error-border-width);
-        outline: var(--uigc-input__error-outline);
-        outline-offset: -1px;
-      }
-
-      .xrate-root:focus,
-      .xrate-root:focus-visible,
-      .xrate-root:focus-within,
-      .xrate-root:hover {
-        border-bottom: var(--uigc-asset-transfer-border-bottom__hover);
-        background: var(--uigc-asset-transfer-background__hover);
-        transition: 0.2s ease-in-out;
-      }
-
-      .title {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .title > div {
+      div.title {
         display: flex;
         flex-direction: row;
         white-space: nowrap;
@@ -75,21 +35,13 @@ export class AssetXRate extends UIGCElement {
 
   render() {
     return html`
-      <div class="xrate-root">
+      <uigc-asset-ninput .asset=${this.asset} .amount=${this.amount} .amountUsd=${this.amountUsd}>
         <div class="title">
-          <div>
-            <uigc-icon-crosshair></uigc-icon-crosshair>
-            <span>${this.title}</span>
-          </div>
-          <slot name="button"></slot>
+          <uigc-icon-crosshair></uigc-icon-crosshair>
+          <span>${this.title}</span>
         </div>
-        <uigc-asset-input
-          id=${this.id}
-          .asset=${this.asset}
-          .amount=${this.amount}
-          .amountUsd=${this.amountUsd}
-        ></uigc-asset-input>
-      </div>
+        <slot name="button"></slot>
+      </uigc-asset-ninput>
     `;
   }
 }

@@ -21,18 +21,18 @@ export class AddressInput extends UIGCElement {
     css`
       .address-root {
         display: grid;
-        background: var(--uigc-asset-transfer-background);
-        border-radius: var(--uigc-asset-transfer-border-radius);
-        border-bottom: var(--uigc-asset-transfer-border-bottom);
+        background: var(--uigc-field-background);
+        border-radius: var(--uigc-field-border-radius);
+        border-bottom: var(--uigc-field-border-bottom);
         box-sizing: border-box;
-        padding: var(--uigc-asset-transfer-padding);
-        row-gap: var(--uigc-asset-transfer-row-gap);
+        padding: var(--uigc-field-padding);
+        row-gap: var(--uigc-field-row-gap);
       }
 
       :host([error]) .address-root {
-        border: var(--uigc-input__error-border);
-        border-width: var(--uigc-input__error-border-width);
-        outline: var(--uigc-input__error-outline);
+        border: var(--uigc-field__error-border);
+        border-width: var(--uigc-field__error-border-width);
+        outline: var(--uigc-field__error-outline);
         outline-offset: -1px;
       }
 
@@ -40,7 +40,7 @@ export class AddressInput extends UIGCElement {
       .address-root:focus-visible,
       .address-root:focus-within,
       .address-root:hover {
-        border-bottom: var(--uigc-asset-transfer-border-bottom__hover);
+        border-bottom: var(--uigc-field-border-bottom__hover);
         background: var(--uigc-address-input-background__hover);
         transition: 0.2s ease-in-out;
       }
@@ -67,9 +67,9 @@ export class AddressInput extends UIGCElement {
         align-items: center;
         color: var(--uigc-chain-selector--title-color);
         font-weight: var(--uigc-chain-selector--title-font-weight);
-        font-size: var(--uigc-asset-transfer--title-font-size);
-        line-height: var(--uigc-asset-transfer--title-line-height);
-        text-transform: var(--uigc-asset-transfer--title-text-transform);
+        font-size: var(--uigc-field--title-font-size);
+        line-height: var(--uigc-field--title-line-height);
+        text-transform: var(--uigc-field--title-text-transform);
       }
 
       .address {
@@ -79,7 +79,7 @@ export class AddressInput extends UIGCElement {
       }
 
       .address-error {
-        color: var(--uigc-input__error-color);
+        color: var(--uigc-field__error-color);
         line-height: 16px;
         margin-top: 2px;
         font-size: 12px;

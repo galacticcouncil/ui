@@ -24,37 +24,37 @@ export class AssetTransfer extends UIGCElement {
       .asset-root {
         display: grid;
         margin: none;
-        background: var(--uigc-asset-transfer-background);
-        border-radius: var(--uigc-asset-transfer-border-radius);
+        background: var(--uigc-field-background);
+        border-radius: var(--uigc-field-border-radius);
         box-sizing: border-box;
-        padding: var(--uigc-asset-transfer-padding);
-        row-gap: var(--uigc-asset-transfer-row-gap);
+        padding: var(--uigc-field-padding);
+        row-gap: var(--uigc-field-row-gap);
       }
 
       :host(:not([readonly])) .asset-root {
-        border-bottom: var(--uigc-asset-transfer-border-bottom);
+        border-bottom: var(--uigc-field-border-bottom);
       }
 
       @media (max-width: 480px) {
         .asset-root {
-          margin: var(--uigc-asset-transfer-margin__sm);
+          margin: var(--uigc-field-margin__sm);
         }
       }
 
       :host([error]) .asset-root {
-        border: var(--uigc-input__error-border);
-        border-width: var(--uigc-input__error-border-width);
-        outline: var(--uigc-input__error-outline);
+        border: var(--uigc-field__error-border);
+        border-width: var(--uigc-field__error-border-width);
+        outline: var(--uigc-field__error-outline);
         outline-offset: -1px;
-        border-bottom: var(--uigc-input__error-border) !important;
+        border-bottom: var(--uigc-field__error-border) !important;
       }
 
       :host(:not([readonly])) .asset-root:focus,
       :host(:not([readonly])) .asset-root:focus-visible,
       :host(:not([readonly])) .asset-root:focus-within,
       :host(:not([readonly])) .asset-root:hover {
-        border-bottom: var(--uigc-asset-transfer-border-bottom__hover);
-        background: var(--uigc-asset-transfer-background__hover);
+        border-bottom: var(--uigc-field-border-bottom__hover);
+        background: var(--uigc-field-background__hover);
         transition: 0.2s ease-in-out;
       }
 
@@ -72,7 +72,7 @@ export class AssetTransfer extends UIGCElement {
       }
 
       .asset-error {
-        color: var(--uigc-input__error-color);
+        color: var(--uigc-field__error-color);
         line-height: 16px;
         margin-top: 2px;
         font-size: 12px;
@@ -82,10 +82,10 @@ export class AssetTransfer extends UIGCElement {
         display: flex;
         align-items: center;
         font-weight: 600;
-        font-size: var(--uigc-asset-transfer--title-font-size);
-        line-height: var(--uigc-asset-transfer--title-line-height);
-        color: var(--uigc-asset-transfer--title-color);
-        text-transform: var(--uigc-asset-transfer--title-text-transform);
+        font-size: var(--uigc-field--title-font-size);
+        line-height: var(--uigc-field--title-line-height);
+        color: var(--uigc-field--title-color);
+        text-transform: var(--uigc-field--title-text-transform);
       }
 
       .asset {

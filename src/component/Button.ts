@@ -38,6 +38,10 @@ export class Button extends UIGCElement {
         white-space: nowrap;
       }
 
+      :host([variant='primary']) .button-root:before {
+        background: var(--uigc-button__primary-background__before);
+      }
+
       :host([variant='primary']) .button-root {
         color: var(--uigc-button__primary-color);
         background: var(--uigc-button__primary-background);
@@ -46,6 +50,8 @@ export class Button extends UIGCElement {
       :host([variant='primary']) .button-root:hover {
         background: var(--uigc-button__primary-background__hover);
         transition: 0.2s ease-in-out;
+        box-shadow: var(--uigc-button__primary-box-shadow__hover);
+        transform: var(--uigc-button__primary-transform__hover);
       }
 
       :host([variant='secondary']) .button-root {
@@ -61,6 +67,10 @@ export class Button extends UIGCElement {
         transition: 0.2s ease-in-out;
       }
 
+      :host([variant='info']) .button-root:before {
+        background: var(--uigc-button__primary-background__before);
+      }
+
       :host([variant='info']) .button-root {
         color: var(--uigc-button__info-color);
         background: var(--uigc-button__info-background);
@@ -69,6 +79,8 @@ export class Button extends UIGCElement {
       :host([variant='info']) .button-root:hover {
         background: var(--uigc-button__info-background__hover);
         transition: 0.2s ease-in-out;
+        box-shadow: var(--uigc-button__info-box-shadow__hover);
+        transform: var(--uigc-button__info-transform__hover);
       }
 
       :host([variant='max']) .button-root {
@@ -84,6 +96,7 @@ export class Button extends UIGCElement {
       }
 
       .button-root {
+        position: relative;
         border-radius: var(--uigc-button-border-radius);
         font-weight: 700;
         font-size: 16px;
@@ -91,6 +104,25 @@ export class Button extends UIGCElement {
         cursor: pointer;
         text-transform: uppercase;
         line-height: 18px;
+        transition: 0.2s ease-in-out;
+        transform-style: preserve-3d;
+      }
+
+      .button-root:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: var(--uigc-button-border-radius);
+        transform: translate3d(0px, 0px, -1px);
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+      }
+
+      .button-root:hover:before {
+        transform: translate3d(5px, 5px, -1px);
       }
     `,
   ];

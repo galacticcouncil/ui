@@ -232,6 +232,9 @@ export const bsxThemeProperties = css`
     --uigc-button__primary-color: var(--hex-background-gray-800);
     --uigc-button__primary-background: var(--hex-primary-400);
     --uigc-button__primary-background__hover: var(--hex-primary-300);
+    --uigc-button__primary-box-shadow__hover: none;
+    --uigc-button__primary-transform__hover: none;
+    --uigc-button__primary-background__before: none;
     --uigc-button__secondary-color: var(--hex-primary-400);
     --uigc-button__secondary-color__hover: var(--hex-primary-400);
     --uigc-button__secondary-background: rgba(var(--rgb-primary-450), 0.12);
@@ -373,8 +376,13 @@ export const hdxThemeProperties = css`
     /** GENERAL */
     --uigc-app-font: 'ChakraPetch';
     --uigc-app-font-secondary: 'FontOver';
-    --uigc-app-background: linear-gradient(180deg, #00579f 0%, #023b6a 25%, #060917 100%);
-
+    --uigc-app-background: radial-gradient(
+        73.65% 123% at 57% -38.76%,
+        rgba(93, 177, 255, 0.59) 0%,
+        rgba(0, 194, 255, 0) 100%
+      ),
+      linear-gradient(180deg, #00579f 0%, #023b6a 25%, #060917 100%);
+    --uigc-app-background-color: rgb(6, 9, 23);
     --uigc-app-border-radius: 4px;
     --uigc-app-border-radius-2: 2px;
 
@@ -457,9 +465,20 @@ export const hdxThemeProperties = css`
     --uigc-button__primary-color: var(--hex-white);
     --uigc-button__primary-background: var(--hex-pink-700);
     --uigc-button__primary-background__hover: var(--hex-pink-600);
+    --uigc-button__primary-box-shadow__hover: rgb(255 15 111 / 30%) 4px 10px 40px 0px;
+    --uigc-button__primary-transform__hover: translate(-5px, -5px);
+    --uigc-button__primary-background__before: linear-gradient(
+      129deg,
+      rgba(122, 96, 138, 0.25) 0%,
+      rgba(255, 153, 202, 0.23) 100%
+    );
     --uigc-button__info-color: var(--hex-white);
     --uigc-button__info-background: var(--hex-bright-blue-700);
-    --uigc-button__info-background__hover: var(--hex-dark-blue-600);
+    --uigc-button__info-background__hover: var(--hex-bright-blue-700);
+    --uigc-button__info-box-shadow__hover: 0px 0px 0px -1px rgba(145, 164, 200, 0.3),
+      0px 13px 40px -12px rgba(41, 148, 246, 0.45);
+    --uigc-button__info-transform__hover: translate(-5px, -5px);
+    --uigc-button__info-background__before: rgba(1, 158, 255, 0.35);
     --uigc-button__secondary-color: var(--hex-bright-blue-300);
     --uigc-button__secondary-color__hover: var(--hex-white);
     --uigc-button__secondary-background: rgba(var(--rgb-primary-alpha15), 0.12);

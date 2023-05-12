@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-import './icons/DropdownAlt';
+import './icons/Dropdown';
 
 @customElement('uigc-selector')
 export class Selector extends UIGCElement {
@@ -51,7 +51,7 @@ export class Selector extends UIGCElement {
       .title {
         display: flex;
         align-items: center;
-        font-weight: var(--uigc-selector--title-font-weight);;
+        font-weight: var(--uigc-selector--title-font-weight);
         font-size: var(--uigc-field--title-font-size);
         line-height: var(--uigc-field--title-line-height);
         color: var(--uigc-selector--title-color);
@@ -74,7 +74,7 @@ export class Selector extends UIGCElement {
       <span class="title">${this.title}</span>
       <div>
         <slot></slot>
-        <uigc-icon-dropdown-alt></uigc-icon-dropdown-alt>
+        <uigc-icon-dropdown alt></uigc-icon-dropdown>
       </div>
     </button>`;
   }

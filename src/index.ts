@@ -48,7 +48,6 @@ export { ChevronRightIcon } from './component/icons/ChevronRight';
 export { CloseIcon } from './component/icons/Close';
 export { CrosshairIcon } from './component/icons/Crosshair';
 export { DropdownIcon } from './component/icons/Dropdown';
-export { DropdownIconAlt } from './component/icons/DropdownAlt';
 export { ErrorIcon } from './component/icons/Error';
 export { ErrorIconAlt } from './component/icons/ErrorAlt';
 export { MagnifierIcon } from './component/icons/Magnifier';

@@ -48,7 +48,6 @@ import './component/icons/ChevronRight';
 import './component/icons/Close';
 import './component/icons/Crosshair';
 import './component/icons/Dropdown';
-import './component/icons/DropdownAlt';
 import './component/icons/Error';
 import './component/icons/ErrorAlt';
 import './component/icons/Magnifier';

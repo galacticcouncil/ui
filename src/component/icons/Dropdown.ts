@@ -1,10 +1,23 @@
-import { html } from 'lit';
+import { html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 import { BaseIcon } from './BaseIcon';
 
 @customElement('uigc-icon-dropdown')
-export class DropdownIconAlt extends BaseIcon {
+export class DropdownIcon extends BaseIcon {
+  static styles = [
+    BaseIcon.styles,
+    css`
+      :host([alt]) svg[bsx] path {
+        stroke: rgb(120, 126, 130);
+      }
+
+      :host([alt]) svg[hdx] path {
+        stroke: rgba(114, 131, 165, 0.6);
+      }
+    `,
+  ];
+
   bsxTemplate() {
     return html`
       <svg bsx xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

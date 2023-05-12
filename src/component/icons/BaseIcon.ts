@@ -1,4 +1,4 @@
-import { css, LitElement } from 'lit';
+import { css, CSSResultGroup, LitElement } from 'lit';
 
 export class BaseIcon extends LitElement {
   static styles = [
@@ -20,5 +20,5 @@ export class BaseIcon extends LitElement {
         display: var(--uigc-hdx-icon-display);
       }
     `,
-  ];
+  ] as CSSResultGroup;
 }

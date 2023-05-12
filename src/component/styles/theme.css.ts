@@ -144,6 +144,7 @@ export const bsxThemeProperties = css`
     --uigc-app-font-secondary: 'SatoshiVariable';
     --uigc-app-background: radial-gradient(89.2% 89.2% at 50.07% 87.94%, rgb(0, 138, 105) 0%, rgb(38, 47, 49) 88.52%),
       rgb(44, 51, 53);
+    --uigc-app-background-color: var(--uigc-app-background);
     --uigc-app-border-radius: 20px;
     --uigc-app-border-radius-2: 8px;
 

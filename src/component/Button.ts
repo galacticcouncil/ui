@@ -98,6 +98,7 @@ export class Button extends UIGCElement {
       .button-root {
         display: flex;
         align-items: center;
+        justify-content: center;
         position: relative;
         border-radius: var(--uigc-button-border-radius);
         font-weight: 700;
@@ -108,6 +109,10 @@ export class Button extends UIGCElement {
         line-height: 18px;
         transition: 0.2s ease-in-out;
         transform-style: preserve-3d;
+      }
+
+      .button-root:hover {
+        transition: 0.2s ease-in-out;
       }
 
       .button-root:before {

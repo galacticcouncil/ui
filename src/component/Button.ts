@@ -96,6 +96,8 @@ export class Button extends UIGCElement {
       }
 
       .button-root {
+        display: flex;
+        align-items: center;
         position: relative;
         border-radius: var(--uigc-button-border-radius);
         font-weight: 700;
@@ -132,6 +134,7 @@ export class Button extends UIGCElement {
       <button type="button" class="button-root">
         <slot name="icon"></slot>
         <slot></slot>
+        <slot name="endIcon"></slot>
       </button>
     `;
   }

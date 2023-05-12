@@ -19,7 +19,6 @@ export class Asset extends UIGCElement {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 6px;
         background-color: transparent;
         height: 32px;
         border-radius: 8px;
@@ -47,6 +46,7 @@ export class Asset extends UIGCElement {
         justify-content: center;
         align-items: flex-start;
         padding: 5px 0px;
+        margin-left: 6px;
       }
 
       uigc-logo-asset,

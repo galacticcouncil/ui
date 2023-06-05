@@ -1,5 +1,6 @@
 import { html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
 import { numberMaskSettings, textMask } from './types/InputConfig';
@@ -13,6 +14,8 @@ export class Textfield extends UIGCElement {
 
   @property({ type: String }) id = null;
   @property({ type: String }) value = null;
+  @property({ type: String }) desc = null;
+  @property({ type: String }) placeholder = null;
   @property({ type: Boolean }) disabled = false;
   @property({ type: Boolean }) number = false;
 
@@ -138,6 +141,15 @@ export class Textfield extends UIGCElement {
           font-size: var(--uigc-textfield-font-size);
         }
       }
+
+      .desc {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 10px;
+        line-height: 14px;
+        color: var(--hex-neutral-gray-400);
+        font-weight: 600;
+      }
     `,
   ];
 
@@ -193,6 +205,7 @@ export class Textfield extends UIGCElement {
               type="text"
               class="textfield"
               id="textField"
+              placeholder=${this.placeholder}
               value=${this.value}
               @input=${(e: any) => {
                 this.onInputChange(e);
@@ -201,6 +214,7 @@ export class Textfield extends UIGCElement {
             />
             <slot name="endAdornment"></slot>
           </span>
+          ${when(this.desc, () => html` <span class="desc">${this.desc}</span> `)}
         </div>
       </div>
     `;

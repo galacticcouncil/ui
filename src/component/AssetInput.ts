@@ -5,6 +5,7 @@ import { when } from 'lit/directives/when.js';
 import { UIGCElement } from './base/UIGCElement';
 import { priceMaskSettings } from './types/InputConfig';
 import { debounce } from 'ts-debounce';
+
 import IMask from 'imask';
 
 @customElement('uigc-asset-input')

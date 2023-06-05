@@ -585,6 +585,9 @@
       <template data-element="uigc-input" data-target="host">
         <uigc-input type="number" defaultValue="20" min="0" max="100" step="0.1" placeholder="Custom"></uigc-input>
       </template>
+      <template data-element="uigc-input" data-target="slot">
+        <span class="title" slot="inputAdornment">Max budget</span>
+      </template>
       <template data-element="uigc-input" data-target="wrapper">
         <uigc-paper></uigc-paper>
       </template>
@@ -592,12 +595,6 @@
         <style>
           uigc-paper {
             width: 400px;
-            padding: 20px;
-          }
-          uigc-asset-input {
-            display: block;
-            border-radius: 12px;
-            box-sizing: border-box;
             padding: 20px;
           }
           [part='demo-output'] {
@@ -840,6 +837,40 @@
           uigc-paper {
             width: 400px;
             padding: 20px;
+          }
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Textfield -->
+      <template data-element="uigc-textfield" data-target="host">
+        <uigc-textfield value="1000"></uigc-textfield>
+      </template>
+      <template data-element="uigc-textfield" data-target="slot">
+        <span class="title" slot="inputAdornment">Max budget</span>
+      </template>
+      <template data-element="uigc-textfield" data-target="wrapper">
+        <uigc-paper></uigc-paper>
+      </template>
+      <template data-element="uigc-textfield" data-target="suffix">
+        <style>
+          uigc-paper {
+            width: 400px;
+            padding: 20px;
+          }
+          .title {
+            white-space: nowrap;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            color: #ffffff;
+            font-family: 'ChakraPetch';
           }
           [part='demo-output'] {
             background: var(--uigc-app-background);

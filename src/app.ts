@@ -33,6 +33,7 @@ import './component/SearchBar';
 import './component/Selector';
 import './component/Skeleton';
 import './component/Switch';
+import './component/Textfield';
 import './component/Toast';
 import './component/ToggleButton';
 import './component/ToggleButtonGroup';

@@ -179,6 +179,18 @@ export const bsxThemeProperties = css`
     --uigc-field__error-color: var(--hex-red-300);
     --uigc-field__error-outline: 1px solid var(--hex-red-300);
 
+    --uigc-textfield-background: rgba(var(--rgb-primary-100), 0.06);
+    --uigc-textfield-background__hover: rgba(var(--rgb-primary-100), 0.12);
+    --uigc-textfield-border-style: solid;
+    --uigc-textfield-padding: 0 14px;
+    --uigc-textfield-font-size: 16px;
+    --uigc-textfield-font-size__sm: 14px;
+    --uigc-textfield__field-background: var(--uigc-asset-input-background);
+    --uigc-textfield__field-background__hover: var(--uigc-asset-input-background__hover);
+    --uigc-textfield__field-border-width: var(--uigc-input-border-width);
+    --uigc-textfield__field-border-color: var(--uigc-input-border-color);
+    --uigc-textfield__field-border-color__hover: var(--uigc-input-border-color__focus);
+
     /** AddressInput */
     --uigc-address-input__placeholder-color: var(--hex-basic-300);
     --uigc-address-input-background__hover: rgba(var(--rgb-primary-100), 0.12);
@@ -191,18 +203,6 @@ export const bsxThemeProperties = css`
     --uigc-alert__error-background: var(--hex-background-gray-1000);
     --uigc-alert__progress-background: var(--hex-background-gray-1000);
     --uigc-alert__drawer-background: var(--hex-background-gray-1000);
-    /** AssetInput */
-    --uigc-asset-input-background: rgba(var(--rgb-primary-100), 0.06);
-    --uigc-asset-input-background__hover: rgba(var(--rgb-primary-100), 0.12);
-    --uigc-asset-input-border-style: solid;
-    --uigc-asset-input-padding: 0 14px;
-    --uigc-asset-input-font-size: 16px;
-    --uigc-asset-input-font-size__sm: 14px;
-    --uigc-asset-input__field-background: var(--uigc-asset-input-background);
-    --uigc-asset-input__field-background__hover: var(--uigc-asset-input-background__hover);
-    --uigc-asset-input__field-border-width: var(--uigc-input-border-width);
-    --uigc-asset-input__field-border-color: var(--uigc-input-border-color);
-    --uigc-asset-input__field-border-color__hover: var(--uigc-input-border-color__focus);
     /** AssetNamedInput */
     --uigc-asset-ninput-padding: 5px 14px;
     --uigc-asset-ninput-row-gap: 5px;
@@ -416,6 +416,18 @@ export const hdxThemeProperties = css`
     --uigc-field__error-color: var(--hex-red-400);
     --uigc-field__error-outline: none;
 
+    --uigc-textfield-background: transparent;
+    --uigc-textfield-background__hover: none;
+    --uigc-textfield-border-style: none;
+    --uigc-textfield-padding: 0;
+    --uigc-textfield-font-size: 18px;
+    --uigc-textfield-font-size__sm: 16px;
+    --uigc-textfield__field-background: var(--uigc-field-background);
+    --uigc-textfield__field-background__hover: var(--uigc-field-background__hover);
+    --uigc-textfield__field-border-bottom: var(--uigc-input-border-width);
+    --uigc-textfield__field-border-color: var(--uigc-input-border-color);
+    --uigc-textfield__field-border-color__hover: var(--uigc-input-border-color__focus);
+
     /** AddressInput */
     --uigc-address-input__placeholder-color: var(--hex-basic-300);
     --uigc-address-input-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
@@ -428,18 +440,6 @@ export const hdxThemeProperties = css`
     --uigc-alert__error-background: rgba(239, 3, 3, 0.25);
     --uigc-alert__progress-background: rgba(37, 203, 255, 0.2);
     --uigc-alert__drawer-background: var(--hex-dark-blue-401);
-    /** AssetInput */
-    --uigc-asset-input-background: transparent;
-    --uigc-asset-input-background__hover: none;
-    --uigc-asset-input-border-style: none;
-    --uigc-asset-input-padding: 0;
-    --uigc-asset-input-font-size: 18px;
-    --uigc-asset-input-font-size__sm: 16px;
-    --uigc-asset-input__field-background: var(--uigc-field-background);
-    --uigc-asset-input__field-background__hover: var(--uigc-field-background__hover);
-    --uigc-asset-input__field-border-bottom: var(--uigc-input-border-width);
-    --uigc-asset-input__field-border-color: var(--uigc-input-border-color);
-    --uigc-asset-input__field-border-color__hover: var(--uigc-input-border-color__focus);
     /** AssetNamedInput */
     --uigc-asset-ninput-padding: 5px 14px;
     --uigc-asset-ninput-row-gap: 5px;

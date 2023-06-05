@@ -1,22 +1,20 @@
 import { html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
-import { priceMaskSettings } from './types/InputConfig';
+import { numberMaskSettings, textMask } from './types/InputConfig';
 import { debounce } from 'ts-debounce';
 import IMask from 'imask';
 
-@customElement('uigc-asset-input')
-export class AssetInput extends UIGCElement {
+@customElement('uigc-textfield')
+export class Textfield extends UIGCElement {
   private _inputHandler = null;
   private _imask = null;
 
   @property({ type: String }) id = null;
-  @property({ type: String }) amount = null;
-  @property({ type: String }) amountUsd = null;
-  @property({ type: String }) asset = null;
+  @property({ type: String }) value = null;
   @property({ type: Boolean }) disabled = false;
+  @property({ type: Boolean }) number = false;
 
   constructor() {
     super();
@@ -63,7 +61,7 @@ export class AssetInput extends UIGCElement {
         color: #c7c7cd;
       }
 
-      .asset-root {
+      .textfield-root {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -73,7 +71,7 @@ export class AssetInput extends UIGCElement {
         border-color: var(--uigc-input-border-color);
       }
 
-      :host([field]) .asset-root {
+      :host([field]) .textfield-root {
         flex-direction: row;
         background: var(--uigc-textfield__field-background);
         border-width: var(--uigc-textfield__field-border-width);
@@ -83,38 +81,38 @@ export class AssetInput extends UIGCElement {
         padding: var(--uigc-field-padding);
       }
 
-      :host([disabled]) .asset-root {
+      :host([disabled]) .textfield-root {
         border-width: 0;
       }
 
-      :host(:not([disabled]):not([field])) .asset-root {
+      :host(:not([disabled]):not([field])) .textfield-root {
         padding: var(--uigc-textfield-padding);
         background: var(--uigc-textfield-background);
         border-style: var(--uigc-textfield-border-style);
       }
 
-      :host(:not([disabled]):not([field])) .asset-root:focus-within {
+      :host(:not([disabled]):not([field])) .textfield-root:focus-within {
         border-color: var(--uigc-input-border-color__focus);
       }
 
-      :host(:not([disabled]):not([field])) .asset-root:hover {
+      :host(:not([disabled]):not([field])) .textfield-root:hover {
         background: var(--uigc-textfield-background__hover);
       }
 
-      :host([field]:not([disabled])) .asset-root:focus,
-      :host([field]:not([disabled])) .asset-root:focus-visible,
-      :host([field]:not([disabled])) .asset-root:focus-within,
-      :host([field]:not([disabled])) .asset-root:hover {
+      :host([field]:not([disabled])) .textfield-root:focus,
+      :host([field]:not([disabled])) .textfield-root:focus-visible,
+      :host([field]:not([disabled])) .textfield-root:focus-within,
+      :host([field]:not([disabled])) .textfield-root:hover {
         border-color: var(--uigc-textfield__field-border-color__hover);
         background: var(--uigc-textfield__field-background__hover);
         transition: 0.2s ease-in-out;
       }
 
-      .asset-wrapper {
+      .textfield-wrapper {
         width: 100%;
       }
 
-      .asset-field {
+      .textfield-field {
         width: 100%;
         display: flex;
         position: relative;
@@ -123,7 +121,7 @@ export class AssetInput extends UIGCElement {
         gap: 4px;
       }
 
-      .asset-input {
+      .textfield {
         width: 100%;
         background: none;
         border: none;
@@ -135,34 +133,10 @@ export class AssetInput extends UIGCElement {
         padding: 0px;
       }
 
-      .asset-unit {
-        color: var(--hex-white);
-        font-weight: 700;
-        font-size: var(--uigc-textfield-font-size__sm);
-        line-height: 24px;
-      }
-
       @media (min-width: 520px) {
-        .asset-input {
+        .textfield {
           font-size: var(--uigc-textfield-font-size);
         }
-
-        .asset-unit {
-          font-size: var(--uigc-textfield-font-size);
-        }
-      }
-
-      .usd {
-        display: flex;
-        flex-direction: row-reverse;
-        font-size: 10px;
-        line-height: 14px;
-        color: var(--hex-neutral-gray-400);
-        font-weight: 600;
-      }
-
-      #asset-value {
-        display: none;
       }
     `,
   ];
@@ -175,19 +149,19 @@ export class AssetInput extends UIGCElement {
     const options = {
       bubbles: true,
       composed: true,
-      detail: { id: this.id, asset: this.asset, value: unmasked, masked: masked },
+      detail: { value: unmasked, masked: masked },
     };
-    this.dispatchEvent(new CustomEvent('asset-input-changed', options));
+    this.dispatchEvent(new CustomEvent('input-changed', options));
   }
 
   onWrapperClick(e: any) {
-    this.shadowRoot.getElementById('asset').focus();
+    this.shadowRoot.getElementById('textField').focus();
   }
 
   override update(changedProperties: Map<string, unknown>) {
-    if (changedProperties.has('amount') && this._imask) {
-      if (this.amount) {
-        this._imask.unmaskedValue = this.amount;
+    if (changedProperties.has('value') && this._imask) {
+      if (this.value) {
+        this._imask.unmaskedValue = this.value;
       } else {
         this._imask.unmaskedValue = '';
       }
@@ -197,8 +171,9 @@ export class AssetInput extends UIGCElement {
 
   override async firstUpdated() {
     super.firstUpdated();
-    const input = this.shadowRoot.getElementById('asset');
-    this._imask = IMask(input, priceMaskSettings);
+    const input = this.shadowRoot.getElementById('textField');
+    const maskOpts = this.number ? numberMaskSettings : { mask: textMask };
+    this._imask = IMask(input, maskOpts);
   }
 
   override disconnectedCallback() {
@@ -210,25 +185,22 @@ export class AssetInput extends UIGCElement {
 
   render() {
     return html`
-      <div class="asset-root" @click="${this.onWrapperClick}}">
+      <div class="textfield-root" @click="${this.onWrapperClick}}">
         <slot name="inputAdornment"></slot>
-        <div class="asset-wrapper">
-          <span class="asset-field">
+        <div class="textfield-wrapper">
+          <span class="textfield-field">
             <input
-              ?disabled=${!this.asset || this.disabled}
               type="text"
-              id="asset"
-              class="asset-input"
-              placeholder="0"
-              value=${this.asset ? this.amount : null}
+              class="textfield"
+              id="textField"
+              value=${this.value}
               @input=${(e: any) => {
                 this.onInputChange(e);
                 this._inputHandler();
               }}
             />
-            <span class="asset-unit">${this.asset}</span>
+            <slot name="endAdornment"></slot>
           </span>
-          ${when(this.amountUsd, () => html` <span class="usd">≈ ${this.amountUsd} USD</span> `)}
         </div>
       </div>
     `;

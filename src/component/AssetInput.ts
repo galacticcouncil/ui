@@ -17,6 +17,7 @@ export class AssetInput extends UIGCElement {
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
+  @property({ type: String }) error = null;
   @property({ type: Boolean }) disabled = false;
 
   constructor() {
@@ -72,6 +73,14 @@ export class AssetInput extends UIGCElement {
         border-radius: var(--uigc-input-border-radius);
         border-width: var(--uigc-input-border-width);
         border-color: var(--uigc-input-border-color);
+      }
+
+      :host([error]) .asset-root {
+        border: var(--uigc-field__error-border);
+        border-width: var(--uigc-field__error-border-width);
+        outline: var(--uigc-field__error-outline);
+        outline-offset: -1px;
+        border-bottom: var(--uigc-field__error-border) !important;
       }
 
       :host([field]) .asset-root {
@@ -134,6 +143,13 @@ export class AssetInput extends UIGCElement {
         text-align: right;
         font-weight: 700;
         padding: 0px;
+      }
+
+      .asset-error {
+        color: var(--uigc-field__error-color);
+        line-height: 16px;
+        margin-top: 2px;
+        font-size: 12px;
       }
 
       .asset-unit {
@@ -232,6 +248,7 @@ export class AssetInput extends UIGCElement {
           ${when(this.amountUsd, () => html` <span class="usd">≈ ${this.amountUsd} USD</span> `)}
         </div>
       </div>
+      <p class="asset-error">${this.error}</p>
     `;
   }
 }

@@ -16,6 +16,7 @@ export class Textfield extends UIGCElement {
   @property({ type: String }) value = null;
   @property({ type: String }) desc = null;
   @property({ type: String }) placeholder = null;
+  @property({ type: String }) error = null;
   @property({ type: Boolean }) disabled = false;
   @property({ type: Boolean }) number = false;
 
@@ -74,6 +75,14 @@ export class Textfield extends UIGCElement {
         border-color: var(--uigc-input-border-color);
       }
 
+      :host([error]) .textfield-root {
+        border: var(--uigc-field__error-border);
+        border-width: var(--uigc-field__error-border-width);
+        outline: var(--uigc-field__error-outline);
+        outline-offset: -1px;
+        border-bottom: var(--uigc-field__error-border) !important;
+      }
+
       :host([field]) .textfield-root {
         flex-direction: row;
         background: var(--uigc-textfield__field-background);
@@ -122,6 +131,13 @@ export class Textfield extends UIGCElement {
         -webkit-box-align: center;
         align-items: center;
         gap: 4px;
+      }
+
+      .textfield-error {
+        color: var(--uigc-field__error-color);
+        line-height: 16px;
+        margin-top: 2px;
+        font-size: 12px;
       }
 
       .textfield {
@@ -217,6 +233,7 @@ export class Textfield extends UIGCElement {
           ${when(this.desc, () => html` <span class="desc">${this.desc}</span> `)}
         </div>
       </div>
+      <p class="textfield-error">${this.error}</p>
     `;
   }
 }

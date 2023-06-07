@@ -67,6 +67,19 @@ export class Button extends UIGCElement {
         transition: 0.2s ease-in-out;
       }
 
+      :host([variant='error']) .button-root {
+        color: var(--uigc-button__error-color);
+        background: var(--uigc-button__error-background);
+        border: var(--uigc-button__error-border);
+      }
+
+      :host([variant='error']) .button-root:hover {
+        color: var(--uigc-button__error-color__hover);
+        background: var(--uigc-button__error-background__hover);
+        border: var(--uigc-button__error-border__hover);
+        transition: 0.2s ease-in-out;
+      }
+
       :host([variant='info']) .button-root:before {
         background: var(--uigc-button__primary-background__before);
       }

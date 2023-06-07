@@ -486,6 +486,12 @@ export const hdxThemeProperties = css`
     --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-alpha15), 0.3);
     --uigc-button__secondary-border: 1px solid var(--hex-bright-blue-300);
     --uigc-button__secondary-border__hover: 1px solid var(--hex-white);
+    --uigc-button__error-color: #F87171;
+    --uigc-button__error-color__hover: #FF9E9E;
+    --uigc-button__error-background: rgba(239, 3, 3, 0.25);
+    --uigc-button__error-background__hover: rgba(255, 6, 6, 0.39);
+    --uigc-button__error-border: 1px solid #F87171;
+    --uigc-button__error-border__hover: 1px solid #FF9E9E;
     /** CircularProgress */
     --uigc-circular-progress-background: conic-gradient(
       from 90.65deg at 50% 50%,

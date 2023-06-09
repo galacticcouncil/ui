@@ -419,7 +419,7 @@ export const hdxThemeProperties = css`
     --uigc-field-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
     --uigc-field-padding: 14px;
     --uigc-field-margin__sm: none;
-    --uigc-field-row-gap: 10px;
+    --uigc-field-row-gap: 5px;
 
     --uigc-field--title-color: var(--hex-basic-500);
     --uigc-field--title-text-transform: uppercase;

@@ -31,8 +31,8 @@ export class AssetTransfer extends UIGCElement {
         row-gap: var(--uigc-field-row-gap);
       }
 
-      :host([dense]) .asset-root {
-        row-gap: 0;
+      :host([dense]) .asset {
+        height: unset
       }
 
       :host(:not([readonly])) .asset-root {
@@ -114,17 +114,17 @@ export class AssetTransfer extends UIGCElement {
         line-height: var(--uigc-field--title-line-height);
         color: var(--uigc-field--title-color);
         text-transform: var(--uigc-field--title-text-transform);
-        min-height: 20px;
       }
 
       .asset {
+        height: 54px;
         display: flex;
         flex-direction: row;
         align-items: center;
       }
 
       .asset_ro {
-        padding: 0 6px;
+        padding: 5px;
       }
 
       .asset > *:last-child {

@@ -56,7 +56,6 @@ export class Selector extends UIGCElement {
         line-height: var(--uigc-field--title-line-height);
         color: var(--uigc-selector--title-color);
         text-transform: var(--uigc-field--title-text-transform);
-        padding-bottom: 4px;
       }
     `,
   ];

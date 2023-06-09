@@ -21,6 +21,7 @@ export class AssetBalance extends UIGCElement {
         flex-direction: row;
         align-items: center;
         justify-content: end;
+        height: 20px;
       }
 
       .balance > span {

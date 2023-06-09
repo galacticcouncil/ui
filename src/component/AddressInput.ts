@@ -45,6 +45,14 @@ export class AddressInput extends UIGCElement {
         transition: 0.2s ease-in-out;
       }
 
+      :host([error]) .address-root:focus,
+      :host([error]) .address-root:focus-visible,
+      :host([error]) .address-root:focus-within,
+      :host([error]) .address-root:hover {
+        background: rgba(255, 75, 75, 0.1);
+        transition: 0.2s ease-in-out;
+      }
+
       /* Placeholder color */
       ::-webkit-input-placeholder {
         color: var(--uigc-address-input__placeholder-color);
@@ -93,7 +101,7 @@ export class AddressInput extends UIGCElement {
         justify-content: center;
         box-sizing: border-box;
         padding: 0 14px;
-        min-height: 54px;
+        min-height: 50px;
       }
 
       .input-root p {

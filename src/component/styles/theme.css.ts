@@ -137,8 +137,12 @@ export const paletteProperties = css`
 export const bsxThemeProperties = css`
   :root,
   html[theme='bsx'] {
-    --uigc-bsx-icon-display: flex;
-    --uigc-hdx-icon-display: none;
+    --uigc-bsx-flex-display: flex;
+    --uigc-hdx-flex-display: none;
+    --uigc-bsx-grid-display: grid;
+    --uigc-hdx-grid-display: none;
+    --uigc-bsx-display: block;
+    --uigc-hdx-display: none;
     /** GENERAL */
     --uigc-app-font: 'SatoshiVariable';
     --uigc-app-font-secondary: 'SatoshiVariable';
@@ -217,6 +221,12 @@ export const bsxThemeProperties = css`
     --uigc-asset-switch-transform: rotate(180deg);
     --uigc-asset-switch-transition: all 0.3s ease-in-out 0s;
     --uigc-asset-switch-background: #192022;
+    /** AssetTransfer */
+    --uigc-asset-transfer__error-border: none;
+    --uigc-asset-transfer__error-border-width: unset;
+    --uigc-asset-transfer__error-outline: unset;
+    --uigc-asset-transfer__error-border: none;
+    --uigc-asset-transfer__error-backgroud__hover: var(--uigc-field-background);
     /** Backdrop */
     --uigc-backdrop-background: radial-gradient(
         70.22% 56.77% at 51.87% 101.05%,
@@ -286,6 +296,7 @@ export const bsxThemeProperties = css`
     --uigc-icon-button-background: rgba(var(--rgb-white), 0.06);
     --uigc-icon-button-background__hover: rgba(var(--rgb-white), 0.2);
     /** Input */
+    --uigc-input-height: 54px;
     --uigc-input-border-width: 1px;
     --uigc-input-border-color: rgba(var(--rgb-white), 0.12);
     --uigc-input-border-color__focus: var(--hex-primary-300);
@@ -372,8 +383,12 @@ export const bsxThemeProperties = css`
 
 export const hdxThemeProperties = css`
   html[theme='hdx'] {
-    --uigc-bsx-icon-display: none;
-    --uigc-hdx-icon-display: flex;
+    --uigc-bsx-flex-display: none;
+    --uigc-hdx-flex-display: flex;
+    --uigc-bsx-grid-display: none;
+    --uigc-hdx-grid-display: grid;
+    --uigc-bsx-display: none;
+    --uigc-hdx-display: block;
     /** GENERAL */
     --uigc-app-font: 'ChakraPetch';
     --uigc-app-font-secondary: 'FontOver';
@@ -404,7 +419,7 @@ export const hdxThemeProperties = css`
     --uigc-field-background__hover: rgba(var(--rgb-primary-alpha15), 0.12);
     --uigc-field-padding: 14px;
     --uigc-field-margin__sm: none;
-    --uigc-field-row-gap: 5px;
+    --uigc-field-row-gap: 10px;
 
     --uigc-field--title-color: var(--hex-basic-500);
     --uigc-field--title-text-transform: uppercase;
@@ -454,6 +469,12 @@ export const hdxThemeProperties = css`
     --uigc-asset-switch-transform: rotateX(180deg);
     --uigc-asset-switch-transition: none;
     --uigc-asset-switch-background: transparent;
+    /** AssetTransfer */
+    --uigc-asset-transfer__error-border: var(--uigc-field__error-border);
+    --uigc-asset-transfer__error-border-width: var(--uigc-field__error-border-width);
+    --uigc-asset-transfer__error-outline: var(--uigc-field__error-outline);
+    --uigc-asset-transfer__error-border: var(--uigc-field__error-border);
+    --uigc-asset-transfer__error-backgroud__hover: rgba(255, 75, 75, 0.1);
     /** Backdrop */
     --uigc-backdrop-background: rgba(0, 7, 50, 0.7);
     /** BusyIndicator */
@@ -486,12 +507,12 @@ export const hdxThemeProperties = css`
     --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-alpha15), 0.3);
     --uigc-button__secondary-border: 1px solid var(--hex-bright-blue-300);
     --uigc-button__secondary-border__hover: 1px solid var(--hex-white);
-    --uigc-button__error-color: #F87171;
-    --uigc-button__error-color__hover: #FF9E9E;
+    --uigc-button__error-color: #f87171;
+    --uigc-button__error-color__hover: #ff9e9e;
     --uigc-button__error-background: rgba(239, 3, 3, 0.25);
     --uigc-button__error-background__hover: rgba(255, 6, 6, 0.39);
-    --uigc-button__error-border: 1px solid #F87171;
-    --uigc-button__error-border__hover: 1px solid #FF9E9E;
+    --uigc-button__error-border: 1px solid #f87171;
+    --uigc-button__error-border__hover: 1px solid #ff9e9e;
     /** CircularProgress */
     --uigc-circular-progress-background: conic-gradient(
       from 90.65deg at 50% 50%,
@@ -533,6 +554,7 @@ export const hdxThemeProperties = css`
     --uigc-icon-button-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-icon-button-background__hover: rgba(var(--rgb-primary-alpha20), 0.2);
     /** Input */
+    --uigc-input-height: unset;
     --uigc-input-border-width: 0 0 1px 0;
     --uigc-input-border-color: var(--hex-dark-blue-400);
     --uigc-input-border-color__focus: var(--hex-bright-blue-600);

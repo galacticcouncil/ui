@@ -13,11 +13,11 @@ export class BaseLogo extends LitElement {
       }
 
       :host svg[bsx] {
-        display: var(--uigc-bsx-icon-display);
+        display: var(--uigc-bsx-flex-display);
       }
 
       :host svg[hdx] {
-        display: var(--uigc-hdx-icon-display);
+        display: var(--uigc-hdx-flex-display);
       }
     `,
   ];

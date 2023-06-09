@@ -69,7 +69,7 @@ export class AssetInput extends UIGCElement {
         display: flex;
         flex-direction: row;
         align-items: center;
-        height: 54px;
+        height: var(--uigc-input-height);
         border-radius: var(--uigc-input-border-radius);
         border-width: var(--uigc-input-border-width);
         border-color: var(--uigc-input-border-color);
@@ -117,6 +117,14 @@ export class AssetInput extends UIGCElement {
       :host([field]:not([disabled])) .asset-root:hover {
         border-color: var(--uigc-textfield__field-border-color__hover);
         background: var(--uigc-textfield__field-background__hover);
+        transition: 0.2s ease-in-out;
+      }
+
+      :host([error]:not([disabled])) .asset-root:focus,
+      :host([error]:not([disabled])) .asset-root:focus-visible,
+      :host([error]:not([disabled])) .asset-root:focus-within,
+      :host([error]:not([disabled])) .asset-root:hover {
+        background: rgba(255, 75, 75, 0.1);
         transition: 0.2s ease-in-out;
       }
 

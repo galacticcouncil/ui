@@ -22,10 +22,9 @@ export class AssetSelector extends UIGCElement {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0 6px;
+        padding: 5px;
         gap: 6px;
         background-color: transparent;
-        height: 52px;
         border-radius: var(--uigc-asset-selector-border-radius);
         cursor: pointer;
       }

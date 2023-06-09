@@ -31,6 +31,14 @@ export class AssetTransfer extends UIGCElement {
         row-gap: var(--uigc-field-row-gap);
       }
 
+      :host([dense]) .asset-root {
+        row-gap: 0;
+      }
+
+      :host(:not([readonly])) .asset-root {
+        border-bottom: var(--uigc-field-border-bottom);
+      }
+
       :host(:not([readonly])) .asset-root {
         border-bottom: var(--uigc-field-border-bottom);
       }
@@ -42,11 +50,11 @@ export class AssetTransfer extends UIGCElement {
       }
 
       :host([error]) .asset-root {
-        border: var(--uigc-field__error-border);
-        border-width: var(--uigc-field__error-border-width);
-        outline: var(--uigc-field__error-outline);
+        border: var(--uigc-asset-transfer__error-border);
+        border-width: var(--uigc-asset-transfer__error-border-width);
+        outline: var(--uigc-asset-transfer__error-outline);
         outline-offset: -1px;
-        border-bottom: var(--uigc-field__error-border) !important;
+        border-bottom: var(--uigc-asset-transfer__error-border) !important;
       }
 
       :host(:not([readonly])) .asset-root:focus,
@@ -55,6 +63,14 @@ export class AssetTransfer extends UIGCElement {
       :host(:not([readonly])) .asset-root:hover {
         border-bottom: var(--uigc-field-border-bottom__hover);
         background: var(--uigc-field-background__hover);
+        transition: 0.2s ease-in-out;
+      }
+
+      :host([error]:not([readonly])) .asset-root:focus,
+      :host([error]:not([readonly])) .asset-root:focus-visible,
+      :host([error]:not([readonly])) .asset-root:focus-within,
+      :host([error]:not([readonly])) .asset-root:hover {
+        background: var(--uigc-asset-transfer__error-backgroud__hover);
         transition: 0.2s ease-in-out;
       }
 
@@ -78,6 +94,18 @@ export class AssetTransfer extends UIGCElement {
         font-size: 12px;
       }
 
+      :host uigc-asset-input[bsx] {
+        display: var(--uigc-bsx-display);
+      }
+
+      :host uigc-asset-input[hdx] {
+        display: var(--uigc-hdx-display);
+      }
+
+      :host p[hdx] {
+        display: var(--uigc-hdx-display);
+      }
+
       .title {
         display: flex;
         align-items: center;
@@ -86,6 +114,7 @@ export class AssetTransfer extends UIGCElement {
         line-height: var(--uigc-field--title-line-height);
         color: var(--uigc-field--title-color);
         text-transform: var(--uigc-field--title-text-transform);
+        min-height: 20px;
       }
 
       .asset {
@@ -112,7 +141,7 @@ export class AssetTransfer extends UIGCElement {
 
   render() {
     return html`
-      <div tabindex="0" class="asset-root">
+      <div bsx tabindex="0" class="asset-root">
         <span class="title">${this.title}</span>
         <slot name="balance"></slot>
         <div class="asset">
@@ -122,15 +151,26 @@ export class AssetTransfer extends UIGCElement {
             () => html` <uigc-asset class="asset_ro" .symbol=${this.asset}></uigc-asset>`
           )}
           <uigc-asset-input
+            hdx
             id=${this.id}
             .asset=${this.asset}
             .amount=${this.amount}
             .amountUsd=${this.amountUsd}
             ?disabled=${this.readonly}
           ></uigc-asset-input>
+          <uigc-asset-input
+            bsx
+            id=${this.id}
+            .asset=${this.asset}
+            .amount=${this.amount}
+            .amountUsd=${this.amountUsd}
+            ?error=${this.error}
+            .error=${this.error}
+            ?disabled=${this.readonly}
+          ></uigc-asset-input>
         </div>
       </div>
-      <p class="asset-error">${this.error}</p>
+      <p hdx class="asset-error">${this.error}</p>
     `;
   }
 }

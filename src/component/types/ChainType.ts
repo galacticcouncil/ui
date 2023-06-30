@@ -4,6 +4,7 @@ export const ChainTypes = {
   acala: 'Acala',
   astar: 'Astar',
   basilisk: 'Basilisk',
+  centrifuge: 'Centrifuge',
   hydradx: 'HydraDX',
   interlay: 'Interlay',
   karura: 'Karura',

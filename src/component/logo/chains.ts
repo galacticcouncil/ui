@@ -42,6 +42,59 @@ export const basilisk = html`<svg
   />
 </svg>`;
 
+export const centrifuge = html`
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="48px"
+    height="48px"
+    viewBox="0 0 48 47"
+    version="1.1"
+    fill="#fff"
+  >
+    <defs>
+      <filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+      </filter>
+      <image
+        id="image7"
+        width="48"
+        height="47"
+        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAvCAYAAAClgknJAAAABmJLR0QA/wD/AP+gvaeTAAAAlUlEQVRoge3YoQrCUByF8XPFMTCYl4YPYF4TBLtY9nJWraa9iN1kXxQMIjMv7Y5xdxC+X/6ze746CQCAPxZijrrXpVC+2aYe0/PWPax37dDZMupj2eegsL9OHjXG6nSU1AydLWaYkhQBbgS4EeBGgBsBbgS4EeBGgBsBbgS4xf2VCOVDqs+Jt/R9q6d0m/VJAAAAYJwfSVoOYS0fsT4AAAAASUVORK5CYII="
+      />
+      <mask id="mask0">
+        <g filter="url(#alpha)">
+          <use xlink:href="#image7" />
+        </g>
+      </mask>
+      <clipPath id="clip1">
+        <rect x="0" y="0" width="48" height="47" />
+      </clipPath>
+      <g id="surface6" clip-path="url(#clip1)">
+        <path
+          style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;"
+          d="M 13 31.738281 C 12.148438 29.933594 11.671875 27.917969 11.671875 25.792969 C 11.671875 18.03125 18.03125 11.734375 25.871094 11.734375 C 30.238281 11.734375 34.140625 13.6875 36.746094 16.757812 L 38.300781 15.46875 C 35.324219 11.957031 30.859375 9.726562 25.871094 9.726562 C 16.910156 9.726562 9.644531 16.921875 9.644531 25.792969 C 9.644531 28.222656 10.1875 30.523438 11.160156 32.585938 Z M 13 31.738281 "
+        />
+      </g>
+    </defs>
+    <g id="surface1">
+      <path
+        style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;"
+        d="M 48 24 C 48 37.253906 37.253906 48 24 48 C 10.746094 48 0 37.253906 0 24 C 0 10.746094 10.746094 0 24 0 C 37.253906 0 48 10.746094 48 24 Z M 48 24 "
+      ></path>
+      <use xlink:href="#surface6" mask="url(#mask0)" />
+      <path
+        style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;"
+        d="M 25.871094 35.335938 C 20.550781 35.335938 16.238281 31.0625 16.238281 25.792969 C 16.238281 20.527344 20.550781 16.253906 25.871094 16.253906 C 28.832031 16.253906 31.484375 17.578125 33.25 19.664062 L 34.804688 18.371094 C 32.664062 15.851562 29.457031 14.246094 25.871094 14.246094 C 19.429688 14.246094 14.207031 19.417969 14.207031 25.792969 C 14.207031 32.171875 19.429688 37.34375 25.871094 37.34375 Z M 25.871094 35.335938 "
+      />
+      <path
+        style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;"
+        d="M 29.367188 28.699219 C 28.527344 29.683594 27.273438 30.3125 25.871094 30.3125 C 23.351562 30.3125 21.308594 28.289062 21.308594 25.792969 C 21.308594 23.296875 23.351562 21.277344 25.871094 21.277344 C 27.273438 21.277344 28.527344 21.902344 29.367188 22.890625 L 31.113281 21.4375 C 29.859375 19.957031 27.976562 19.015625 25.871094 19.015625 C 22.089844 19.015625 19.023438 22.050781 19.023438 25.792969 C 19.023438 29.539062 22.089844 32.574219 25.871094 32.574219 C 27.800781 32.574219 29.542969 31.78125 30.785156 30.511719 Z M 29.367188 28.699219 "
+      />
+    </g>
+  </svg>
+`;
+
 export const hydradx = html`<svg
   xmlns="http://www.w3.org/2000/svg"
   width="48"

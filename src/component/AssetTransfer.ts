@@ -43,12 +43,6 @@ export class AssetTransfer extends UIGCElement {
         border-bottom: var(--uigc-field-border-bottom);
       }
 
-      @media (max-width: 480px) {
-        .asset-root {
-          margin: var(--uigc-field-margin__sm);
-        }
-      }
-
       :host([error]) .asset-root {
         border: var(--uigc-asset-transfer__error-border);
         border-width: var(--uigc-asset-transfer__error-border-width);

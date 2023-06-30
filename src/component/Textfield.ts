@@ -120,6 +120,14 @@ export class Textfield extends UIGCElement {
         transition: 0.2s ease-in-out;
       }
 
+      :host([error]:not([disabled])) .textfield-root:focus,
+      :host([error]:not([disabled])) .textfield-root:focus-visible,
+      :host([error]:not([disabled])) .textfield-root:focus-within,
+      :host([error]:not([disabled])) .textfield-root:hover {
+        background: rgba(255, 75, 75, 0.1);
+        transition: 0.2s ease-in-out;
+      }
+
       .textfield-wrapper {
         width: 100%;
       }

@@ -11,9 +11,4 @@ export const priceMaskSettings: IMask.MaskedNumberOptions = {
   mapToRadix: ['.'],
 };
 
-export const numberMaskSettings: IMask.MaskedNumberOptions = {
-  mask: Number,
-  min: 0,
-};
-
 export const textMask: RegExp = /^[0-9a-zA-Z]+$/;

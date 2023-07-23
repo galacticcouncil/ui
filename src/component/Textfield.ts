@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
-import { numberMaskSettings, textMask } from './types/InputConfig';
+import { textMask } from './types/InputConfig';
 import { debounce } from 'ts-debounce';
 import IMask from 'imask';
 
@@ -17,8 +17,10 @@ export class Textfield extends UIGCElement {
   @property({ type: String }) desc = null;
   @property({ type: String }) placeholder = null;
   @property({ type: String }) error = null;
-  @property({ type: Boolean }) disabled = false;
+  @property({ type: Number }) min = null;
+  @property({ type: Number }) max = null;
   @property({ type: Boolean }) number = false;
+  @property({ type: Boolean }) disabled = false;
 
   constructor() {
     super();
@@ -208,7 +210,15 @@ export class Textfield extends UIGCElement {
   override async firstUpdated() {
     super.firstUpdated();
     const input = this.shadowRoot.getElementById('textField');
-    const maskOpts = this.number ? numberMaskSettings : { mask: textMask };
+    const maskOpts = this.number
+      ? {
+          mask: Number,
+          min: this.min,
+          max: this.max,
+          radix: '.',
+        }
+      : { mask: textMask };
+
     this._imask = IMask(input, maskOpts);
   }
 

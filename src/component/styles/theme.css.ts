@@ -122,6 +122,8 @@ export const paletteProperties = css`
     --hex-neutral-gray-100: #e5ecf1;
     --rgb-neutral-gray-100: 229, 236, 241;
 
+    --hex-dark-gray: #1a171b;
+
     --hex-basic-100: #ecedef;
     --hex-basic-200: #8f90a6;
     --hex-basic-300: #bbbec9;
@@ -332,6 +334,7 @@ export const bsxThemeProperties = css`
     --uigc-skeleton-border-radius: 9999px;
     /** Switch */
     --uigc-switch--root-border: 1px solid var(--hex-background-gray-700);
+    --uigc-switch--root-border-radius: 45px;
     --uigc-switch--root-background: var(--hex-dark-gray);
     --uigc-switch--thumb-background: var(--hex-neutral-gray-400);
     --uigc-switch--thumb-border-color: var(--hex-dark-gray);
@@ -590,8 +593,9 @@ export const hdxThemeProperties = css`
     --uigc-skeleton-border-radius: 4px;
     /** Switch */
     --uigc-switch--root-border: 1px solid var(--hex-basic-700);
+    --uigc-switch--root-border-radius: 4px;
     --uigc-switch--root-background: var(--hex-dark-gray);
-    --uigc-switch--thumb-background: var(--hex-basic-400);
+    --uigc-switch--thumb-background: var( --hex-background-gray-500);
     --uigc-switch--thumb-border-color: var(--hex-dark-gray);
     --uigc-switch--thumb-border-color__hover: var(--hex-bright-blue-300);
     --uigc-switch__checked--root-background: rgba(var(--rgb-primary-alpha20), 0.2);

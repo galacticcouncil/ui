@@ -32,7 +32,7 @@ export class AssetTransfer extends UIGCElement {
       }
 
       :host([dense]) .asset {
-        height: unset
+        height: unset;
       }
 
       :host(:not([readonly])) .asset-root {
@@ -79,6 +79,12 @@ export class AssetTransfer extends UIGCElement {
 
       .asset-root > :nth-child(3) {
         grid-area: 2 / 1 / 3 / 3;
+      }
+
+      @media (max-width: 480px) {
+        .asset-root {
+          margin: var(--uigc-field-margin__sm);
+        }
       }
 
       .asset-error {

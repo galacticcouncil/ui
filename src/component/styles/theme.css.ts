@@ -321,6 +321,8 @@ export const bsxThemeProperties = css`
     --uigc-paper-border-radius: 20px;
     --uigc-paper-box-shadow: 0 0 0 1px hsl(0deg 0% 100% / 5%);
     --uigc-paper-background: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);
+    --uigc-paper-content: unset;
+    --uigc-paper-mask: unset;
     /** Progress */
     --uigc-progress__success-background: var(--hex-primary-500);
     --uigc-progress__error-background: var(--hex-primary-500);
@@ -580,6 +582,9 @@ export const hdxThemeProperties = css`
     --uigc-paper-border-radius: 4px;
     --uigc-paper-box-shadow: 3px 4px 0px rgba(102, 181, 255, 0.19);
     --uigc-paper-background: var(--hex-dark-blue-700);
+    --uigc-paper-content: '';
+    --uigc-paper-mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) content-box content-box,
+      linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
     /** Progress */
     --uigc-progress__success-background: #30ffb1;
     --uigc-progress__error-background: #f11313;
@@ -595,7 +600,7 @@ export const hdxThemeProperties = css`
     --uigc-switch--root-border: 1px solid var(--hex-basic-700);
     --uigc-switch--root-border-radius: 4px;
     --uigc-switch--root-background: var(--hex-dark-gray);
-    --uigc-switch--thumb-background: var( --hex-background-gray-500);
+    --uigc-switch--thumb-background: var(--hex-background-gray-500);
     --uigc-switch--thumb-border-color: var(--hex-dark-gray);
     --uigc-switch--thumb-border-color__hover: var(--hex-bright-blue-300);
     --uigc-switch__checked--root-background: rgba(var(--rgb-primary-alpha20), 0.2);

@@ -53,6 +53,7 @@ export { ErrorIcon } from './component/icons/Error';
 export { ErrorIconAlt } from './component/icons/ErrorAlt';
 export { MagnifierIcon } from './component/icons/Magnifier';
 export { IdentityIcon } from './component/icons/Identity';
+export { InfoIcon } from './component/icons/Info';
 export { ProgressIcon } from './component/icons/Progress';
 export { PasteIcon } from './component/icons/Paste';
 export { RouteIcon } from './component/icons/Route';

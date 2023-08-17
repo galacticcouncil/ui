@@ -54,6 +54,7 @@ import './component/icons/ErrorAlt';
 import './component/icons/Magnifier';
 import './component/icons/Progress';
 import './component/icons/Route';
+import './component/icons/Info';
 import './component/icons/Settings';
 import './component/icons/Success';
 import './component/icons/SuccessAlt';

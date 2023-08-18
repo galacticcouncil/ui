@@ -118,6 +118,22 @@
         </style>
       </template>
 
+      <!-- AssetId -->
+      <template data-element="uigc-asset-id" data-target="host">
+        <uigc-asset-id symbol="HDX" chain="kusama"></uigc-asset-id>
+      </template>
+      <template data-element="uigc-asset-id" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
       <!-- AssetInput -->
       <template data-element="uigc-asset-input" data-target="host">
         <uigc-asset-input id="assetOut" asset="BSX" amount="1000"></uigc-asset-input>
@@ -714,6 +730,40 @@
             width: 100px;
             height: 100px;
           }
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
+      <!-- Popper -->
+      <template data-element="uigc-popper" data-target="host">
+        <uigc-popper text="Popper"> </uigc-popper>
+      </template>
+      <template data-element="uigc-popper" data-target="slot">
+        <uigc-icon-info></uigc-icon-info>
+      </template>
+      <template data-element="uigc-popper" data-target="wrapper">
+        <uigc-paper></uigc-paper>
+      </template>
+      <template data-element="uigc-popper" data-target="suffix">
+        <style>
+          uigc-paper {
+            width: 400px;
+            height: 400px;
+            padding: 20px;
+          }
+          uigc-popper {
+            width: 20px;
+            height: 20px;
+            display: block;
+            position: absolute;
+          }
+
           [part='demo-output'] {
             background: var(--uigc-app-background);
             min-height: 200px;

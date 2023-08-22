@@ -4,12 +4,12 @@ import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-import './logo/AssetLogo';
-import './logo/PlaceholderLogo';
+import './AssetId';
 
 @customElement('uigc-asset')
 export class Asset extends UIGCElement {
   @property({ type: String }) symbol = null;
+  @property({ type: String }) origin = null;
   @property({ type: String }) desc = null;
 
   static styles = [
@@ -49,17 +49,23 @@ export class Asset extends UIGCElement {
         margin-left: 6px;
       }
 
-      uigc-logo-asset,
-      uigc-logo-placeholder {
+      uigc-asset-id {
         width: 30px;
       }
     `,
   ];
 
+  override async updated() {
+    const assetId = this.shadowRoot.querySelector('uigc-asset-id');
+    if (this.origin) {
+      assetId.setAttribute('chain', this.origin);
+    } else {
+      assetId.removeAttribute('chain');
+    }
+  }
+
   render() {
-    return html` <uigc-logo-asset fit asset=${this.symbol}>
-        <uigc-logo-placeholder fit slot="placeholder"></uigc-logo-placeholder>
-      </uigc-logo-asset>
+    return html` <uigc-asset-id .symbol=${this.symbol}></uigc-asset-id>
       <span class="title">
         <span class="code">${this.symbol}</span>
         ${when(this.desc, () => html` <span class="desc">${this.desc}</span> `)}

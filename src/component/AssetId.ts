@@ -18,7 +18,7 @@ export class AssetId extends UIGCElement {
       }
 
       uigc-logo-chain {
-        visibility: hidden;
+        display: none;
       }
 
       :host([chain]) uigc-logo-asset {
@@ -27,7 +27,7 @@ export class AssetId extends UIGCElement {
       }
 
       :host([chain]) uigc-logo-chain {
-        visibility: visible;
+        display: flex;
         position: absolute;
         width: 50%;
         height: 50%;
@@ -37,12 +37,21 @@ export class AssetId extends UIGCElement {
     `,
   ];
 
+  override async updated() {
+    const logoChain = this.shadowRoot.querySelector('uigc-logo-chain');
+    if (this.chain) {
+      logoChain.setAttribute('chain', this.chain);
+    } else {
+      logoChain.removeAttribute('chain');
+    }
+  }
+
   render() {
     return html`
-      <uigc-logo-asset fit asset=${this.symbol}>
+      <uigc-logo-asset fit .asset=${this.symbol}>
         <uigc-logo-placeholder fit slot="placeholder"></uigc-logo-placeholder>
       </uigc-logo-asset>
-      <uigc-logo-chain fit chain=${this.chain}>
+      <uigc-logo-chain fit>
         <uigc-logo-placeholder fit slot="placeholder"></uigc-logo-placeholder>
       </uigc-logo-chain>
     `;

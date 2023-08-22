@@ -4,11 +4,12 @@ import { when } from 'lit/directives/when.js';
 
 import { UIGCElement } from './base/UIGCElement';
 
-import './Asset';
+import './AssetId';
 
 @customElement('uigc-asset-list-item')
 export class AssetListItem extends UIGCElement {
   @property({ type: Object }) asset = null;
+  @property({ type: String }) origin = null;
   @property({ type: String }) desc = null;
   @property({ type: String }) balance = null;
   @property({ type: String }) balanceUsd = null;
@@ -82,7 +83,7 @@ export class AssetListItem extends UIGCElement {
 
   render() {
     return html` <button @click=${this.onAssetClick} ?disabled=${this.disabled}>
-      <uigc-asset .symbol=${this.asset.symbol} .desc=${this.desc}></uigc-asset>
+      <uigc-asset .symbol=${this.asset.symbol} .origin=${this.origin} .desc=${this.desc}></uigc-asset>
       <div class="grow"></div>
       <div class="secondary">
         <span>${this.balance || 0} ${this.asset.symbol}</span>

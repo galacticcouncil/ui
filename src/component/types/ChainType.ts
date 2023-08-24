@@ -15,8 +15,8 @@ export const ChainTypes = {
   polkadot: 'Polkadot',
   robonomics: 'Robonomics',
   tinkernet: 'Tinkernet',
-  statemine: 'Statemine',
-  statemint: 'Statemint',
+  statemine: 'AssetHub',
+  statemint: 'AssetHub',
   zeitgeist: 'Zeitgeist',
 };
 

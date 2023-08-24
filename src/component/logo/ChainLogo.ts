@@ -16,6 +16,8 @@ import {
   statemine,
   interlay,
   zeitgeist,
+  assetHub,
+  assetHubKusama,
 } from './chains';
 import { astar, kusama, robonomics, tinkernet } from './assets';
 
@@ -41,8 +43,8 @@ export class ChainLogo extends BaseLogo {
           ['phala', () => phala],
           ['polkadot', () => polkadot],
           ['robonomics', () => robonomics],
-          ['statemine', () => statemine],
-          ['statemint', () => statemine],
+          ['statemine', () => assetHubKusama],
+          ['statemint', () => assetHub],
           ['tinkernet', () => tinkernet],
           ['zeitgeist', () => zeitgeist],
         ],

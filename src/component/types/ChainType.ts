@@ -16,7 +16,9 @@ export const ChainTypes = {
   robonomics: 'Robonomics',
   tinkernet: 'Tinkernet',
   statemine: 'AssetHub',
+  assethub: 'AssetHub',
   statemint: 'AssetHub',
+  'assethub-kusama': 'AssetHub',
   zeitgeist: 'Zeitgeist',
 };
 

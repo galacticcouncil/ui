@@ -3,7 +3,7 @@
   "version": "1.2.21",
   "private": false,
   "description": "Galactic UI Kit",
-  "author": "Pavol Noha <pavol.noha@gmail.com>",
+  "author": "GalacticCouncil",
   "type": "module",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",

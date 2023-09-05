@@ -54,6 +54,7 @@ export class AssetLogo extends BaseLogo {
           ['ETH', () => weth],
           ['GLMR', () => moonbeam],
           ['HDX', () => hydraDX],
+          ['HDXb', () => hydraDX],
           ['IBTC', () => ibtc],
           ['INTR', () => interlay],
           ['KAR', () => karura],

@@ -323,6 +323,7 @@ export const bsxThemeProperties = css`
     --uigc-paper-background: linear-gradient(180deg, #1c2527 0%, #14161a 80.73%, #121316 100%);
     --uigc-paper-content: unset;
     --uigc-paper-mask: unset;
+    --uigc-paper-padding: unset;
     /** Progress */
     --uigc-progress__success-background: var(--hex-primary-500);
     --uigc-progress__error-background: var(--hex-primary-500);
@@ -585,6 +586,7 @@ export const hdxThemeProperties = css`
     --uigc-paper-content: '';
     --uigc-paper-mask: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px) content-box content-box,
       linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 0px);
+    --uigc-paper-padding: 1px;
     /** Progress */
     --uigc-progress__success-background: #30ffb1;
     --uigc-progress__error-background: #f11313;

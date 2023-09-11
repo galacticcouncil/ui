@@ -13,6 +13,7 @@ export class Paper extends UIGCElement {
         box-shadow: var(--uigc-paper-box-shadow);
         position: relative;
         overflow: hidden;
+        padding: var(--uigc-paper-padding);
       }
 
       @media (min-width: 480px) {

@@ -98,6 +98,27 @@
         </style>
       </template>
 
+      <!-- Assets -->
+      <template data-element="uigc-assets" data-target="host">
+        <uigc-assets symbol="SPS"></uigc-assets>
+      </template>
+      <template data-element="uigc-assets" data-target="slot">
+        <uigc-asset-id slot="asset" symbol="USDC" chain="assethub"></uigc-asset-id>
+        <uigc-asset-id slot="asset" symbol="USDT" chain="assethub"></uigc-asset-id>
+        <uigc-asset-id slot="asset" symbol="DAI" chain="moonbeam"></uigc-asset-id>
+      </template>
+      <template data-element="uigc-assets" data-target="suffix">
+        <style>
+          [part='demo-output'] {
+            background: var(--uigc-app-background);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        </style>
+      </template>
+
       <!-- AssetBalance -->
       <template data-element="uigc-asset-balance" data-target="host">
         <uigc-asset-balance balance="50000"></uigc-asset-balance>
@@ -136,7 +157,7 @@
 
       <!-- AssetInput -->
       <template data-element="uigc-asset-input" data-target="host">
-        <uigc-asset-input id="assetOut" asset="BSX" amount="1000"></uigc-asset-input>
+        <uigc-asset-input slot="selected" id="assetOut" asset="BSX" amount="1000"></uigc-asset-input>
       </template>
       <template data-element="uigc-asset-input" data-target="slot">
         <span class="title" slot="inputAdornment">Max budget</span>

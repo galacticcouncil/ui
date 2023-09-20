@@ -33,6 +33,7 @@ export class AssetId extends UIGCElement {
         height: 50%;
         right: -10%;
         top: -10%;
+        z-index: 1;
       }
     `,
   ];

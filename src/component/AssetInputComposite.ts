@@ -10,6 +10,7 @@ export class AssetInputComposite extends UIGCElement {
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
+  @property({ type: String }) unit = null;
   @property({ type: Boolean }) disabled = false;
 
   static styles = [
@@ -68,6 +69,7 @@ export class AssetInputComposite extends UIGCElement {
           .asset=${this.asset}
           .amount=${this.amount}
           .amountUsd=${this.amountUsd}
+          .unit=${this.unit}
           ?disabled=${this.disabled}
         ></uigc-asset-input>
       </div>

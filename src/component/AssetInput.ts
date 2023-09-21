@@ -17,6 +17,7 @@ export class AssetInput extends UIGCElement {
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
+  @property({ type: String }) unit = null;
   @property({ type: String }) error = null;
   @property({ type: Boolean }) disabled = false;
 
@@ -251,7 +252,7 @@ export class AssetInput extends UIGCElement {
                 this._inputHandler();
               }}
             />
-            <span class="asset-unit">${this.asset}</span>
+            <span class="asset-unit">${this.unit}</span>
           </span>
           ${when(this.amountUsd, () => html` <span class="usd">≈ ${this.amountUsd} USD</span> `)}
         </div>

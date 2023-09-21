@@ -157,7 +157,7 @@
 
       <!-- AssetInput -->
       <template data-element="uigc-asset-input" data-target="host">
-        <uigc-asset-input slot="selected" id="assetOut" asset="BSX" amount="1000"></uigc-asset-input>
+        <uigc-asset-input id="assetOut" asset="BSX" amount="1000" unit="BSX"></uigc-asset-input>
       </template>
       <template data-element="uigc-asset-input" data-target="slot">
         <span class="title" slot="inputAdornment">Max budget</span>
@@ -196,7 +196,7 @@
 
       <!-- AssetInputComposite-->
       <template data-element="uigc-asset-cinput" data-target="host">
-        <uigc-asset-cinput id="assetOut" asset="BSX" amount="1000"></uigc-asset-cinput>
+        <uigc-asset-cinput id="assetOut" asset="BSX" amount="1000" unit="BSX"></uigc-asset-cinput>
       </template>
       <template data-element="uigc-asset-cinput" data-target="slot">
         <span class="title">Info</span>
@@ -321,7 +321,13 @@
 
       <!-- AssetXRate-->
       <template data-element="uigc-asset-x-rate" data-target="host">
-        <uigc-asset-x-rate title="Price for 1 HDX:" asset="BSX" amount="1000" amountUsd="45"></uigc-asset-x-rate>
+        <uigc-asset-x-rate
+          title="Price for 1 HDX:"
+          asset="BSX"
+          amount="1000"
+          amountUsd="45"
+          unit="BSX"
+        ></uigc-asset-x-rate>
       </template>
       <template data-element="uigc-asset-x-rate" data-target="slot">
         <uigc-button slot="button" variant="max" size="micro" nowrap>Last omnipool price</uigc-button>
@@ -393,7 +399,7 @@
           asset="BSX"
           amount="1000"
           amountUsd="45"
-          balance="50000"
+          unit="BSX"
         ></uigc-asset-transfer>
       </template>
       <template data-element="uigc-asset-transfer" data-target="slot">

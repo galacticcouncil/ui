@@ -12,6 +12,7 @@ export class AssetXRate extends UIGCElement {
   @property({ type: String }) amount = null;
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
+  @property({ type: String }) unit = null;
 
   static styles = [
     UIGCElement.styles,
@@ -35,7 +36,7 @@ export class AssetXRate extends UIGCElement {
 
   render() {
     return html`
-      <uigc-asset-cinput .asset=${this.asset} .amount=${this.amount} .amountUsd=${this.amountUsd}>
+      <uigc-asset-cinput .asset=${this.asset} .amount=${this.amount} .amountUsd=${this.amountUsd} .unit=${this.unit}>
         <div class="title">
           <uigc-icon-crosshair></uigc-icon-crosshair>
           <span>${this.title}</span>

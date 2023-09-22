@@ -10,7 +10,6 @@ import './icons/Dropdown';
 export class AssetSelector extends UIGCElement {
   @property({ type: String }) id = null;
   @property({ type: String }) asset = null;
-  @property({ type: String }) origin = null;
 
   static styles = [
     UIGCElement.styles,
@@ -70,9 +69,8 @@ export class AssetSelector extends UIGCElement {
     return html` <button @click=${this.onSelectorClick}>
       ${when(
         this.asset,
-        () => html` <uigc-asset .symbol=${this.asset} .origin=${this.origin}>
-          <uigc-icon-dropdown></uigc-icon-dropdown>
-        </uigc-asset>`,
+        () => html` <slot name="asset"></slot>
+          <uigc-icon-dropdown></uigc-icon-dropdown>`,
         () => html` <span class="select">
           <span> Select asset </span>
           <uigc-icon-dropdown></uigc-icon-dropdown>

@@ -10,7 +10,6 @@ import './component/AssetInputComposite';
 import './component/AssetList';
 import './component/AssetListItem';
 import './component/AssetPrice';
-import './component/Assets';
 import './component/AssetSelector';
 import './component/AssetSwitch';
 import './component/AssetTransfer';

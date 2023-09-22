@@ -10,8 +10,8 @@ export class AssetBalance extends UIGCElement {
   @property({ type: String }) balance = null;
   @property({ type: Boolean }) disabled = false;
   @property({ type: Boolean }) visible = true;
-  @property({ type: Function }) formatter = null;
-  @property({ type: Function }) onMaxClick = null;
+  @property({ attribute: false }) formatter = null;
+  @property({ attribute: false }) onMaxClick = null;
 
   static styles = [
     UIGCElement.styles,

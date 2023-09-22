@@ -8,7 +8,6 @@ export { AssetInputComposite } from './component/AssetInputComposite';
 export { AssetList } from './component/AssetList';
 export { AssetListItem } from './component/AssetListItem';
 export { AssetPrice } from './component/AssetPrice';
-export { Assets } from './component/Assets';
 export { AssetSelector } from './component/AssetSelector';
 export { AssetSwitch } from './component/AssetSwitch';
 export { AssetTransfer } from './component/AssetTransfer';

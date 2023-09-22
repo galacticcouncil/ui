@@ -86,28 +86,10 @@
       <template data-element="uigc-asset" data-target="host">
         <uigc-asset symbol="KSM"></uigc-asset>
       </template>
+      <template data-element="uigc-asset" data-target="slot">
+        <uigc-asset-id slot="icon" symbol="KSM"></uigc-asset-id>
+      </template>
       <template data-element="uigc-asset" data-target="suffix">
-        <style>
-          [part='demo-output'] {
-            background: var(--uigc-app-background);
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        </style>
-      </template>
-
-      <!-- Assets -->
-      <template data-element="uigc-assets" data-target="host">
-        <uigc-assets symbol="SPS"></uigc-assets>
-      </template>
-      <template data-element="uigc-assets" data-target="slot">
-        <uigc-asset-id slot="asset" symbol="USDC" chain="assethub"></uigc-asset-id>
-        <uigc-asset-id slot="asset" symbol="USDT" chain="assethub"></uigc-asset-id>
-        <uigc-asset-id slot="asset" symbol="DAI" chain="moonbeam"></uigc-asset-id>
-      </template>
-      <template data-element="uigc-assets" data-target="suffix">
         <style>
           [part='demo-output'] {
             background: var(--uigc-app-background);
@@ -231,21 +213,36 @@
 
       <!-- AssetList -->
       <template data-element="uigc-asset-list" data-target="slot">
-        <uigc-asset-list-item asset='{"id":"0","symbol":"BSX"}' balance="1500" balanceUsd="23"></uigc-asset-list-item>
+        <uigc-asset-list-item asset='{"id":"0","symbol":"BSX"}' balance="1500" balanceUsd="23" unit="BSX">
+          <uigc-asset slot="asset" symbol="BSX" desc="Token">
+            <uigc-asset-id slot="icon" symbol="BSX" chain="basilisk"></uigc-asset-id>
+          </uigc-asset>
+        </uigc-asset-list-item>
         <uigc-asset-list-item
           slot="selected"
           selected
           asset='{"id":"1","symbol":"KSM"}'
           balance="3500"
           balanceUsd="46"
-        ></uigc-asset-list-item>
+          unit="KSM"
+        >
+          <uigc-asset slot="asset" symbol="KSM" desc="Token">
+            <uigc-asset-id slot="icon" symbol="KSM" chain="kusama"></uigc-asset-id>
+          </uigc-asset>
+        </uigc-asset-list-item>
         <uigc-asset-list-item
           slot="disabled"
           disabled
           asset='{"id":"2","symbol":"TNKR"}'
           balance="3500"
           balanceUsd="46"
-        ></uigc-asset-list-item>
+        >
+          <uigc-asset slot="asset" symbol="SPS" desc="PoolShare">
+            <uigc-asset-id slot="icon" symbol="USDC" chain="assethub"></uigc-asset-id>
+            <uigc-asset-id slot="icon" symbol="USDT" chain="assethub"></uigc-asset-id>
+            <uigc-asset-id slot="icon" symbol="DAI" chain="moonbeam"></uigc-asset-id>
+          </uigc-asset>
+        </uigc-asset-list-item>
       </template>
       <template data-element="uigc-asset-list" data-target="suffix">
         <style>
@@ -270,7 +267,12 @@
 
       <!-- AssetListItem -->
       <template data-element="uigc-asset-list-item" data-target="host">
-        <uigc-asset-list-item asset='{"id":"0","symbol":"BSX"}' balance="1500"></uigc-asset-list-item>
+        <uigc-asset-list-item asset='{"id":"0","symbol":"BSX"}' balance="1500" unit="BSX"></uigc-asset-list-item>
+      </template>
+      <template data-element="uigc-asset-list-item" data-target="slot">
+        <uigc-asset slot="asset" symbol="BSX" desc="Token">
+          <uigc-asset-id slot="icon" symbol="BSX" chain="basilisk"></uigc-asset-id>
+        </uigc-asset>
       </template>
       <template data-element="uigc-asset-list-item" data-target="suffix">
         <style>
@@ -356,6 +358,11 @@
       <template data-element="uigc-asset-selector" data-target="host">
         <uigc-asset-selector id="1" asset="KSM"></uigc-asset-selector>
       </template>
+      <template data-element="uigc-asset-selector" data-target="slot">
+        <uigc-asset slot="asset" symbol="KSM" desc="Token">
+          <uigc-asset-id slot="icon" symbol="KSM"></uigc-asset-id>
+        </uigc-asset>
+      </template>
       <template data-element="uigc-asset-selector" data-target="suffix">
         <style>
           [part='demo-output'] {
@@ -403,6 +410,9 @@
         ></uigc-asset-transfer>
       </template>
       <template data-element="uigc-asset-transfer" data-target="slot">
+        <uigc-asset slot="asset" symbol="BSX" desc="Token">
+          <uigc-asset-id slot="icon" symbol="BSX"></uigc-asset-id>
+        </uigc-asset>
         <uigc-asset-balance slot="balance" balance="50000"></uigc-asset-balance>
       </template>
       <template data-element="uigc-asset-transfer" data-target="suffix">

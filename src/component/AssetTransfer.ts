@@ -15,7 +15,6 @@ export class AssetTransfer extends UIGCElement {
   @property({ type: String }) amountUsd = null;
   @property({ type: String }) asset = null;
   @property({ type: String }) unit = null;
-  @property({ type: String }) assetOrigin = null;
   @property({ type: String }) error = null;
   @property({ type: Boolean }) selectable = true;
   @property({ type: Boolean }) readonly = false;
@@ -151,13 +150,11 @@ export class AssetTransfer extends UIGCElement {
             this.selectable,
             () =>
               html`
-                <uigc-asset-selector
-                  id=${this.id}
-                  .asset=${this.asset}
-                  .origin=${this.assetOrigin}
-                ></uigc-asset-selector>
+                <uigc-asset-selector id=${this.id} .asset=${this.asset}>
+                  <slot name="asset" slot="asset"></slot>
+                </uigc-asset-selector>
               `,
-            () => html` <uigc-asset class="asset_ro" .symbol=${this.asset} .origin=${this.assetOrigin}></uigc-asset>`
+            () => html` <slot class="asset_ro" name="asset"></slot>`
           )}
           <uigc-asset-input
             hdx

@@ -29,7 +29,7 @@ export class AssetList extends UIGCElement {
         position: sticky;
         height: 24px;
         top: 0;
-        z-index: 1;
+        z-index: 2;
       }
 
       @media (min-width: 768px) {
@@ -42,7 +42,7 @@ export class AssetList extends UIGCElement {
         background: var(--uigc-list--header-background);
         position: sticky;
         top: 25px;
-        z-index: 1;
+        z-index: 2;
       }
 
       ::slotted(*) {

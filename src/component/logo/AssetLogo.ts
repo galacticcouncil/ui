@@ -39,7 +39,7 @@ export class AssetLogo extends BaseLogo {
   render() {
     return html`
       ${choose(
-        this.asset.toUpperCase(),
+        this.asset && this.asset.toUpperCase(),
         [
           ['AUSD', () => acala],
           ['ACA', () => acala],
@@ -54,7 +54,6 @@ export class AssetLogo extends BaseLogo {
           ['ETH', () => weth],
           ['GLMR', () => moonbeam],
           ['HDX', () => hydraDX],
-          ['HDXB', () => hydraDX],
           ['IBTC', () => ibtc],
           ['INTR', () => interlay],
           ['KAR', () => karura],

@@ -82,6 +82,6 @@ export class Asset extends UIGCElement {
         <span class="code">${this.symbol}</span>
         ${when(this.desc, () => html` <span class="desc">${this.desc}</span> `)}
       </span>
-      <slot></slot>;`;
+      <slot></slot>`;
   }
 }

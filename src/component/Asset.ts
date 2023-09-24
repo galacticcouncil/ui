@@ -62,6 +62,10 @@ export class Asset extends UIGCElement {
         width: 26px;
         height: 26px;
       }
+
+      :host([icon]) span.title {
+        display: none;
+      }
     `,
   ];
 

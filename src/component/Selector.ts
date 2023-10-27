@@ -9,6 +9,7 @@ import './icons/Dropdown';
 export class Selector extends UIGCElement {
   @property({ type: String }) item = null;
   @property({ type: String }) title = null;
+  @property({ type: Boolean }) readonly = false;
 
   static styles = [
     UIGCElement.styles,
@@ -16,6 +17,23 @@ export class Selector extends UIGCElement {
       :host {
         border-radius: 12px;
         width: 100%;
+      }
+
+      :host(:not([readonly])) .selector-root {
+        border-bottom: var(--uigc-field-border-bottom);
+      }
+
+      :host(:not([readonly])) .selector-root:focus,
+      :host(:not([readonly])) .selector-root:focus-visible,
+      :host(:not([readonly])) .selector-root:focus-within,
+      :host(:not([readonly])) .selector-root:hover {
+        border-bottom: var(--uigc-selector-border-bottom__hover);
+        background: var(--uigc-selector-background__hover);
+        transition: 0.2s ease-in-out;
+      }
+
+      :host([readonly]) button {
+        cursor: default;
       }
 
       button {
@@ -28,7 +46,6 @@ export class Selector extends UIGCElement {
         border-radius: var(--uigc-field-border-radius);
         padding: var(--uigc-field-padding);
         row-gap: var(--uigc-field-row-gap);
-        border-bottom: var(--uigc-field-border-bottom);
       }
 
       button > div {
@@ -37,15 +54,6 @@ export class Selector extends UIGCElement {
         justify-content: space-between;
         width: 100%;
         align-items: center;
-      }
-
-      button:focus,
-      button:focus-visible,
-      button:focus-within,
-      button:hover {
-        border-bottom: var(--uigc-selector-border-bottom__hover);
-        background: var(--uigc-selector-background__hover);
-        transition: 0.2s ease-in-out;
       }
 
       .title {
@@ -70,12 +78,14 @@ export class Selector extends UIGCElement {
   }
 
   render() {
-    return html` <button @click=${this.onSelectorClick}>
-      <span class="title">${this.title}</span>
-      <div>
-        <slot></slot>
-        <uigc-icon-dropdown alt></uigc-icon-dropdown>
-      </div>
-    </button>`;
+    return html` <div tabindex="0" class="selector-root">
+      <button @click=${this.onSelectorClick}>
+        <span class="title">${this.title}</span>
+        <div>
+          <slot></slot>
+          <uigc-icon-dropdown alt></uigc-icon-dropdown>
+        </div>
+      </button>
+    </div>`;
   }
 }

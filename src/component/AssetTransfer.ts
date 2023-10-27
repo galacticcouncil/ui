@@ -40,10 +40,6 @@ export class AssetTransfer extends UIGCElement {
         border-bottom: var(--uigc-field-border-bottom);
       }
 
-      :host(:not([readonly])) .asset-root {
-        border-bottom: var(--uigc-field-border-bottom);
-      }
-
       :host([error]) .asset-root {
         border: var(--uigc-asset-transfer__error-border);
         border-width: var(--uigc-asset-transfer__error-border-width);
@@ -142,7 +138,7 @@ export class AssetTransfer extends UIGCElement {
 
   render() {
     return html`
-      <div bsx tabindex="0" class="asset-root">
+      <div tabindex="0" class="asset-root">
         <span class="title">${this.title}</span>
         <slot name="balance"></slot>
         <div class="asset">

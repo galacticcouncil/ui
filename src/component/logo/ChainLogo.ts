@@ -18,6 +18,7 @@ import {
   zeitgeist,
   assetHub,
   assetHubKusama,
+  subsocial,
 } from './chains';
 import { astar, kusama, robonomics, tinkernet } from './assets';
 
@@ -46,6 +47,7 @@ export class ChainLogo extends BaseLogo {
           ['statemine', () => assetHubKusama],
           ['assethub-kusama', () => assetHub],
           ['statemint', () => assetHub],
+          ['subsocial', () => subsocial],
           ['assethub', () => assetHub],
           ['tinkernet', () => tinkernet],
           ['zeitgeist', () => zeitgeist],

@@ -19,6 +19,7 @@ export const ChainTypes = {
   assethub: 'AssetHub',
   statemint: 'AssetHub',
   'assethub-kusama': 'AssetHub',
+  subsocial: 'Subsocial',
   zeitgeist: 'Zeitgeist',
 };
 

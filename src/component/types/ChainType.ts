@@ -11,6 +11,7 @@ export const ChainTypes = {
   karura: 'Karura',
   kusama: 'Kusama',
   moonbeam: 'Moonbeam',
+  nodle: 'Nodle',
   phala: 'Phala',
   polkadot: 'Polkadot',
   robonomics: 'Robonomics',
@@ -20,6 +21,7 @@ export const ChainTypes = {
   statemint: 'AssetHub',
   'assethub-kusama': 'AssetHub',
   subsocial: 'Subsocial',
+  unique: 'Unique',
   zeitgeist: 'Zeitgeist',
 };
 

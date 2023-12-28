@@ -20,7 +20,7 @@ import {
   assetHubKusama,
   subsocial,
 } from './chains';
-import { astar, kusama, robonomics, tinkernet } from './assets';
+import { astar, kusama, nodle, robonomics, tinkernet, unique } from './assets';
 
 @customElement('uigc-logo-chain')
 export class ChainLogo extends BaseLogo {
@@ -33,6 +33,8 @@ export class ChainLogo extends BaseLogo {
         [
           ['acala', () => acala],
           ['astar', () => astar],
+          ['assethub', () => assetHub],
+          ['assethub-kusama', () => assetHub],
           ['basilisk', () => basilisk],
           ['bifrost', () => bifrost],
           ['centrifuge', () => centrifuge],
@@ -41,15 +43,15 @@ export class ChainLogo extends BaseLogo {
           ['karura', () => karura],
           ['kusama', () => kusama],
           ['moonbeam', () => moonbeam],
+          ['nodle', () => nodle],
           ['phala', () => phala],
           ['polkadot', () => polkadot],
           ['robonomics', () => robonomics],
           ['statemine', () => assetHubKusama],
-          ['assethub-kusama', () => assetHub],
           ['statemint', () => assetHub],
           ['subsocial', () => subsocial],
-          ['assethub', () => assetHub],
           ['tinkernet', () => tinkernet],
+          ['unique', () => unique],
           ['zeitgeist', () => zeitgeist],
         ],
         () => html`<slot name="placeholder"></slot>`

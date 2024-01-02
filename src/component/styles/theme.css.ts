@@ -538,16 +538,15 @@ export const hdxThemeProperties = css`
 
     --uigc-button__disabled-opacity: 0.7;
     --uigc-button__disabled-border: 1px solid rgb(102, 105, 124);
-    /** CircularProgress */
     --uigc-circular-progress-background: conic-gradient(
-      from 90.65deg at 50% 50%,
-      #fc408c -1.87deg,
-      rgba(10, 13, 26, 0) 117.39deg,
-      #00c2ff 185.07deg,
-      #004de2 219.37deg,
-      #fc408c 294.78deg,
-      #fc408c 358.13deg,
-      rgba(10, 13, 26, 0) 477.39deg
+      from -60.84deg at 50% 50%,
+      rgba(10, 13, 26, 0) 0deg,
+      rgba(10, 13, 26, 0) 134.49deg,
+      rgb(0, 194, 255) 185.07deg,
+      rgb(0, 77, 226) 243.24deg,
+      rgb(252, 64, 140) 294.78deg,
+      rgb(252, 64, 140) 358.13deg,
+      rgba(10, 13, 26, 0) 360deg
     );
     /** ChainSelector */
     --uigc-chain-selector-border-radius: 2px;

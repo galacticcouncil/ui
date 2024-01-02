@@ -243,17 +243,24 @@ export const bsxThemeProperties = css`
     --uigc-button__max-border-radius: 35px;
     --uigc-button__max-text-transform: none;
     --uigc-button__primary-color: var(--hex-background-gray-800);
+    --uigc-button__primary-color__disabled: var(--hex-background-gray-800);
     --uigc-button__primary-background: var(--hex-primary-400);
+    --uigc-button__primary-background__disabled: var(--hex-primary-400);
     --uigc-button__primary-background__hover: var(--hex-primary-300);
     --uigc-button__primary-box-shadow__hover: none;
     --uigc-button__primary-transform__hover: none;
     --uigc-button__primary-background__before: none;
     --uigc-button__secondary-color: var(--hex-primary-400);
+    --uigc-button__secondary-color__disabled: var(--hex-primary-400);
     --uigc-button__secondary-color__hover: var(--hex-primary-400);
     --uigc-button__secondary-background: rgba(var(--rgb-primary-450), 0.12);
+    --uigc-button__secondary-background__disabled: rgba(var(--rgb-primary-450), 0.12);
     --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-450), 0.3);
     --uigc-button__secondary-border: none;
     --uigc-button__secondary-border__hover: none;
+
+    --uigc-button__disabled-opacity: 0.2;
+    --uigc-button__disabled-border: none;
     /** CircularProgress */
     --uigc-circular-progress-background: conic-gradient(
       from 180deg at 50% 50%,
@@ -489,9 +496,12 @@ export const hdxThemeProperties = css`
     --uigc-button-border-radius: 4px;
     --uigc-button__max-border-radius: none;
     --uigc-button__max-text-transform: uppercase;
+    --uigc-button__max-background__disabled: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-button__max-background__hover: rgba(var(--rgb-primary-alpha15), 0.2);
     --uigc-button__primary-color: var(--hex-white);
+    --uigc-button__primary-color__disabled: rgb(102, 105, 124);
     --uigc-button__primary-background: var(--hex-pink-700);
+    --uigc-button__primary-background__disabled: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-button__primary-background__hover: var(--hex-pink-600);
     --uigc-button__primary-box-shadow__hover: rgb(255 15 111 / 30%) 4px 10px 40px 0px;
     --uigc-button__primary-transform__hover: translate(-5px, -5px);
@@ -501,24 +511,33 @@ export const hdxThemeProperties = css`
       rgba(255, 153, 202, 0.23) 100%
     );
     --uigc-button__info-color: var(--hex-white);
+    --uigc-button__info-color__disabled: rgb(102, 105, 124);
     --uigc-button__info-background: var(--hex-bright-blue-700);
+    --uigc-button__info-background__disabled: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-button__info-background__hover: var(--hex-bright-blue-700);
     --uigc-button__info-box-shadow__hover: 0px 0px 0px -1px rgba(145, 164, 200, 0.3),
       0px 13px 40px -12px rgba(41, 148, 246, 0.45);
     --uigc-button__info-transform__hover: translate(-5px, -5px);
     --uigc-button__info-background__before: rgba(1, 158, 255, 0.35);
     --uigc-button__secondary-color: var(--hex-bright-blue-300);
+    --uigc-button__secondary-color__disabled: rgb(102, 105, 124);
     --uigc-button__secondary-color__hover: var(--hex-white);
     --uigc-button__secondary-background: rgba(var(--rgb-primary-alpha15), 0.12);
+    --uigc-button__secondary-background__disabled: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-button__secondary-background__hover: rgba(var(--rgb-primary-alpha15), 0.3);
     --uigc-button__secondary-border: 1px solid var(--hex-bright-blue-300);
     --uigc-button__secondary-border__hover: 1px solid var(--hex-white);
     --uigc-button__error-color: #f87171;
+    --uigc-button__error-color__disabled: rgb(102, 105, 124);
     --uigc-button__error-color__hover: #ff9e9e;
     --uigc-button__error-background: rgba(239, 3, 3, 0.25);
+    --uigc-button__error-background__disabled: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-button__error-background__hover: rgba(255, 6, 6, 0.39);
     --uigc-button__error-border: 1px solid #f87171;
     --uigc-button__error-border__hover: 1px solid #ff9e9e;
+
+    --uigc-button__disabled-opacity: 0.7;
+    --uigc-button__disabled-border: 1px solid rgb(102, 105, 124);
     /** CircularProgress */
     --uigc-circular-progress-background: conic-gradient(
       from 90.65deg at 50% 50%,

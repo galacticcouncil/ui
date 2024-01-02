@@ -29,11 +29,6 @@ export class Button extends UIGCElement {
         width: 100%;
       }
 
-      :host([disabled]) {
-        opacity: 0.2;
-        pointer-events: none;
-      }
-
       :host([nowrap]) .button-root {
         white-space: nowrap;
       }
@@ -45,6 +40,12 @@ export class Button extends UIGCElement {
       :host([variant='primary']) .button-root {
         color: var(--uigc-button__primary-color);
         background: var(--uigc-button__primary-background);
+      }
+
+      :host([variant='primary'][disabled]) .button-root {
+        background: var(--uigc-button__primary-background__disabled);
+        color: var(--uigc-button__primary-color__disabled);
+        border: var(--uigc-button__disabled-border);
       }
 
       :host([variant='primary']) .button-root:hover {
@@ -60,6 +61,12 @@ export class Button extends UIGCElement {
         border: var(--uigc-button__secondary-border);
       }
 
+      :host([variant='secondary'][disabled]) .button-root {
+        background: var(--uigc-button__secondary-background__disabled);
+        color: var(--uigc-button__secondary-color__disabled);
+        border: var(--uigc-button__disabled-border);
+      }
+
       :host([variant='secondary']) .button-root:hover {
         color: var(--uigc-button__secondary-color__hover);
         background: var(--uigc-button__secondary-background__hover);
@@ -71,6 +78,12 @@ export class Button extends UIGCElement {
         color: var(--uigc-button__error-color);
         background: var(--uigc-button__error-background);
         border: var(--uigc-button__error-border);
+      }
+
+      :host([variant='error'][disabled]) .button-root {
+        background: var(--uigc-button__error-background__disabled);
+        color: var(--uigc-button__error-color__disabled);
+        border: var(--uigc-button__disabled-border);
       }
 
       :host([variant='error']) .button-root:hover {
@@ -89,6 +102,12 @@ export class Button extends UIGCElement {
         background: var(--uigc-button__info-background);
       }
 
+      :host([variant='info'][disabled]) .button-root {
+        background: var(--uigc-button__info-background__disabled);
+        color: var(--uigc-button__info-color__disabled);
+        border: var(--uigc-button__disabled-border);
+      }
+
       :host([variant='info']) .button-root:hover {
         background: var(--uigc-button__info-background__hover);
         transition: 0.2s ease-in-out;
@@ -101,6 +120,10 @@ export class Button extends UIGCElement {
         background: rgba(var(--rgb-white), 0.06);
         font-weight: 600;
         text-transform: var(--uigc-button__max-text-transform);
+      }
+
+      :host([variant='max'][disabled]) .button-root {
+        opacity: 0.2;
       }
 
       :host([variant='max']) .button-root:hover {
@@ -124,8 +147,18 @@ export class Button extends UIGCElement {
         transform-style: preserve-3d;
       }
 
+      :host([disabled]) .button-root {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: var(--uigc-button__disabled-opacity);
+      }
+
       .button-root:hover {
         transition: 0.2s ease-in-out;
+      }
+
+      :host([disabled]) .button-root:before {
+        content: none;
       }
 
       .button-root:before {

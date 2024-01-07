@@ -83,7 +83,7 @@ export class ToggleButton extends UIGCElement {
       composed: true,
       detail: { value: this.value },
     };
-    this.dispatchEvent(new CustomEvent('toggle-button-clicked', options));
+    this.dispatchEvent(new CustomEvent('toggle-button-click', options));
   }
 
   render() {

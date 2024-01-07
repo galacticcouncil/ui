@@ -85,7 +85,7 @@ export class SearchBar extends UIGCElement {
       composed: true,
       detail: { value: this.value },
     };
-    this.dispatchEvent(new CustomEvent('search-changed', options));
+    this.dispatchEvent(new CustomEvent('search-change', options));
   }
 
   override async firstUpdated() {

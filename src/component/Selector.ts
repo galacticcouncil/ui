@@ -74,7 +74,7 @@ export class Selector extends UIGCElement {
       composed: true,
       detail: { item: this.item },
     };
-    this.dispatchEvent(new CustomEvent('selector-clicked', options));
+    this.dispatchEvent(new CustomEvent('selector-click', options));
   }
 
   render() {

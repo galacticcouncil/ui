@@ -51,7 +51,7 @@ export class ListItem extends UIGCElement {
       composed: true,
       detail: { item: this.item },
     };
-    this.dispatchEvent(new CustomEvent('list-item-clicked', options));
+    this.dispatchEvent(new CustomEvent('list-item-click', options));
   }
 
   render() {

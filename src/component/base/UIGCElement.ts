@@ -46,4 +46,14 @@ export class UIGCElement extends LitElement {
     this.createBsxThemeStylesheet();
     this.createHdxThemeStylesheet();
   }
+
+  fireEvent<T>(name: string, data?: T, cancelable = false, bubbles = true) {
+    const normalEvent = new CustomEvent<T>(name, {
+      detail: data,
+      composed: false,
+      bubbles,
+      cancelable,
+    });
+    return this.dispatchEvent(normalEvent);
+  }
 }

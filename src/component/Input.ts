@@ -104,7 +104,7 @@ export class Input extends UIGCElement {
       composed: true,
       detail: { value: this.value, valid: input.reportValidity() },
     };
-    this.dispatchEvent(new CustomEvent('input-changed', options));
+    this.dispatchEvent(new CustomEvent('input-change', options));
   }
 
   override async firstUpdated() {

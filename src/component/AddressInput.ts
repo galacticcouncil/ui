@@ -149,7 +149,7 @@ export class AddressInput extends UIGCElement {
       composed: true,
       detail: { address: null },
     };
-    this.dispatchEvent(new CustomEvent('address-input-changed', options));
+    this.dispatchEvent(new CustomEvent('address-input-change', options));
   }
 
   onInputChange(e: any) {
@@ -159,7 +159,7 @@ export class AddressInput extends UIGCElement {
       composed: true,
       detail: { address: this.address },
     };
-    this.dispatchEvent(new CustomEvent('address-input-changed', options));
+    this.dispatchEvent(new CustomEvent('address-input-change', options));
   }
 
   async onPasteClick() {
@@ -169,7 +169,7 @@ export class AddressInput extends UIGCElement {
       composed: true,
       detail: { address: this.address },
     };
-    this.dispatchEvent(new CustomEvent('address-input-changed', options));
+    this.dispatchEvent(new CustomEvent('address-input-change', options));
   }
 
   override async updated() {

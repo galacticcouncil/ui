@@ -23,7 +23,7 @@ export class AssetInput extends UIGCElement {
 
   constructor() {
     super();
-    this._inputHandler = debounce(this.onInputChanged, 300);
+    this._inputHandler = debounce(this.onInputChange, 300);
   }
 
   static styles = [
@@ -193,9 +193,9 @@ export class AssetInput extends UIGCElement {
     `,
   ];
 
-  onInputChange(e) {}
+  _onInputChange(e) {}
 
-  onInputChanged() {
+  onInputChange() {
     const unmasked = this._imask.unmaskedValue;
     const masked = this._imask.value;
     const options = {
@@ -203,7 +203,7 @@ export class AssetInput extends UIGCElement {
       composed: true,
       detail: { id: this.id, asset: this.asset, value: unmasked, masked: masked },
     };
-    this.dispatchEvent(new CustomEvent('asset-input-changed', options));
+    this.dispatchEvent(new CustomEvent('asset-input-change', options));
   }
 
   onWrapperClick(e: any) {
@@ -248,7 +248,7 @@ export class AssetInput extends UIGCElement {
               placeholder="0"
               value=${this.asset ? this.amount : null}
               @input=${(e: any) => {
-                this.onInputChange(e);
+                this._onInputChange(e);
                 this._inputHandler();
               }}
             />

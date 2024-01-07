@@ -24,7 +24,7 @@ export class Textfield extends UIGCElement {
 
   constructor() {
     super();
-    this._inputHandler = debounce(this.onInputChanged, 300);
+    this._inputHandler = debounce(this.onInputChange, 300);
   }
 
   static styles = [
@@ -179,9 +179,9 @@ export class Textfield extends UIGCElement {
     `,
   ];
 
-  onInputChange(e) {}
+  _onInputChange(e) {}
 
-  onInputChanged() {
+  onInputChange() {
     const unmasked = this._imask.unmaskedValue;
     const masked = this._imask.value;
     const options = {
@@ -189,7 +189,7 @@ export class Textfield extends UIGCElement {
       composed: true,
       detail: { value: unmasked, masked: masked },
     };
-    this.dispatchEvent(new CustomEvent('input-changed', options));
+    this.dispatchEvent(new CustomEvent('input-change', options));
   }
 
   onWrapperClick(e: any) {
@@ -242,7 +242,7 @@ export class Textfield extends UIGCElement {
               placeholder=${this.placeholder}
               value=${this.value}
               @input=${(e: any) => {
-                this.onInputChange(e);
+                this._onInputChange(e);
                 this._inputHandler();
               }}
             />

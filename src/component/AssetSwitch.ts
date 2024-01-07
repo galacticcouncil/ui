@@ -54,7 +54,7 @@ export class AssetSwitch extends UIGCElement {
       bubbles: true,
       composed: true,
     };
-    this.dispatchEvent(new CustomEvent('asset-switch-clicked', options));
+    this.dispatchEvent(new CustomEvent('asset-switch-click', options));
   }
 
   render() {

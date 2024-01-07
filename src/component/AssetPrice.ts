@@ -13,7 +13,7 @@ export class AssetPrice extends UIGCElement {
   @property({ type: String }) outputAsset = null;
   @property({ type: String }) outputBalance = null;
   @property({ type: Boolean }) loading = false;
-  @property({ type: Function }) formatter = null;
+  @property({ attribute: false }) formatter = null;
 
   static styles = [
     UIGCElement.styles,

@@ -62,7 +62,7 @@ export class AssetSelector extends UIGCElement {
       composed: true,
       detail: { id: this.id, asset: this.asset },
     };
-    this.dispatchEvent(new CustomEvent('asset-selector-clicked', options));
+    this.dispatchEvent(new CustomEvent('asset-selector-click', options));
   }
 
   render() {

@@ -64,7 +64,7 @@ export class CloseableElement extends UIGCElement {
     }
 
     const applyDefault = this.dispatchEvent(
-      new CustomEvent('closeable-closed', {
+      new CustomEvent('closeable-close', {
         composed: true,
         bubbles: true,
         cancelable: true,

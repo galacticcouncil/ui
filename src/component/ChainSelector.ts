@@ -80,7 +80,7 @@ export class ChainSelector extends UIGCElement {
       composed: true,
       detail: { chain: this.chain },
     };
-    this.dispatchEvent(new CustomEvent('chain-selector-clicked', options));
+    this.dispatchEvent(new CustomEvent('chain-selector-click', options));
   }
 
   render() {

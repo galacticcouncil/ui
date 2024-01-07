@@ -28,7 +28,7 @@
   "devDependencies": {
     "@craftamap/esbuild-plugin-html": "^0.4.0",
     "@custom-elements-manifest/analyzer": "^0.6.6",
-    "api-viewer-element": "^1.0.0-pre.3",
+    "api-viewer-element": "^1.0.0-pre.8",
     "esbuild": "^0.17.11",
     "node-html-parser": "^5.4.2-0",
     "prettier": "^2.3.2",

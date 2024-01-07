@@ -91,7 +91,7 @@ export class Toast extends CloseableElement {
   onClose(e: Event) {
     e.stopPropagation();
     const applyDefault = this.dispatchEvent(
-      new CustomEvent('toast-closed', {
+      new CustomEvent('toast-close', {
         composed: true,
         bubbles: true,
         cancelable: true,

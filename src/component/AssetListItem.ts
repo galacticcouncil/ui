@@ -77,7 +77,7 @@ export class AssetListItem extends UIGCElement {
       composed: true,
       detail: { ...this.asset },
     };
-    this.dispatchEvent(new CustomEvent('asset-clicked', options));
+    this.dispatchEvent(new CustomEvent('asset-click', options));
   }
 
   render() {

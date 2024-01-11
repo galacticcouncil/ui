@@ -19,6 +19,10 @@ export class Input extends UIGCElement {
         width: 100%;
       }
 
+      :host([fit]) .input-root {
+        height: 100%;
+      }
+
       /* Remove arrows - Chrome, Safari, Edge, Opera */
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
@@ -62,6 +66,7 @@ export class Input extends UIGCElement {
 
       .input-root {
         width: 100%;
+        height: 54px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -69,7 +74,6 @@ export class Input extends UIGCElement {
         justify-content: center;
         box-sizing: border-box;
         padding: 0 14px;
-        height: 54px;
         background: var(--uigc-input-background);
         border-style: solid;
         border-radius: var(--uigc-input-border-radius);

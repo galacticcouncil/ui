@@ -374,6 +374,7 @@ export const bsxThemeProperties = css`
       linear-gradient(90deg, #4fffb0 1.27%, #a2ff76 53.24%, #ff984e 104.14%),
       linear-gradient(90deg, #ffce4f 1.27%, #4fffb0 104.14%);
     --uigc-toggle-button__selected--tab-color: var(--hex-black);
+    --uigc-toggle-button__selected--tab-background: var(--hex-primary-400);
     /** ToggleButtonGroup */
     --uigc-toggle-button-group--root-background: rgba(var(--rgb-black), 0.25);
     --uigc-toggle-button-group--root-border-radius: 11px;
@@ -641,6 +642,7 @@ export const hdxThemeProperties = css`
     --uigc-toggle-button__selected--root-color: var(--hex-black);
     --uigc-toggle-button__selected--root-background: linear-gradient(90deg, #fc408c 30%, #efb0ff 100%);
     --uigc-toggle-button__selected--tab-color: var(--hex-white);
+    --uigc-toggle-button__selected--tab-background: var(--hex-bright-blue-700);
     /** ToggleButtonGroup */
     --uigc-toggle-button-group--root-background: rgba(var(--rgb-primary-alpha), 0.06);
     --uigc-toggle-button-group--root-border-radius: 4px;

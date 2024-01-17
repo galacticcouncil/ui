@@ -71,8 +71,9 @@ export class ToggleButton extends UIGCElement {
       }
 
       :host([aria-pressed='true'][tab]) .toggle-button-root {
-        background: var(--uigc-app-font-color__gradient);
-        color: var(--uigc-toggle-button__selected-tab-color);
+        background: var( --uigc-toggle-button__selected--tab-background);
+        color: var(--uigc-toggle-button__selected--tab-color);
+        border-radius: 66px;
       }
     `,
   ];

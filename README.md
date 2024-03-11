@@ -1,5 +1,7 @@
 # UIGC Web Components
 
+**Moved under [Apps](https://github.com/galacticcouncil/apps) monorepo.**
+
 [![npm version](https://img.shields.io/npm/v/@galacticcouncil/ui.svg)](https://www.npmjs.com/package/@galacticcouncil/ui)
 
 ## What are [UIGC Web Components](https://galactic-uikit.netlify.app)?
